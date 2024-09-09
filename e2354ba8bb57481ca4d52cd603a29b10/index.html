@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="e2354ba8bb57481ca4d52cd603a29b10">
+        <style>
+            #e2354ba8bb57481ca4d52cd603a29b10 {
+                width: fit-content;
+                /*border: 1px dashed black;*/
+                background-image: linear-gradient(to bottom, rgba(0, 255, 0, 0.5) 0%, white 70%);
+                padding: 20px;
+                margin: auto;
+            }
+
+            #e2354ba8bb57481ca4d52cd603a29b10 .tab-button-box {
+                width: 100%;
+                text-align: center;
+            }
+
+            #e2354ba8bb57481ca4d52cd603a29b10 .tab-button-box button {
+                margin: 0;
+                padding: 15px 20px;
+                background-color: rgba(0, 0, 0, 0.4);
+                border: none;
+                color: white;
+                border-radius: 3px 3px 0 0;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+            #e2354ba8bb57481ca4d52cd603a29b10 .tab-button-box button:not(.active):hover {
+                background-color: rgba(0, 0, 0, 0.3) !important;
+            }
+
+            /*#e2354ba8bb57481ca4d52cd603a29b10 .tab-button-box button.active {
+        
+    }*/
+
+            #e2354ba8bb57481ca4d52cd603a29b10 .tab-container-box {
+                padding-top: 20px;
+                background-color: white;
+            }
+
+            #e2354ba8bb57481ca4d52cd603a29b10 .card-box {
+                float: left;
+            }
+        </style>
+
+        <div class="tab-button-box">
+            <button class="active" style="background-color: white;color: black;"
+                onclick="showPlans_e2354ba8bb57481ca4d52cd603a29b10(this, 'starter-plans')">
+                Starter Plans</button>
+            <button onclick="showPlans_e2354ba8bb57481ca4d52cd603a29b10(this, 'business-plans')">
+                Business Plans</button>
+        </div>
+        <div class="tab-container-box">
+            <div class="tab starter-plans clearfix">
+                <div class="card-box">
+                    <style>
+                        #e2354ba8bb57481ca4d52cd603a29b10 .card-box .card {
+                            width: 230px;
+                            text-align: center;
+                            padding: 20px 30px;
+                            background-color: white;
+                            margin: auto;
+                            border-radius: 3px;
+                        }
+
+                        #e2354ba8bb57481ca4d52cd603a29b10 .card-box.center-card .card {
+                            background-color: rgb(242, 247, 247);
+                        }
+
+                        #e2354ba8bb57481ca4d52cd603a29b10 .card-box .card .title {
+                            margin-top: 0;
+                        }
+
+                        #e2354ba8bb57481ca4d52cd603a29b10 .card-box .card .currency {
+                            color: lightgray;
+                            position: relative;
+                            top: -20px;
+                        }
+
+                        #e2354ba8bb57481ca4d52cd603a29b10 .card-box .card .price {
+                            font-size: 50px;
+
+                        }
+
+                        #e2354ba8bb57481ca4d52cd603a29b10 .card-box .card p {
+                            margin: 0;
+                        }
+
+                        #e2354ba8bb57481ca4d52cd603a29b10 .card-box .card .period {
+                            font-weight: bold;
+                            color: lightgray;
+                        }
+
+                        #e2354ba8bb57481ca4d52cd603a29b10 .card-box .card .start-the-plan {
+                            padding: 10px;
+                            width: 100%;
+                            background-color: rgb(55, 163, 55);
+                            border-radius: 3px;
+                            color: white;
+                            text-decoration: none;
+                            font-size: 14px;
+                            display: block;
+                            margin: auto;
+                        }
+
+                        #e2354ba8bb57481ca4d52cd603a29b10 .card-box .card .start-the-plan:hover {
+                            background-color: rgb(0, 255, 0);
+                        }
+
+                        #e2354ba8bb57481ca4d52cd603a29b10 .card-box .card .left {
+                            float: left;
+                            font-size: 11px;
+                            color: gray;
+                        }
+
+                        #e2354ba8bb57481ca4d52cd603a29b10 .card-box .card .right {
+                            float: right;
+                            font-size: 12px;
+                        }
+
+                        #e2354ba8bb57481ca4d52cd603a29b10 .card-box .card .row {
+                            border-top: 1px solid lightgray;
+                            padding: 10px 0;
+                            opacity: 1;
+                        }
+
+                        #e2354ba8bb57481ca4d52cd603a29b10 .card-box .card .row.disabled {
+                            opacity: 0.5;
+                        }
+
+                        #e2354ba8bb57481ca4d52cd603a29b10 .card-box .card .row:first-child {
+                            border-top: 2px solid lightgray;
+                        }
+                    </style>
+                    <div class="card">
+                        <h4 class="title">Growing</h4>
+                        <div>
+                            <span class="currency">$</span>
+                            <span class="price">169</span>
+                        </div>
+                        <p class="period">month</p>
+                        <div style="padding: 10px 0; font-size: 12px; color: gray;">
+                            <p>Suggested mobile app</p>
+                            <p>team size 3-5</p>
+                        </div>
+                        <div style="padding: 10px 0;">
+                            <a href="" class="start-the-plan">Start free trial</a>
+                        </div>
+                        <div class="details" style="margin-top: 20px;">
+                            <div class="row clearfix">
+                                <div class="left">
+                                    Team support
+                                </div>
+                                <div class="right">
+                                    Yes
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="left">
+                                    Concurrent builds
+                                </div>
+                                <div class="right">
+                                    Up to 6
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="left">
+                                    Feature branches
+                                </div>
+                                <div class="right">
+                                    Yes
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="left">
+                                    Pull Requests
+                                </div>
+                                <div class="right">
+                                    Yes
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="left">
+                                    Workflows
+                                </div>
+                                <div class="right">
+                                    Yes
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="left">
+                                    Support
+                                </div>
+                                <div class="right">
+                                    24h email/chat
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="left">
+                                    Team based access control
+                                </div>
+                                <div class="right">
+                                    Yes
+                                </div>
+                            </div>
+                            <div class="row clearfix disabled">
+                                <div class="left">
+                                    Testing on real devices
+                                </div>
+                                <div class="right"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-box center-card">
+                    <div class="card">
+                        <h4 class="title">Small</h4>
+                        <div>
+                            <span class="currency">$</span>
+                            <span class="price">49</span>
+                        </div>
+                        <p class="period">month</p>
+                        <div style="padding: 10px 0; font-size: 12px; color: gray;">
+                            <p>Suggested mobile app</p>
+                            <p>team size 1-2</p>
+                        </div>
+                        <div style="padding: 10px 0;">
+                            <a href="" class="start-the-plan">Start free trial</a>
+                        </div>
+                        <div class="details" style="margin-top: 20px;">
+                            <div class="row clearfix">
+                                <div class="left">
+                                    Team support
+                                </div>
+                                <div class="right">
+                                    Yes
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="left">
+                                    Concurrent builds
+                                </div>
+                                <div class="right">
+                                    1
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="left">
+                                    Feature branches
+                                </div>
+                                <div class="right">
+                                    Yes
+                                </div>
+                            </div>
+                            <div class="row clearfix disabled">
+                                <div class="left">
+                                    Pull Requests
+                                </div>
+                                <div class="right">
+
+                                </div>
+                            </div>
+                            <div class="row clearfix disabled">
+                                <div class="left">
+                                    Workflows
+                                </div>
+                                <div class="right">
+
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="left">
+                                    Support
+                                </div>
+                                <div class="right">
+                                    48h
+                                </div>
+                            </div>
+                            <div class="row clearfix disabled">
+                                <div class="left">
+                                    Team based access control
+                                </div>
+                                <div class="right">
+
+                                </div>
+                            </div>
+                            <div class="row clearfix disabled">
+                                <div class="left">
+                                    Testing on real devices
+                                </div>
+                                <div class="right"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-box">
+                    <div class="card">
+                        <h4 class="title">Free</h4>
+                        <div>
+                            <span class="currency">$</span>
+                            <span class="price">0</span>
+                        </div>
+                        <p class="period">month</p>
+                        <div style="padding: 10px 0; font-size: 12px; color: gray;">
+                            <p>Suggested mobile app</p>
+                            <p>team size 1</p>
+                        </div>
+                        <div style="padding: 10px 0;">
+                            <a href="" class="start-the-plan">Start free trial</a>
+                        </div>
+                        <div class="details" style="margin-top: 20px;">
+                            <div class="row clearfix disabled">
+                                <div class="left">
+                                    Team support
+                                </div>
+                                <div class="right">
+
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="left">
+                                    Concurrent builds
+                                </div>
+                                <div class="right">
+                                    1
+                                </div>
+                            </div>
+                            <div class="row clearfix disabled">
+                                <div class="left">
+                                    Feature branches
+                                </div>
+                                <div class="right">
+
+                                </div>
+                            </div>
+                            <div class="row clearfix disabled">
+                                <div class="left">
+                                    Pull Requests
+                                </div>
+                                <div class="right">
+
+                                </div>
+                            </div>
+                            <div class="row clearfix disabled">
+                                <div class="left">
+                                    Workflows
+                                </div>
+                                <div class="right">
+
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="left">
+                                    Support
+                                </div>
+                                <div class="right">
+                                    Only report bugs
+                                </div>
+                            </div>
+                            <div class="row clearfix disabled">
+                                <div class="left">
+                                    Team based access control
+                                </div>
+                                <div class="right">
+
+                                </div>
+                            </div>
+                            <div class="row clearfix disabled">
+                                <div class="left">
+                                    Testing on real devices
+                                </div>
+                                <div class="right"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab business-plans" style="display: none;">
+                <p>this is business plan</p>
+            </div>
+        </div>
+
+        <script>
+            function showPlans_e2354ba8bb57481ca4d52cd603a29b10(element, tabClassName) {
+                let allTabs = element.parentElement.parentElement.getElementsByClassName("tab");
+                for (let i = 0; i < allTabs.length; i++) {
+                    allTabs[i].style.display = "none";
+                }
+
+                let starterPlansTab = element.parentElement.parentElement.getElementsByClassName(tabClassName)[0];
+                starterPlansTab.style.display = "block";
+
+                let allTabButtons = element.parentElement.getElementsByTagName("button");
+                for (let i = 0; i < allTabButtons.length; i++) {
+                    allTabButtons[i].style.backgroundColor = "rgba(0,0,0,0.4)";
+                    allTabButtons[i].style.color = "white";
+                    allTabButtons[i].classList.remove("active");
+                }
+
+                element.style.backgroundColor = "white";
+                element.style.color = "black";
+                element.classList.add("active");
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

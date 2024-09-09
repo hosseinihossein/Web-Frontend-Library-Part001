@@ -1,0 +1,3 @@
+- Title: Customized Checkbox Field
+- Description: Customized checkbox inputs.
+- Tags: form input checkbox_input

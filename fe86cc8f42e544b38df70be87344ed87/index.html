@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="fe86cc8f42e544b38df70be87344ed87" class="Script_4ed411afaf5b41e6a9c3069dae9d85ac">
+        <style>
+            #fe86cc8f42e544b38df70be87344ed87 {
+                position: relative;
+                width: fit-content;
+                margin: auto;
+            }
+
+            #fe86cc8f42e544b38df70be87344ed87 .img-magnifier-glass {
+                position: absolute;
+                border: 3px solid #000;
+                border-radius: 50%;
+                cursor: none;
+                /*Set the size of the magnifier glass:*/
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+
+        <img id="zoomimage" src="./statics/library002.webp" width="600" height="400" alt="Girl">
+
+        <script>
+            /* Script_4ed411afaf5b41e6a9c3069dae9d85ac*/
+
+            let mainElements_Script_4ed411afaf5b41e6a9c3069dae9d85ac = document.getElementsByClassName("Script_4ed411afaf5b41e6a9c3069dae9d85ac");
+            for (let i = 0; i < mainElements_Script_4ed411afaf5b41e6a9c3069dae9d85ac.length; i++) {
+                let img = mainElements_Script_4ed411afaf5b41e6a9c3069dae9d85ac[i].querySelector("#zoomimage");
+                magnify_Script_4ed411afaf5b41e6a9c3069dae9d85ac(img);
+            }
+
+            function magnify_Script_4ed411afaf5b41e6a9c3069dae9d85ac(img) {
+                let zoom = 3;
+                let glass, w, h, bw;
+                //img = document.getElementById(imgID);
+
+                /* Create magnifier glass: */
+                glass = document.createElement("DIV");
+                glass.setAttribute("class", "img-magnifier-glass");
+
+                /* Insert magnifier glass: */
+                img.parentElement.insertBefore(glass, img);
+
+                /* Set background properties for the magnifier glass: */
+                glass.style.backgroundImage = "url('" + img.src + "')";
+                glass.style.backgroundRepeat = "no-repeat";
+                glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+                /* bw is the width of border */
+                bw = 3;
+                w = glass.offsetWidth / 2;
+                h = glass.offsetHeight / 2;
+
+                /* Execute a function when someone moves the magnifier glass over the image: */
+                glass.addEventListener("mousemove", moveMagnifier);
+                img.addEventListener("mousemove", moveMagnifier);
+
+                /*and also for touch screens:*/
+                glass.addEventListener("touchmove", moveMagnifier);
+                img.addEventListener("touchmove", moveMagnifier);
+                function moveMagnifier(e) {
+                    let pos, x, y;
+                    /* Prevent any other actions that may occur when moving over the image */
+                    e.preventDefault();
+                    /* Get the cursor's x and y positions: */
+                    pos = getCursorPos(e);
+                    x = pos.x;
+                    y = pos.y;
+                    /* Prevent the magnifier glass from being positioned outside the image: */
+                    if (x > img.width - (w / zoom)) { x = img.width - (w / zoom); }
+                    if (x < w / zoom) { x = w / zoom; }
+                    if (y > img.height - (h / zoom)) { y = img.height - (h / zoom); }
+                    if (y < h / zoom) { y = h / zoom; }
+                    /* Set the position of the magnifier glass: */
+                    glass.style.left = (x - w) + "px";
+                    glass.style.top = (y - h) + "px";
+                    /* Display what the magnifier glass "sees": */
+                    glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
+                }
+
+                function getCursorPos(e) {
+                    let a, x = 0, y = 0;
+                    //e = e || window.event;
+                    /* Get the x and y positions of the image: */
+                    a = img.getBoundingClientRect();
+                    /* Calculate the cursor's x and y coordinates, relative to the image: */
+                    x = e.pageX - a.left;
+                    y = e.pageY - a.top;
+                    /* Consider any page scrolling: */
+                    x = x - window.scrollX;
+                    y = y - window.scrollY;
+                    return { x: x, y: y };
+                }
+            }
+        </script>
+
+
+    </div>
+</body>
+
+</html>

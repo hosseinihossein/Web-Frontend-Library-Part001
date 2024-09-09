@@ -1,0 +1,3 @@
+- Title: Menu
+- Description: A simple menu of buttons stacked vertically on each other.
+- Tags: navbar menu

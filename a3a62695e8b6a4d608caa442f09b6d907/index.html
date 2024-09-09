@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a3a62695e8b6a4d608caa442f09b6d907">
+        <style>
+            #a3a62695e8b6a4d608caa442f09b6d907 {
+                width: fit-content;
+                margin: auto;
+            }
+
+            #a3a62695e8b6a4d608caa442f09b6d907 .card {
+                background-color: white;
+                border: 1px solid lightgray;
+                text-align: center;
+                color: rgba(0, 0, 0, 0.8);
+                width: 200px;
+                padding: 20px 0 0 0;
+                border-radius: 5px;
+                position: relative;
+                float: left;
+                margin: 5px;
+            }
+
+            #a3a62695e8b6a4d608caa442f09b6d907 .card.most-popular {
+                background-color: yellow;
+            }
+
+            #a3a62695e8b6a4d608caa442f09b6d907 .card span.popular {
+                background-color: rgba(32, 32, 32, 1);
+                color: white;
+                border-radius: 20px;
+                font-size: 12px;
+                padding: 5px 0;
+                width: 50%;
+                position: absolute;
+                top: -12px;
+                left: 25%;
+                display: none;
+            }
+
+            #a3a62695e8b6a4d608caa442f09b6d907 .card.most-popular span.popular {
+                display: inline;
+            }
+
+            #a3a62695e8b6a4d608caa442f09b6d907 .card .title {
+                margin: 0;
+            }
+
+            #a3a62695e8b6a4d608caa442f09b6d907 .card p,
+            #a3a62695e8b6a4d608caa442f09b6d907 .card a {
+                font-size: 13px;
+                text-decoration: none;
+            }
+
+            #a3a62695e8b6a4d608caa442f09b6d907 .card>img {
+                width: 70%;
+                object-fit: contain;
+                height: 100px;
+            }
+
+            #a3a62695e8b6a4d608caa442f09b6d907 .card .price {
+                font-size: 50px;
+                margin: 0;
+            }
+
+            #a3a62695e8b6a4d608caa442f09b6d907 .card .price span {
+                font-size: 16px;
+            }
+
+            #a3a62695e8b6a4d608caa442f09b6d907 .card .price span.currency {
+                position: relative;
+                top: -20px;
+            }
+
+            #a3a62695e8b6a4d608caa442f09b6d907 .card .price-description {
+                color: gray;
+                margin-top: 0;
+            }
+
+            #a3a62695e8b6a4d608caa442f09b6d907 .card .features-box {
+                border-top: 1px solid lightgray;
+                background-color: white;
+            }
+
+            #a3a62695e8b6a4d608caa442f09b6d907 .card .features-box ul {
+                list-style-position: inside;
+                text-align: left;
+                padding-left: 10px;
+                list-style-type: none;
+            }
+
+            #a3a62695e8b6a4d608caa442f09b6d907 .card .features-box li {
+                padding: 5px;
+                font-size: 12px;
+                border-radius: 20px;
+                width: fit-content;
+            }
+
+            #a3a62695e8b6a4d608caa442f09b6d907 .card .features-box li::before {
+                content: "\2713";
+                /*float: left;*/
+                margin-right: 5px;
+                font-size: 13px;
+            }
+
+            #a3a62695e8b6a4d608caa442f09b6d907 .card .features-box li:hover {
+                background-color: rgb(230, 230, 230);
+            }
+
+            #a3a62695e8b6a4d608caa442f09b6d907 .card .features-box a {
+                padding: 0 0 20px 0;
+                display: block;
+            }
+
+            /****** tooltip ******/
+            #a3a62695e8b6a4d608caa442f09b6d907 .card .li-tooltip {
+                position: relative;
+                display: inline-block;
+                /*border-bottom: 1px dotted black;*/
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            #a3a62695e8b6a4d608caa442f09b6d907 .card .li-tooltip .tooltiptext {
+                visibility: hidden;
+                width: 120px;
+                background-color: black;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 5px 0;
+                position: absolute;
+                z-index: 1;
+                bottom: 110%;
+                left: 50%;
+                margin-left: -60px;
+                /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+
+            #a3a62695e8b6a4d608caa442f09b6d907 .card .li-tooltip .tooltiptext::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: black transparent transparent transparent;
+            }
+
+            #a3a62695e8b6a4d608caa442f09b6d907 .card .li-tooltip:hover .tooltiptext {
+                visibility: visible;
+                opacity: 1;
+            }
+        </style>
+        <div class="card">
+            <span class="popular">Most popular</span>
+            <h3 class="title">Starter</h3>
+            <p>Small office / Home office</p>
+            <img src="./statics/startup001.webp" alt="">
+            <div>
+                <h1 class="price"><span class="currency">$</span>16<span class="period"> / mo</span></h1>
+                <p class="price-description">per seat (logged in agent)</p>
+            </div>
+            <div class="features-box">
+                <style>
+
+                </style>
+                <ul>
+                    <li class="li-tooltip">Unlimited agent account
+                        <span class="tooltiptext">you can place a Tooltip text here</span>
+                    </li>
+                    <li class="li-tooltip">60-day chat history
+                        <span class="tooltiptext">you can place a Tooltip text here</span>
+                    </li>
+                    <li class="li-tooltip">Basic chat customization
+                        <span class="tooltiptext">you can place a Tooltip text here</span>
+                    </li>
+                    <li class="li-tooltip">Ticketing system
+                        <span class="tooltiptext">you can place a Tooltip text here</span>
+                    </li>
+                    <li class="li-tooltip">Data security
+                        <span class="tooltiptext">you can place a Tooltip text here</span>
+                    </li>
+                </ul>
+                <a href="">See all features <i class="fa-solid fa-angle-right"></i></a>
+            </div>
+        </div>
+        <div class="card most-popular">
+            <span class="popular">Most popular</span>
+            <h3 class="title">Business</h3>
+            <p>Small office / Home office</p>
+            <img src="./statics/team001.webp" alt="">
+            <div>
+                <h1 class="price"><span class="currency">$</span>50<span class="period"> / mo</span></h1>
+                <p class="price-description">per seat (logged in agent)</p>
+            </div>
+            <div class="features-box">
+                <ul>
+                    <li class="li-tooltip">Unlimited agent account
+                        <span class="tooltiptext">you can place a Tooltip text here</span>
+                    </li>
+                    <li class="li-tooltip">60-day chat history
+                        <span class="tooltiptext">you can place a Tooltip text here</span>
+                    </li>
+                    <li class="li-tooltip">Basic chat customization
+                        <span class="tooltiptext">you can place a Tooltip text here</span>
+                    </li>
+                    <li class="li-tooltip">Ticketing system
+                        <span class="tooltiptext">you can place a Tooltip text here</span>
+                    </li>
+                    <li class="li-tooltip">Data security
+                        <span class="tooltiptext">you can place a Tooltip text here</span>
+                    </li>
+                    <li class="li-tooltip">Basic reporting
+                        <span class="tooltiptext">you can place a Tooltip text here</span>
+                    </li>
+                    <li class="li-tooltip">Agent groups
+                        <span class="tooltiptext">you can place a Tooltip text here</span>
+                    </li>
+                    <li class="li-tooltip">Multiple brandings
+                        <span class="tooltiptext">you can place a Tooltip text here</span>
+                    </li>
+                </ul>
+                <a href="">See all features <i class="fa-solid fa-angle-right"></i></a>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

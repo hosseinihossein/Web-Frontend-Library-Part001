@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a44eac3c593284899994aff4bd1be73da">
+        <style>
+            /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+            #a44eac3c593284899994aff4bd1be73da {
+                background-color: transparent;
+                width: 400px;
+                height: 300px;
+                object-fit: cover;
+                border: 1px solid black;
+                perspective: 1000px;
+                /* Remove this if you don't want the 3D effect */
+
+                margin: auto;
+            }
+
+            /* This container is needed to position the front and back side */
+            #a44eac3c593284899994aff4bd1be73da .flip-box-inner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                transition: transform 0.8s;
+                transform-style: preserve-3d;
+            }
+
+            /* Do an horizontal flip when you move the mouse over the flip box container */
+            #a44eac3c593284899994aff4bd1be73da:hover .flip-box-inner {
+                transform: rotateY(180deg);
+            }
+
+            /* Position the front and back side */
+            #a44eac3c593284899994aff4bd1be73da .flip-box-front,
+            #a44eac3c593284899994aff4bd1be73da .flip-box-back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                -webkit-backface-visibility: hidden;
+                /* Safari */
+                backface-visibility: hidden;
+            }
+
+            /* Style the front side (fallback if image is missing) */
+            #a44eac3c593284899994aff4bd1be73da .flip-box-front {
+                background-color: #bbb;
+                color: black;
+            }
+
+            /* Style the back side */
+            #a44eac3c593284899994aff4bd1be73da .flip-box-back {
+                background-color: dodgerblue;
+                color: white;
+                transform: rotateY(180deg);
+            }
+        </style>
+
+        <div class="flip-box-inner">
+            <div class="flip-box-front">
+                <img src="./statics/deer001.webp" alt="Paris" style="width:100%;height:100%">
+            </div>
+            <div class="flip-box-back">
+                <h2>Paris</h2>
+                <p>What an amazing city</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

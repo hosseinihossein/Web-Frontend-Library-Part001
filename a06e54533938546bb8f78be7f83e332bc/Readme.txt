@@ -1,0 +1,3 @@
+- Title: Changing Star Icon
+- Description: Some star icons from fontawesome that replace each other.
+- Tags: icon fa_icon

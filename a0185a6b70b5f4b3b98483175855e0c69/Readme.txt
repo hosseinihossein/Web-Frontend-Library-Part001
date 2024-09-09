@@ -1,0 +1,3 @@
+- Title: Search Form
+- Description: A simple search from with local search icon.
+- Tags: form search_form

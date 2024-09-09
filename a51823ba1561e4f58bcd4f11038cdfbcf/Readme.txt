@@ -1,0 +1,3 @@
+- Title: Avatar
+- Description: An avatar image can be useful for profile image.
+- Tags: image

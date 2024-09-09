@@ -1,0 +1,3 @@
+- Title: Magnifying Box
+- Description: An image with magnifying tool. Hover over the image to magnify that part of image.
+- Tags: image magnify

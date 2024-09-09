@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a06e54533938546bb8f78be7f83e332bc">
+        <style>
+            #a06e54533938546bb8f78be7f83e332bc {
+                width: fit-content;
+                margin: 50px auto 0;
+            }
+
+            #a06e54533938546bb8f78be7f83e332bc #battery01 {
+                font-size: 48px;
+            }
+        </style>
+
+        <i id="battery01" class="fa-regular fa-star" style="position: static; left: -3px;"></i>
+
+        <script>
+            let mainElement_a06e54533938546bb8f78be7f83e332bc = document.getElementById("a06e54533938546bb8f78be7f83e332bc");
+            function chargebattery_a06e54533938546bb8f78be7f83e332bc() {
+                let element = mainElement_a06e54533938546bb8f78be7f83e332bc.querySelector("#battery01");
+                element.style.position = "static";
+                element.className = "fa-regular fa-star";
+
+                setTimeout(setClass, 1000, "fa-star-half-stroke");
+
+                function setClass(faClass) {
+                    //console.log(faClass);
+                    element.className = "fa-solid " + faClass;
+                    if (faClass == "fa-star-half-stroke") {
+                        element.style.position = "relative";
+                        element.style.left = "-3px";
+                        setTimeout(setClass, 1000, "fa-star");
+                    }
+                    else {
+                        element.style.position = "static";
+                    }
+                }
+            }
+            chargebattery_a06e54533938546bb8f78be7f83e332bc();
+            setInterval(chargebattery_a06e54533938546bb8f78be7f83e332bc, 3000);
+        </script>
+
+    </div>
+</body>
+
+</html>

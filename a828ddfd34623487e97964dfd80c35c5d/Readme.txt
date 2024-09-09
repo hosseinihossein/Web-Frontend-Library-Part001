@@ -1,0 +1,3 @@
+- Title: Submit Form
+- Description: A form with several input typessuch as text, email, phone, checkbox and date fields to submit a service.
+- Tags: form submit register

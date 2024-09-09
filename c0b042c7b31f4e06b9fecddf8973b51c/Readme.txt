@@ -1,0 +1,3 @@
+- Title: Table
+- Description: A table with different background color in even rows. Hover on each row changes its background color.
+- Tags: table

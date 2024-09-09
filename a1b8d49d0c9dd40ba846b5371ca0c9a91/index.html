@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a1b8d49d0c9dd40ba846b5371ca0c9a91">
+        <style>
+            #a1b8d49d0c9dd40ba846b5371ca0c9a91 .bgimg {
+                /* Background image */
+                background-image: url('./statics/deer001.webp');
+                /* Full-screen */
+                height: 600px;
+                /* Center the background image */
+                background-position: center;
+                /* Scale and zoom in the image */
+                background-size: cover;
+                /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+                position: relative;
+                /* Add a white text color to all elements inside the .bgimg container */
+                color: white;
+                /* Add a font */
+                font-family: "Courier New", Courier, monospace;
+                /* Set the font-size to 25 pixels */
+                font-size: 25px;
+            }
+
+            /* Position text in the top-left corner */
+            #a1b8d49d0c9dd40ba846b5371ca0c9a91 .topleft {
+                position: absolute;
+                top: 0;
+                left: 16px;
+            }
+
+            /* Position text in the bottom-left corner */
+            #a1b8d49d0c9dd40ba846b5371ca0c9a91 .bottomleft {
+                position: absolute;
+                bottom: 0;
+                left: 16px;
+            }
+
+            /* Position text in the middle */
+            #a1b8d49d0c9dd40ba846b5371ca0c9a91 .middle {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            /* Style the <hr> element */
+            #a1b8d49d0c9dd40ba846b5371ca0c9a91 hr {
+                margin: auto;
+                width: 40%;
+            }
+        </style>
+
+        <div class="bgimg">
+            <div class="topleft">
+                <p>Logo</p>
+            </div>
+            <div class="middle">
+                <h1>COMING SOON</h1>
+                <hr>
+                <style>
+                    #m01e54e6453924021a7269d1681847477 #demo {
+                        text-align: center;
+                        font-size: 50px;
+                        margin: 30px 0;
+                    }
+                </style>
+                <div id="m01e54e6453924021a7269d1681847477">
+                    <p id="demo">EXPIRED</p>
+                </div>
+                <script>
+                    let mainElement_m01e54e6453924021a7269d1681847477 = document.getElementById("m01e54e6453924021a7269d1681847477");
+                    // Set the date we're counting down to
+
+                    // Update the count down every 1 second
+                    let intervalId_m01e54e6453924021a7269d1681847477 = setInterval(function () {
+
+                        // Get today's date and time
+                        let countDownDate = new Date("Jan 5, 2024 15:37:25");
+                        let now = Date.now();
+
+                        // Find the distance between now and the count down date
+                        let distance = countDownDate.getTime() - now;
+
+                        // Time calculations for days, hours, minutes and seconds
+                        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                        // Output the result in an element with id="demo"
+                        mainElement_m01e54e6453924021a7269d1681847477.querySelector("#demo").innerHTML = days + "d " + hours + "h "
+                            + minutes + "m " + seconds + "s ";
+
+                        // If the count down is over, write some text 
+                        if (distance < 0) {
+                            clearInterval(intervalId_m01e54e6453924021a7269d1681847477);
+                            mainElement_m01e54e6453924021a7269d1681847477.querySelector("#demo").innerHTML = "EXPIRED";
+                        }
+                    }, 1000);
+                </script>
+            </div>
+            <div class="bottomleft">
+                <p>Some text</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

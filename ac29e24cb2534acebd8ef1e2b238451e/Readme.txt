@@ -1,0 +1,3 @@
+- Title: Image with a moving title
+- Description: An image with a hidden text that will appear from the center by hovering over the image.
+- Tags: image text

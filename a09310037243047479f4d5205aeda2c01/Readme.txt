@@ -1,0 +1,3 @@
+- Title: Sending Comment Container
+- Description: A container including a textarea to write a message, a sliding button and a send button to send a message. 
+- Tags: message comment review container text

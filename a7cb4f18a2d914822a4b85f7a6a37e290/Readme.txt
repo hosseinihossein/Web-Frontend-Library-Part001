@@ -1,0 +1,3 @@
+- Title: Full Screen Button
+- Description: Click on the button to display the video in fullscreen mode.
+- Tags: video button

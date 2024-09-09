@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="e25b219ad28a425cafb010db46650d0c">
+        <style>
+            #e25b219ad28a425cafb010db46650d0c {
+                width: fit-content;
+                margin: auto;
+            }
+
+            #e25b219ad28a425cafb010db46650d0c .card {
+                width: 20%;
+                min-width: 200px;
+                padding: 20px 15px;
+                border: 2px solid lightgray;
+                border-radius: 10px;
+                position: relative;
+                overflow: hidden;
+                float: left;
+                margin: 5px;
+                transition: transform 0.3s;
+            }
+
+            #e25b219ad28a425cafb010db46650d0c .card:hover {
+                transform: scale(105%);
+            }
+
+            #e25b219ad28a425cafb010db46650d0c .card.recommended {
+                background-color: rgba(30, 70, 60, 1);
+            }
+
+            #e25b219ad28a425cafb010db46650d0c .card>img {
+                position: absolute;
+                object-fit: cover;
+                z-index: -1;
+                top: 0;
+                left: 0;
+            }
+
+            #e25b219ad28a425cafb010db46650d0c .card h3.title {
+                margin: 0;
+                color: rgb(30, 70, 60);
+                font-weight: 1000;
+            }
+
+            #e25b219ad28a425cafb010db46650d0c .card.recommended h3.title,
+            #e25b219ad28a425cafb010db46650d0c .card.recommended h1.price,
+            #e25b219ad28a425cafb010db46650d0c .card.recommended p.title-description,
+            #e25b219ad28a425cafb010db46650d0c .card.recommended h1.price span,
+            #e25b219ad28a425cafb010db46650d0c .card.recommended p.price-description,
+            #e25b219ad28a425cafb010db46650d0c .card.recommended ul li.feature-item {
+                color: white;
+            }
+
+            #e25b219ad28a425cafb010db46650d0c .card p.title-description {
+                font-size: 14px;
+                color: gray;
+            }
+
+            #e25b219ad28a425cafb010db46650d0c .card h1.price {
+                font-size: 50px;
+                font-weight: 1000;
+                color: rgb(30, 70, 60);
+                margin: 10px 0;
+            }
+
+            #e25b219ad28a425cafb010db46650d0c .card h1.price i {
+                font-size: 25px;
+                position: relative;
+                top: -15px;
+                padding-right: 5px;
+            }
+
+            #e25b219ad28a425cafb010db46650d0c .card h1.price span {
+                font-size: 18px;
+                color: gray;
+                font-weight: bold;
+            }
+
+            #e25b219ad28a425cafb010db46650d0c .card p.price-description {
+                font-size: 14px;
+                color: gray;
+            }
+
+            #e25b219ad28a425cafb010db46650d0c .card ul.features {
+                /*padding: 0;*/
+                list-style-type: none;
+                margin: 20px 0 0;
+                padding: 10px 0;
+                border-top: 1px solid lightgray;
+            }
+
+            #e25b219ad28a425cafb010db46650d0c .card ul li.feature-item {
+                margin: 10px 0;
+                color: rgb(27, 27, 27);
+                font-size: 14px;
+            }
+
+            #e25b219ad28a425cafb010db46650d0c .card ul li.feature-item::before {
+                content: "\2713";
+                padding: 0 10px;
+            }
+
+            #e25b219ad28a425cafb010db46650d0c .card a.all-features-link {
+                font-size: 14px;
+                margin: 0;
+                padding: 0;
+                color: skyblue;
+            }
+
+            #e25b219ad28a425cafb010db46650d0c .card a.choose-link-button {
+                display: block;
+                padding: 20px;
+                text-decoration: none;
+                width: 80%;
+                margin: 30px 10% 0;
+                text-align: center;
+                background-color: rgb(240, 240, 240);
+                border-radius: 10px;
+                font-size: 14px;
+                font-weight: bold;
+                color: rgb(27, 27, 27);
+            }
+
+            #e25b219ad28a425cafb010db46650d0c .card.recommended a.choose-link-button {
+                background-color: gold;
+                color: rgb(30, 70, 60);
+            }
+
+            @media screen and (max-width:450px) {
+                #e25b219ad28a425cafb010db46650d0c .card {
+                    width: 80%;
+                }
+            }
+        </style>
+        <div class="card">
+            <h3 class="title">Starter</h3>
+            <p class="title-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <h1 class="price"><!--i class="fa-solid fa-euro-sign"></i-->Free<!--span>/ mo</span-->
+            </h1>
+            <p class="price-description">Free forever.</p>
+            <ul class="features">
+                <li class="feature-item">Feature 1</li>
+                <li class="feature-item">Feature 2</li>
+                <li class="feature-item">Feature 3</li>
+                <li class="feature-item">Feature 4</li>
+            </ul>
+            <a href="" class="all-features-link">See all features</a>
+            <a href="" class="choose-link-button">Choose Plan</a>
+        </div>
+        <div class="card">
+            <h3 class="title">Basic</h3>
+            <p class="title-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <h1 class="price"><i class="fa-solid fa-euro-sign"></i>16 <span>/ mo</span>
+            </h1>
+            <p class="price-description">Billed monthly.</p>
+            <ul class="features">
+                <li class="feature-item">Feature 1</li>
+                <li class="feature-item">Feature 2</li>
+                <li class="feature-item">Feature 3</li>
+                <li class="feature-item">Feature 4</li>
+            </ul>
+            <a href="" class="all-features-link">See all features</a>
+            <a href="" class="choose-link-button">Choose Plan</a>
+        </div>
+        <div class="card recommended">
+            <!--img src="/Images/forest001.webp" alt=""-->
+            <h3 class="title">Pro</h3>
+            <p class="title-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <h1 class="price"><i class="fa-solid fa-euro-sign"></i>44 <span>/ mo</span>
+            </h1>
+            <p class="price-description">Billed monthly.</p>
+            <ul class="features">
+                <li class="feature-item">Feature 1</li>
+                <li class="feature-item">Feature 2</li>
+                <li class="feature-item">Feature 3</li>
+                <li class="feature-item">Feature 4</li>
+            </ul>
+            <a href="" class="all-features-link">See all features</a>
+            <a href="" class="choose-link-button">Choose Plan</a>
+        </div>
+        <div class="card">
+            <h3 class="title">Team</h3>
+            <p class="title-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <h1 class="price"><i class="fa-solid fa-euro-sign"></i>99 <span>/ mo</span>
+            </h1>
+            <p class="price-description">Billed monthly.</p>
+            <ul class="features">
+                <li class="feature-item">Feature 1</li>
+                <li class="feature-item">Feature 2</li>
+                <li class="feature-item">Feature 3</li>
+                <li class="feature-item">Feature 4</li>
+            </ul>
+            <a href="" class="all-features-link">See all features</a>
+            <a href="" class="choose-link-button">Choose Plan</a>
+        </div>
+
+    </div>
+</body>
+
+</html>

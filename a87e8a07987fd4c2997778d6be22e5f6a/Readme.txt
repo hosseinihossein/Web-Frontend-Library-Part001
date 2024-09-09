@@ -1,0 +1,3 @@
+- Title: Bottom Tabs
+- Description: Some tabs located at the bottom.
+- Tags: tabs

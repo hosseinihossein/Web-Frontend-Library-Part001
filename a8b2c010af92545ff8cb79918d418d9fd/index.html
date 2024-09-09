@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a8b2c010af92545ff8cb79918d418d9fd">
+        <style>
+            #a8b2c010af92545ff8cb79918d418d9fd {
+                width: fit-content;
+                margin: auto;
+            }
+        </style>
+
+        <button onclick="sortTable_Script_18c01b5a59dc425c9adb0fcb89bbf653(this)">Sort</button>
+        <table id="myTable" class="sort_Script_18c01b5a59dc425c9adb0fcb89bbf653">
+            <tbody>
+                <tr>
+                    <th>Name</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <td>Berglunds snabbkop</td>
+                    <td>Sweden</td>
+                </tr>
+                <tr>
+                    <td>North/South</td>
+                    <td>UK</td>
+                </tr>
+                <tr>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>Koniglich Essen</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>Magazzini Alimentari Riuniti</td>
+                    <td>Italy</td>
+                </tr>
+                <tr>
+                    <td>Paris specialites</td>
+                    <td>France</td>
+                </tr>
+                <tr>
+                    <td>Island Trading</td>
+                    <td>UK</td>
+                </tr>
+                <tr>
+                    <td>Laughing Bacchus Winecellars</td>
+                    <td>Canada</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <script>/*
+Script_18c01b5a59dc425c9adb0fcb89bbf653
+*/
+
+            function sortTable_Script_18c01b5a59dc425c9adb0fcb89bbf653(element) {
+                let tables = element.parentElement.getElementsByClassName("sort_Script_18c01b5a59dc425c9adb0fcb89bbf653");
+                for (let c = 0; c < tables.length; c++) {
+                    let rows, switching, i, tableData, nextTableData, shouldSwitch;
+                    let table = tables[c];
+                    switching = true;
+                    /*Make a loop that will continue until
+                    no switching has been done:*/
+                    while (switching) {
+                        //start by saying: no switching is done:
+                        switching = false;
+                        rows = table.rows;
+                        /*Loop through all table rows (except the
+                        first, which contains table headers):*/
+                        for (i = 1; i < (rows.length - 1); i++) {
+                            //start by saying there should be no switching:
+                            shouldSwitch = false;
+                            /*Get the two elements you want to compare,
+                            one from current row and one from the next:*/
+                            tableData = rows[i].getElementsByTagName("TD")[0];
+                            nextTableData = rows[i + 1].getElementsByTagName("TD")[0];
+                            //check if the two rows should switch place:
+                            if (tableData.innerHTML.toLowerCase() > nextTableData.innerHTML.toLowerCase()) {
+                                //if so, mark as a switch and break the loop:
+                                shouldSwitch = true;
+                                break;
+                            }
+                        }
+                        if (shouldSwitch) {
+                            /*If a switch has been marked, make the switch
+                            and mark that a switch has been done:*/
+                            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                            switching = true;
+                        }
+                    }
+                }
+
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

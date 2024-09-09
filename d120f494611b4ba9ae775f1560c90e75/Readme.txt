@@ -1,0 +1,3 @@
+- Title: Draggable Box
+- Description: Click and drag the specified section to move and change the location of the box.
+- Tags: container drag 

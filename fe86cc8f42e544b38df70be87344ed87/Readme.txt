@@ -1,0 +1,3 @@
+- Title: Magnifying Glass
+- Description: An image with a magnifying glass.
+- Tags: image

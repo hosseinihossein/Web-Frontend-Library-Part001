@@ -1,0 +1,3 @@
+- Title: Search Form
+- Description: A search form that will grow in width at focus.
+- Tags: form search

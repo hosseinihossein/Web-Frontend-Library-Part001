@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a02d872bebf0742119417e2fd65d249b5">
+        <style>
+            #a02d872bebf0742119417e2fd65d249b5 {
+                width: 60vw;
+                height: fit-content;
+                background-color: white;
+                margin: auto;
+                box-shadow: 0 0 3px lightgray;
+                padding: 20px;
+            }
+
+            #a02d872bebf0742119417e2fd65d249b5 form .input-box {
+                border: 2px solid rgb(220, 220, 220, 0.5);
+                padding: 10px 15px;
+                border-radius: 5px;
+                float: left;
+                margin: 2%;
+                height: 75px;
+            }
+
+            #a02d872bebf0742119417e2fd65d249b5 form .input-box.one {
+                width: 96%;
+            }
+
+            #a02d872bebf0742119417e2fd65d249b5 form .input-box.two {
+                width: 46%;
+            }
+
+            #a02d872bebf0742119417e2fd65d249b5 form .input-box.three {
+                width: 29.3%;
+            }
+
+            #a02d872bebf0742119417e2fd65d249b5 form .input-box label {
+                display: block;
+                width: 100%;
+                font-size: 13px;
+                font-weight: bold;
+            }
+
+            #a02d872bebf0742119417e2fd65d249b5 form .input-box label span {
+                float: right;
+                color: red;
+                font-size: 18px;
+            }
+
+            #a02d872bebf0742119417e2fd65d249b5 form .input-box input,
+            #a02d872bebf0742119417e2fd65d249b5 form .input-box select {
+                border: none;
+                padding: 10px 0 0 0;
+                font-size: 18px;
+                width: 100%;
+                color: gray;
+                /*text-transform: uppercase;*/
+            }
+
+            #a02d872bebf0742119417e2fd65d249b5 .button-container {
+                width: 100%;
+            }
+
+            #a02d872bebf0742119417e2fd65d249b5 .button-container a,
+            #a02d872bebf0742119417e2fd65d249b5 .button-container input {
+                float: right;
+                padding: 15px 30px;
+                color: white;
+                font-size: 18px;
+                font-weight: 500;
+                background-color: rgb(105, 29, 105);
+                border: none;
+                border-radius: 5px;
+                text-decoration: none;
+                text-transform: uppercase;
+                cursor: pointer;
+                margin: 2%;
+            }
+
+            #a02d872bebf0742119417e2fd65d249b5 .button-container a {
+                background-color: gray;
+            }
+
+            @media only screen and (max-width: 800px) {
+                #a02d872bebf0742119417e2fd65d249b5 {
+                    width: 100%;
+                }
+            }
+
+            @media only screen and (max-width: 600px) {
+
+                #a02d872bebf0742119417e2fd65d249b5 form .input-box.one {
+                    width: 96%;
+                }
+
+                #a02d872bebf0742119417e2fd65d249b5 form .input-box.two {
+                    width: 96%;
+                }
+
+                #a02d872bebf0742119417e2fd65d249b5 form .input-box.three {
+                    width: 96%;
+                }
+            }
+        </style>
+
+        <form id="form_a02d872bebf0742119417e2fd65d249b5" action="">
+            <div class="clearfix">
+                <div class="input-box two">
+                    <label for="birth">DATE OF BIRTH <span>*</span></label>
+                    <input type="date" id="birth" required="" style="text-transform: uppercase;">
+                </div>
+                <div class="input-box two">
+                    <label for="gender">GENDER</label>
+                    <select id="gender">
+                        <option value="m">Male</option>
+                        <option value="f">Female</option>
+                        <option value="o">Prefer not to say</option>
+                    </select>
+                </div>
+            </div>
+            <div class="address-box clearfix">
+                <h1 style="margin: 30px 0 10px 0;color: rgb(55, 0, 156);">Address</h1>
+                <div class="clearfix">
+                    <div class="input-box two">
+                        <label for="addline1">ADDRESS LINE 1 <span>*</span></label>
+                        <input type="text" id="addline1" required="">
+                    </div>
+                    <div class="input-box two">
+                        <label for="addline2">ADDRESS LINE 2</label>
+                        <input type="text" id="addline2" required="">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="input-box three">
+                        <label for="city">CITY <span>*</span></label>
+                        <input type="text" id="city" required="" placeholder="Enter Your City">
+                    </div>
+                    <div class="input-box three">
+                        <label for="state">STATE <span>*</span></label>
+                        <select id="state">
+                            <option value="ny">New York</option>
+                            <option value="ca">California</option>
+                            <option value="tx">Texas</option>
+                            <option value="fl">Florida</option>
+                        </select>
+                    </div>
+                    <div class="input-box three">
+                        <label for="zipcode">POSTAL CODE <span>*</span></label>
+                        <input type="text" id="zipcode" required="" placeholder="Enter Your Zip Code">
+                    </div>
+                </div>
+                <div class="input-box one">
+                    <label for="country">COUNTRY OF RESIDENCE <span>*</span></label>
+                    <select id="country">
+                        <option value="usa">United States of America</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="uae">United Arab Emerate</option>
+                        <option value="fr">France</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+        <div class="button-container clearfix">
+            <input type="submit" form="form_a02d872bebf0742119417e2fd65d249b5" value="Next">
+            <a href="">Back</a>
+        </div>
+
+    </div>
+</body>
+
+</html>

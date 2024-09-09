@@ -1,0 +1,3 @@
+- Title: Image Card
+- Description: An image card with a brief description that can be opened in a black page by clicking on it.
+- Tags: image card

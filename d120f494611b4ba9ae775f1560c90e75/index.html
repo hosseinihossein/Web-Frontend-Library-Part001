@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="d120f494611b4ba9ae775f1560c90e75">
+        <style>
+            #d120f494611b4ba9ae775f1560c90e75 #mydiv {
+                position: absolute;
+                left: 45%;
+                top: 10%;
+                z-index: 1;
+                background-color: #f1f1f1;
+                border: 1px solid #d3d3d3;
+                text-align: center;
+            }
+
+            #d120f494611b4ba9ae775f1560c90e75 #mydivheader {
+                padding: 10px;
+                cursor: move;
+                z-index: 2;
+                background-color: #2196F3;
+                color: #fff;
+            }
+        </style>
+
+        <!-- Draggable DIV -->
+        <div id="mydiv" class="Script_b4dedcd8ae1a4493af70693c8a5b4a6a">
+            <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+            <div id="mydivheader">Click here to move</div>
+            <p>Move</p>
+            <p>this</p>
+            <p>DIV</p>
+        </div>
+
+        <script>/*
+Script_b4dedcd8ae1a4493af70693c8a5b4a6a
+*/
+
+            let mainElements_Script_b4dedcd8ae1a4493af70693c8a5b4a6a = document.getElementsByClassName("Script_b4dedcd8ae1a4493af70693c8a5b4a6a");
+            for (let i = 0; i < mainElements_Script_b4dedcd8ae1a4493af70693c8a5b4a6a.length; i++) {
+                // Make the DIV element draggable:
+                dragElement_Script_b4dedcd8ae1a4493af70693c8a5b4a6a(mainElements_Script_b4dedcd8ae1a4493af70693c8a5b4a6a[i]);
+            }
+
+            function dragElement_Script_b4dedcd8ae1a4493af70693c8a5b4a6a(elmnt) {
+                /*let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;*/
+                if (elmnt.querySelector("#" + elmnt.id + "header")) {
+                    // if present, the header is where you move the DIV from:
+                    elmnt.querySelector("#" + elmnt.id + "header").onmousedown = dragMouseDown;
+                } else {
+                    // otherwise, move the DIV from anywhere inside the DIV:
+                    elmnt.onmousedown = dragMouseDown;
+                }
+
+                function dragMouseDown(e) {
+                    //e = e || window.event;
+                    e.preventDefault();
+                    // get the mouse cursor position at startup:
+                    /*pos3 = e.clientX;
+                    pos4 = e.clientY;*/
+                    document.onmouseup = closeDragElement;
+                    // call a function whenever the cursor moves:
+                    document.onmousemove = elementDrag;
+                }
+
+                function elementDrag(e) {
+                    //e = e || window.event;
+                    e.preventDefault();
+                    // calculate the new cursor position:
+                    /*pos1 = pos3 - e.clientX;
+                    pos2 = pos4 - e.clientY;
+                    pos3 = e.clientX;
+                    pos4 = e.clientY;*/
+                    // set the element's new position:
+                    /*elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";*/
+                    elmnt.style.top = (elmnt.offsetTop + e.movementY) + "px";
+                    elmnt.style.left = (elmnt.offsetLeft + e.movementX) + "px";
+                }
+
+                function closeDragElement() {
+                    // stop moving when mouse button is released:
+                    document.onmouseup = null;
+                    document.onmousemove = null;
+                }
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

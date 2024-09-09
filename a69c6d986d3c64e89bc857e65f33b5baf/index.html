@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a69c6d986d3c64e89bc857e65f33b5baf">
+        <style>
+            #a69c6d986d3c64e89bc857e65f33b5baf {
+                width: fit-content;
+                margin: 50px auto 0;
+            }
+
+            #a69c6d986d3c64e89bc857e65f33b5baf #battery01 {
+                font-size: 48px;
+            }
+        </style>
+
+        <i id="battery01" class="fa-solid fa-battery-three-quarters"></i>
+
+        <script>
+            let mainElement_a69c6d986d3c64e89bc857e65f33b5baf = document.getElementById("a69c6d986d3c64e89bc857e65f33b5baf");
+            function chargebattery_a69c6d986d3c64e89bc857e65f33b5baf() {
+                let element = mainElement_a69c6d986d3c64e89bc857e65f33b5baf.querySelector("#battery01");
+
+                element.className = "fa-solid fa-battery-empty";
+
+                setTimeout(setClass, 1000, "fa-battery-quarter");
+
+                function setClass(faClass) {
+                    //console.log(faClass);
+                    element.className = "fa-solid " + faClass;
+                    if (faClass == "fa-battery-quarter") {
+                        setTimeout(setClass, 1000, "fa-battery-half");
+                    }
+                    else if (faClass == "fa-battery-half") {
+                        setTimeout(setClass, 1000, "fa-battery-three-quarters");
+                    }
+                    else if (faClass == "fa-battery-three-quarters") {
+                        setTimeout(setClass, 1000, "fa-battery-full");
+                    }
+                }
+            }
+            chargebattery_a69c6d986d3c64e89bc857e65f33b5baf();
+            setInterval(chargebattery_a69c6d986d3c64e89bc857e65f33b5baf, 5000);
+        </script>
+
+    </div>
+</body>
+
+</html>

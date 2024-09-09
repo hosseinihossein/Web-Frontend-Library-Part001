@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a9ab2ab65400c4439922bcb9e860593c6">
+        <style>
+            #a9ab2ab65400c4439922bcb9e860593c6 {
+                overflow: hidden;
+                background-color: #333;
+            }
+
+            #a9ab2ab65400c4439922bcb9e860593c6 a {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+            #a9ab2ab65400c4439922bcb9e860593c6 a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+            #a9ab2ab65400c4439922bcb9e860593c6 a.active {
+                background-color: #04AA6D;
+                color: white;
+            }
+
+            #a9ab2ab65400c4439922bcb9e860593c6 .icon {
+                display: none;
+            }
+
+            @media screen and (max-width: 800px) {
+                #a9ab2ab65400c4439922bcb9e860593c6 a:not(:first-child) {
+                    display: none;
+                }
+
+                #a9ab2ab65400c4439922bcb9e860593c6 a.icon {
+                    float: right;
+                    display: block;
+                    padding: 12px 16px;
+                }
+            }
+
+            @media screen and (max-width: 800px) {
+                #a9ab2ab65400c4439922bcb9e860593c6.responsive {
+                    position: relative;
+                }
+
+                #a9ab2ab65400c4439922bcb9e860593c6.responsive .icon {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+
+                #a9ab2ab65400c4439922bcb9e860593c6.responsive a {
+                    float: none;
+                    display: block;
+                    text-align: left;
+                }
+            }
+        </style>
+
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction_a9ab2ab65400c4439922bcb9e860593c6(this)">
+            ☰
+        </a>
+
+        <script>
+            function myFunction_a9ab2ab65400c4439922bcb9e860593c6(iconElement) {
+                let parent = iconElement.parentElement;
+                console.log("parent: " + parent.tagName);
+                parent.classList.toggle("responsive");
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

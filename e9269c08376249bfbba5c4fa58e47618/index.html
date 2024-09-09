@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="e9269c08376249bfbba5c4fa58e47618">
+        <style>
+            #e9269c08376249bfbba5c4fa58e47618 {
+                background: #f1f1f1;
+                width: fit-content;
+                margin: auto;
+                height: 95vh;
+                overflow: auto;
+            }
+
+            #e9269c08376249bfbba5c4fa58e47618 #mySVG {
+                position: sticky;
+                top: 15%;
+                width: 400px;
+                height: 210px;
+                margin-left: -50px;
+            }
+        </style>
+
+        <h2>Scroll down this window to draw a triangle.</h2>
+        <p>Scroll back up to reverse the drawing.</p>
+
+        <svg id="mySVG">
+            <path fill="none" stroke="red" stroke-width="3" id="triangle" d="M150 0 L75 200 L225 200 Z"
+                style="stroke-dasharray: 577.2; stroke-dashoffset: 90.4738;"></path>
+            Sorry, your browser does not support inline SVG.
+        </svg>
+        <div style="height: 2000px;"></div>
+
+        <script>
+            let mainElement_e9269c08376249bfbba5c4fa58e47618 = document.getElementById("e9269c08376249bfbba5c4fa58e47618");
+            // Find scroll percentage on scroll (using cross-browser properties), and offset dash same amount as percentage scrolled
+            mainElement_e9269c08376249bfbba5c4fa58e47618.addEventListener("scroll", myFunction_e9269c08376249bfbba5c4fa58e47618);
+            // Get the id of the <path> element and the length of <path>
+            let trianglePath_e9269c08376249bfbba5c4fa58e47618 = mainElement_e9269c08376249bfbba5c4fa58e47618.querySelector("#triangle");
+            let length_e9269c08376249bfbba5c4fa58e47618 = trianglePath_e9269c08376249bfbba5c4fa58e47618.getTotalLength();
+            // The start position of the drawing
+            trianglePath_e9269c08376249bfbba5c4fa58e47618.style.strokeDasharray = length_e9269c08376249bfbba5c4fa58e47618;
+
+            // Hide the triangle by offsetting dash. Remove this line to show the triangle before scroll draw
+            trianglePath_e9269c08376249bfbba5c4fa58e47618.style.strokeDashoffset = length_e9269c08376249bfbba5c4fa58e47618;
+            function myFunction_e9269c08376249bfbba5c4fa58e47618() {
+
+                let scrollpercent =
+                    (mainElement_e9269c08376249bfbba5c4fa58e47618.scrollTop) /
+                    (mainElement_e9269c08376249bfbba5c4fa58e47618.scrollHeight -
+                        mainElement_e9269c08376249bfbba5c4fa58e47618.clientHeight);
+
+                let draw = length_e9269c08376249bfbba5c4fa58e47618 * scrollpercent;
+
+                // Reverse the drawing (when scrolling upwards)
+                trianglePath_e9269c08376249bfbba5c4fa58e47618.style.strokeDashoffset = length_e9269c08376249bfbba5c4fa58e47618 - draw;
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

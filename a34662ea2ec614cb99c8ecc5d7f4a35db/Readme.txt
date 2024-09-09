@@ -1,0 +1,3 @@
+- Title: Navigation Bar
+- Description: A navigation bar created by icons. Fontawesome icons are used.
+- Tags: fa_icon navbar button menu

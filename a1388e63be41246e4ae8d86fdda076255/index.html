@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a1388e63be41246e4ae8d86fdda076255">
+        <style>
+            #a1388e63be41246e4ae8d86fdda076255 {
+                width: 50%;
+                /* Width of the outside container */
+                margin: 50px auto 0;
+            }
+
+            /* The slider itself */
+            #a1388e63be41246e4ae8d86fdda076255 .slider {
+                -webkit-appearance: none;
+                /* Override default CSS styles */
+                appearance: none;
+                width: 100%;
+                /* Full-width */
+                height: 25px;
+                /* Specified height */
+                background: #d3d3d3;
+                /* Grey background */
+                outline: none;
+                /* Remove outline */
+                opacity: 0.7;
+                /* Set transparency (for mouse-over effects on hover) */
+                -webkit-transition: .2s;
+                /* 0.2 seconds transition on hover */
+                transition: opacity .2s;
+                border-radius: 12px;
+            }
+
+            /* Mouse-over effects */
+            #a1388e63be41246e4ae8d86fdda076255 .slider:hover {
+                opacity: 1;
+                /* Fully shown on mouse-over */
+            }
+
+            /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+            #a1388e63be41246e4ae8d86fdda076255 .slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                /* Override default look */
+                appearance: none;
+                width: 25px;
+                /* Set a specific slider handle width */
+                height: 25px;
+                /* Slider handle height */
+                background: #04AA6D;
+                /* Green background */
+                cursor: pointer;
+                /* Cursor on hover */
+                border-radius: 50%;
+            }
+
+            #a1388e63be41246e4ae8d86fdda076255 .slider::-moz-range-thumb {
+                width: 25px;
+                /* Set a specific slider handle width */
+                height: 25px;
+                /* Slider handle height */
+                background: #04AA6D;
+                /* Green background */
+                cursor: pointer;
+                /* Cursor on hover */
+                border-radius: 50%;
+            }
+        </style>
+
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange"
+            oninput="function01_Script_f80ad437cf764a47a510024296af51ce(this)">
+        <p id="output01" style="text-align: center;">50%</p>
+
+        <script>/*
+Script_f80ad437cf764a47a510024296af51ce
+*/
+            function function01_Script_f80ad437cf764a47a510024296af51ce(slider) {
+                let output = slider.parentElement.querySelector("#output01");
+                output.innerHTML = slider.value + "%";
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a63af7d4062674e87b24a6460e43c3209">
+        <style>
+            #a63af7d4062674e87b24a6460e43c3209 {
+                width: fit-content;
+                margin: 50px auto;
+            }
+
+            #a63af7d4062674e87b24a6460e43c3209 #battery01 {
+                font-size: 48px;
+            }
+        </style>
+
+        <i id="battery01" class="fa-regular fa-hand-point-up"></i>
+
+        <script>
+            let mainElement_a63af7d4062674e87b24a6460e43c3209 = document.getElementById("a63af7d4062674e87b24a6460e43c3209");
+            function chargebattery_a63af7d4062674e87b24a6460e43c3209() {
+                let element = mainElement_a63af7d4062674e87b24a6460e43c3209.querySelector("#battery01");
+                element.className = "fa-regular fa-hand";
+
+                setTimeout(setClass, 1000, "fa-hand-point-up");
+
+                function setClass(faClass) {
+                    //console.log(faClass);
+                    element.className = "fa-regular " + faClass;
+                    if (faClass == "fa-hand-point-up") {
+                        setTimeout(setClass, 1000, "fa-hand-spock");
+                    }
+                }
+            }
+            chargebattery_a63af7d4062674e87b24a6460e43c3209();
+            setInterval(chargebattery_a63af7d4062674e87b24a6460e43c3209, 3000);
+        </script>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="c6f20d7e8f3246919a38651ff8f8a61f" class="clearfix">
+        <style>
+            #c6f20d7e8f3246919a38651ff8f8a61f {
+                width: fit-content;
+                margin: auto;
+                background-color: #eee;
+                padding: 15px 0;
+            }
+
+            #c6f20d7e8f3246919a38651ff8f8a61f h2 {
+                padding-left: 8px;
+            }
+
+            /* Style the search box */
+            #c6f20d7e8f3246919a38651ff8f8a61f #mySearch {
+                width: 100%;
+                font-size: 18px;
+                padding: 11px;
+                border: 1px solid #ddd;
+            }
+
+            /* Style the navigation menu inside the left column */
+            #c6f20d7e8f3246919a38651ff8f8a61f #myMenu {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            #c6f20d7e8f3246919a38651ff8f8a61f #myMenu li a {
+                padding: 12px;
+                text-decoration: none;
+                color: black;
+                display: block
+            }
+
+            #c6f20d7e8f3246919a38651ff8f8a61f #myMenu li a:hover {
+                background-color: #eee;
+            }
+        </style>
+
+        <h2>Menu</h2>
+        <input type="text" id="mySearch" onkeyup="myFunction_c6f20d7e8f3246919a38651ff8f8a61f(this)"
+            placeholder="Search.." title="Type in a category">
+        <ul id="myMenu">
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="#">PHP</a></li>
+            <li><a href="#">Python</a></li>
+            <li><a href="#">jQuery</a></li>
+            <li><a href="#">SQL</a></li>
+            <li><a href="#">Bootstrap</a></li>
+            <li><a href="#">Node.js</a></li>
+        </ul>
+
+        <script>
+            function myFunction_c6f20d7e8f3246919a38651ff8f8a61f(element) {
+                let parent = element.parentElement;
+                let input, filter, ul, li, a, i;
+                input = parent.querySelector("#mySearch");
+                filter = input.value.toUpperCase();
+                ul = parent.querySelector("#myMenu");
+                li = ul.getElementsByTagName("li");
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[0];
+                    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    }
+                }
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+- Title: Display Password
+- Description: A simple password input that will reveal the entered password by clicking the show password checkbox.
+- Tags: input form password

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a952a66757c68427a986bb12ab2cd221b">
+        <style>
+            #a952a66757c68427a986bb12ab2cd221b .parallax {
+                /* The image used */
+                /*background-image: url("/Images/pic004.jpg");*/
+
+                /* Set a specific height */
+                min-height: 500px;
+
+                /* Create the parallax scrolling effect */
+                background-attachment: fixed;
+                background-position: left;
+                background-repeat: no-repeat;
+                background-size: 60%;
+            }
+
+            /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+            @media only screen and (max-device-width: 1200px) {
+                #a952a66757c68427a986bb12ab2cd221b .parallax {
+                    background-attachment: scroll;
+                }
+            }
+        </style>
+
+        <p>Scroll Up and Down this page to see the parallax scrolling effect.</p>
+
+        <div class="parallax" style="background-image: url('./statics/bird001.webp');"></div>
+
+        <div style="background-color:red;font-size:36px">
+            Scroll Up and Down this page to see the parallax scrolling effect.
+            This div is just here to enable scrolling.
+            Tip: Try to remove the background-attachment property to remove the scrolling effect.
+        </div>
+        <div class="parallax" style="background-image: url('./statics/deer001.webp');"></div>
+
+    </div>
+</body>
+
+</html>

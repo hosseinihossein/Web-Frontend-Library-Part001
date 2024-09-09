@@ -1,0 +1,3 @@
+- Title: Checkmark Table
+- Description: A table with a list of checkmarcked items.
+- Tags: table

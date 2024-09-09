@@ -1,0 +1,3 @@
+- Title: Glowing Text
+- Description: A text header with glowing animation effect.
+- Tags: text animation

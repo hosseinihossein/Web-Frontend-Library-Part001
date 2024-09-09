@@ -1,0 +1,3 @@
+- Title: Transfer Money Form
+- Description: A form for transfering money between accounts. Fontawesome icons are used.
+- Tags: form money fa_icon

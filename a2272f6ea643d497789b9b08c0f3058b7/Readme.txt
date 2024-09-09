@@ -1,0 +1,3 @@
+- Title: Popup Text
+- Description: Click on the specified text to display a tooltip text.
+- Tags: popup text tooltip

@@ -1,0 +1,3 @@
+- Title: Range Slider
+- Description: A customized range input with a handle to change its value.
+- Tags: range input slide

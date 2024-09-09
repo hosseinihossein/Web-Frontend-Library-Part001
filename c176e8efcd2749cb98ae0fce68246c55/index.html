@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="c176e8efcd2749cb98ae0fce68246c55">
+        <style>
+            #c176e8efcd2749cb98ae0fce68246c55 {
+                width: 70%;
+                min-width: 320px;
+                margin: auto;
+            }
+
+            #c176e8efcd2749cb98ae0fce68246c55 .galleryRow {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 0 4px;
+                justify-content: center;
+            }
+
+            #c176e8efcd2749cb98ae0fce68246c55 .galleryRow .galleryColumn {
+                flex: 33%;
+                max-width: 33%;
+                padding: 0 4px;
+            }
+
+            #c176e8efcd2749cb98ae0fce68246c55 .galleryRow .galleryColumn img {
+
+                margin-top: 8px;
+                vertical-align: middle;
+                width: 100%;
+                border: 2px solid white;
+                border-radius: 5px;
+            }
+
+            /* buttons */
+            #c176e8efcd2749cb98ae0fce68246c55 .buttonsBox {
+                text-align: center;
+                padding: 32px;
+            }
+
+            #c176e8efcd2749cb98ae0fce68246c55 button {
+                border: none;
+                outline: none;
+                padding: 10px 16px;
+                background-color: #f1f1f1;
+                cursor: pointer;
+                font-size: 18px;
+            }
+
+            #c176e8efcd2749cb98ae0fce68246c55 button:hover {
+                background-color: #ddd;
+            }
+
+            #c176e8efcd2749cb98ae0fce68246c55 button.active {
+                background-color: #666;
+                color: white;
+            }
+        </style>
+
+        <div class="buttonsBox">
+            <button onclick="one_c176e8efcd2749cb98ae0fce68246c55(this)">1</button>
+            <button onclick="two_c176e8efcd2749cb98ae0fce68246c55(this)">2</button>
+            <button class="active" onclick="three_c176e8efcd2749cb98ae0fce68246c55(this)">3</button>
+        </div>
+        <div class="galleryRow">
+
+            <div class="galleryColumn">
+                <img src="./statics/bird001.webp" alt="">
+                <img src="./statics/computer001.webp" alt="">
+                <img src="./statics/pizza001.webp" alt="">
+            </div>
+            <div class="galleryColumn">
+                <img src="./statics/team001.webp" alt="">
+                <img src="./statics/pizza001.webp" alt="">
+                <img src="./statics/nature001.webp" alt="">
+            </div>
+            <div class="galleryColumn">
+                <img src="./statics/nature001.webp" alt="">
+                <img src="./statics/bird001.webp" alt="">
+                <img src="./statics/team001.webp" alt="">
+            </div>
+        </div>
+
+        <script>
+            function one_c176e8efcd2749cb98ae0fce68246c55(element) {
+                let buttonsBox = element.parentElement;
+                let buttons = buttonsBox.getElementsByTagName("button");
+                for (let i = 0; i < buttons.length; i++) {
+                    buttons[i].classList.remove("active");
+                }
+
+                element.classList.add("active");
+
+                let mainElement = element.parentElement.parentElement;
+                let galleryColumns = mainElement.getElementsByClassName("galleryColumn");
+                //console.log("galleryColumns: " + galleryColumns.length);
+                for (let i = 0; i < galleryColumns.length; i++) {
+                    galleryColumns[i].style.flex = "100%";
+                    galleryColumns[i].style.maxWidth = "100%";
+                }
+            }
+            function two_c176e8efcd2749cb98ae0fce68246c55(element) {
+                let buttonsBox = element.parentElement;
+                let buttons = buttonsBox.getElementsByTagName("button");
+                for (let i = 0; i < buttons.length; i++) {
+                    buttons[i].classList.remove("active");
+                }
+
+                element.classList.add("active");
+
+                let mainElement = element.parentElement.parentElement;
+                let galleryColumns = mainElement.getElementsByClassName("galleryColumn");
+                for (let i = 0; i < galleryColumns.length; i++) {
+                    galleryColumns[i].style.flex = "50%";
+                    galleryColumns[i].style.maxWidth = "50%";
+                }
+            }
+            function three_c176e8efcd2749cb98ae0fce68246c55(element) {
+                let buttonsBox = element.parentElement;
+                let buttons = buttonsBox.getElementsByTagName("button");
+                for (let i = 0; i < buttons.length; i++) {
+                    buttons[i].classList.remove("active");
+                }
+
+                element.classList.add("active");
+
+                let mainElement = element.parentElement.parentElement;
+                let galleryColumns = mainElement.getElementsByClassName("galleryColumn");
+                for (let i = 0; i < galleryColumns.length; i++) {
+                    galleryColumns[i].style.flex = "33%";
+                    galleryColumns[i].style.maxWidth = "33%";
+                }
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

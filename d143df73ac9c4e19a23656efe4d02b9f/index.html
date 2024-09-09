@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="d143df73ac9c4e19a23656efe4d02b9f">
+
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+        <style>
+            #d143df73ac9c4e19a23656efe4d02b9f {
+                width: 100%;
+                margin: auto;
+            }
+
+            /* Style the form */
+            #d143df73ac9c4e19a23656efe4d02b9f form {
+                background-color: #ffffff;
+                margin: 100px auto;
+                padding: 40px;
+                width: 70%;
+                min-width: 300px;
+                font-family: Raleway;
+                box-shadow: 0 0 20px rgba(128, 128, 128, 0.5);
+            }
+
+            #d143df73ac9c4e19a23656efe4d02b9f form h1 {
+                text-align: center;
+            }
+
+            /* Style the input fields */
+            #d143df73ac9c4e19a23656efe4d02b9f form input {
+                padding: 10px;
+                width: 100%;
+                font-size: 17px;
+                font-family: Raleway;
+                border: 1px solid #aaaaaa;
+            }
+
+            /* Mark input boxes that gets an error on validation: */
+            #d143df73ac9c4e19a23656efe4d02b9f form input.invalid {
+                background-color: #ffdddd;
+            }
+
+            /* Hide all steps by default: */
+            #d143df73ac9c4e19a23656efe4d02b9f form .tab {
+                display: none;
+            }
+
+            #d143df73ac9c4e19a23656efe4d02b9f form button {
+                background-color: #04AA6D;
+                color: #ffffff;
+                border: none;
+                padding: 10px 20px;
+                font-size: 17px;
+                font-family: Raleway;
+                cursor: pointer;
+            }
+
+            #d143df73ac9c4e19a23656efe4d02b9f form button:hover {
+                opacity: 0.8;
+            }
+
+            #d143df73ac9c4e19a23656efe4d02b9f form #prevBtn {
+                background-color: #bbbbbb;
+            }
+
+            /* Make circles that indicate the steps of the form: */
+            #d143df73ac9c4e19a23656efe4d02b9f form .step {
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbbbbb;
+                border: none;
+                border-radius: 50%;
+                display: inline-block;
+                opacity: 0.5;
+            }
+
+            /* Mark the active step: */
+            #d143df73ac9c4e19a23656efe4d02b9f form .step.active {
+                opacity: 1;
+            }
+
+            /* Mark the steps that are finished and valid: */
+            #d143df73ac9c4e19a23656efe4d02b9f form .step.finish {
+                background-color: #04AA6D;
+            }
+        </style>
+
+        <form action="">
+
+            <h1>Register:</h1>
+
+            <!-- One "tab" for each step in the form: -->
+            <div class="tab" style="display: block;">Name:
+                <p><input required="" placeholder="First name..." oninput="this.className = ''"></p>
+                <p><input required="" placeholder="Last name..." oninput="this.className = ''"></p>
+            </div>
+
+            <div class="tab">Contact Info:
+                <p><input required="" type="email" placeholder="E-mail..." oninput="this.className = ''"></p>
+                <p><input required="" type="tel" placeholder="Phone..." oninput="this.className = ''"></p>
+            </div>
+
+            <div class="tab">Birthday:
+                <p><input required="" type="number" placeholder="dd" oninput="this.className = ''"></p>
+                <p><input required="" type="number" placeholder="mm" oninput="this.className = ''"></p>
+                <p><input required="" type="number" placeholder="yyyy" oninput="this.className = ''"></p>
+            </div>
+
+            <div class="tab">Login Info:
+                <p><input required="" placeholder="Username..." oninput="this.className = ''"></p>
+                <p><input required="" type="password" placeholder="Password..." oninput="this.className = ''"></p>
+            </div>
+
+            <div style="overflow:auto;">
+                <div style="float:right;">
+                    <button type="button" id="prevBtn" onclick="nextPrev_d143df73ac9c4e19a23656efe4d02b9f(-1)"
+                        style="display: none;">Previous</button>
+                    <button type="button" id="nextBtn"
+                        onclick="nextPrev_d143df73ac9c4e19a23656efe4d02b9f(1)">Next</button>
+                </div>
+            </div>
+
+            <!-- Circles which indicates the steps of the form: -->
+            <div style="text-align:center;margin-top:40px;">
+                <span class="step active"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+            </div>
+
+        </form>
+
+        <script>
+            let mainElement_d143df73ac9c4e19a23656efe4d02b9f = document.getElementById("d143df73ac9c4e19a23656efe4d02b9f");
+            let currentTab_d143df73ac9c4e19a23656efe4d02b9f = 0; // Current tab is set to be the first tab (0)
+            showTab_d143df73ac9c4e19a23656efe4d02b9f(currentTab_d143df73ac9c4e19a23656efe4d02b9f); // Display the current tab
+
+            function showTab_d143df73ac9c4e19a23656efe4d02b9f(n) {
+                // This function will display the specified tab of the form ...
+                let tabs = mainElement_d143df73ac9c4e19a23656efe4d02b9f.getElementsByClassName("tab");
+                tabs[n].style.display = "block";
+                // ... and fix the Previous/Next buttons:
+                if (n == 0) {
+                    mainElement_d143df73ac9c4e19a23656efe4d02b9f.querySelector("#prevBtn").style.display = "none";
+                } else {
+                    mainElement_d143df73ac9c4e19a23656efe4d02b9f.querySelector("#prevBtn").style.display = "inline";
+                }
+                if (n == (tabs.length - 1)) {
+                    mainElement_d143df73ac9c4e19a23656efe4d02b9f.querySelector("#nextBtn").innerHTML = "Submit";
+                } else {
+                    mainElement_d143df73ac9c4e19a23656efe4d02b9f.querySelector("#nextBtn").innerHTML = "Next";
+                }
+                // ... and run a function that displays the correct step indicator:
+                fixStepIndicator_d143df73ac9c4e19a23656efe4d02b9f(n)
+            }
+
+            function nextPrev_d143df73ac9c4e19a23656efe4d02b9f(n) {
+                // This function will figure out which tab to display
+                let tabs = mainElement_d143df73ac9c4e19a23656efe4d02b9f.getElementsByClassName("tab");
+                // Exit the function if any field in the current tab is invalid:
+                if (n == 1 && !validateForm_d143df73ac9c4e19a23656efe4d02b9f()) return false;
+                // Hide the current tab:
+                tabs[currentTab_d143df73ac9c4e19a23656efe4d02b9f].style.display = "none";
+                // Increase or decrease the current tab by 1:
+                currentTab_d143df73ac9c4e19a23656efe4d02b9f = currentTab_d143df73ac9c4e19a23656efe4d02b9f + n;
+                // if you have reached the end of the form... :
+                if (currentTab_d143df73ac9c4e19a23656efe4d02b9f >= tabs.length) {
+                    //...the form gets submitted:
+                    mainElement_d143df73ac9c4e19a23656efe4d02b9f.submit();
+                    return false;
+                }
+                // Otherwise, display the correct tab:
+                showTab_d143df73ac9c4e19a23656efe4d02b9f(currentTab_d143df73ac9c4e19a23656efe4d02b9f);
+            }
+
+            function validateForm_d143df73ac9c4e19a23656efe4d02b9f() {
+                // This function deals with validation of the form fields
+                let tabs, inputs, i, valid = true;
+                tabs = mainElement_d143df73ac9c4e19a23656efe4d02b9f.getElementsByClassName("tab");
+                inputs = tabs[currentTab_d143df73ac9c4e19a23656efe4d02b9f].getElementsByTagName("input");
+                // A loop that checks every input field in the current tab:
+                for (i = 0; i < inputs.length; i++) {
+                    // If a field is empty...
+                    /*if (inputs[i].value == "") {
+                        // add an "invalid" class to the field:
+                        inputs[i].className += " invalid";
+                        // and set the current valid status to false:
+                        valid = false;
+                    }*/
+                    valid = inputs[i].checkValidity();
+                    if (!valid) {
+                        inputs[i].className += " invalid";
+                    }
+                }
+                // If the valid status is true, mark the step as finished and valid:
+                if (valid) {
+                    mainElement_d143df73ac9c4e19a23656efe4d02b9f.getElementsByClassName("step")[currentTab_d143df73ac9c4e19a23656efe4d02b9f].className += " finish";
+                }
+                return valid; // return the valid status
+            }
+
+            function fixStepIndicator_d143df73ac9c4e19a23656efe4d02b9f(n) {
+                // This function removes the "active" class of all steps...
+                let i, steps = mainElement_d143df73ac9c4e19a23656efe4d02b9f.getElementsByClassName("step");
+                for (i = 0; i < steps.length; i++) {
+                    steps[i].className = steps[i].className.replace(" active", "");
+                }
+                //... and adds the "active" class to the current step:
+                steps[n].className += " active";
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

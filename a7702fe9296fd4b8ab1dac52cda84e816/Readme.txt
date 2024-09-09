@@ -1,0 +1,3 @@
+- Title: Navigation Bar
+- Description: A responsive navigation bar with a logo linked to home.
+- Tags: navbar responsive

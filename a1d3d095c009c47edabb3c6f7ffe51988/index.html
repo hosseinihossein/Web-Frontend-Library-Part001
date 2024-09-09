@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a1d3d095c009c47edabb3c6f7ffe51988" class="clearfix">
+        <style>
+            #a1d3d095c009c47edabb3c6f7ffe51988 {
+                width: fit-content;
+                margin: auto;
+            }
+
+            #a1d3d095c009c47edabb3c6f7ffe51988 .card {
+                width: 300px;
+                /*min-width: 300px;*/
+                background-color: rgb(238, 235, 235);
+                border-radius: 20px;
+                position: relative;
+                margin-top: 50px;
+                text-align: center;
+                scale: 90%;
+                transition: 0.2s;
+            }
+
+            #a1d3d095c009c47edabb3c6f7ffe51988 .card.active {
+                scale: 100%;
+                /*background-color: rgb(34, 150, 80);*/
+                box-shadow: 0 0 70px rgba(167, 40, 40, 0.5);
+            }
+
+            #a1d3d095c009c47edabb3c6f7ffe51988 .card .product-img {
+                position: absolute;
+                top: -50px;
+                left: 50px;
+                width: 150px;
+                height: 200px;
+            }
+
+            #a1d3d095c009c47edabb3c6f7ffe51988 .card .bg-div {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                /*background-color: rgb(78, 226, 137);*/
+                border-radius: 20px;
+                overflow: hidden;
+                z-index: -1;
+                filter: brightness(70%);
+                display: none;
+            }
+
+            #a1d3d095c009c47edabb3c6f7ffe51988 .card.active .bg-div {
+                display: block;
+            }
+
+            #a1d3d095c009c47edabb3c6f7ffe51988 .card .bg-img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                /*z-index: -1;*/
+                opacity: 0.5;
+            }
+
+            #a1d3d095c009c47edabb3c6f7ffe51988 .card h1.production-name {
+                color: gray;
+                padding-top: 125px;
+            }
+
+            #a1d3d095c009c47edabb3c6f7ffe51988 .card.active h1.production-name {
+                color: white;
+            }
+
+            #a1d3d095c009c47edabb3c6f7ffe51988 .card.left,
+            #a1d3d095c009c47edabb3c6f7ffe51988 .card .left {
+                float: left;
+            }
+
+            #a1d3d095c009c47edabb3c6f7ffe51988 .card .right {
+                float: right;
+            }
+
+            #a1d3d095c009c47edabb3c6f7ffe51988 .card form {
+                padding: 0 20px;
+                color: gray;
+            }
+
+            #a1d3d095c009c47edabb3c6f7ffe51988 .card.active form label {
+                color: rgba(0, 0, 0, 0.3);
+            }
+
+            #a1d3d095c009c47edabb3c6f7ffe51988 .card form>div {
+                margin: 10px 0;
+            }
+
+            #a1d3d095c009c47edabb3c6f7ffe51988 .card form label {
+                font-weight: 1000;
+                font-size: 20px;
+            }
+
+            #a1d3d095c009c47edabb3c6f7ffe51988 .card form select {
+                color: gray;
+                border: none;
+                background-color: rgba(0, 0, 0, 0);
+                padding-top: 5px;
+                font-weight: bold;
+            }
+
+            #a1d3d095c009c47edabb3c6f7ffe51988 .card.active form select {
+                color: white;
+            }
+
+            #a1d3d095c009c47edabb3c6f7ffe51988 .card form option {
+                color: black;
+                font-size: 18px;
+            }
+
+            #a1d3d095c009c47edabb3c6f7ffe51988 .card form input[type=submit] {
+                margin: 20px auto;
+                padding: 10px 30px;
+                color: black;
+                background-color: white;
+                border-radius: 20px;
+                border: none;
+                font-size: 12px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                cursor: pointer;
+                display: none;
+            }
+
+            #a1d3d095c009c47edabb3c6f7ffe51988 .card.active form input[type=submit] {
+                display: block;
+            }
+        </style>
+
+        <div class="card left" onclick="setActive_a1d3d095c009c47edabb3c6f7ffe51988(this)">
+            <div class="bg-div">
+                <img class="bg-img" src="./statics/orange001.webp" alt="">
+            </div>
+            <img class="product-img" src="./statics/pizza001.webp" alt="">
+            <h1 class="production-name">Midnight Mint Mocha Frappuccino</h1>
+            <form action="">
+                <div class="clearfix">
+                    <label class="left" for="size">Size</label>
+                    <select class="right" name="" id="size">
+                        <option value="" disabled="" selected="" hidden="">select a size</option>
+                        <option value="">size1</option>
+                        <option value="">size2</option>
+                    </select>
+                </div>
+                <div class="clearfix">
+                    <label class="left" for="milk">Milk</label>
+                    <select class="right" name="" id="milk">
+                        <option value="" disabled="" selected="" hidden="">select a milk type</option>
+                        <option value="">milk1</option>
+                        <option value="">milk2</option>
+                    </select>
+                </div>
+                <div class="clearfix">
+                    <label class="left" for="drink">Drink</label>
+                    <select class="right" name="" id="drink">
+                        <option value="" disabled="" selected="" hidden="">select a drink type</option>
+                        <option value="">drink1</option>
+                        <option value="">drink2</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="submit" value="ADD TO BASKET">
+                </div>
+            </form>
+        </div>
+        <div class="card active left" onclick="setActive_a1d3d095c009c47edabb3c6f7ffe51988(this)">
+            <div class="bg-div">
+                <img class="bg-img" src="./statics/orange001.webp" alt="">
+            </div>
+            <img class="product-img" src="./statics/pizza001.webp" alt="">
+            <h1 class="production-name">Midnight Mint Mocha Frappuccino</h1>
+            <form action="">
+                <div class="clearfix">
+                    <label class="left" for="size">Size</label>
+                    <select class="right" name="" id="size">
+                        <option value="" disabled="" selected="" hidden="">select a size</option>
+                        <option value="">size1</option>
+                        <option value="">size2</option>
+                    </select>
+                </div>
+                <div class="clearfix">
+                    <label class="left" for="milk">Milk</label>
+                    <select class="right" name="" id="milk">
+                        <option value="" disabled="" selected="" hidden="">select a milk type</option>
+                        <option value="">milk1</option>
+                        <option value="">milk2</option>
+                    </select>
+                </div>
+                <div class="clearfix">
+                    <label class="left" for="drink">Drink</label>
+                    <select class="right" name="" id="drink">
+                        <option value="" disabled="" selected="" hidden="">select a drink type</option>
+                        <option value="">drink1</option>
+                        <option value="">drink2</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="submit" value="ADD TO BASKET">
+                </div>
+            </form>
+        </div>
+
+        <script>
+            function setActive_a1d3d095c009c47edabb3c6f7ffe51988(element) {
+                let mainElement = element.parentElement;
+                let cards = mainElement.getElementsByClassName("card");
+                for (let card of cards) {
+                    card.classList.remove("active");
+                }
+                element.classList.add("active");
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

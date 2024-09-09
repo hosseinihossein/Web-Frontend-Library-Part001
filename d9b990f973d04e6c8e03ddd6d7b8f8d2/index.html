@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="d9b990f973d04e6c8e03ddd6d7b8f8d2" class="clearfix">
+        <style>
+            #d9b990f973d04e6c8e03ddd6d7b8f8d2 {
+                width: fit-content;
+                margin: auto;
+
+            }
+
+            #d9b990f973d04e6c8e03ddd6d7b8f8d2 #img-box {
+                width: 500px;
+                min-width: 300px;
+                float: left;
+
+            }
+
+            #d9b990f973d04e6c8e03ddd6d7b8f8d2 #img-box img {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+
+        <p style="font-size: 18px;font-weight: bold;width: fit-content;">filters:</p>
+        <div style="float: left;width: fit-content;margin-right: 20px;">
+            <form action="">
+                <label for="none">none</label>
+                <input type="radio" id="none" name="d9b990f973d04e6c8e03ddd6d7b8f8d2">
+                <br>
+                <label for="blur(5px)">blur(5px)</label>
+                <input type="radio" id="blur(5px)" name="d9b990f973d04e6c8e03ddd6d7b8f8d2">
+                <br>
+                <label for="brightness(200%)">brightness(200%)</label>
+                <input type="radio" id="brightness(200%)" name="d9b990f973d04e6c8e03ddd6d7b8f8d2">
+                <br>
+                <label for="contrast(200%)">contrast(200%)</label>
+                <input type="radio" id="contrast(200%)" name="d9b990f973d04e6c8e03ddd6d7b8f8d2">
+                <br>
+                <label for="drop-shadow(8px 8px 10px gray)">drop-shadow(8px 8px 10px gray)</label>
+                <input type="radio" id="drop-shadow(8px 8px 10px gray)" name="d9b990f973d04e6c8e03ddd6d7b8f8d2">
+                <br>
+                <label for="grayscale(100%)">grayscale(100%)</label>
+                <input type="radio" id="grayscale(100%)" name="d9b990f973d04e6c8e03ddd6d7b8f8d2">
+                <br>
+                <label for="hue-rotate(90deg)">hue-rotate(90deg)</label>
+                <input type="radio" id="hue-rotate(90deg)" name="d9b990f973d04e6c8e03ddd6d7b8f8d2">
+                <br>
+                <label for="invert100%">invert(100%)</label>
+                <input type="radio" id="invert100%" name="d9b990f973d04e6c8e03ddd6d7b8f8d2">
+                <br>
+                <label for="opacity(30%)">opacity(30%)</label>
+                <input type="radio" id="opacity(30%)" name="d9b990f973d04e6c8e03ddd6d7b8f8d2">
+                <br>
+                <label for="saturate(8)">saturate(8)</label>
+                <input type="radio" id="saturate(8)" name="d9b990f973d04e6c8e03ddd6d7b8f8d2">
+                <br>
+                <label for="sepia(100%)">sepia(100%)</label>
+                <input type="radio" id="sepia(100%)" name="d9b990f973d04e6c8e03ddd6d7b8f8d2">
+                <br>
+                <label for="contrast(200%) brightness(150%)">contrast(200%) brightness(150%)</label>
+                <input type="radio" id="contrast(200%) brightness(150%)" name="d9b990f973d04e6c8e03ddd6d7b8f8d2">
+            </form>
+        </div>
+        <div id="img-box">
+            <img src="./statics/library002.webp" alt="filteredImage">
+        </div>
+
+        <script>
+            let mainElement_d9b990f973d04e6c8e03ddd6d7b8f8d2 = document.getElementById("d9b990f973d04e6c8e03ddd6d7b8f8d2");
+            let image_d9b990f973d04e6c8e03ddd6d7b8f8d2 = mainElement_d9b990f973d04e6c8e03ddd6d7b8f8d2.getElementsByTagName("img")[0];
+            let labels_d9b990f973d04e6c8e03ddd6d7b8f8d2 = mainElement_d9b990f973d04e6c8e03ddd6d7b8f8d2.getElementsByTagName("label");
+            for (let i = 0; i < labels_d9b990f973d04e6c8e03ddd6d7b8f8d2.length; i++) {
+                labels_d9b990f973d04e6c8e03ddd6d7b8f8d2[i].addEventListener("click", (event) => {
+                    image_d9b990f973d04e6c8e03ddd6d7b8f8d2.style.filter = event.target.innerHTML;
+                });
+            }
+            let inputs_d9b990f973d04e6c8e03ddd6d7b8f8d2 = mainElement_d9b990f973d04e6c8e03ddd6d7b8f8d2.getElementsByTagName("input");
+            for (let i = 0; i < inputs_d9b990f973d04e6c8e03ddd6d7b8f8d2.length; i++) {
+                inputs_d9b990f973d04e6c8e03ddd6d7b8f8d2[i].addEventListener("click", (event) => {
+                    image_d9b990f973d04e6c8e03ddd6d7b8f8d2.style.filter = event.target.id;
+                });
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+- Title: Type Writer Button
+- Description: Click on the button to write the text character by character.
+- Tags: button text

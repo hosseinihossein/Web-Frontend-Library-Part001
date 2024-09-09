@@ -1,0 +1,3 @@
+- Title: To Do List
+- Description: A customized todo list. You can add new item, check an item as a successfully done job and delete an item from list.
+- Tags: list

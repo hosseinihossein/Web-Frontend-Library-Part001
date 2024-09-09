@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Accordion</title>
+</head>
+
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a57b97f9bd6d9494090be0bc07cd8608f">
+        <style>
+            #a57b97f9bd6d9494090be0bc07cd8608f {
+                max-width: 600px;
+                margin: auto;
+            }
+
+            #a57b97f9bd6d9494090be0bc07cd8608f .accordion {
+                background-color: #eee;
+                color: #444;
+                cursor: pointer;
+                padding: 18px;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 15px;
+                transition: 0.4s;
+            }
+
+            #a57b97f9bd6d9494090be0bc07cd8608f .accordion.active,
+            #a57b97f9bd6d9494090be0bc07cd8608f .accordion:hover {
+                background-color: #ccc;
+            }
+
+            #a57b97f9bd6d9494090be0bc07cd8608f .panel {
+                padding: 0 18px;
+                background-color: white;
+                overflow: hidden;
+                max-height: 0;
+                transition: all 0.2s ease-out;
+            }
+
+            #a57b97f9bd6d9494090be0bc07cd8608f .accordion:after {
+                content: '\02795';
+                /* Unicode character for "plus" sign (+) */
+                font-size: 13px;
+                color: #777;
+                float: right;
+                margin-left: 5px;
+            }
+
+            #a57b97f9bd6d9494090be0bc07cd8608f .accordion.active:after {
+                content: "\2796";
+                /* Unicode character for "minus" sign (-) */
+            }
+        </style>
+
+        <button class="accordion" onclick="toggleActive_a57b97f9bd6d9494090be0bc07cd8608f(this)">Section 1</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip
+                ex ea commodo consequat.</p>
+        </div>
+
+        <script>
+            function toggleActive_a57b97f9bd6d9494090be0bc07cd8608f(element) {
+                element.classList.toggle("active");
+                let panel = element.nextElementSibling;
+                if (parseInt(panel.style.maxHeight) > 0) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>

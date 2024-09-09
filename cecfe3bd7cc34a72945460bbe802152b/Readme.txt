@@ -1,0 +1,3 @@
+- Title: Clickable Image Card
+- Description: A simple image card with border. Click on the image to open it in a new page.
+- Tags: image

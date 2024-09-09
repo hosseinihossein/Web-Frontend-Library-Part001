@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a514ba8d38b874e87b8c3e24357427776">
+        <style>
+            #a514ba8d38b874e87b8c3e24357427776 {
+                width: fit-content;
+                margin: auto;
+            }
+
+            #a514ba8d38b874e87b8c3e24357427776 .image {
+                border-radius: 5px;
+                cursor: pointer;
+                transition: 0.3s;
+                max-width: 400px;
+                max-height: 300px;
+            }
+
+            #a514ba8d38b874e87b8c3e24357427776 .image:hover {
+                opacity: 0.7;
+            }
+
+            /* The Modal (background) */
+            #a514ba8d38b874e87b8c3e24357427776 .modal {
+                display: none;
+                /* Hidden by default */
+                position: fixed;
+                /* Stay in place */
+                z-index: 10;
+                /* Sit on top */
+                padding-top: 100px;
+                /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%;
+                /* Full width */
+                height: 100%;
+                /* Full height */
+                overflow: auto;
+                /* Enable scroll if needed */
+                background-color: rgb(0, 0, 0);
+                /* Fallback color */
+                background-color: rgba(0, 0, 0, 0.9);
+                /* Black w/ opacity */
+            }
+
+            /* Modal Content (image) */
+            #a514ba8d38b874e87b8c3e24357427776 .modalImage {
+                margin: auto;
+                display: block;
+                width: 80%;
+                max-width: 700px;
+            }
+
+            /* Caption of Modal Image */
+            #a514ba8d38b874e87b8c3e24357427776 .caption {
+                margin: auto;
+                display: block;
+                width: 80%;
+                max-width: 700px;
+                text-align: center;
+                color: #ccc;
+                padding: 10px 0;
+                height: 150px;
+            }
+
+            /* Add Animation */
+            #a514ba8d38b874e87b8c3e24357427776 .modalImage,
+            #a514ba8d38b874e87b8c3e24357427776 .caption {
+                animation-name: zoom;
+                animation-duration: 0.6s;
+            }
+
+            @keyframes zoom {
+                from {
+                    transform: scale(0.1)
+                }
+
+                to {
+                    transform: scale(1)
+                }
+            }
+
+            /* The Close Button */
+            #a514ba8d38b874e87b8c3e24357427776 .close {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+
+            #a514ba8d38b874e87b8c3e24357427776 .close:hover,
+            #a514ba8d38b874e87b8c3e24357427776 .close:focus {
+                color: #bbb;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            /* 100% Image Width on Smaller Screens */
+            @media only screen and (max-width: 700px) {
+                #a514ba8d38b874e87b8c3e24357427776 .modalImage {
+                    width: 100%;
+                }
+            }
+        </style>
+
+        <img onclick="function01_Script28e31197628946cab786f266a3650f7d(this)" class="image"
+            src="./statics/deer001.webp" alt="beautiful animal">
+
+        <!-- The Modal -->
+        <div class="modal" onclick="if(event.target == this) this.style.display='none';">
+            <span onclick="functin02_Script28e31197628946cab786f266a3650f7d(this)" class="close">×</span>
+            <img class="modalImage">
+            <div class="caption"></div>
+        </div>
+
+        <script>
+            function function01_Script28e31197628946cab786f266a3650f7d(element) {
+                let mainElement = element.parentElement;
+                let modal = mainElement.querySelector(".modal");
+                let img = mainElement.querySelector(".image");
+                let modalImg = mainElement.querySelector(".modalImage");
+                let caption = mainElement.querySelector(".caption");
+                modal.style.display = "block";
+                modalImg.src = img.src;
+                caption.innerHTML = img.alt;
+            }
+
+            function functin02_Script28e31197628946cab786f266a3650f7d(element) {
+                let modal = element.parentElement;
+                modal.style.display = "none";
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

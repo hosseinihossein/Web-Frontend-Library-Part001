@@ -1,0 +1,3 @@
+- Title: Table
+- Description: A table with bottom border.
+- Tags: table

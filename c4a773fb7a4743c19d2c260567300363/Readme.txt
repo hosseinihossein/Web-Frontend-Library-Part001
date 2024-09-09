@@ -1,0 +1,3 @@
+- Title: Navigation Bar
+- Description: A collapsible navigation bar.
+- Tags: navbar

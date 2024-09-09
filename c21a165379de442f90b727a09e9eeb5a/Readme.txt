@@ -1,0 +1,3 @@
+- Title: Client Chip
+- Description: A small container with an image and a username.
+- Tags: chip client

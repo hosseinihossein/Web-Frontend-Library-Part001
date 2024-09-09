@@ -1,0 +1,3 @@
+- Title: Side Bar
+- Description: A hidden side bar with open button.
+- Tags: navbar sidebar

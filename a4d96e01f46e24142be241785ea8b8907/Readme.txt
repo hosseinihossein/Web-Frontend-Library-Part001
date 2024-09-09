@@ -1,0 +1,3 @@
+- Title: Image with revealing information
+- Description: Hover on the image to reveal a hidden card. Fontawesome icons are used.
+- Tags: fa_icon image card

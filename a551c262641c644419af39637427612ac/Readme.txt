@@ -1,0 +1,3 @@
+- Title: Colorful Tab
+- Description: Some tabs with different background colors.
+- Tags: tab

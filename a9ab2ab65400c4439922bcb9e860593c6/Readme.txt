@@ -1,0 +1,3 @@
+- Title: Responsive Navigation Bar
+- Description: A responsive navbar that will locate its buttons in a menu
+- Tags: navbar

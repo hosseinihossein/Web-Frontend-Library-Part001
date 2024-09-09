@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="b2fa92792f514343800ed30a1a7e9ae2" class="Script_b7eba7283ec14c5286b50cd912c28c82">
+        <style>
+            #b2fa92792f514343800ed30a1a7e9ae2 {
+                width: 60%;
+                min-width: 300px;
+                margin: auto;
+            }
+
+            /* Slideshow container */
+            #b2fa92792f514343800ed30a1a7e9ae2 .slideshow-container {
+                position: relative;
+                background: #f1f1f1f1;
+            }
+
+            /* Slides */
+            #b2fa92792f514343800ed30a1a7e9ae2 .mySlides {
+                display: none;
+                padding: 80px;
+                text-align: center;
+            }
+
+            /* Next &amp; previous buttons */
+            #b2fa92792f514343800ed30a1a7e9ae2 .prev,
+            #b2fa92792f514343800ed30a1a7e9ae2 .next {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                margin-top: -30px;
+                padding: 16px;
+                color: #888;
+                font-weight: bold;
+                font-size: 20px;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+            }
+
+            /* Position the "next button" to the right */
+            #b2fa92792f514343800ed30a1a7e9ae2 .next {
+                position: absolute;
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+
+            /* On hover, add a black background color with a little bit see-through */
+            #b2fa92792f514343800ed30a1a7e9ae2 .prev:hover,
+            #b2fa92792f514343800ed30a1a7e9ae2 .next:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+                color: white;
+            }
+
+            /* The dot/bullet/indicator container */
+            #b2fa92792f514343800ed30a1a7e9ae2 .dot-container {
+                text-align: center;
+                padding: 20px;
+                background: #ddd;
+            }
+
+            /* The dots/bullets/indicators */
+            #b2fa92792f514343800ed30a1a7e9ae2 .dot {
+                cursor: pointer;
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+
+            /* Add a background color to the active dot/circle */
+            #b2fa92792f514343800ed30a1a7e9ae2 .active,
+            #b2fa92792f514343800ed30a1a7e9ae2 .dot:hover {
+                background-color: #717171;
+            }
+
+            /* Add an italic font style to all quotes */
+            #b2fa92792f514343800ed30a1a7e9ae2 q {
+                font-style: italic;
+            }
+
+            /* Add a blue color to the author */
+            #b2fa92792f514343800ed30a1a7e9ae2 .author {
+                color: cornflowerblue;
+            }
+        </style>
+
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width slides/quotes -->
+            <div class="mySlides" style="display: block;">
+                <q>I love you the more in that I believe you had liked me for my own sake and for nothing else</q>
+                <p class="author">- John Keats</p>
+            </div>
+
+            <div class="mySlides" style="display: none;">
+                <q>But man is not made for defeat. A man can be destroyed but not defeated.</q>
+                <p class="author">- Ernest Hemingway</p>
+            </div>
+
+            <div class="mySlides" style="display: none;">
+                <q>I have not failed. I've just found 10,000 ways that won't work.</q>
+                <p class="author">- Thomas A. Edison</p>
+            </div>
+
+            <!-- Next/prev buttons -->
+            <a class="prev" onclick="previousSlide_b7eba7283ec14c5286b50cd912c28c82(this)">❮</a>
+            <a class="next" onclick="nextSlide_b7eba7283ec14c5286b50cd912c28c82(this)">❯</a>
+        </div>
+
+        <!-- Dots/bullets/indicators -->
+        <div class="dot-container">
+            <span class="dot 1 active" onclick="currentSlide_b7eba7283ec14c5286b50cd912c28c82(this, 1)"></span>
+            <span class="dot 2" onclick="currentSlide_b7eba7283ec14c5286b50cd912c28c82(this, 2)"></span>
+            <span class="dot 3" onclick="currentSlide_b7eba7283ec14c5286b50cd912c28c82(this, 3)"></span>
+        </div>
+
+        <script>
+
+            let allElements_Script_b7eba7283ec14c5286b50cd912c28c82 = document.getElementsByClassName("Script_b7eba7283ec14c5286b50cd912c28c82");
+            for (let i = 0; i < allElements_Script_b7eba7283ec14c5286b50cd912c28c82.length; i++) {
+                let mainElement = allElements_Script_b7eba7283ec14c5286b50cd912c28c82[i];
+                let slides = mainElement.getElementsByClassName("mySlides");
+                let dots = mainElement.getElementsByClassName("dot");
+
+                showSlides_b7eba7283ec14c5286b50cd912c28c82(slides, dots, 1);
+            }
+
+            let allElements_Script_b7eba7283ec14c5286b50cd912c28c82_Automatic = document.getElementsByClassName("Script_b7eba7283ec14c5286b50cd912c28c82_Automatic");
+            for (let i = 0; i < allElements_Script_b7eba7283ec14c5286b50cd912c28c82_Automatic.length; i++) {
+                let mainElement = allElements_Script_b7eba7283ec14c5286b50cd912c28c82_Automatic[i];
+
+                showSlidesAutomatically_b7eba7283ec14c5286b50cd912c28c82(mainElement);
+            }
+
+            // Next/previous controls 
+            function nextSlide_b7eba7283ec14c5286b50cd912c28c82(element) {
+                let mainElement = element.parentElement.parentElement;
+                let slides = mainElement.getElementsByClassName("mySlides");
+                let dots = mainElement.getElementsByClassName("dot");
+                let activeIndex = mainElement.getElementsByClassName("active")[0].classList[1];
+
+                showSlides_b7eba7283ec14c5286b50cd912c28c82(slides, dots, ++activeIndex);
+            }
+
+            function previousSlide_b7eba7283ec14c5286b50cd912c28c82(element) {
+                let mainElement = element.parentElement.parentElement;
+                let slides = mainElement.getElementsByClassName("mySlides");
+                let dots = mainElement.getElementsByClassName("dot");
+                let activeIndex = mainElement.getElementsByClassName("active")[0].classList[1];
+
+                showSlides_b7eba7283ec14c5286b50cd912c28c82(slides, dots, --activeIndex);
+            }
+
+            // Thumbnail image controls
+            function currentSlide_b7eba7283ec14c5286b50cd912c28c82(element, n) {
+                let mainElement = element.parentElement.parentElement;
+                let slides = mainElement.getElementsByClassName("mySlides");
+                let dots = mainElement.getElementsByClassName("dot");
+
+                showSlides_b7eba7283ec14c5286b50cd912c28c82(slides, dots, n);
+            }
+
+            function showSlides_b7eba7283ec14c5286b50cd912c28c82(slides, dots, n) {
+
+                if (n > slides.length) { n = 1 }
+                if (n < 1) { n = slides.length }
+
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+
+                for (let i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+
+                slides[n - 1].style.display = "block";
+                dots[n - 1].className += " active";
+            }
+
+            function showSlidesAutomatically_b7eba7283ec14c5286b50cd912c28c82(mainElement) {
+                let slides = mainElement.getElementsByClassName("mySlides");
+                let dots = mainElement.getElementsByClassName("dot");
+                let activeIndex = mainElement.getElementsByClassName("active")[0].classList[1];
+
+                showSlides_b7eba7283ec14c5286b50cd912c28c82(slides, dots, ++activeIndex);
+
+                setTimeout(showSlidesAutomatically_b7eba7283ec14c5286b50cd912c28c82, 2000, mainElement); // Change image every 2 seconds
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+- Title: Page with gradient background
+- Description: A page with background linear gradient. Scroll to see the effects.
+- Tags: page text

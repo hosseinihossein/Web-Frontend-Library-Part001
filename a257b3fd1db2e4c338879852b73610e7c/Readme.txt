@@ -1,0 +1,3 @@
+- Title: Text Message Snacker
+- Description: Click on the button to show a short text message at the bottom of the page as a snacker. The text will disappear after a while.
+- Tags: snacker text button message

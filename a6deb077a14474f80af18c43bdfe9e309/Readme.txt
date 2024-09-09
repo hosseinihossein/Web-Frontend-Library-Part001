@@ -1,0 +1,3 @@
+- Title: Progress Bar
+- Description: A simple progress bar. Click on the button to proceed.
+- Tags: progress_bar slide

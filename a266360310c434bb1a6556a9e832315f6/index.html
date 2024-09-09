@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expandable Text</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a266360310c434bb1a6556a9e832315f6">
+        <style>
+            #a266360310c434bb1a6556a9e832315f6 #more {
+                display: none;
+            }
+        </style>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum,
+            nisi lorem egestas vitae scel<span id="dots" style="display: inline;">...</span><span id="more"
+                style="display: none;">erisque enim ligula venenatis
+                dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
+                augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed
+                nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer
+                fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+
+        <button onclick="myFunction_a266360310c434bb1a6556a9e832315f6(this)" id="myBtn">Read more</button>
+
+
+        <script>
+            function myFunction_a266360310c434bb1a6556a9e832315f6(element) {
+                let mainElement = element.parentElement;
+                let dots = mainElement.querySelector("#dots");
+                let moreText = mainElement.querySelector("#more");
+                let btn = element;//mainElement.querySelector("#myBtn");
+
+                if (dots.style.display === "none") {
+                    dots.style.display = "inline";
+                    btn.innerHTML = "Read more";
+                    moreText.style.display = "none";
+                } else {
+                    dots.style.display = "none";
+                    btn.innerHTML = "Read less";
+                    moreText.style.display = "inline";
+                }
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

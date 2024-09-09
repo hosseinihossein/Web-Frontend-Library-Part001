@@ -1,0 +1,3 @@
+- Title: Navigation Bar
+- Description: A simple navigation bar fixed to the bottom of the page.
+- Tags: navbar

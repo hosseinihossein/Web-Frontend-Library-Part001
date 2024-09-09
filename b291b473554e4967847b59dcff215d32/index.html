@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="b291b473554e4967847b59dcff215d32">
+        <style>
+            #b291b473554e4967847b59dcff215d32 {
+                width: fit-content;
+                margin: auto;
+            }
+        </style>
+
+        <label for="checkbox1">Checkbox: </label><input id="checkbox1" name="checkbox1" type="checkbox"
+            onclick="myFunction_b291b473554e4967847b59dcff215d32(this)">
+        <p id="text" style="display: none;">Checkbox is CHECKED!</p>
+
+        <script>
+            function myFunction_b291b473554e4967847b59dcff215d32(checkBox) {
+                // Get the checkbox
+                //let checkBox = document.getElementById("myCheck");
+                // Get the output text
+                //let text = document.getElementById("text");
+                let text = checkBox.parentElement.querySelector("#text");
+
+                // If the checkbox is checked, display the output text
+                if (checkBox.checked == true) {
+                    text.style.display = "block";
+                } else {
+                    text.style.display = "none";
+                }
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

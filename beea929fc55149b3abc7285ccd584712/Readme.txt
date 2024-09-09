@@ -1,0 +1,3 @@
+- Title: Navigation Bar
+- Description: A simple navbar with a button floated to the right. 
+- Tags: navbar

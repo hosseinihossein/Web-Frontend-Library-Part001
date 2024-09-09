@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a4e44faf6b538453caeb707ced08cf94e">
+        <style>
+            #a4e44faf6b538453caeb707ced08cf94e {
+                height: 100%;
+                width: 160px;
+                position: absolute;
+                /*fixed*/
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #111;
+                overflow-x: hidden;
+                padding-top: 20px;
+            }
+
+            #a4e44faf6b538453caeb707ced08cf94e a,
+            .dropdown-btn {
+                padding: 6px 8px 6px 16px;
+                text-decoration: none;
+                font-size: 20px;
+                color: #818181;
+                display: block;
+                border: none;
+                background: none;
+                width: 100%;
+                text-align: left;
+                cursor: pointer;
+                outline: none;
+            }
+
+            #a4e44faf6b538453caeb707ced08cf94e a:hover,
+            .dropdown-btn:hover {
+                color: #f1f1f1;
+            }
+
+            #a4e44faf6b538453caeb707ced08cf94e .active {
+                background-color: green;
+                color: white;
+            }
+
+            #a4e44faf6b538453caeb707ced08cf94e .dropdown-container {
+                display: none;
+                background-color: #262626;
+                padding-left: 8px;
+            }
+
+            @media screen and (max-height: 450px) {
+                #a4e44faf6b538453caeb707ced08cf94e {
+                    padding-top: 15px;
+                }
+
+                #a4e44faf6b538453caeb707ced08cf94e a {
+                    font-size: 18px;
+                }
+            }
+        </style>
+
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#clients">Clients</a>
+        <button onclick="dropdownInSideBar_onlick_3710d98023dc4fd5af5a6f0218f30c5b(this)" class="dropdown-btn">Dropdown
+            ▼</button>
+        <div class="dropdown-container">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+        <a href="#contact">Contact</a>
+
+        <script>/* 3710d98023dc4fd5af5a6f0218f30c5b
+this scripts works for onclick event of dropdown buttons located in sidebars
+*/
+
+            function dropdownInSideBar_onlick_3710d98023dc4fd5af5a6f0218f30c5b(dropdownBtn) {
+                dropdownBtn.classList.toggle("active");
+                var dropdownContent = dropdownBtn.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

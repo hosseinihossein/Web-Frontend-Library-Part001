@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="ffd9c0bdec334bb3a3c4c284d515815e">
+        <style>
+            #ffd9c0bdec334bb3a3c4c284d515815e {
+                background-color: #2B2B2B;
+                color: white;
+                border-radius: 10px 30px 10px 10px;
+                width: 85vw;
+                margin: 20px auto 0;
+            }
+
+            #ffd9c0bdec334bb3a3c4c284d515815e .main {
+                background-color: #242424;
+                border-radius: 10px 30px 10px 10px;
+                position: relative;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+
+            #ffd9c0bdec334bb3a3c4c284d515815e .rate-box {
+                border-radius: 10px 0 0 10px;
+                padding: 10px;
+            }
+
+            #ffd9c0bdec334bb3a3c4c284d515815e .specs-box {
+                padding: 10px;
+                font-size: 18px;
+                width: 100%;
+            }
+
+            #ffd9c0bdec334bb3a3c4c284d515815e .specs-box>div {
+                margin: 10px;
+            }
+
+            #ffd9c0bdec334bb3a3c4c284d515815e .spec-title {
+                color: gray;
+            }
+
+            #ffd9c0bdec334bb3a3c4c284d515815e .spec-value {
+                display: inline-block;
+            }
+
+            #ffd9c0bdec334bb3a3c4c284d515815e img {
+                /*float: left;*/
+                width: 90%;
+                object-fit: contain;
+                margin: 10px 10px 0 10px;
+                transition: 0.3s;
+            }
+
+            #ffd9c0bdec334bb3a3c4c284d515815e img:hover {
+                filter: brightness(120%);
+            }
+
+            #ffd9c0bdec334bb3a3c4c284d515815e header {
+                padding: 20px 30px;
+            }
+
+            #ffd9c0bdec334bb3a3c4c284d515815e header h1 {
+                float: left;
+                margin: 0;
+            }
+
+            #ffd9c0bdec334bb3a3c4c284d515815e a {
+                text-decoration: none;
+            }
+
+            #ffd9c0bdec334bb3a3c4c284d515815e .description {
+                padding: 10px 10px 20px 10px;
+            }
+
+            #ffd9c0bdec334bb3a3c4c284d515815e .description>p {
+                margin-top: 0;
+                text-indent: 2rem;
+                font-size: 18px;
+            }
+
+            #ffd9c0bdec334bb3a3c4c284d515815e .description>h3 {
+                margin: 10px 0;
+            }
+
+            #ffd9c0bdec334bb3a3c4c284d515815e a:visited {
+                color: white;
+            }
+
+            #ffd9c0bdec334bb3a3c4c284d515815e a:hover {
+                color: coral;
+            }
+
+            #ffd9c0bdec334bb3a3c4c284d515815e header .bookmark-btn {
+                float: right;
+                cursor: pointer;
+                font-size: 20px;
+                border: none;
+                background-color: rgba(0, 0, 0, 0);
+                color: white;
+            }
+
+            #ffd9c0bdec334bb3a3c4c284d515815e .more {
+                color: white;
+                background-color: #ff5791;
+                padding: 10px 30px 10px 20px;
+                display: block;
+                border-radius: 10px 20px 10px 10px;
+                /*position: absolute;
+                    left: 20px;
+                    bottom: -20px;*/
+                font-size: 18px;
+                margin: 10px;
+                width: 90%;
+                text-align: center;
+            }
+
+            #ffd9c0bdec334bb3a3c4c284d515815e .more:hover {
+                background-color: #f78da7;
+                color: white;
+            }
+
+            #ffd9c0bdec334bb3a3c4c284d515815e .your-vote i {
+                font-size: 18px;
+            }
+
+            #ffd9c0bdec334bb3a3c4c284d515815e .your-vote>i {
+                color: #ff5791;
+            }
+
+            #ffd9c0bdec334bb3a3c4c284d515815e .your-vote>i:hover {
+                color: gold;
+            }
+
+            /****** tooltip ******/
+            #ffd9c0bdec334bb3a3c4c284d515815e #tooltip {
+                position: relative;
+            }
+
+            #ffd9c0bdec334bb3a3c4c284d515815e #tooltip .tooltiptext {
+                visibility: hidden;
+                width: 120px;
+                background-color: #ff5791;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 5px 0;
+                position: absolute;
+                z-index: 1;
+                bottom: 150%;
+                left: 50%;
+                margin-left: -60px;
+                font-size: 14px;
+            }
+
+            #ffd9c0bdec334bb3a3c4c284d515815e #tooltip .tooltiptext::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: #ff5791 transparent transparent transparent;
+            }
+
+            #ffd9c0bdec334bb3a3c4c284d515815e #tooltip:hover .tooltiptext {
+                visibility: visible;
+            }
+        </style>
+
+        <article>
+            <header class="clearfix">
+                <h1><a href="">Oppenheimer</a></h1>
+                <button id="tooltip" class="bookmark-btn">
+                    <i class="fa-regular fa-bookmark">
+                    </i>
+                    <span class="tooltiptext">Add to favorites</span>
+                </button>
+            </header>
+            <div class="main">
+                <div style="width: 20%;">
+                    <a href=""><img src="./statics/Oppenheimer001.jpg" alt="movie image"></a>
+                    <a class="more" href=""><i class="fa-regular fa-circle-play"></i> watch online</a>
+                </div>
+                <div style="/*flex-grow: 1;*/width: 30%;">
+                    <div class="specs-box">
+                        <div style="margin-bottom: 15px;">
+                            <i style="margin-right: 5px;" class="fa-solid fa-film"></i>
+                            <span class="spec-title">Genre:</span>
+                            <div class="spec-value"><a href="">Drama</a>, <a href="">Comedy</a>,
+                                <a href="">Exciting</a>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 15px;">
+                            <i style="margin-right: 6px;" class="fa-solid fa-calendar-days"></i>
+                            <span class="spec-title">Production Year: </span>
+                            <a href="" class="spec-value">2023</a>
+                        </div>
+
+                        <div style="margin-bottom: 15px;">
+                            <i style=" position: relative;left: -2px;" class="fa-solid fa-tv"></i>
+                            <span class="spec-title">Resulation: </span><span class="spec-value">1080p HDRip</span>
+                        </div>
+
+                        <div style="margin-bottom: 15px;">
+                            <i style="margin-right: 4px;" class="fa-solid fa-clock"></i>
+                            <span class="spec-title">Duration: </span><span class="spec-value">131 minutes</span>
+                        </div>
+
+                        <div style="margin-bottom: 15px;">
+                            <i style="position: relative;left: -2px;" class="fa-solid fa-language"></i>
+                            <span class="spec-title">Language: </span>
+                            <div class="spec-value"><a href="">English</a></div>
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <i style="margin-right: 8px;" class="fa-solid fa-user"></i>
+                            <span class="spec-title">Director:</span>
+                            <a href="" class="spec-value">Christopher Nollan</a>
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <i style="position: relative;left: -4px;margin-right: 0px;"
+                                class="fa-solid fa-user-group"></i>
+                            <span class="spec-title">Cast: </span>
+                            <div class="spec-value">
+                                <a href="">Cillian Murphy</a>,
+                                <a href="">Florence Pugh</a>,
+                                <a href="">Robert Downey</a>, ...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="/*flex-grow: 1;*/width: 20%;">
+                    <div class="specs-box">
+                        <div style="margin-bottom: 15px;">
+                            <i style="margin-right: 5px;" class="fa-solid fa-earth-americas"></i>
+                            <span class="spec-title">Country: </span>
+                            <div class="spec-value">
+                                <a href="">USA</a>,
+                                <a href="">UK</a>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 15px;"><i style=" position: relative;left: -2px;"
+                                class="fa-solid fa-user-check"></i>
+                            <span class="spec-title">Age Ratings: </span>
+                            <span class="spec-value">R</span>
+                        </div>
+
+                        <div style="margin-bottom: 15px;">
+                            <i style=" position: relative;left: -2px;" class="fa-regular fa-closed-captioning"></i>
+                            <span class="spec-title">Subtitle: </span><span class="spec-value">Available</span>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 30%;">
+                    <!---------------------- rating stars ------------------>
+                    <link rel="stylesheet"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+                        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+                        crossorigin="anonymous" referrerpolicy="no-referrer">
+                    <style>
+                        #mfcd2bfc7328c45bdaef7f8cd31384268 {
+                            margin: 20px auto 0;
+                            width: fit-content;
+                            height: 110px;
+                            text-wrap: nowrap;
+                            text-align: center;
+                            background-color: #242424;
+                            overflow: hidden;
+                            padding: 10px;
+                            border-radius: 10px;
+                            font-family: Helvetica, Arial, sans-serif;
+                        }
+
+                        #mfcd2bfc7328c45bdaef7f8cd31384268 .your-vote i {
+                            font-size: 18px;
+                        }
+
+                        #mfcd2bfc7328c45bdaef7f8cd31384268 p {
+                            color: white;
+                        }
+
+                        #mfcd2bfc7328c45bdaef7f8cd31384268 .your-vote>div {
+                            mix-blend-mode: lighten;
+                        }
+
+                        #mfcd2bfc7328c45bdaef7f8cd31384268 .star-ratings-range {
+                            width: 30%;
+                            text-wrap: nowrap;
+                            position: relative;
+                            overflow: hidden;
+                        }
+
+                        #mfcd2bfc7328c45bdaef7f8cd31384268 .reg-stars {
+                            position: relative;
+                            z-index: 1;
+                            color: gray;
+                        }
+
+                        #mfcd2bfc7328c45bdaef7f8cd31384268 a:visited {
+                            color: gray;
+                        }
+                    </style>
+                    <div id="mfcd2bfc7328c45bdaef7f8cd31384268">
+                        <div class="your-vote">
+                            <div class="reg-stars">
+                                <a class="star1" href=""><i class="fa-regular fa-star"></i></a>
+                                <a class="star2" href=""><i class="fa-regular fa-star"></i></a>
+                                <a class="star3" href=""><i class="fa-regular fa-star"></i></a>
+                                <a class="star4" href=""><i class="fa-regular fa-star"></i></a>
+                                <a class="star5" href=""><i class="fa-regular fa-star"></i></a>
+                            </div>
+                            <div class="star-ratings-range" style="top: -20px;">
+                                <i style="color: red;" class="fa-solid fa-star"></i>
+                                <i style="color: red;" class="fa-solid fa-star"></i>
+                                <i style="color: red;" class="fa-solid fa-star"></i>
+                                <i style="color: red;" class="fa-solid fa-star"></i>
+                                <i style="color: red;" class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="star-ratings-range" style="top: -40px;">
+                                <i style="color: rgb(0, 255, 0);" class="fa-solid fa-star"></i>
+                                <i style="color: rgb(0, 255, 0);" class="fa-solid fa-star"></i>
+                                <i style="color: rgb(0, 255, 0);" class="fa-solid fa-star"></i>
+                                <i style="color: rgb(0, 255, 0);" class="fa-solid fa-star"></i>
+                                <i style="color: rgb(0, 255, 0);" class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="rate" style="position: relative; top: -40px;">rate: 3.5</p>
+                        <p class="vote" style="position: relative; top: -40px;">200 votes</p>
+                    </div>
+                    <script>
+                        let mainElement_mfcd2bfc7328c45bdaef7f8cd31384268 = document.getElementById("mfcd2bfc7328c45bdaef7f8cd31384268");
+                        let anchors_mfcd2bfc7328c45bdaef7f8cd31384268 = mainElement_mfcd2bfc7328c45bdaef7f8cd31384268.getElementsByTagName("A");
+
+                        for (let j = 0; j < anchors_mfcd2bfc7328c45bdaef7f8cd31384268.length; j++) {
+                            anchors_mfcd2bfc7328c45bdaef7f8cd31384268[j].addEventListener("mouseover", (event) => {
+                                for (let i = 0; i <= j; i++) {
+                                    anchors_mfcd2bfc7328c45bdaef7f8cd31384268[i].style.color = "gold";
+                                }
+                            });
+                        }
+
+                        for (let j = 0; j < anchors_mfcd2bfc7328c45bdaef7f8cd31384268.length; j++) {
+                            anchors_mfcd2bfc7328c45bdaef7f8cd31384268[j].addEventListener("mouseleave", (event) => {
+                                for (let i = 0; i < anchors_mfcd2bfc7328c45bdaef7f8cd31384268.length; i++) {
+                                    anchors_mfcd2bfc7328c45bdaef7f8cd31384268[i].style.color = "gray";
+                                }
+                            });
+                        }
+                    </script>
+                    <!------------------------------------------------------>
+                    <div class="rate-box">
+                        <div style="width: 100%; text-align: center;">
+                            <a href="">
+                                <i style="font-size: 40px;color: yellow; padding: 0 0px;/*float: left;*/"
+                                    class="fa-brands fa-imdb">
+                                </i>
+                            </a>
+                            <span style="font-size: 14px; padding: 0 0px;">
+                                <b style="font-size: 30px; padding: 0 10px;">7.5/10</b> 12.411 votes
+                            </span>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <i style="float: left;margin-top: 12px; margin-right: 5px;" class="fa-solid fa-file-pen"></i>
+                        <h3 style="color: gray;"> summary: </h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea blanditiis neque nulla. Beatae
+                            expedita
+                            vero numquam quisquam sint minus hic. Quis officia distinctio magni, molestiae aspernatur
+                            eos
+                            esse
+                            atque. Eum...</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </div>
+</body>
+
+</html>

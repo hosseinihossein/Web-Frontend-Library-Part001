@@ -1,0 +1,2440 @@
+<!-- movie675f678295ad4db19d01049d5864f200 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Template</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+
+<body style="font-size: 100%; background-color: #000;">
+    <!-------------------- Navigation Bar -------------------->
+    <style>
+        #navbara18260fe20a648beaf5493576c07cd5f {
+            color: white;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f * {
+            z-index: 10;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f a {
+            text-decoration: none;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f a:visited {
+            color: white;
+        }
+
+        /******************* container-1 ******************/
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-1 {
+            background-color: #000;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-1>* {
+            float: left;
+            margin: 10px auto;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-1 .logo-box {
+            font-size: 50px;
+            width: 20%;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-1 .menu-box {
+            width: 60%;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-1 .menu-box a {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: #1e1e1e;
+            border-radius: 30px;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-1 .menu-box a:hover {
+            background-color: #ef6e9c;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-1 .login-box {
+            width: 20%;
+            float: right;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-1 .login-box a {
+            display: inline-block;
+            padding: 15px 20px;
+            background-color: #1e1e1e;
+            border-radius: 30px;
+            border: 2px solid white;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-1 .login-box a:hover {
+            border: 2px solid #ef6e9c;
+        }
+
+        /***************** container-2 *****************/
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-2 {
+            background-color: #242424;
+            padding: 0;
+            text-align: center;
+            font-family: Helvetica, Arial, sans-serif;
+            width: 100%;
+            position: relative;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-2 .nav-box {
+            float: left;
+
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-2 .nav-box>ul {
+            list-style-position: inside;
+            list-style-type: none;
+            height: 65px;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-2 .nav-box>ul>li {
+            float: left;
+            margin: 0;
+            padding: 30px;
+            position: relative;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-2 .nav-box>ul>li i {
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-2 .nav-box>ul>li:hover i {
+            font-size: 20px;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-2 .nav-box>ul>li:hover>a {
+            color: #ef6e9c;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-2 .nav-box>ul>li:hover .list {
+            /*display: block;*/
+            visibility: visible;
+            height: 250px;
+            padding: 25px 20px 50px 25px;
+            border-radius: 0 0 10px 10px;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-2 .search-box {
+            float: right;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-2 .list {
+            position: absolute;
+            top: 100%;
+            /*78px;*/
+            display: block;
+            visibility: hidden;
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 50vw;
+            /*500px;*/
+            height: 0px;
+            padding: 0;
+            transition: all 0.5s;
+            overflow: hidden;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-2 .list img {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            float: right;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-2 .list ul {
+            list-style-type: none;
+            float: left;
+            margin: 10px;
+            text-align: start;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-2 .list ul li {
+            padding: 10px 0;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-2 .list ul li::before {
+            content: "\2022";
+            /* Add content: \2022 is the CSS Code/unicode for a bullet */
+            color: #ef6e9c;
+            /* Change the color */
+            font-weight: bold;
+            /* If you want it to be bold */
+            display: inline-block;
+            /* Needed to add space between the bullet and the text */
+            width: 1em;
+            /* Also needed for space (tweak if needed) */
+            margin-left: -1em;
+            /* Also needed for space (tweak if needed) */
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-2 .list ul li a:hover {
+            color: #ef6e9c;
+            transition: all 0.3s;
+        }
+
+        /****************** search-box ***************/
+        #navbara18260fe20a648beaf5493576c07cd5f .container-2 .search-box {
+            float: right;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #2B2B2B;
+            border-radius: 10px;
+            /*max-width: 40%;
+        min-width: 30%;*/
+            width: 30%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-2 .search-box input {
+            font-size: 20px;
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
+            color: white;
+            /*float: left;*/
+            margin: 0 10px;
+            border-right: 1px solid gray;
+            /*padding-right: 10px;*/
+            width: 100%;
+            /*flex-grow: 1;*/
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-2 .search-box input:focus {
+            outline: none;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-2 .search-box i {
+            font-size: 20px;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-2 .search-box button.open-advanced {
+            border: none;
+            background-color: hsla(0, 0%, 39%, .1);
+            padding: 15px;
+            color: white;
+            border-radius: 10px;
+            /*float: left;*/
+            /*margin-right: 10px;*/
+            cursor: pointer;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-2 .advanced-search-box {
+            display: block;
+            position: absolute;
+            top: 80%;
+            left: 70%;
+            right: 0;
+            background-color: #242424;
+            transition: all 0.5s ease-out;
+            overflow: hidden;
+            border-radius: 0 0 10px 10px;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-2 .advanced-search-box.show {
+            /*display: block;*/
+            top: 100%;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-2 .advanced-search-box form {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-2 .advanced-search-box form>div {
+            margin: 10px;
+            border: 1px solid gray;
+            border-radius: 10px;
+            height: 60px;
+            position: relative;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-2 .advanced-search-box form select {
+            height: 34px;
+            cursor: pointer;
+            background-color: #242424;
+            color: white;
+            border: none;
+            font-size: 18px;
+            outline: none;
+            padding: 10px;
+            height: 100%;
+            border-radius: 15px;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-2 .advanced-search-box form .on-border {
+            position: absolute;
+            top: -5px;
+            left: 5px;
+            background-color: #242424;
+            color: gray;
+            padding: 0 5px;
+        }
+
+        #navbara18260fe20a648beaf5493576c07cd5f .container-2 .advanced-search-box form>input[type="button"] {
+            background-color: #ef6e9c;
+            margin: 5px;
+            padding: 0 30px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 18px;
+            min-height: 50px;
+            cursor: pointer;
+        }
+
+        /****************************** slide buttons *********************************/
+        #button15500db0018a4a5b90867fc327dfcd0b {
+            float: left;
+            padding: 15px;
+
+        }
+
+        /* The switch - the box around the slider */
+        #button15500db0018a4a5b90867fc327dfcd0b .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        /* Hide default HTML checkbox */
+        #button15500db0018a4a5b90867fc327dfcd0b .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        /* The slider */
+        #button15500db0018a4a5b90867fc327dfcd0b .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0px;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        #button15500db0018a4a5b90867fc327dfcd0b .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        #button15500db0018a4a5b90867fc327dfcd0b input:checked+.slider {
+            background-color: #ef6e9c;
+        }
+
+        #button15500db0018a4a5b90867fc327dfcd0b input:focus+.slider {
+            box-shadow: 0 0 1px #ef6e9c;
+        }
+
+        #button15500db0018a4a5b90867fc327dfcd0b input:checked+.slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders*/
+        #button15500db0018a4a5b90867fc327dfcd0b .slider.round {
+            border-radius: 34px;
+        }
+
+        #button15500db0018a4a5b90867fc327dfcd0b .slider.round:before {
+            border-radius: 50%;
+        }
+
+        /*************** filter layer ****************/
+        #filterLayere57d46cb9b964270aefb6a2cb0ee6304 {
+            display: none;
+            position: absolute;
+            top: 200px;
+            bottom: -100vw;
+            left: 0;
+            right: 0;
+            -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+            z-index: 5;
+        }
+    </style>
+    <div id="filterLayere57d46cb9b964270aefb6a2cb0ee6304" style="display: none;"></div>
+    <header id="navbara18260fe20a648beaf5493576c07cd5f">
+        <div class="container-1 clearfix">
+            <div class="logo-box">
+                <a href="./index.html"><i style="color: #ef6e9c;" class="fa-solid fa-film"></i> Movies</a>
+            </div>
+            <div class="menu-box">
+                <a href="">link</a>
+                <a href="">link</a>
+                <a href="">link</a>
+                <a href="">link</a>
+            </div>
+            <div class="login-box">
+                <a href="">
+                    <i class="fa-solid fa-right-to-bracket"></i>&nbsp;&nbsp; login
+                </a>
+                <a href="">
+                    <i class="fa-solid fa-user-plus"></i>&nbsp;&nbsp; sign up
+                </a>
+            </div>
+        </div>
+        <div class="container-2 clearfix">
+            <div class="nav-box">
+                <ul>
+                    <li onmouseover="show_filterLayere57d46cb9b964270aefb6a2cb0ee6304()"
+                        onmouseleave="hide_filterLayere57d46cb9b964270aefb6a2cb0ee6304()">
+                        <a href="">
+                            <i class="fa-solid fa-video"></i>
+                            Movie
+                            <i class="fa-solid fa-caret-down"></i>
+                        </a>
+                        <div class="list">
+                            <ul>
+                                <li><a href="">movie 1</a></li>
+                                <li><a href="">movie movie 2</a></li>
+                                <li><a href="">movie 3</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="">movie movie 1</a></li>
+                                <li><a href="">movie 2</a></li>
+                                <li><a href="">moviemovie 3</a></li>
+                            </ul>
+                            <img src="./statics/Oppenheimer001.jpg" alt="">
+                        </div>
+                    </li>
+                    <li onmouseover="show_filterLayere57d46cb9b964270aefb6a2cb0ee6304()"
+                        onmouseleave="hide_filterLayere57d46cb9b964270aefb6a2cb0ee6304()">
+                        <a href="">
+                            <i class="fa-solid fa-clapperboard"></i>
+                            Series
+                            <i class="fa-solid fa-caret-down"></i>
+                        </a>
+                        <div class="list">
+                            <ul>
+                                <li><a href="">series 1</a></li>
+                                <li><a href="">series series 2</a></li>
+                                <li><a href="">series 3</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="">series series 1</a></li>
+                                <li><a href="">series 2</a></li>
+                                <li><a href="">seriesseries 3</a></li>
+                            </ul>
+                            <img src="./statics/bird001.webp" alt="">
+                        </div>
+                    </li>
+                    <li onmouseover="show_filterLayere57d46cb9b964270aefb6a2cb0ee6304()"
+                        onmouseleave="hide_filterLayere57d46cb9b964270aefb6a2cb0ee6304()">
+                        <a href="">
+                            <i class="fa-solid fa-palette"></i>
+                            Anime
+                            <i class="fa-solid fa-caret-down"></i>
+                        </a>
+                        <div class="list">
+                            <ul>
+                                <li><a href="">anime 1</a></li>
+                                <li><a href="">anime anime 2</a></li>
+                                <li><a href="">anime 3</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="">anime anime 1</a></li>
+                                <li><a href="">anime 2</a></li>
+                                <li><a href="">animeanime 3</a></li>
+                            </ul>
+                            <img src="./statics/computer001.webp" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="search-box clearfix">
+                <button onclick="funtion001_navbara18260fe20a648beaf5493576c07cd5f(this)" class="open-advanced"><i
+                        class="fa-solid fa-gear"></i></button>
+                <input type="text" placeholder="Search">
+                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+            <div class="advanced-search-box">
+                <form action="/#" method="get">
+                    <div>
+                        <label class="on-border" for="advanced-search-box-sort">Sort</label>
+                        <select name="sort" id="advanced-search-box-sort">
+                            <option value="default" selected="">Default</option>
+                            <option value="uploaded">Uploaded</option>
+                            <option value="visited">Visited</option>
+                            <option value="imdb">IMDb</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="on-border" for="advanced-search-box-genre">Genre</label>
+                        <select name="genre" id="advanced-search-box-genre">
+                            <option value="all" selected="">All</option>
+                            <option value="drama">Drama</option>
+                            <option value="comedy">Comedy</option>
+                            <option value="horror">Horror</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="on-border" for="advanced-search-box-country">Country</label>
+                        <select name="country" id="advanced-search-box-country">
+                            <option value="all" selected="">All</option>
+                            <option value="USA">USA</option>
+                            <option value="UK">UK</option>
+                            <option value="France">France</option>
+                        </select>
+                    </div>
+                    <div id="button15500db0018a4a5b90867fc327dfcd0b"><span class="on-border">Subtitle</span>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div id="button15500db0018a4a5b90867fc327dfcd0b"><span class="on-border">4K</span>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div id="button15500db0018a4a5b90867fc327dfcd0b"><span class="on-border">3D</span>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <input type="button" value="Search">
+                </form>
+            </div>
+        </div>
+    </header>
+    <div style="width: 100%;height: 200px;"></div>
+    <script>
+        function funtion001_navbara18260fe20a648beaf5493576c07cd5f(element) {
+            let advancedSearchBox = element.parentElement.parentElement.getElementsByClassName("advanced-search-box")[0];
+            advancedSearchBox.classList.toggle("show");
+        }
+        function show_filterLayere57d46cb9b964270aefb6a2cb0ee6304() {
+            let filterLayer = document.getElementById("filterLayere57d46cb9b964270aefb6a2cb0ee6304");
+            filterLayer.style.display = "block";
+        }
+        function hide_filterLayere57d46cb9b964270aefb6a2cb0ee6304() {
+            let filterLayer = document.getElementById("filterLayere57d46cb9b964270aefb6a2cb0ee6304");
+            filterLayer.style.display = "none";
+        }
+    </script>
+
+    <!-------------------- Main -------------------->
+    <div style="width: 95vw; margin: 10px auto; /*background-color: red;*/ padding: 10px;">
+        <style>
+            #card8f27ed6da26c4a7fab92cb479e483e77 {
+                background-color: #2B2B2B;
+                color: white;
+                border-radius: 10px 30px 10px 10px;
+                width: 85vw;
+                margin: auto;
+            }
+
+            #card8f27ed6da26c4a7fab92cb479e483e77 .main {
+                background-color: #242424;
+                border-radius: 10px 30px 10px 10px;
+                position: relative;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+
+            #card8f27ed6da26c4a7fab92cb479e483e77 .rate-box {
+                border-radius: 10px 0 0 10px;
+                padding: 10px;
+            }
+
+            #card8f27ed6da26c4a7fab92cb479e483e77 .specs-box {
+                padding: 10px;
+                font-size: 18px;
+                width: 100%;
+            }
+
+            #card8f27ed6da26c4a7fab92cb479e483e77 .specs-box>div {
+                margin: 10px;
+            }
+
+            #card8f27ed6da26c4a7fab92cb479e483e77 .spec-title {
+                color: gray;
+            }
+
+            #card8f27ed6da26c4a7fab92cb479e483e77 .spec-value {
+                display: inline-block;
+            }
+
+            #card8f27ed6da26c4a7fab92cb479e483e77 img {
+                /*float: left;*/
+                width: 90%;
+                object-fit: contain;
+                margin: 10px 10px 0 10px;
+                transition: 0.3s;
+            }
+
+            #card8f27ed6da26c4a7fab92cb479e483e77 img:hover {
+                filter: brightness(120%);
+            }
+
+            #card8f27ed6da26c4a7fab92cb479e483e77 header {
+                padding: 20px 30px;
+            }
+
+            #card8f27ed6da26c4a7fab92cb479e483e77 header h1 {
+                float: left;
+                margin: 0;
+            }
+
+            #card8f27ed6da26c4a7fab92cb479e483e77 a {
+                text-decoration: none;
+            }
+
+            #card8f27ed6da26c4a7fab92cb479e483e77 .description {
+                padding: 10px 10px 20px 10px;
+            }
+
+            #card8f27ed6da26c4a7fab92cb479e483e77 .description>p {
+                margin-top: 0;
+                text-indent: 2rem;
+                font-size: 18px;
+            }
+
+            #card8f27ed6da26c4a7fab92cb479e483e77 .description>h3 {
+                margin: 10px 0;
+            }
+
+            #card8f27ed6da26c4a7fab92cb479e483e77 a:visited {
+                color: white;
+            }
+
+            #card8f27ed6da26c4a7fab92cb479e483e77 a:hover {
+                color: coral;
+            }
+
+            #card8f27ed6da26c4a7fab92cb479e483e77 header .bookmark-btn {
+                float: right;
+                cursor: pointer;
+                font-size: 20px;
+                border: none;
+                background-color: rgba(0, 0, 0, 0);
+                color: white;
+            }
+
+            #card8f27ed6da26c4a7fab92cb479e483e77 .more {
+                color: white;
+                background-color: #ff5791;
+                padding: 10px 30px 10px 20px;
+                display: block;
+                border-radius: 10px 20px 10px 10px;
+                /*position: absolute;
+            left: 20px;
+            bottom: -20px;*/
+                font-size: 18px;
+                margin: 10px;
+                width: 90%;
+                text-align: center;
+            }
+
+            #card8f27ed6da26c4a7fab92cb479e483e77 .more:hover {
+                background-color: #f78da7;
+                color: white;
+            }
+
+            #card8f27ed6da26c4a7fab92cb479e483e77 .your-vote i {
+                font-size: 18px;
+            }
+
+            #card8f27ed6da26c4a7fab92cb479e483e77 .your-vote>i {
+                color: #ff5791;
+            }
+
+            #card8f27ed6da26c4a7fab92cb479e483e77 .your-vote>i:hover {
+                color: gold;
+            }
+
+            /****** tooltip ******/
+            #tooltipe29b8a5413dc4112a0b88236471b0587 {
+                position: relative;
+            }
+
+            #tooltipe29b8a5413dc4112a0b88236471b0587 .tooltiptext {
+                visibility: hidden;
+                width: 120px;
+                background-color: #ff5791;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 5px 0;
+                position: absolute;
+                z-index: 1;
+                bottom: 150%;
+                left: 50%;
+                margin-left: -60px;
+                font-size: 14px;
+            }
+
+            #tooltipe29b8a5413dc4112a0b88236471b0587 .tooltiptext::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: #ff5791 transparent transparent transparent;
+            }
+
+            #tooltipe29b8a5413dc4112a0b88236471b0587:hover .tooltiptext {
+                visibility: visible;
+            }
+        </style>
+        <div id="card8f27ed6da26c4a7fab92cb479e483e77">
+            <article>
+                <header class="clearfix">
+                    <h1><a href="">Oppenheimer</a></h1>
+                    <button id="tooltipe29b8a5413dc4112a0b88236471b0587" class="bookmark-btn">
+                        <i class="fa-regular fa-bookmark">
+                        </i>
+                        <span class="tooltiptext">Add to favorites</span>
+                    </button>
+                </header>
+                <div class="main">
+                    <div style="width: 20%;">
+                        <a href=""><img src="./statics/Oppenheimer001.jpg" alt="movie image"></a>
+                        <a class="more" href=""><i class="fa-regular fa-circle-play"></i> watch online</a>
+                    </div>
+                    <div style="/*flex-grow: 1;*/width: 30%;">
+                        <div class="specs-box">
+                            <div style="margin-bottom: 15px;">
+                                <i style="margin-right: 5px;" class="fa-solid fa-film"></i>
+                                <span class="spec-title">Genre:</span>
+                                <div class="spec-value"><a href="">Drama</a>, <a href="">Comedy</a>,
+                                    <a href="">Exciting</a>
+                                </div>
+                            </div>
+
+                            <div style="margin-bottom: 15px;">
+                                <i style="margin-right: 6px;" class="fa-solid fa-calendar-days"></i>
+                                <span class="spec-title">Production Year: </span>
+                                <a href="" class="spec-value">2023</a>
+                            </div>
+
+                            <div style="margin-bottom: 15px;">
+                                <i style=" position: relative;left: -2px;" class="fa-solid fa-tv"></i>
+                                <span class="spec-title">Resulation: </span><span class="spec-value">1080p HDRip</span>
+                            </div>
+
+                            <div style="margin-bottom: 15px;">
+                                <i style="margin-right: 4px;" class="fa-solid fa-clock"></i>
+                                <span class="spec-title">Duration: </span><span class="spec-value">131 minutes</span>
+                            </div>
+
+                            <div style="margin-bottom: 15px;">
+                                <i style="position: relative;left: -2px;" class="fa-solid fa-language"></i>
+                                <span class="spec-title">Language: </span>
+                                <div class="spec-value"><a href="">English</a></div>
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <i style="margin-right: 8px;" class="fa-solid fa-user"></i>
+                                <span class="spec-title">Director:</span>
+                                <a href="" class="spec-value">Christopher Nollan</a>
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <i style="position: relative;left: -4px;margin-right: 0px;"
+                                    class="fa-solid fa-user-group"></i>
+                                <span class="spec-title">Cast: </span>
+                                <div class="spec-value">
+                                    <a href="">Cillian Murphy</a>,
+                                    <a href="">Florence Pugh</a>,
+                                    <a href="">Robert Downey</a>, ...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="/*flex-grow: 1;*/width: 20%;">
+                        <div class="specs-box">
+                            <div style="margin-bottom: 15px;">
+                                <i style="margin-right: 5px;" class="fa-solid fa-earth-americas"></i>
+                                <span class="spec-title">Country: </span>
+                                <div class="spec-value">
+                                    <a href="">USA</a>,
+                                    <a href="">UK</a>
+                                </div>
+                            </div>
+
+                            <div style="margin-bottom: 15px;"><i style=" position: relative;left: -2px;"
+                                    class="fa-solid fa-user-check"></i>
+                                <span class="spec-title">Age Ratings: </span>
+                                <span class="spec-value">R</span>
+                            </div>
+
+                            <div style="margin-bottom: 15px;">
+                                <i style=" position: relative;left: -2px;" class="fa-regular fa-closed-captioning"></i>
+                                <span class="spec-title">Subtitle: </span><span class="spec-value">Available</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="width: 30%;">
+                        <!---------------------- rating stars ------------------>
+                        <link rel="stylesheet"
+                            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+                            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+                            crossorigin="anonymous" referrerpolicy="no-referrer">
+                        <style>
+                            #mfcd2bfc7328c45bdaef7f8cd31384268 {
+                                margin: 20px auto 0;
+                                width: fit-content;
+                                height: 110px;
+                                text-wrap: nowrap;
+                                text-align: center;
+                                background-color: #242424;
+                                overflow: hidden;
+                                padding: 10px;
+                                border-radius: 10px;
+                                font-family: Helvetica, Arial, sans-serif;
+                            }
+
+                            #mfcd2bfc7328c45bdaef7f8cd31384268 .your-vote i {
+                                font-size: 18px;
+                            }
+
+                            #mfcd2bfc7328c45bdaef7f8cd31384268 p {
+                                color: white;
+                            }
+
+                            #mfcd2bfc7328c45bdaef7f8cd31384268 .your-vote>div {
+                                mix-blend-mode: lighten;
+                            }
+
+                            #mfcd2bfc7328c45bdaef7f8cd31384268 .star-ratings-range {
+                                width: 30%;
+                                text-wrap: nowrap;
+                                position: relative;
+                                overflow: hidden;
+                            }
+
+                            #mfcd2bfc7328c45bdaef7f8cd31384268 .reg-stars {
+                                position: relative;
+                                z-index: 1;
+                                color: gray;
+                            }
+
+                            #mfcd2bfc7328c45bdaef7f8cd31384268 a:visited {
+                                color: gray;
+                            }
+                        </style>
+                        <div id="mfcd2bfc7328c45bdaef7f8cd31384268">
+                            <div class="your-vote">
+                                <div class="reg-stars">
+                                    <a class="star1" href=""><i class="fa-regular fa-star"></i></a>
+                                    <a class="star2" href=""><i class="fa-regular fa-star"></i></a>
+                                    <a class="star3" href=""><i class="fa-regular fa-star"></i></a>
+                                    <a class="star4" href=""><i class="fa-regular fa-star"></i></a>
+                                    <a class="star5" href=""><i class="fa-regular fa-star"></i></a>
+                                </div>
+                                <div class="star-ratings-range" style="top: -20px;">
+                                    <i style="color: red;" class="fa-solid fa-star"></i>
+                                    <i style="color: red;" class="fa-solid fa-star"></i>
+                                    <i style="color: red;" class="fa-solid fa-star"></i>
+                                    <i style="color: red;" class="fa-solid fa-star"></i>
+                                    <i style="color: red;" class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="star-ratings-range" style="top: -40px;">
+                                    <i style="color: rgb(0, 255, 0);" class="fa-solid fa-star"></i>
+                                    <i style="color: rgb(0, 255, 0);" class="fa-solid fa-star"></i>
+                                    <i style="color: rgb(0, 255, 0);" class="fa-solid fa-star"></i>
+                                    <i style="color: rgb(0, 255, 0);" class="fa-solid fa-star"></i>
+                                    <i style="color: rgb(0, 255, 0);" class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="rate" style="position: relative; top: -40px;">rate: 3.5</p>
+                            <p class="vote" style="position: relative; top: -40px;">200 votes</p>
+                        </div>
+                        <script>
+                            let mainElement_mfcd2bfc7328c45bdaef7f8cd31384268 = document.getElementById("mfcd2bfc7328c45bdaef7f8cd31384268");
+                            let anchors_mfcd2bfc7328c45bdaef7f8cd31384268 = mainElement_mfcd2bfc7328c45bdaef7f8cd31384268.getElementsByTagName("A");
+
+                            for (let j = 0; j < anchors_mfcd2bfc7328c45bdaef7f8cd31384268.length; j++) {
+                                anchors_mfcd2bfc7328c45bdaef7f8cd31384268[j].addEventListener("mouseover", (event) => {
+                                    for (let i = 0; i <= j; i++) {
+                                        anchors_mfcd2bfc7328c45bdaef7f8cd31384268[i].style.color = "gold";
+                                    }
+                                });
+                            }
+
+                            for (let j = 0; j < anchors_mfcd2bfc7328c45bdaef7f8cd31384268.length; j++) {
+                                anchors_mfcd2bfc7328c45bdaef7f8cd31384268[j].addEventListener("mouseleave", (event) => {
+                                    for (let i = 0; i < anchors_mfcd2bfc7328c45bdaef7f8cd31384268.length; i++) {
+                                        anchors_mfcd2bfc7328c45bdaef7f8cd31384268[i].style.color = "gray";
+                                    }
+                                });
+                            }
+                        </script>
+                        <!------------------------------------------------------>
+                        <div class="rate-box">
+                            <div style="width: 100%; text-align: center;">
+                                <a href="">
+                                    <i style="font-size: 40px;color: yellow; padding: 0 0px;/*float: left;*/"
+                                        class="fa-brands fa-imdb">
+                                    </i>
+                                </a>
+                                <span style="font-size: 14px; padding: 0 0px;">
+                                    <b style="font-size: 30px; padding: 0 10px;">7.5/10</b> 12.411 votes
+                                </span>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <i style="float: left;margin-top: 12px; margin-right: 5px;"
+                                class="fa-solid fa-file-pen"></i>
+                            <h3 style="color: gray;"> summary: </h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea blanditiis neque nulla.
+                                Beatae
+                                expedita
+                                vero numquam quisquam sint minus hic. Quis officia distinctio magni, molestiae
+                                aspernatur
+                                eos
+                                esse
+                                atque. Eum...</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-------------------- Download List -------------------->
+    <div>
+        <style>
+            #accordion65df986a01414f779478d9178d1a7826 {
+                background-color: #292929;
+                color: white;
+                font-family: Helvetica, Arial, sans-serif;
+                padding: 20px;
+                border-radius: 10px;
+                width: 80vw;
+                margin: 0 auto;
+            }
+
+            #accordion65df986a01414f779478d9178d1a7826 .header {
+                font-size: 20px;
+                padding: 0 20px 20px 20px;
+                display: inline-block;
+                border-bottom: 2px solid #e388a7;
+                position: relative;
+                top: 2px;
+            }
+
+            #accordion65df986a01414f779478d9178d1a7826 .trailer-btn {
+                padding: 10px 20px;
+                margin: 15px auto;
+                display: block;
+                width: 50%;
+                border-radius: 20px;
+                color: white;
+                background-color: rgba(0, 0, 0, 0);
+                border: 2px solid #474747;
+
+            }
+
+            #accordion65df986a01414f779478d9178d1a7826 .trailer-btn:hover {
+                border: 2px solid #e388a7;
+            }
+
+            #accordion65df986a01414f779478d9178d1a7826 a {
+                text-decoration: none;
+                text-align: center;
+                /*margin: 0 20px;*/
+            }
+
+            #accordion65df986a01414f779478d9178d1a7826 a:visited {
+                color: white;
+            }
+        </style>
+        <div id="accordion65df986a01414f779478d9178d1a7826">
+            <div class="header">
+                <i class="fa-solid fa-download"></i>
+                <span>Download</span>
+            </div>
+            <hr style="margin: 0;">
+            <div style="border: 1px solid black; background-color: #1d1d1d;margin: 10px 0; border-radius: 10px;">
+                <a href="" class="trailer-btn">Watch the Trailer</a>
+            </div>
+            <div class="accordion-box">
+                <style>
+                    #accordion8e87db006f714efba8e3982f7a5bb669 {
+                        margin: 10px 0;
+                    }
+
+                    #accordion8e87db006f714efba8e3982f7a5bb669 .accordion {
+                        background-color: #1d1d1d;
+                        color: white;
+                        cursor: pointer;
+                        padding: 20px;
+                        width: 100%;
+                        border: 1px solid black;
+                        border-radius: 10px;
+                        text-align: left;
+                        outline: none;
+                        font-size: 18px;
+                        transition: 0.4s;
+                    }
+
+                    #accordion8e87db006f714efba8e3982f7a5bb669 .accordion.active {
+                        border-radius: 10px 10px 0 0;
+                    }
+
+                    #accordion8e87db006f714efba8e3982f7a5bb669 .panel {
+                        padding: 0px 18px;
+                        background-color: white;
+                        overflow: hidden;
+                        max-height: 0;
+                        transition: all 0.2s ease-out;
+                        background-color: black;
+                        border-radius: 0 0 10px 10px;
+                        font-size: 16px;
+                    }
+
+                    #accordion8e87db006f714efba8e3982f7a5bb669 .accordion:after {
+                        content: '\02795';
+                        /* Unicode character for "plus" sign (+) */
+                        font-size: 16px;
+                        color: white;
+                        float: right;
+                        margin-left: 5px;
+                    }
+
+                    #accordion8e87db006f714efba8e3982f7a5bb669 .accordion.active:after {
+                        content: "\2796";
+                        /* Unicode character for "minus" sign (-) */
+                    }
+
+                    #accordion8e87db006f714efba8e3982f7a5bb669 a {
+                        text-decoration: none;
+                        padding: 10px 20px;
+                        background-color: #292929;
+                        border: 2px solid #292929;
+                        border-radius: 20px;
+                    }
+
+                    #accordion8e87db006f714efba8e3982f7a5bb669 a:visited {
+                        color: white;
+                    }
+
+                    #accordion8e87db006f714efba8e3982f7a5bb669 a:hover {
+                        background-color: #1b1b1b;
+                    }
+                </style>
+
+                <div id="accordion8e87db006f714efba8e3982f7a5bb669">
+                    <button class="accordion Script8145dfe532594b45aefd0a1782bed213">SoftSub Version</button>
+                    <div class="panel">
+                        <div class="clearfix"
+                            style="margin: 10px;padding: 10px;border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+                            <div style="float: left;margin: 35px 10px;">
+                                <a href=""><i style="color: #f55dbf;" class="fa-solid fa-download"></i> Download with
+                                    direct
+                                    link</a>
+                                <a href=""><i style="color: #f55dbf;" class=" fa-solid fa-image"></i> Sample
+                                    resolution</a>
+                            </div>
+                            <div style="float: right;text-align: center;">
+                                <h2 style="color: #f55dbf; margin: 20px;">WEB-DL x265 10bit 720p</h2>
+                                <span>size: 1.2 GB</span>
+                            </div>
+                        </div>
+                        <div class="clearfix"
+                            style="margin: 10px;padding: 10px;border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+                            <div style="float: left;margin: 35px 10px;">
+                                <a href=""><i style="color: #f55dbf;" class="fa-solid fa-download"></i> Download with
+                                    direct
+                                    link</a>
+                                <a href=""><i style="color: #f55dbf;" class=" fa-solid fa-image"></i> Sample
+                                    resolution</a>
+                            </div>
+                            <div style="float: right;text-align: center;">
+                                <h2 style="color: #f55dbf; margin: 20px;">WEB-DL x265 10bit 1080p</h2>
+                                <span>size: 3.5 GB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="accordion8e87db006f714efba8e3982f7a5bb669">
+                    <button class="accordion Script8145dfe532594b45aefd0a1782bed213">SoftSub Version</button>
+                    <div class="panel">
+                        <div class="clearfix"
+                            style="margin: 10px;padding: 10px;border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+                            <div style="float: left;margin: 35px 10px;">
+                                <a href=""><i style="color: #f55dbf;" class="fa-solid fa-download"></i> Download with
+                                    direct
+                                    link</a>
+                                <a href=""><i style="color: #f55dbf;" class=" fa-solid fa-image"></i> Sample
+                                    resolution</a>
+                            </div>
+                            <div style="float: right;text-align: center;">
+                                <h2 style="color: #f55dbf; margin: 20px;">WEB-DL x265 10bit 720p</h2>
+                                <span>size: 1.2 GB</span>
+                            </div>
+                        </div>
+                        <div class="clearfix"
+                            style="margin: 10px;padding: 10px;border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+                            <div style="float: left;margin: 35px 10px;">
+                                <a href=""><i style="color: #f55dbf;" class="fa-solid fa-download"></i> Download with
+                                    direct
+                                    link</a>
+                                <a href=""><i style="color: #f55dbf;" class=" fa-solid fa-image"></i> Sample
+                                    resolution</a>
+                            </div>
+                            <div style="float: right;text-align: center;">
+                                <h2 style="color: #f55dbf; margin: 20px;">WEB-DL x265 10bit 1080p</h2>
+                                <span>size: 3.5 GB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    /* 
+                    this script belongs to accordions
+                    
+                    an accordion element example:
+                    
+                    <div id="accordion9a4a231c0f8f459dbb173c1c71a34339">
+                        <button class="accordion Script8145dfe532594b45aefd0a1782bed213">Section
+                            1</button>
+                        <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                et
+                                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip
+                                ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                    */
+
+                    let accordions_Script8145dfe532594b45aefd0a1782bed213 = document.getElementsByClassName("Script8145dfe532594b45aefd0a1782bed213");
+
+                    for (let i = 0; i < accordions_Script8145dfe532594b45aefd0a1782bed213.length; i++) {
+                        accordions_Script8145dfe532594b45aefd0a1782bed213[i].addEventListener("click", function () {
+                            this.classList.toggle("active");
+                            let panel = this.nextElementSibling;
+                            if (parseInt(panel.style.maxHeight) > 0) {
+                                panel.style.maxHeight = null;
+                            } else {
+                                panel.style.maxHeight = panel.scrollHeight + "px";
+                            }
+                            //console.log(panel.style.maxHeight);
+                        });
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------- Actors List -------------------->
+    <div style="width: 90%; margin: 20px auto 0;">
+        <!-- Text Divider -->
+        <style>
+            #m7dcb4daccb564c768b7b313f95c75483 .divider {
+                font-size: 25px;
+                display: flex;
+                align-items: center;
+                color: white;
+            }
+
+            #m7dcb4daccb564c768b7b313f95c75483 .divider::before,
+            #m7dcb4daccb564c768b7b313f95c75483 .divider::after {
+                flex: 1;
+                content: '';
+                padding: 3px;
+                background-color: #777;
+                margin: 5px;
+            }
+        </style>
+        <div id="m7dcb4daccb564c768b7b313f95c75483">
+            <div class="divider">Actors</div>
+        </div>
+
+    </div>
+    <div>
+        <style>
+            #imagedde3412c54f648cdae874216fa0b3f26 {
+                position: relative;
+                color: white;
+                width: 80vw;
+                height: 300px;
+                font-family: Helvetica, Arial, sans-serif;
+                margin: auto;
+            }
+
+            #imagedde3412c54f648cdae874216fa0b3f26 .content-row {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                left: -100%;
+                top: 5%;
+            }
+
+            #imagedde3412c54f648cdae874216fa0b3f26 .content {
+                position: absolute;
+                margin: 0 5%;
+                opacity: 0.5;
+                width: 37%;
+                height: 80%;
+                overflow: hidden;
+                text-align: center;
+                transition: all 0.3s ease-out;
+                top: 10%;
+            }
+
+            #imagedde3412c54f648cdae874216fa0b3f26 .ordered-content.o1 {
+                left: 55%;
+                transition: none;
+            }
+
+            #imagedde3412c54f648cdae874216fa0b3f26 .ordered-content.o2 {
+                left: 75%;
+            }
+
+            #imagedde3412c54f648cdae874216fa0b3f26 .ordered-content.o3 {
+                left: 96%;
+            }
+
+            #imagedde3412c54f648cdae874216fa0b3f26 .ordered-content.o4 {
+                left: 116%;
+            }
+
+            #imagedde3412c54f648cdae874216fa0b3f26 .ordered-content.o5 {
+                left: 136%;
+            }
+
+            #imagedde3412c54f648cdae874216fa0b3f26 .ordered-content.o6 {
+                left: 156%;
+            }
+
+            #imagedde3412c54f648cdae874216fa0b3f26 .ordered-content.o7 {
+                left: 176%;
+            }
+
+            #imagedde3412c54f648cdae874216fa0b3f26 .ordered-content.o8 {
+                left: 195%;
+            }
+
+            #imagedde3412c54f648cdae874216fa0b3f26 .ordered-content.o9 {
+                left: 215%;
+                transition: none;
+            }
+
+            #imagedde3412c54f648cdae874216fa0b3f26 .content.active {
+                opacity: 1;
+                width: 18%;
+                height: 90%;
+                top: 0;
+                background-color: #444444;
+                border-radius: 10px;
+                padding: 10px;
+            }
+
+            #imagedde3412c54f648cdae874216fa0b3f26 .content img {
+                width: 100%;
+                height: 80%;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+
+            #imagedde3412c54f648cdae874216fa0b3f26 .content p {
+                margin: 0;
+                position: relative;
+                top: 10px;
+            }
+
+            #imagedde3412c54f648cdae874216fa0b3f26 .content a {
+                text-decoration: none;
+                text-align: center;
+            }
+
+            #imagedde3412c54f648cdae874216fa0b3f26 .content a:visited {
+                color: white;
+            }
+
+            #imagedde3412c54f648cdae874216fa0b3f26 .visible-box {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                left: 0px;
+                top: 0;
+                border-radius: 5px;
+                overflow: hidden;
+            }
+
+            #imagedde3412c54f648cdae874216fa0b3f26 .btn {
+                position: relative;
+                top: 40%;
+                transform: translate(0, -50%);
+                font-size: 50px;
+                border: none;
+                border-radius: 40px;
+                background-color: black;
+                opacity: 0.6;
+                cursor: pointer;
+                color: #ff5791;
+                z-index: 1;
+
+            }
+
+            #imagedde3412c54f648cdae874216fa0b3f26 .btn:hover {
+                opacity: 0.9;
+            }
+
+            #imagedde3412c54f648cdae874216fa0b3f26 .left-btn {
+                float: left;
+                left: -35px;
+                padding: 5px 30px 15px 60px;
+            }
+
+            #imagedde3412c54f648cdae874216fa0b3f26 .right-btn {
+                float: right;
+                right: -35px;
+                padding: 5px 60px 15px 30px;
+            }
+        </style>
+        <div id="imagedde3412c54f648cdae874216fa0b3f26" class="">
+            <div class="visible-box">
+                <button
+                    onclick="{moveLeft_Script_a2c8516167af46f4a16f3605195f397d(this); /*clearInterval(interval_Script_a2c8516167af46f4a16f3605195f397d_Automatic);*/}"
+                    class="btn right-btn">‹</button>
+                <button
+                    onclick="{moveRight_Script_a2c8516167af46f4a16f3605195f397d(this); /*clearInterval(interval_Script_a2c8516167af46f4a16f3605195f397d_Automatic);*/}"
+                    class="btn left-btn">›</button>
+                <div class="content-row">
+                    <div class="content touchable active ordered-content o9">
+                        <a href="" draggable="false"><img src="./statics/bird001.webp" alt="" draggable="false"></a>
+
+                        <a href="" draggable="false">
+                            <p>pic001</p>
+                        </a>
+                    </div>
+                    <div class="content touchable active ordered-content o1">
+                        <a href="" draggable="false"><img src="./statics/computer001.webp" alt="" draggable="false"></a>
+                        <a href="" draggable="false">
+                            <p>pic001</p>
+                        </a>
+                    </div>
+                    <div class="content touchable active ordered-content o2">
+                        <a href="" draggable="false"><img src="./statics/deer001.webp" alt="" draggable="false"></a>
+                        <a href="" draggable="false">
+                            <p>pic001</p>
+                        </a>
+                    </div>
+                    <div class="content touchable active ordered-content o3">
+                        <a href="" draggable="false"><img src="./statics/galaxyfire001.webp" alt=""
+                                draggable="false"></a>
+                        <a href="" draggable="false">
+                            <p>pic001</p>
+                        </a>
+                    </div>
+                    <div class="content touchable active ordered-content o4">
+                        <a href="" draggable="false"><img src="./statics/Oppenheimer001.jpg" alt=""
+                                draggable="false"></a>
+                        <a href="" draggable="false">
+                            <p>pic001</p>
+                        </a>
+                    </div>
+                    <div class="content touchable active ordered-content o5">
+                        <a href="" draggable="false"><img src="./statics/orange001.webp" alt="" draggable="false"></a>
+                        <a href="" draggable="false">
+                            <p>pic001</p>
+                        </a>
+                    </div>
+                    <div class="content touchable active ordered-content o6">
+                        <a href="" draggable="false"><img src="./statics/bird001.webp" alt="" draggable="false"></a>
+                        <a href="" draggable="false">
+                            <p>pic001</p>
+                        </a>
+                    </div>
+                    <div class="content touchable active ordered-content o7">
+                        <a href="" draggable="false"><img src="./statics/computer001.webp" alt="" draggable="false"></a>
+                        <a href="" draggable="false">
+                            <p>pic001</p>
+                        </a>
+                    </div>
+                    <div class="content touchable active ordered-content o8">
+                        <a href="" draggable="false"><img src="./statics/deer001.webp" alt="" draggable="false"></a>
+                        <a href="" draggable="false">
+                            <p>pic001</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-------------------- Related Movies List -------------------->
+    <div style="width: 90%; margin: 20px auto 10px;">
+        <!-- Text Divider -->
+        <style>
+            #m7dcb4daccb564c768b7b313f95c75483 .divider {
+                font-size: 25px;
+                display: flex;
+                align-items: center;
+                color: white;
+            }
+
+            #m7dcb4daccb564c768b7b313f95c75483 .divider::before,
+            #m7dcb4daccb564c768b7b313f95c75483 .divider::after {
+                flex: 1;
+                content: '';
+                padding: 3px;
+                background-color: #777;
+                margin: 5px;
+            }
+        </style>
+        <div id="m7dcb4daccb564c768b7b313f95c75483">
+            <div class="divider">Related Movies</div>
+        </div>
+
+    </div>
+    <div>
+        <style>
+            #image88a8e1e2a94d4e13a17ecf81403d3232 {
+                position: relative;
+                color: white;
+                width: 80vw;
+                height: 400px;
+                font-family: Helvetica, Arial, sans-serif;
+                margin: auto;
+            }
+
+            #image88a8e1e2a94d4e13a17ecf81403d3232 .content-row {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                left: -100%;
+                top: 5%;
+            }
+
+            #image88a8e1e2a94d4e13a17ecf81403d3232 .content {
+                position: absolute;
+                margin: 0 5%;
+                opacity: 0.5;
+                width: 37%;
+                /*150px;*/
+                height: 80%;
+                /*260px;*/
+                /*border-radius: 10px;*/
+                overflow: hidden;
+                text-align: center;
+                /*background-color: gray;*/
+                transition: all 0.3s ease-out;
+                top: 10%;
+            }
+
+            #image88a8e1e2a94d4e13a17ecf81403d3232 .ordered-content.o1 {
+                left: 55%;
+                transition: none;
+            }
+
+            #image88a8e1e2a94d4e13a17ecf81403d3232 .ordered-content.o2 {
+                left: 75%;
+            }
+
+            #image88a8e1e2a94d4e13a17ecf81403d3232 .ordered-content.o3 {
+                left: 95.5%;
+            }
+
+            #image88a8e1e2a94d4e13a17ecf81403d3232 .ordered-content.o4 {
+                left: 115.5%;
+            }
+
+            #image88a8e1e2a94d4e13a17ecf81403d3232 .ordered-content.o5 {
+                left: 135.5%;
+            }
+
+            #image88a8e1e2a94d4e13a17ecf81403d3232 .ordered-content.o6 {
+                left: 155.5%;
+                /*transition: none;*/
+            }
+
+            #image88a8e1e2a94d4e13a17ecf81403d3232 .ordered-content.o7 {
+                left: 175.5%;
+            }
+
+            #image88a8e1e2a94d4e13a17ecf81403d3232 .ordered-content.o8 {
+                left: 195%;
+            }
+
+            #image88a8e1e2a94d4e13a17ecf81403d3232 .ordered-content.o9 {
+                left: 215%;
+                transition: none;
+            }
+
+            #image88a8e1e2a94d4e13a17ecf81403d3232 .content.active {
+                opacity: 1;
+                width: 19%;
+                /*50%;*/
+                /*200px;*/
+                height: 100%;
+                top: 0;
+            }
+
+            #image88a8e1e2a94d4e13a17ecf81403d3232 .content img {
+                width: 100%;
+                height: 80%;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+
+            #image88a8e1e2a94d4e13a17ecf81403d3232 .content p {
+                margin: 0;
+                position: relative;
+                top: -10px;
+            }
+
+            #image88a8e1e2a94d4e13a17ecf81403d3232 .content a {
+                text-decoration: none;
+                text-align: center;
+            }
+
+            #image88a8e1e2a94d4e13a17ecf81403d3232 .content a:visited {
+                color: white;
+            }
+
+            #image88a8e1e2a94d4e13a17ecf81403d3232 .visible-box {
+                position: relative;
+                width: 100%;
+                /*400px;*/
+                height: 100%;
+                /*550px;*/
+                left: 0px;
+                top: 0;
+                background-color: #242424;
+                border-radius: 5px;
+                overflow: hidden;
+            }
+
+            #image88a8e1e2a94d4e13a17ecf81403d3232 .btn {
+                position: relative;
+                top: 40%;
+                transform: translate(0, -50%);
+                font-size: 50px;
+                border: none;
+                border-radius: 40px;
+                background-color: black;
+                opacity: 0.6;
+                cursor: pointer;
+                color: #ff5791;
+                z-index: 1;
+
+            }
+
+            #image88a8e1e2a94d4e13a17ecf81403d3232 .btn:hover {
+                opacity: 0.9;
+            }
+
+            #image88a8e1e2a94d4e13a17ecf81403d3232 .left-btn {
+                float: left;
+                left: -35px;
+                padding: 5px 30px 15px 60px;
+            }
+
+            #image88a8e1e2a94d4e13a17ecf81403d3232 .right-btn {
+                float: right;
+                right: -35px;
+                padding: 5px 60px 15px 30px;
+            }
+        </style>
+        <div id="image88a8e1e2a94d4e13a17ecf81403d3232" class="Script_a2c8516167af46f4a16f3605195f397d_Automatic">
+            <div class="visible-box">
+                <button
+                    onclick="{moveLeft_Script_a2c8516167af46f4a16f3605195f397d(this); clearInterval(interval_Script_a2c8516167af46f4a16f3605195f397d_Automatic);}"
+                    class="btn right-btn">‹</button>
+                <button
+                    onclick="{moveRight_Script_a2c8516167af46f4a16f3605195f397d(this); clearInterval(interval_Script_a2c8516167af46f4a16f3605195f397d_Automatic);}"
+                    class="btn left-btn">›</button>
+                <div class="content-row">
+                    <div class="content touchable active ordered-content o9">
+                        <a href="" draggable="false"><img src="./statics/bird001.webp" alt="" draggable="false"></a>
+                        <div
+                            style="border-radius: 5px; padding:5px; position: relative;left: -25%;top: -7%; display: inline-block; background-color: rgba(0, 0, 0, 0.5);">
+                            <i style="color: gold;" class="fa-solid fa-star"></i>
+                            <span>5.9 / 10</span>
+                        </div>
+                        <a href="" draggable="false">
+                            <p>pic001</p>
+                        </a>
+                    </div>
+                    <div class="content touchable active ordered-content o1">
+                        <a href="" draggable="false"><img src="./statics/computer001.webp" alt="" draggable="false"></a>
+                        <div
+                            style="border-radius: 5px; padding:5px; position: relative;left: -25%;top: -7%; display: inline-block; background-color: rgba(0, 0, 0, 0.5);">
+                            <i style="color: gold;" class="fa-solid fa-star"></i>
+                            <span>5.9 / 10</span>
+                        </div>
+                        <a href="" draggable="false">
+                            <p>pic001</p>
+                        </a>
+                    </div>
+                    <div class="content touchable active ordered-content o2">
+                        <a href="" draggable="false"><img src="./statics/deer001.webp" alt="" draggable="false"></a>
+                        <div
+                            style="border-radius: 5px; padding:5px; position: relative;left: -25%;top: -7%; display: inline-block; background-color: rgba(0, 0, 0, 0.5);">
+                            <i style="color: gold;" class="fa-solid fa-star"></i>
+                            <span>5.9 / 10</span>
+                        </div>
+                        <a href="" draggable="false">
+                            <p>pic001</p>
+                        </a>
+                    </div>
+                    <div class="content touchable active ordered-content o3">
+                        <a href="" draggable="false"><img src="./statics/galaxyfire001.webp" alt=""
+                                draggable="false"></a>
+                        <div
+                            style="border-radius: 5px; padding:5px; position: relative;left: -25%;top: -7%; display: inline-block; background-color: rgba(0, 0, 0, 0.5);">
+                            <i style="color: gold;" class="fa-solid fa-star"></i>
+                            <span>5.9 / 10</span>
+                        </div>
+                        <a href="" draggable="false">
+                            <p>pic001</p>
+                        </a>
+                    </div>
+                    <div class="content touchable active ordered-content o4">
+                        <a href="" draggable="false"><img src="./statics/Oppenheimer001.jpg" alt=""
+                                draggable="false"></a>
+                        <div
+                            style="border-radius: 5px; padding:5px; position: relative;left: -25%;top: -7%; display: inline-block; background-color: rgba(0, 0, 0, 0.5);">
+                            <i style="color: gold;" class="fa-solid fa-star"></i>
+                            <span>5.9 / 10</span>
+                        </div>
+                        <a href="" draggable="false">
+                            <p>pic001</p>
+                        </a>
+                    </div>
+                    <div class="content touchable active ordered-content o5">
+                        <a href="" draggable="false"><img src="./statics/orange001.webp" alt="" draggable="false"></a>
+                        <div
+                            style="border-radius: 5px; padding:5px; position: relative;left: -25%;top: -7%; display: inline-block; background-color: rgba(0, 0, 0, 0.5);">
+                            <i style="color: gold;" class="fa-solid fa-star"></i>
+                            <span>5.9 / 10</span>
+                        </div>
+                        <a href="" draggable="false">
+                            <p>pic001</p>
+                        </a>
+                    </div>
+                    <div class="content touchable active ordered-content o6">
+                        <a href="" draggable="false"><img src="./statics/bird001.webp" alt="" draggable="false"></a>
+                        <div
+                            style="border-radius: 5px; padding:5px; position: relative;left: -25%;top: -7%; display: inline-block; background-color: rgba(0, 0, 0, 0.5);">
+                            <i style="color: gold;" class="fa-solid fa-star"></i>
+                            <span>5.9 / 10</span>
+                        </div>
+                        <a href="" draggable="false">
+                            <p>pic001</p>
+                        </a>
+                    </div>
+                    <div class="content touchable active ordered-content o7">
+                        <a href="" draggable="false"><img src="./statics/computer001.webp" alt="" draggable="false"></a>
+                        <div
+                            style="border-radius: 5px; padding:5px; position: relative;left: -25%;top: -7%; display: inline-block; background-color: rgba(0, 0, 0, 0.5);">
+                            <i style="color: gold;" class="fa-solid fa-star"></i>
+                            <span>5.9 / 10</span>
+                        </div>
+                        <a href="" draggable="false">
+                            <p>pic001</p>
+                        </a>
+                    </div>
+                    <div class="content touchable active ordered-content o8">
+                        <a href="" draggable="false"><img src="./statics/deer001.webp" alt="" draggable="false"></a>
+                        <div
+                            style="border-radius: 5px; padding:5px; position: relative;left: -25%;top: -7%; display: inline-block; background-color: rgba(0, 0, 0, 0.5);">
+                            <i style="color: gold;" class="fa-solid fa-star"></i>
+                            <span>5.9 / 10</span>
+                        </div>
+                        <a href="" draggable="false">
+                            <p>pic001</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------- Comments -------------------->
+    <div style="width: 90%; margin: 20px auto 0;">
+        <!-- Text Divider -->
+        <style>
+            #m7dcb4daccb564c768b7b313f95c75483 .divider {
+                font-size: 25px;
+                display: flex;
+                align-items: center;
+                color: white;
+            }
+
+            #m7dcb4daccb564c768b7b313f95c75483 .divider::before,
+            #m7dcb4daccb564c768b7b313f95c75483 .divider::after {
+                flex: 1;
+                content: '';
+                padding: 3px;
+                background-color: #777;
+                margin: 5px;
+            }
+        </style>
+        <div id="m7dcb4daccb564c768b7b313f95c75483">
+            <div class="divider">Comments</div>
+        </div>
+
+    </div>
+    <div style="width: 90vw; margin: auto; border-radius: 10px;background-color: #272727;">
+        <!--------------------- login ---------------------->
+        <div>
+            <style>
+                #m5d26fb7d035b4cfd9e68f5af53c30ffb {
+                    margin: 10px auto;
+                    padding: 10px;
+                    background-color: #3a3a3a;
+                    font-family: Helvetica, Arial, sans-serif;
+                    width: fit-content;
+                    color: white;
+                }
+
+                #m5d26fb7d035b4cfd9e68f5af53c30ffb button {
+                    padding: 10px 20px;
+                    margin: 10px;
+                    background-color: #3a3a3a;
+                    color: white;
+                    border: 2px solid white;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    transition: 0.3s;
+                }
+
+                #m5d26fb7d035b4cfd9e68f5af53c30ffb button:hover {
+                    border: 2px solid #ef6e9c;
+                }
+            </style>
+            <div id="m5d26fb7d035b4cfd9e68f5af53c30ffb">
+                <p>Please login to submit your review!</p>
+                <div>
+                    <button>
+                        <i class="fa-solid fa-right-to-bracket"></i> Login
+                    </button>
+                    <button>
+                        <i class="fa-solid fa-user-plus"></i> Sign Up
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!--------------------- form ---------------------->
+        <style>
+            #me8b4dc8fa9dc42aa921952ccfb6d169b {
+                background-color: #272727;
+                padding: 10px;
+                margin: 10px;
+                overflow: hidden;
+            }
+
+            #me8b4dc8fa9dc42aa921952ccfb6d169b textarea {
+                width: 100%;
+                font-family: Helvetica, Arial, sans-serif;
+                font-size: 16px;
+                padding: 10px;
+                outline: none;
+                color: white;
+                background-color: #494949;
+                border: none;
+                border-radius: 10px 10px 0 10px;
+            }
+
+            #me8b4dc8fa9dc42aa921952ccfb6d169b .left {
+                float: left;
+                margin-left: 10px;
+            }
+
+            #me8b4dc8fa9dc42aa921952ccfb6d169b .left p {
+                margin-bottom: 10px;
+            }
+
+            #me8b4dc8fa9dc42aa921952ccfb6d169b .right {
+                float: right;
+                padding: 10px;
+            }
+
+            #me8b4dc8fa9dc42aa921952ccfb6d169b .right button {
+                margin: 10px;
+                padding: 10px 20px;
+                background-color: #272727;
+                color: white;
+                border: 2px solid white;
+                border-radius: 20px;
+                cursor: pointer;
+                font-size: 18px;
+            }
+
+            #me8b4dc8fa9dc42aa921952ccfb6d169b .right button:hover {
+                background-color: #ef6e9c;
+                border: 2px solid #ef6e9c;
+            }
+        </style>
+        <form id="me8b4dc8fa9dc42aa921952ccfb6d169b" action="">
+            <textarea name="comment" id="comment-text-area" cols="30" rows="5"
+                placeholder="type your comment here ..."></textarea>
+            <div class="clearfix">
+                <div class="left">
+                    <!-- Rectangular switch -->
+
+                    <style>
+                        /* The switch - the box around the slider */
+                        #buttone278cca5da014ad69e59ca9c70eaf572 {
+                            font-family: Helvetica, Arial, sans-serif;
+                            color: white;
+                        }
+
+                        #buttone278cca5da014ad69e59ca9c70eaf572>p {
+                            display: block;
+                        }
+
+                        #buttone278cca5da014ad69e59ca9c70eaf572 .switch {
+                            position: relative;
+                            display: inline-block;
+                            width: 70px;
+                            height: 34px;
+                            color: white;
+                        }
+
+                        /* Hide default HTML checkbox */
+                        #buttone278cca5da014ad69e59ca9c70eaf572 .switch input {
+                            opacity: 0;
+                            width: 0;
+                            height: 0;
+                        }
+
+                        /* The slider */
+                        #buttone278cca5da014ad69e59ca9c70eaf572 .slider {
+                            position: absolute;
+                            cursor: pointer;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            background-color: black;
+                            -webkit-transition: .4s;
+                            transition: .4s;
+                            padding: 8px;
+                        }
+
+                        #buttone278cca5da014ad69e59ca9c70eaf572 .slider span {
+                            margin-right: 10px;
+                            font-family: Helvetica, Arial, sans-serif;
+                        }
+
+                        #buttone278cca5da014ad69e59ca9c70eaf572 .slider:before {
+                            position: absolute;
+                            content: "";
+                            height: 34px;
+                            width: 36px;
+                            left: -1px;
+                            bottom: 0px;
+                            background-color: #ef6e9c;
+                            mix-blend-mode: lighten;
+                            -webkit-transition: .4s;
+                            transition: .4s;
+                        }
+
+                        #buttone278cca5da014ad69e59ca9c70eaf572 input:checked+.slider:before {
+                            width: 38px;
+                            -webkit-transform: translateX(34px);
+                            -ms-transform: translateX(34px);
+                            transform: translateX(34px);
+                        }
+
+                        #buttone278cca5da014ad69e59ca9c70eaf572 .slider.round {
+                            border-radius: 34px;
+                        }
+
+                        #buttone278cca5da014ad69e59ca9c70eaf572 .slider.round:before {
+                            border-radius: 34px;
+                        }
+                    </style>
+
+                    <div id="buttone278cca5da014ad69e59ca9c70eaf572">
+                        <p><b>Contains spoiled contents?</b></p>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"><span><b>No</b></span><span><b>Yes</b></span></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="right">
+                    <button type="submit"><i class="fa-regular fa-paper-plane"></i> Send the Comment</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--------------------- comments ---------------------->
+    <div style="width: 90vw; margin: 0 auto 50px;">
+        <div class="clearfix">
+            <style>
+                .m437d3e35b60b47f3bd34849821634efb {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    background-color: #272727;
+                    color: white;
+                    padding: 10px;
+                    border-radius: 10px;
+                    border: 2px solid black;
+                    font-family: Helvetica, Arial, sans-serif;
+                    margin-top: 10px;
+                }
+
+                .m437d3e35b60b47f3bd34849821634efb:hover {
+                    background-color: #464646;
+                }
+
+                .m437d3e35b60b47f3bd34849821634efb>div {
+                    margin: 10px 10px 0 10px;
+                }
+
+                .m437d3e35b60b47f3bd34849821634efb span,
+                .m437d3e35b60b47f3bd34849821634efb button {
+                    margin: 10px;
+                }
+
+                .m437d3e35b60b47f3bd34849821634efb img {
+                    width: 100px;
+                    height: 100px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+
+                .m437d3e35b60b47f3bd34849821634efb .left {
+                    float: left;
+                }
+
+                .m437d3e35b60b47f3bd34849821634efb .right {
+                    float: right;
+                }
+
+                .m437d3e35b60b47f3bd34849821634efb i {
+                    font-size: 20px;
+
+                }
+
+                .m437d3e35b60b47f3bd34849821634efb button {
+                    border: 2px solid #ef6e9c;
+                    background-color: #272727;
+                    border-radius: 20px;
+                    color: white;
+                    padding: 5px 15px 10px 15px;
+                    margin: 0 10px;
+                    cursor: pointer;
+                }
+
+                .m437d3e35b60b47f3bd34849821634efb button:hover {
+                    background-color: #ef6e9c;
+                }
+
+                .m437d3e35b60b47f3bd34849821634efb .user-name {
+                    color: #ef6e9c;
+                }
+
+                .m437d3e35b60b47f3bd34849821634efb .comment-box p {
+                    line-height: 1.5rem;
+                    /*letter-spacing: 1px;*/
+                    margin-bottom: 10px;
+                }
+            </style>
+            <div class="m437d3e35b60b47f3bd34849821634efb">
+                <div class="user-image-box">
+                    <img src="./statics/bird001.webp" alt="">
+                </div>
+                <div class="comment-box">
+                    <div class="clearfix">
+                        <div class="left">
+                            <span class="user-name"><b>UserName</b></span>
+                            <span class="date">12/25/2023</span>
+                        </div>
+                        <div class="right">
+                            <button class="reply-btn">
+                                <i class="fa-solid fa-reply"></i><span> Reply</span>
+                            </button>
+                            <button class="like-btn">
+                                <i class="fa-regular fa-thumbs-up"></i><span> 16</span>
+                            </button>
+                            <button class="dislike-btn">
+                                <i class="fa-regular fa-thumbs-down"></i><span> 4</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam aliquid temporibus
+                            molestias
+                            mollitia natus. Odio voluptas officia voluptates laboriosam pariatur dicta, ullam corrupti!
+                            Quibusdam sunt accusantium veritatis architecto officia eum cupiditate deleniti. Dolorem
+                            placeat
+                            aliquid sed voluptate provident veniam aliquam eveniet esse illum voluptatum totam debitis
+                            atque,
+                            dolorum beatae molestiae.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 98%;float: right;">
+                <div class="m437d3e35b60b47f3bd34849821634efb">
+                    <div class="user-image-box">
+                        <img src="./statics/bird001.webp" alt="">
+                    </div>
+                    <div class="comment-box">
+                        <div class="clearfix">
+                            <div class="left">
+                                <span class="user-name"><b>UserName</b></span>
+                                <span class="date">12/25/2023</span>
+                            </div>
+                            <div class="right">
+                                <button class="reply-btn">
+                                    <i class="fa-solid fa-reply"></i><span> Reply</span>
+                                </button>
+                                <button class="like-btn">
+                                    <i class="fa-regular fa-thumbs-up"></i><span> 16</span>
+                                </button>
+                                <button class="dislike-btn">
+                                    <i class="fa-regular fa-thumbs-down"></i><span> 4</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam aliquid temporibus
+                                molestias
+                                mollitia natus. Odio voluptas officia voluptates laboriosam pariatur dicta, ullam
+                                corrupti!
+                                Quibusdam sunt accusantium veritatis architecto officia eum cupiditate deleniti. Dolorem
+                                placeat
+                                aliquid sed voluptate provident veniam aliquam eveniet esse illum voluptatum totam
+                                debitis
+                                atque,
+                                dolorum beatae molestiae.</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 98%;float: right;">
+                    <div class="m437d3e35b60b47f3bd34849821634efb">
+                        <div class="user-image-box">
+                            <img src="./statics/bird001.webp" alt="">
+                        </div>
+                        <div class="comment-box">
+                            <div class="clearfix">
+                                <div class="left">
+                                    <span class="user-name"><b>UserName</b></span>
+                                    <span class="date">12/25/2023</span>
+                                </div>
+                                <div class="right">
+                                    <button class="reply-btn">
+                                        <i class="fa-solid fa-reply"></i><span> Reply</span>
+                                    </button>
+                                    <button class="like-btn">
+                                        <i class="fa-regular fa-thumbs-up"></i><span> 16</span>
+                                    </button>
+                                    <button class="dislike-btn">
+                                        <i class="fa-regular fa-thumbs-down"></i><span> 4</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam aliquid
+                                    temporibus
+                                    molestias
+                                    mollitia natus. Odio voluptas officia voluptates laboriosam pariatur dicta, ullam
+                                    corrupti!
+                                    Quibusdam sunt accusantium veritatis architecto officia eum cupiditate deleniti.
+                                    Dolorem
+                                    placeat
+                                    aliquid sed voluptate provident veniam aliquam eveniet esse illum voluptatum totam
+                                    debitis
+                                    atque,
+                                    dolorum beatae molestiae.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-------------------------------->
+        <div>
+            <div class="m437d3e35b60b47f3bd34849821634efb">
+                <div class="user-image-box">
+                    <img src="./statics/bird001.webp" alt="">
+                </div>
+                <div class="comment-box">
+                    <div class="clearfix">
+                        <div class="left">
+                            <span class="user-name"><b>UserName</b></span>
+                            <span class="date">12/25/2023</span>
+                        </div>
+                        <div class="right">
+                            <button class="reply-btn">
+                                <i class="fa-solid fa-reply"></i><span> Reply</span>
+                            </button>
+                            <button class="like-btn">
+                                <i class="fa-regular fa-thumbs-up"></i><span> 16</span>
+                            </button>
+                            <button class="dislike-btn">
+                                <i class="fa-regular fa-thumbs-down"></i><span> 4</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam aliquid temporibus
+                            molestias
+                            mollitia natus. Odio voluptas officia voluptates laboriosam pariatur dicta, ullam corrupti!
+                            Quibusdam sunt accusantium veritatis architecto officia eum cupiditate deleniti. Dolorem
+                            placeat
+                            aliquid sed voluptate provident veniam aliquam eveniet esse illum voluptatum totam debitis
+                            atque,
+                            dolorum beatae molestiae.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-------------------------------->
+        <div>
+            <div class="m437d3e35b60b47f3bd34849821634efb">
+                <div class="user-image-box">
+                    <img src="./statics/bird001.webp" alt="">
+                </div>
+                <div class="comment-box">
+                    <div class="clearfix">
+                        <div class="left">
+                            <span class="user-name"><b>UserName</b></span>
+                            <span class="date">12/25/2023</span>
+                        </div>
+                        <div class="right">
+                            <button class="reply-btn">
+                                <i class="fa-solid fa-reply"></i><span> Reply</span>
+                            </button>
+                            <button class="like-btn">
+                                <i class="fa-regular fa-thumbs-up"></i><span> 16</span>
+                            </button>
+                            <button class="dislike-btn">
+                                <i class="fa-regular fa-thumbs-down"></i><span> 4</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam aliquid temporibus
+                            molestias
+                            mollitia natus. Odio voluptas officia voluptates laboriosam pariatur dicta, ullam corrupti!
+                            Quibusdam sunt accusantium veritatis architecto officia eum cupiditate deleniti. Dolorem
+                            placeat
+                            aliquid sed voluptate provident veniam aliquam eveniet esse illum voluptatum totam debitis
+                            atque,
+                            dolorum beatae molestiae.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-------------------------------->
+        <div>
+            <div class="m437d3e35b60b47f3bd34849821634efb">
+                <div class="user-image-box">
+                    <img src="./statics/bird001.webp" alt="">
+                </div>
+                <div class="comment-box">
+                    <div class="clearfix">
+                        <div class="left">
+                            <span class="user-name"><b>UserName</b></span>
+                            <span class="date">12/25/2023</span>
+                        </div>
+                        <div class="right">
+                            <button class="reply-btn">
+                                <i class="fa-solid fa-reply"></i><span> Reply</span>
+                            </button>
+                            <button class="like-btn">
+                                <i class="fa-regular fa-thumbs-up"></i><span> 16</span>
+                            </button>
+                            <button class="dislike-btn">
+                                <i class="fa-regular fa-thumbs-down"></i><span> 4</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam aliquid temporibus
+                            molestias
+                            mollitia natus. Odio voluptas officia voluptates laboriosam pariatur dicta, ullam corrupti!
+                            Quibusdam sunt accusantium veritatis architecto officia eum cupiditate deleniti. Dolorem
+                            placeat
+                            aliquid sed voluptate provident veniam aliquam eveniet esse illum voluptatum totam debitis
+                            atque,
+                            dolorum beatae molestiae.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-------------------------------->
+    </div>
+
+    <!-------------------- Footer -------------------->
+    <div>
+        <style>
+            #footer9c54a8749dd44bb8b28f8d357cecdfb3 {
+                text-align: center;
+                background-color: #1e1e1e;
+                color: white;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+                position: relative;
+            }
+
+            #footer9c54a8749dd44bb8b28f8d357cecdfb3 .go-up-btn {
+                border: none;
+                background-color: #ef6e9c;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                color: white;
+                cursor: pointer;
+                position: absolute;
+                top: -30%;
+                left: 46%;
+            }
+
+            #footer9c54a8749dd44bb8b28f8d357cecdfb3 .social-media {
+                flex-grow: 1;
+                margin: 0px;
+            }
+
+            #footer9c54a8749dd44bb8b28f8d357cecdfb3 .social-media p {
+                margin: 0 0 10px 0;
+            }
+
+            #footer9c54a8749dd44bb8b28f8d357cecdfb3 .copy-rights-notices {
+                flex-grow: 2;
+            }
+
+            #footer9c54a8749dd44bb8b28f8d357cecdfb3 a {
+                margin: 10px;
+            }
+
+            #footer9c54a8749dd44bb8b28f8d357cecdfb3 a:visited {
+                color: white;
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+        </style>
+        <div id="footer9c54a8749dd44bb8b28f8d357cecdfb3" class="clearfix">
+            <button class="go-up-btn" onclick="goUp_footer9c54a8749dd44bb8b28f8d357cecdfb3()"><i
+                    style="font-size: 20px;" class="fa-solid fa-arrow-up"></i></button>
+            <div style="flex-grow: 1;width: 100px;"></div>
+            <div class="copy-rights-notices">
+                <p>
+                    <i class="fa-regular fa-copyright"></i>
+                    2023 admin, Inc. All rights reserved.
+                </p>
+            </div>
+            <div class="social-media">
+                <p>follow us in social media:</p>
+                <div>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-telegram"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <script>
+            function goUp_footer9c54a8749dd44bb8b28f8d357cecdfb3() {
+                window.scrollTo(0, 0);
+            }
+        </script>
+
+    </div>
+
+
+    <script>
+        /*Script_a2c8516167af46f4a16f3605195f397d*/
+
+        let mainElements_Script_a2c8516167af46f4a16f3605195f397d_Automatic = document.getElementsByClassName("Script_a2c8516167af46f4a16f3605195f397d_Automatic");
+        let interval_Script_a2c8516167af46f4a16f3605195f397d_Automatic;
+        for (let i = 0; i < mainElements_Script_a2c8516167af46f4a16f3605195f397d_Automatic.length; i++) {
+            let touchables = mainElements_Script_a2c8516167af46f4a16f3605195f397d_Automatic[i].getElementsByClassName("touchable");
+            for (let c = 0; c < touchables.length; c++) {
+                touchMove_Script_a2c8516167af46f4a16f3605195f397d(touchables[c]);
+            }
+
+            let moveLeftBtn = mainElements_Script_a2c8516167af46f4a16f3605195f397d_Automatic[i].getElementsByClassName("right-btn")[0];
+            interval_Script_a2c8516167af46f4a16f3605195f397d_Automatic = setInterval(moveLeft_Script_a2c8516167af46f4a16f3605195f397d, 5000, moveLeftBtn);
+        }
+
+        function moveLeft_Script_a2c8516167af46f4a16f3605195f397d(element) {
+            let visibleBox = element.parentElement;
+            let orderedContents = visibleBox.getElementsByClassName("ordered-content");
+            if (orderedContents.length <= 5) {
+                return;
+            }
+
+            for (let i = 0; i < orderedContents.length; i++) {
+                let o = orderedContents[i].classList[orderedContents[i].classList.length - 1];
+                let order = o[o.length - 1];
+                //console.log(order);
+                orderedContents[i].classList.remove(o);
+                if (order == "1") {
+                    //console.log("order == 1");
+                    orderedContents[i].classList.add(`o${orderedContents.length}`);
+                }
+                else {
+                    orderedContents[i].classList.add(`o${parseInt(order) - 1}`);
+                }
+
+            }
+        }
+
+        function moveRight_Script_a2c8516167af46f4a16f3605195f397d(element) {
+            let visibleBox = element.parentElement;
+            let orderedContents = visibleBox.getElementsByClassName("ordered-content");
+            if (orderedContents.length <= 5) {
+                return;
+            }
+
+            for (let i = 0; i < orderedContents.length; i++) {
+                let o = orderedContents[i].classList[orderedContents[i].classList.length - 1];
+                let order = o[o.length - 1];
+                //console.log(order);
+                orderedContents[i].classList.remove(o);
+                if (parseInt(order) >= orderedContents.length) {
+                    orderedContents[i].classList.add("o1");
+                }
+                else {
+                    orderedContents[i].classList.add(`o${parseInt(order) + 1}`);
+                }
+
+            }
+        }
+
+        function touchMove_Script_a2c8516167af46f4a16f3605195f397d(touchableElement) {
+            let canDrag = false;
+            let pos1, pos2;
+            //let contents = touchableElement.parentElement.getElementsByClassName("content");
+            //let contentRow = touchableElement.parentElement;//.getElementsByClassName("content-row")[0];
+            let leftBtn = touchableElement.parentElement.parentElement.getElementsByClassName("left-btn")[0];
+            let rightBtn = touchableElement.parentElement.parentElement.getElementsByClassName("right-btn")[0];
+            touchableElement.addEventListener("mousedown", (event) => {
+                event.preventDefault();
+                canDrag = true;
+                pos1 = pos2 = event.clientX;
+            });
+            touchableElement.addEventListener("touchstart", (event) => {
+                event.preventDefault();
+                canDrag = true;
+                pos1 = pos2 = event.touches[0].clientX;
+            });
+
+            document.addEventListener("mouseup", (event) => {
+                event.preventDefault();
+                canDrag = false;
+                //console.log("mouse up");
+            });
+            document.addEventListener("touchend", (event) => {
+                event.preventDefault();
+                canDrag = false;
+                //console.log("mouse up");
+            });
+            document.addEventListener("touchcancel", (event) => {
+                event.preventDefault();
+                canDrag = false;
+                //console.log("mouse up");
+            });
+
+            document.addEventListener("mousemove", (event) => {
+                if (canDrag) {
+                    event.preventDefault();
+                    //contentRow.style.left = (contentRow.offsetLeft + event.movementX) + "px";
+
+                    clearInterval(interval_Script_a2c8516167af46f4a16f3605195f397d_Automatic);
+                    pos2 += event.movementX;
+
+                    if (pos2 - pos1 > 50) {
+                        moveRight_Script_a2c8516167af46f4a16f3605195f397d(leftBtn)
+                        pos1 = pos2 = event.clientX;
+                    }
+                    else if (pos2 - pos1 < -50) {
+                        moveLeft_Script_a2c8516167af46f4a16f3605195f397d(rightBtn);
+                        pos1 = pos2 = event.clientX;
+                    }
+                }
+            });
+            document.addEventListener("touchmove", (event) => {
+                if (canDrag) {
+                    event.preventDefault();
+                    //contentRow.style.left = (contentRow.offsetLeft + event.movementX) + "px";
+
+                    clearInterval(interval_Script_a2c8516167af46f4a16f3605195f397d_Automatic);
+                    pos2 += (event.touches[0].clientX - pos2);
+
+                    if (pos2 - pos1 > 50) {
+                        moveRight_Script_a2c8516167af46f4a16f3605195f397d(leftBtn)
+                        pos1 = pos2 = event.touches[0].clientX;
+                    }
+                    else if (pos2 - pos1 < -50) {
+                        moveLeft_Script_a2c8516167af46f4a16f3605195f397d(rightBtn);
+                        pos1 = pos2 = event.touches[0].clientX;
+                    }
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

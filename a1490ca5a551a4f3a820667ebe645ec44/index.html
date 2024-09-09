@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a1490ca5a551a4f3a820667ebe645ec44" class="Script_b466cb9827734d0fbb4b0d0a268b4896">
+        <style>
+            #a1490ca5a551a4f3a820667ebe645ec44 {
+                width: fit-content;
+                margin: 50px auto 0;
+            }
+
+            /* Remove default bullets */
+            #a1490ca5a551a4f3a820667ebe645ec44 ul,
+            #a1490ca5a551a4f3a820667ebe645ec44 #myUL {
+                list-style-type: none;
+            }
+
+            /* Remove margins and padding from the parent ul */
+            #a1490ca5a551a4f3a820667ebe645ec44 #myUL {
+                margin: 0;
+                padding: 0;
+            }
+
+            /* Style the caret/arrow */
+            #a1490ca5a551a4f3a820667ebe645ec44 .toggler {
+                cursor: pointer;
+                user-select: none;
+                /* Prevent text selection */
+            }
+
+            /* Create the caret/arrow with a unicode, and style it */
+            #a1490ca5a551a4f3a820667ebe645ec44 .toggler::before {
+                content: "\25B6";
+                color: black;
+                display: inline-block;
+                margin-right: 6px;
+            }
+
+            /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+            #a1490ca5a551a4f3a820667ebe645ec44 .expanded::before {
+                transform: rotate(90deg);
+            }
+
+            /* Hide the nested list */
+            #a1490ca5a551a4f3a820667ebe645ec44 .nested {
+                display: none;
+            }
+
+            /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+            #a1490ca5a551a4f3a820667ebe645ec44 .active {
+                display: block;
+            }
+        </style>
+
+        <ul id="myUL">
+            <li><span class="toggler">Beverages</span>
+                <ul class="nested">
+                    <li>Water</li>
+                    <li>Coffee</li>
+                    <li><span class="toggler">Tea</span>
+                        <ul class="nested">
+                            <li>Black Tea</li>
+                            <li>White Tea</li>
+                            <li><span class="toggler">Green Tea</span>
+                                <ul class="nested">
+                                    <li>Sencha</li>
+                                    <li>Gyokuro</li>
+                                    <li>Matcha</li>
+                                    <li>Pi Lo Chun</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <script>
+            /* Script_b466cb9827734d0fbb4b0d0a268b4896 */
+
+            let mainElement_Script_b466cb9827734d0fbb4b0d0a268b4896 = document.getElementsByClassName("Script_b466cb9827734d0fbb4b0d0a268b4896");
+            for (let k = 0; k < mainElement_Script_b466cb9827734d0fbb4b0d0a268b4896.length; k++) {
+                let toggler = mainElement_Script_b466cb9827734d0fbb4b0d0a268b4896[k].getElementsByClassName("toggler");
+
+                for (let i = 0; i < toggler.length; i++) {
+                    toggler[i].addEventListener("click", function () {
+                        this.parentElement.querySelector(".nested").classList.toggle("active");
+                        this.classList.toggle("expanded");
+                    });
+                }
+            }
+
+        </script>
+
+    </div>
+</body>
+
+</html>

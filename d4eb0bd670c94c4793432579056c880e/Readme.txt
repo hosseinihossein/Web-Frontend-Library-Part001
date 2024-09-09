@@ -1,0 +1,3 @@
+- Title: Icon Side Bar
+- Description: A side bar menu created by icons. Fontawesome icons are used.
+- Tags: sidebar navbar menu fa_icon button

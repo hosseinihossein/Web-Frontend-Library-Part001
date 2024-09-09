@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a8c8af1a59e0d46d89913ff73f2ac3c93">
+        <style>
+            #a8c8af1a59e0d46d89913ff73f2ac3c93 {
+                width: 80%;
+                min-width: 300px;
+                margin: auto;
+            }
+
+            /* Safari syntax */
+            #a8c8af1a59e0d46d89913ff73f2ac3c93:-webkit-full-screen {
+                background-color: yellow;
+            }
+
+            /* IE11 */
+            #a8c8af1a59e0d46d89913ff73f2ac3c93:-ms-fullscreen {
+                background-color: yellow;
+            }
+
+            /* Standard syntax */
+            #a8c8af1a59e0d46d89913ff73f2ac3c93:fullscreen {
+                background-color: yellow;
+            }
+
+            /* Style the button */
+            #a8c8af1a59e0d46d89913ff73f2ac3c93 button {
+                padding: 20px;
+                font-size: 20px;
+            }
+        </style>
+
+        <h2>Fullscreen with JavaScript</h2>
+        <p>Click on the "Open Fullscreen" button to open this page in fullscreen mode. Close it by either clicking
+            the "Esc" key on your keyboard, or with the "Close Fullscreen" button.</p>
+
+        <button onclick="openFullscreen_a8c8af1a59e0d46d89913ff73f2ac3c93(this);">Open Fullscreen</button>
+        <button onclick="closeFullscreen_a8c8af1a59e0d46d89913ff73f2ac3c93(this);">Close Fullscreen</button>
+
+        <p>Note: Internet Explorer 10 and earlier versions do not support the msRequestFullscreen() method.</p>
+
+        <script>
+            function openFullscreen_a8c8af1a59e0d46d89913ff73f2ac3c93(element) {
+                if (element.parentElement.requestFullscreen) {
+                    element.parentElement.requestFullscreen();
+                } else if (element.parentElement.webkitRequestFullscreen) { /* Safari */
+                    element.parentElement.webkitRequestFullscreen();
+                } else if (element.parentElement.msRequestFullscreen) { /* IE11 */
+                    element.parentElement.msRequestFullscreen();
+                }
+            }
+
+            function closeFullscreen_a8c8af1a59e0d46d89913ff73f2ac3c93() {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) { /* Safari */
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { /* IE11 */
+                    document.msExitFullscreen();
+                }
+            }
+        </script>
+
+    </div>
+
+    <h2 style="text-align: center;color: red;margin: 50px;">this text will not be shown in full screen mode.</h2>
+</body>
+
+</html>

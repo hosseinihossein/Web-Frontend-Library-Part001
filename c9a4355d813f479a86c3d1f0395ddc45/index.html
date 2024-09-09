@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="c9a4355d813f479a86c3d1f0395ddc45">
+        <style>
+            #c9a4355d813f479a86c3d1f0395ddc45 {
+                width: 50%;
+                min-width: 300px;
+                margin: auto;
+            }
+
+            #c9a4355d813f479a86c3d1f0395ddc45 #myInput {
+                background-image: url('./statics/icons8-search-50.png');
+                background-size: 1.5rem;
+                /* Add a search icon to input */
+                background-position: 5px 10px;
+                /* Position the search icon */
+                background-repeat: no-repeat;
+                /* Do not repeat the icon image */
+                width: 100%;
+                /* Full-width */
+                font-size: 16px;
+                /* Increase font-size */
+                padding: 12px 20px 12px 40px;
+                /* Add some padding */
+                border: 1px solid #ddd;
+                /* Add a grey border */
+                margin-bottom: 12px;
+                /* Add some space below the input */
+            }
+
+            #c9a4355d813f479a86c3d1f0395ddc45 #myUL {
+                /* Remove default list styling */
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            #c9a4355d813f479a86c3d1f0395ddc45 #myUL li a {
+                border: 1px solid #ddd;
+                /* Add a border to all links */
+                margin-top: -1px;
+                /* Prevent double borders */
+                background-color: #f6f6f6;
+                /* Grey background color */
+                padding: 12px;
+                /* Add some padding */
+                text-decoration: none;
+                /* Remove default text underline */
+                font-size: 18px;
+                /* Increase the font-size */
+                color: black;
+                /* Add a black text color */
+                display: block;
+                /* Make it into a block element to fill the whole list */
+            }
+
+            #c9a4355d813f479a86c3d1f0395ddc45 #myUL li a:hover:not(.header) {
+                background-color: #eee;
+                /* Add a hover effect to all links, except for headers */
+            }
+        </style>
+
+        <input type="text" id="myInput" onkeyup="filter_Script_a0d21024282f453f8247fefa6ec435f2(this)"
+            placeholder="Search for names..">
+
+        <ul id="myUL" class="filterContainer">
+            <li class="filterItems"><a class="innerFilterItem" href="#">Adele</a></li>
+            <li class="filterItems"><a class="innerFilterItem" href="#">Agnes</a></li>
+
+            <li class="filterItems"><a class="innerFilterItem" href="#">Billy</a></li>
+            <li class="filterItems"><a class="innerFilterItem" href="#">Bob</a></li>
+
+            <li class="filterItems"><a class="innerFilterItem" href="#">Calvin</a></li>
+            <li class="filterItems"><a class="innerFilterItem" href="#">Christina</a></li>
+            <li class="filterItems"><a class="innerFilterItem" href="#">Cindy</a></li>
+        </ul>
+
+        <script>
+            /* Script_a0d21024282f453f8247fefa6ec435f2 */
+
+            function filter_Script_a0d21024282f453f8247fefa6ec435f2(inputElement) {
+                let mainElement = inputElement.parentElement;
+                // Declare variables
+                let filter, filteredContainer, filteredItems, innerFilteredItem, i, txtValue;
+                //inputElement = mainElement_c9a4355d813f479a86c3d1f0395ddc45.querySelector('#myInput');
+                filter = inputElement.value.toUpperCase();
+                filteredContainer = mainElement.getElementsByClassName("filterContainer")[0];
+                filteredItems = filteredContainer.getElementsByClassName('filterItems');
+
+                // Loop through all list items, and hide those who don't match the search query
+                for (i = 0; i < filteredItems.length; i++) {
+                    innerFilteredItem = filteredItems[i].getElementsByClassName("innerFilterItem")[0];
+                    txtValue = innerFilteredItem.textContent || innerFilteredItem.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        filteredItems[i].style.display = "";
+                    } else {
+                        filteredItems[i].style.display = "none";
+                    }
+                }
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

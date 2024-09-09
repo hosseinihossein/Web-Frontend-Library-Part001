@@ -1,0 +1,3 @@
+- Title: Image Gallery
+- Description: Click on each image to open it in the same page.
+- Tags: image gallery

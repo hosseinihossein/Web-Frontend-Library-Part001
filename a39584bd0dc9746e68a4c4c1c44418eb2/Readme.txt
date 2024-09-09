@@ -1,0 +1,3 @@
+- Title: Vertical Menu
+- Description: A menu with buttons vertically stacked on eachother.
+- Tags: menu, button

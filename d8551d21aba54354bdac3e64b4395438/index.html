@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="d8551d21aba54354bdac3e64b4395438">
+        <style>
+            #d8551d21aba54354bdac3e64b4395438 {
+                position: relative;
+                display: block;
+                border-bottom: 1px dotted black;
+                width: fit-content;
+                margin: 100px auto 0;
+            }
+
+            #d8551d21aba54354bdac3e64b4395438 .tooltiptext {
+                visibility: hidden;
+                width: 120px;
+                background-color: black;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 5px 0;
+                position: absolute;
+                z-index: 1;
+                top: 150%;
+                left: 50%;
+                margin-left: -60px;
+                /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+                opacity: 0;
+                transition: opacity 1s;
+            }
+
+            #d8551d21aba54354bdac3e64b4395438 .tooltiptext::after {
+                content: "";
+                position: absolute;
+                bottom: 100%;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: transparent transparent black transparent;
+            }
+
+            #d8551d21aba54354bdac3e64b4395438:hover .tooltiptext {
+                visibility: visible;
+                opacity: 1;
+            }
+        </style>
+
+        Hover over me (bottom tooltip top arrow)
+        <span class="tooltiptext">Tooltip text</span>
+
+    </div>
+</body>
+
+</html>

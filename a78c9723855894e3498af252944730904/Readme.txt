@@ -1,0 +1,3 @@
+- Title: Label
+- Description: Some labels with background color can be used as message badge or notification.
+- Tags: label notification badge

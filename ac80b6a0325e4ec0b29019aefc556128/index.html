@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="ac80b6a0325e4ec0b29019aefc556128" class="Scriptd5b6b606f4934bdd8c8850bd3f2937ff">
+        <style>
+            #ac80b6a0325e4ec0b29019aefc556128 {
+                width: 50%;
+                min-width: 300px;
+                margin: auto;
+            }
+
+            /* Style the tab */
+            #ac80b6a0325e4ec0b29019aefc556128 .links {
+                float: left;
+                width: 30%;
+                height: 300px;
+                border: 1px solid #ccc;
+                background-color: #f1f1f1;
+            }
+
+            /* Style the buttons inside the tab */
+            #ac80b6a0325e4ec0b29019aefc556128 .links button {
+                background-color: inherit;
+                display: block;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 22px 16px;
+                transition: 0.3s;
+                font-size: 17px;
+                width: 100%;
+                text-align: left;
+            }
+
+            /* Change background color of buttons on hover */
+            #ac80b6a0325e4ec0b29019aefc556128 .links button:hover {
+                background-color: #ddd;
+            }
+
+            /* Create an active/current tablink class */
+            #ac80b6a0325e4ec0b29019aefc556128 .links button.active {
+                background-color: #ccc;
+            }
+
+            /* Style the tab content */
+            #ac80b6a0325e4ec0b29019aefc556128 .tabcontent {
+                float: left;
+                padding: 0px 12px;
+                width: 70%;
+                border: 1px solid #ccc;
+                border-left: none;
+                animation: fadeEffect 0.5s;
+                height: 300px;
+            }
+
+            @keyframes fadeEffect {
+                from {
+                    opacity: 0;
+                }
+
+                to {
+                    opacity: 1;
+                }
+            }
+        </style>
+
+        <div class="links">
+            <button class="tablink defaultOpen" onmouseover="this.click()">London</button>
+            <button class="tablink" onmouseover="this.click()">Paris</button>
+            <button class="tablink active" onmouseover="this.click()">Tokyo</button>
+        </div>
+
+        <div id="London" class="tabcontent" style="display: none;">
+            <div class="clearfix" style="margin: 0; padding: 0;">
+                <h3 style="float: left;">London</h3>
+                <span style="float: right; cursor: pointer; margin: 0; padding: 0; font-size: x-large;"
+                    onclick="{removeActive_Scriptd5b6b606f4934bdd8c8850bd3f2937ff('ac80b6a0325e4ec0b29019aefc556128');
+                            setDisplayNone_Scriptd5b6b606f4934bdd8c8850bd3f2937ff('ac80b6a0325e4ec0b29019aefc556128')}">×</span>
+            </div>
+            <p>London is the capital city of England.</p>
+        </div>
+
+        <div id="Paris" class="tabcontent" style="display: none;">
+            <div class="clearfix" style="margin: 0; padding: 0;">
+                <h3 style="float: left;">Paris</h3>
+                <span style="float: right; cursor: pointer; margin: 0; padding: 0; font-size: x-large;"
+                    onclick="{removeActive_Scriptd5b6b606f4934bdd8c8850bd3f2937ff('ac80b6a0325e4ec0b29019aefc556128');
+                            setDisplayNone_Scriptd5b6b606f4934bdd8c8850bd3f2937ff('ac80b6a0325e4ec0b29019aefc556128')}">×</span>
+            </div>
+            <p>Paris is the capital of France.</p>
+        </div>
+
+        <div id="Tokyo" class="tabcontent" style="display: block;">
+            <div class="clearfix" style="margin: 0; padding: 0;">
+                <h3 style="float: left;">Tokyo</h3>
+                <span style="float: right; cursor: pointer; margin: 0; padding: 0; font-size: x-large;"
+                    onclick="{removeActive_Scriptd5b6b606f4934bdd8c8850bd3f2937ff('ac80b6a0325e4ec0b29019aefc556128');
+                            setDisplayNone_Scriptd5b6b606f4934bdd8c8850bd3f2937ff('ac80b6a0325e4ec0b29019aefc556128')}">×</span>
+            </div>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+
+        <script>
+
+            let mainElements_Scriptd5b6b606f4934bdd8c8850bd3f2937ff = document.getElementsByClassName("Scriptd5b6b606f4934bdd8c8850bd3f2937ff");
+
+            for (let i = 0; i < mainElements_Scriptd5b6b606f4934bdd8c8850bd3f2937ff.length; i++) {
+                let mainElement = mainElements_Scriptd5b6b606f4934bdd8c8850bd3f2937ff.item(i);
+                let siblingTabLinks = mainElement.getElementsByClassName("tablink");
+                //let siblingTabContents = mainElements[i].getElementsByClassName("tabcontent");
+
+                console.log("siblingTabLinks: " + siblingTabLinks.length);
+
+                for (let j = 0; j < siblingTabLinks.length; j++) {
+
+                    let cityName = siblingTabLinks.item(j).innerHTML;
+
+                    siblingTabLinks.item(j).addEventListener("click", function () {
+                        removeActive_Scriptd5b6b606f4934bdd8c8850bd3f2937ff(mainElement.id);
+
+                        setDisplayNone_Scriptd5b6b606f4934bdd8c8850bd3f2937ff(mainElement.id);
+
+                        mainElement.querySelector(`#${cityName}`).style.display = "block";
+                        siblingTabLinks.item(j).classList.add("active");
+                    });
+                }
+
+                mainElement.querySelector(".defaultOpen").click();
+            }
+            // remove active From Sibling TabLinks' classList
+            function removeActive_Scriptd5b6b606f4934bdd8c8850bd3f2937ff(mainElementId) {
+                let mainElement = document.getElementById(mainElementId);
+                let siblingTabLinks = mainElement.getElementsByClassName("tablink");
+                for (let i = 0; i < siblingTabLinks.length; i++) {
+                    siblingTabLinks[i].classList.remove("active");
+                }
+            }
+
+            // set display to none for all tabcontent element
+            function setDisplayNone_Scriptd5b6b606f4934bdd8c8850bd3f2937ff(mainElementId) {
+                let mainElement = document.getElementById(mainElementId);
+                let siblingTabContents = mainElement.getElementsByClassName("tabcontent");
+                for (let i = 0; i < siblingTabContents.length; i++) {
+                    siblingTabContents[i].style.display = "none";
+                }
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+- Title: Shopping Card
+- Description: A stylish shopping card with an image of product, name, price, description, order options, tabs of specifications and information and a add to card button.
+- Tags: card shopping

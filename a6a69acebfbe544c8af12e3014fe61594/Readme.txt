@@ -1,0 +1,3 @@
+- Title: Menu
+- Description: A profile menu. Fontawesome are used.
+- Tags: menu profile

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="d59cc8379efd42079db72c81e36558f5">
+        <style>
+            #d59cc8379efd42079db72c81e36558f5 {
+                width: 50%;
+                min-width: 300px;
+                margin: auto;
+            }
+
+            /* Remove margins and padding from the list */
+            #d59cc8379efd42079db72c81e36558f5 ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+            }
+
+            /* Style the list items */
+            #d59cc8379efd42079db72c81e36558f5 ul li {
+                cursor: pointer;
+                position: relative;
+                padding: 12px 8px 12px 40px;
+                background: #eee;
+                font-size: 18px;
+                transition: 0.2s;
+
+                /* make the list items unselectable */
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+
+                overflow: hidden;
+            }
+
+            /* Set all odd list items to a different color (zebra-stripes) */
+            #d59cc8379efd42079db72c81e36558f5 ul li:nth-child(odd) {
+                background: #f9f9f9;
+            }
+
+            /* Darker background-color on hover */
+            #d59cc8379efd42079db72c81e36558f5 ul li:hover {
+                background: #ddd;
+            }
+
+            /* When clicked on, add a background color and strike out text */
+            #d59cc8379efd42079db72c81e36558f5 ul li.checked {
+                background: rgb(167, 255, 171);
+                color: #646464;
+                text-decoration: line-through;
+            }
+
+            /* Add a "checked" mark when clicked on */
+            #d59cc8379efd42079db72c81e36558f5 ul li.checked::before {
+                content: '\2713';
+                position: absolute;
+                /*border-color: #fff;
+                        border-style: solid;
+                        border-width: 0 2px 2px 0;*/
+                top: 10px;
+                left: 16px;
+                /*transform: rotate(45deg);*/
+                height: 15px;
+                width: 7px;
+            }
+
+            /*#d59cc8379efd42079db72c81e36558f5 ul li::after {
+                        content: '\2715';
+                        position: absolute;
+                        top: 10px;
+                        right: 16px;
+                        height: 15px;
+                        width: 7px;
+                    }*/
+
+
+            /* Style the close button */
+            #d59cc8379efd42079db72c81e36558f5 .close {
+                position: absolute;
+                right: 0;
+                top: -5px;
+                padding: 12px 16px 12px 16px;
+                font-size: 30px;
+            }
+
+            #d59cc8379efd42079db72c81e36558f5 .close:hover {
+                background-color: #f44336;
+                color: white;
+            }
+
+            /* Style the header */
+            #d59cc8379efd42079db72c81e36558f5 .header {
+                background-color: #f44336;
+                padding: 30px 40px;
+                color: white;
+                text-align: center;
+            }
+
+            /* Style the input */
+            #d59cc8379efd42079db72c81e36558f5 input {
+                margin: 0;
+                border: none;
+                border-radius: 0;
+                width: 75%;
+                padding: 10px;
+                float: left;
+                font-size: 16px;
+            }
+
+            /* Style the "Add" button */
+            #d59cc8379efd42079db72c81e36558f5 .addBtn {
+                padding: 10px;
+                width: 25%;
+                background: #d9d9d9;
+                color: #555;
+                float: left;
+                text-align: center;
+                font-size: 16px;
+                cursor: pointer;
+                transition: 0.3s;
+                border-radius: 0;
+            }
+
+            #d59cc8379efd42079db72c81e36558f5 .addBtn:hover {
+                background-color: #bbb;
+            }
+        </style>
+
+        <div id="myDIV" class="header clearfix">
+            <h2>My To Do List</h2>
+            <input type="text" id="myInput" placeholder="Title...">
+            <span onclick="addToList_d59cc8379efd42079db72c81e36558f5(this)" class="addBtn">Add</span>
+        </div>
+
+        <ul id="myUL">
+            <li>Hit the gym <span class="close">×</span></li>
+            <li class="checked">Pay bills <span class="close">×</span></li>
+            <li>Meet George <span class="close">×</span></li>
+            <li>Buy eggs <span class="close">×</span></li>
+            <li>Read a book <span class="close">×</span></li>
+            <li>Organize office <span class="close">×</span></li>
+        </ul>
+
+        <script>
+            let mainElement_d59cc8379efd42079db72c81e36558f5 = document.getElementById("d59cc8379efd42079db72c81e36558f5");
+            addCheckedEvent_d59cc8379efd42079db72c81e36558f5();
+            addCloseEvent_d59cc8379efd42079db72c81e36558f5();
+
+            function addCheckedEvent_d59cc8379efd42079db72c81e36558f5() {
+                let lists = mainElement_d59cc8379efd42079db72c81e36558f5.getElementsByTagName("LI");
+                for (let i = 0; i < lists.length; i++) {
+                    //lists[i].previousElementSibling
+                    lists[i].addEventListener("click", (event) => {
+                        if (event.target.tagName === 'LI') {
+                            event.target.classList.toggle('checked');
+                        }
+                    });
+                }
+            }
+
+            function addCloseEvent_d59cc8379efd42079db72c81e36558f5() {
+                let closeSpans = mainElement_d59cc8379efd42079db72c81e36558f5.getElementsByClassName("close");
+                for (let i = 0; i < closeSpans.length; i++) {
+                    closeSpans[i].addEventListener("click", (event) => {
+                        removeFromList_d59cc8379efd42079db72c81e36558f5(event.target)
+                    });
+                }
+            }
+
+            function removeFromList_d59cc8379efd42079db72c81e36558f5(element) {
+                element.parentElement.remove();
+            }
+
+            function addToList_d59cc8379efd42079db72c81e36558f5(element) {
+                let li = document.createElement("li");
+                let inputValue = element.previousElementSibling.value;
+                inputValue = inputValue?.trim();
+
+                if (inputValue === '') {
+                    alert("You must write something!");
+                } else {
+                    let textNode = document.createTextNode(inputValue);
+
+                    li.appendChild(textNode);
+
+                    let span = document.createElement("SPAN");
+                    let closeSign = document.createTextNode("\u00D7");
+                    span.className = "close";
+                    span.appendChild(closeSign);
+                    span.addEventListener("click", (event) => {
+                        removeFromList_d59cc8379efd42079db72c81e36558f5(event.target);
+                    });
+
+                    li.appendChild(span);
+
+                    li.addEventListener("click", (event) => {
+                        if (event.target.tagName === 'LI') {
+                            event.target.classList.toggle('checked');
+                        }
+                    });
+
+                    mainElement_d59cc8379efd42079db72c81e36558f5.querySelector("#myUL").appendChild(li);
+                    element.previousElementSibling.value = "";
+                }
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

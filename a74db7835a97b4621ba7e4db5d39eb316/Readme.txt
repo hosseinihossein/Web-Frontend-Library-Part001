@@ -1,0 +1,3 @@
+- Title: Table
+- Description: Two tables located in a row in two columns.
+- Tags: table

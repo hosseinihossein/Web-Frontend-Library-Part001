@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a257b3fd1db2e4c338879852b73610e7c">
+        <style>
+            #a257b3fd1db2e4c338879852b73610e7c {
+                width: fit-content;
+                margin: 50px auto 0;
+            }
+
+            /* The snackbar - position it at the bottom and in the middle of the screen */
+            #a257b3fd1db2e4c338879852b73610e7c #snackbar {
+                visibility: hidden;
+                /* Hidden by default. Visible on click */
+                min-width: 250px;
+                /* Set a default minimum width */
+                margin-left: -125px;
+                /* Divide value of min-width by 2 */
+                background-color: #333;
+                /* Black background color */
+                color: #fff;
+                /* White text color */
+                text-align: center;
+                /* Centered text */
+                border-radius: 2px;
+                /* Rounded borders */
+                padding: 16px;
+                /* Padding */
+                position: fixed;
+                /* Sit on top of the screen */
+                z-index: 1;
+                /* Add a z-index if needed */
+                left: 50%;
+                /* Center the snackbar */
+                bottom: 30px;
+                /* 30px from the bottom */
+            }
+
+            /* Show the snackbar when clicking on a button (class added with JavaScript) */
+            #a257b3fd1db2e4c338879852b73610e7c #snackbar.show {
+                visibility: visible;
+                /* Show the snackbar */
+                /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+          However, delay the fade out process for 2.5 seconds */
+                -webkit-animation: fadein_a257b3fd1db2e4c338879852b73610e7c 0.5s, fadeout_a257b3fd1db2e4c338879852b73610e7c 0.5s 2.5s;
+                animation: fadein_a257b3fd1db2e4c338879852b73610e7c 0.5s, fadeout_a257b3fd1db2e4c338879852b73610e7c 0.5s 2.5s;
+            }
+
+            /* Animations to fade the snackbar in and out */
+            @-webkit-keyframes fadein_a257b3fd1db2e4c338879852b73610e7c {
+                from {
+                    bottom: 0;
+                    opacity: 0;
+                }
+
+                to {
+                    bottom: 30px;
+                    opacity: 1;
+                }
+            }
+
+            @keyframes fadein_a257b3fd1db2e4c338879852b73610e7c {
+                from {
+                    bottom: 0;
+                    opacity: 0;
+                }
+
+                to {
+                    bottom: 30px;
+                    opacity: 1;
+                }
+            }
+
+            @-webkit-keyframes fadeout_a257b3fd1db2e4c338879852b73610e7c {
+                from {
+                    bottom: 30px;
+                    opacity: 1;
+                }
+
+                to {
+                    bottom: 0;
+                    opacity: 0;
+                }
+            }
+
+            @keyframes fadeout_a257b3fd1db2e4c338879852b73610e7c {
+                from {
+                    bottom: 30px;
+                    opacity: 1;
+                }
+
+                to {
+                    bottom: 0;
+                    opacity: 0;
+                }
+            }
+        </style>
+
+        <!-- Use a button to open the snackbar -->
+        <button onclick="myFunction_a257b3fd1db2e4c338879852b73610e7c(this)">Show Snackbar</button>
+
+        <!-- The actual snackbar -->
+        <div id="snackbar">Some text some message..</div>
+
+        <script>
+            function myFunction_a257b3fd1db2e4c338879852b73610e7c(element) {
+                // Get the snackbar DIV
+                let snackbar = element.parentElement.querySelector("#snackbar");
+
+                snackbar.className = "show";
+
+                // After 3 seconds, remove the show class from DIV
+                setTimeout(hideSnack, 3000);
+
+                function hideSnack() { snackbar.className = snackbar.className.replace("show", ""); }
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

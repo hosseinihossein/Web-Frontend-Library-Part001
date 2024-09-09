@@ -1,0 +1,3 @@
+- Title: Breadcrumb
+- Description: A simple breadcrumb.
+- Tags: breadcrumb pagination

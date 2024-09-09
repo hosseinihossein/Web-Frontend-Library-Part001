@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a3d51796a47624876b656b5adf355817d">
+        <style>
+            #a3d51796a47624876b656b5adf355817d {
+                width: 40vw;
+                /*min-height: 40vw;*/
+                /*background-color: red;*/
+                margin: auto;
+                color: white;
+                text-align: center;
+                position: relative;
+                padding: 6%;
+                /*border: 2px dashed black;*/
+            }
+
+            #a3d51796a47624876b656b5adf355817d::after {
+                content: "";
+                background-color: rgb(0, 45, 56);
+                width: 0;
+                height: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-top: 20vw solid rgb(9, 51, 47);
+                border-left: 20vw solid rgb(9, 51, 47);
+                border-bottom: 20vw solid rgb(0, 45, 56);
+                border-right: 20vw solid rgb(0, 45, 56);
+                z-index: -1;
+            }
+
+            #a3d51796a47624876b656b5adf355817d>h1 {
+                margin: 20px;
+                font-weight: bolder;
+            }
+
+            #a3d51796a47624876b656b5adf355817d form input {
+                color: rgb(0, 45, 56);
+                background-color: rgba(255, 255, 255, 0.4);
+                border: none;
+                border-radius: 30px;
+                width: 100%;
+                padding: 20px 20px;
+                margin: 20px 0;
+                font-size: 18px;
+                /*font-weight: 600;*/
+            }
+
+            #a3d51796a47624876b656b5adf355817d form input[type=submit] {
+                margin: 40px 0;
+                background-color: white;
+                font-size: 16px;
+                font-weight: 1000;
+                padding: 15px 20px;
+                cursor: pointer;
+            }
+
+            #a3d51796a47624876b656b5adf355817d form>div {
+                position: relative;
+            }
+
+            #a3d51796a47624876b656b5adf355817d form i {
+                background-color: white;
+                color: rgb(0, 45, 56);
+                padding: 20px 22px;
+                border-radius: 50%;
+                position: absolute;
+                top: 15px;
+                font-size: 30px;
+            }
+
+            @media screen and (max-width:1200px) {
+                #a3d51796a47624876b656b5adf355817d {
+                    width: 50vw;
+                }
+
+                #a3d51796a47624876b656b5adf355817d::after {
+                    border-width: 25vw;
+                }
+            }
+
+            @media screen and (max-width:1000px) {
+                #a3d51796a47624876b656b5adf355817d {
+                    width: 60vw;
+                }
+
+                #a3d51796a47624876b656b5adf355817d::after {
+                    border-width: 30vw;
+                }
+            }
+
+            @media screen and (max-width:800px) {
+                #a3d51796a47624876b656b5adf355817d {
+                    width: 70vw;
+                }
+
+                #a3d51796a47624876b656b5adf355817d::after {
+                    border-width: 35vw;
+                }
+            }
+
+            @media screen and (max-width:600px) {
+                #a3d51796a47624876b656b5adf355817d {
+                    width: 80vw;
+                }
+
+                #a3d51796a47624876b656b5adf355817d::after {
+                    border-width: 40vw;
+                }
+            }
+
+            @media screen and (max-width:500px) {
+                #a3d51796a47624876b656b5adf355817d {
+                    width: 100vw;
+                }
+
+                #a3d51796a47624876b656b5adf355817d::after {
+                    border-width: 49vw;
+                }
+            }
+
+            @media screen and (max-width:400px) {
+                #a3d51796a47624876b656b5adf355817d::after {
+                    border-width: 65vw 49vw;
+                }
+            }
+        </style>
+
+        <h1>USER LOGIN</h1>
+        <form action="">
+            <div>
+                <input type="text" value="Username" style="padding-left: 80px;"
+                    onfocus="clearInput_a3d51796a47624876b656b5adf355817d(this, 1, 'Password')">
+                <i class="fa-regular fa-user" style="left: 0;"></i>
+            </div>
+            <div>
+                <input type="text" value="Password"
+                    onfocus="clearInput_a3d51796a47624876b656b5adf355817d(this, 0, 'Username')">
+                <i class="fa-solid fa-lock" style="right: 0;"
+                    onclick="if(this.previousElementSibling.type=='password') this.previousElementSibling.type='text'; else this.previousElementSibling.type='password';"></i>
+            </div>
+            <div>
+                <input type="submit" value="LOGIN">
+            </div>
+        </form>
+
+        <script>
+            function clearInput_a3d51796a47624876b656b5adf355817d(element, n, placeholder) {
+                if (element.value == "Username" || element.value == "Password") {
+                    element.value = "";
+                }
+                if (element.parentElement.parentElement.getElementsByTagName("input")[n].value == "") {
+                    element.parentElement.parentElement.getElementsByTagName("input")[n].value = placeholder;
+                }
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

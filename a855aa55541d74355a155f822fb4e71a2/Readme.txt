@@ -1,0 +1,3 @@
+- Title: Loading Content
+- Description: Click on the button to display the spinning loader and then the text content.
+- Tags: loader container

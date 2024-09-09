@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="be4000d1bde74aa3b0ee6e0c5ac1272b">
+        <style>
+            #be4000d1bde74aa3b0ee6e0c5ac1272b {
+                /*display: flex;
+                        flex-direction: column;*/
+                position: relative;
+                width: 200px;
+                height: 300px;
+                margin: auto;
+                color: white;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                overflow: hidden;
+                border-radius: 10px;
+            }
+
+            #be4000d1bde74aa3b0ee6e0c5ac1272b img {
+                border-radius: 5px;
+                object-fit: cover;
+                object-position: 80% 50%;
+                width: inherit;
+                height: inherit;
+                /*position: absolute;*/
+                z-index: -1;
+            }
+
+            #be4000d1bde74aa3b0ee6e0c5ac1272b .infoDiv {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: inherit;
+                height: inherit;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                z-index: 1;
+            }
+
+            #be4000d1bde74aa3b0ee6e0c5ac1272b .overlayBox {
+                flex-grow: 80;
+                overflow: hidden;
+                position: relative;
+            }
+
+            #be4000d1bde74aa3b0ee6e0c5ac1272b:hover .overlay {
+                height: 100%;
+                top: 0;
+            }
+
+            #be4000d1bde74aa3b0ee6e0c5ac1272b .shadowBG {
+                position: absolute;
+                top: 70%;
+                /*top: 0;*/
+                bottom: 0;
+                left: 0;
+                right: 0;
+                /*background-color: rgba(0, 0, 0, 0.7);
+                        box-shadow: 0 -5px 20px black;*/
+                background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 50%);
+                z-index: 0;
+                transition: all 0.5s ease;
+                border-radius: 5px;
+                overflow: hidden;
+            }
+
+            #be4000d1bde74aa3b0ee6e0c5ac1272b:hover .shadowBG {
+                top: -100%;
+                /*background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));*/
+            }
+
+            #be4000d1bde74aa3b0ee6e0c5ac1272b .overlay {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                position: absolute;
+                height: 0;
+                top: 100%;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                transition: 0.5s ease;
+                overflow: hidden;
+                /*background-color: rgba(0, 0, 0, 0.7);
+                        box-shadow: 0px -20px 20px black;*/
+            }
+
+            #be4000d1bde74aa3b0ee6e0c5ac1272b .description p {
+                margin: 0 5px;
+            }
+
+            #be4000d1bde74aa3b0ee6e0c5ac1272b .tags {
+                margin-bottom: 10px;
+            }
+
+            #be4000d1bde74aa3b0ee6e0c5ac1272b .tags a {
+                padding: 0 10px 3px 10px;
+                border-radius: 20px;
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+
+            #be4000d1bde74aa3b0ee6e0c5ac1272b .tags a:hover {
+                background-color: rgba(255, 0, 128, 1.0)
+            }
+
+            #be4000d1bde74aa3b0ee6e0c5ac1272b .title {
+                text-align: center;
+                font-weight: bold;
+            }
+
+            #be4000d1bde74aa3b0ee6e0c5ac1272b .title a {
+                color: white;
+                transition: color 0.5s;
+            }
+
+            #be4000d1bde74aa3b0ee6e0c5ac1272b .title a:hover {
+                color: rgb(255, 0, 128);
+                transition: color 0.3s;
+            }
+
+            #be4000d1bde74aa3b0ee6e0c5ac1272b a {
+                text-decoration: none;
+                color: white;
+            }
+
+            #be4000d1bde74aa3b0ee6e0c5ac1272b .rate,
+            #be4000d1bde74aa3b0ee6e0c5ac1272b .title {
+                flex-grow: 1;
+                border-top: 1px solid lightgray;
+                /*background-color: rgba(0, 0, 0, 0.7);*/
+                padding: 5px;
+            }
+
+            #be4000d1bde74aa3b0ee6e0c5ac1272b .rate span {
+                margin-left: 5px;
+            }
+        </style>
+
+        <img src="./statics/bird001.webp" alt="anial">
+        <div class="shadowBG"></div>
+        <div class="infoDiv">
+            <div class="overlayBox">
+                <div class="overlay">
+                    <div class="description"><a href="">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel aut quidem, a quia
+                                neque pariatur repudiandae libero eveniet debitis alias ex ut quos, omnis quas
+                                officiis culpa saepe tempora delectus.</p>
+                        </a></div>
+                    <div class="tags">
+                        <a href="">tag1</a>
+                        <a href="">tag2</a>
+                        <a href="">tag3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="rate"><span>rate</span></div>
+            <div class="title"><a href="">title</a></div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+- Title: Spinning Loader
+- Description: A spinning loader.
+- Tags: spin loader

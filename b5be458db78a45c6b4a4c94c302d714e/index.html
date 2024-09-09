@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="b5be458db78a45c6b4a4c94c302d714e">
+        <style>
+            #b5be458db78a45c6b4a4c94c302d714e {
+                width: 50%;
+                min-width: 300px;
+                margin: auto;
+            }
+
+            /* The grid: Four equal columns that floats next to each other */
+            #b5be458db78a45c6b4a4c94c302d714e .column {
+                float: left;
+                width: 24%;
+                height: 100px;
+                overflow: hidden;
+                padding: 10px;
+            }
+
+            /* Style the images inside the grid */
+            #b5be458db78a45c6b4a4c94c302d714e .column img {
+                opacity: 0.8;
+                cursor: pointer;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            #b5be458db78a45c6b4a4c94c302d714e .column img:hover {
+                opacity: 1;
+            }
+
+            /* The expanding image container (positioning is needed to position the close button and the text) */
+            #b5be458db78a45c6b4a4c94c302d714e .container {
+                position: relative;
+                display: none;
+            }
+
+            /* Expanding image text */
+            #b5be458db78a45c6b4a4c94c302d714e #imgtext {
+                position: absolute;
+                bottom: 15px;
+                left: 15px;
+                color: white;
+                font-size: 20px;
+            }
+
+            /* Closable button inside the image */
+            #b5be458db78a45c6b4a4c94c302d714e .closebtn {
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                color: #777;
+                font-size: 35px;
+                cursor: pointer;
+            }
+
+            #b5be458db78a45c6b4a4c94c302d714e .closebtn:hover {
+                color: red;
+            }
+        </style>
+
+        <!-- The grid: four columns -->
+        <div class="row clearfix">
+            <div class="column">
+                <img src="./statics/bird001.webp" alt="Nature"
+                    onclick="myFunction_b5be458db78a45c6b4a4c94c302d714e(this);">
+            </div>
+            <div class="column">
+                <img src="./statics/computer001.webp" alt="Snow"
+                    onclick="myFunction_b5be458db78a45c6b4a4c94c302d714e(this);">
+            </div>
+            <div class="column">
+                <img src="./statics/pizza001.webp" alt="Mountains"
+                    onclick="myFunction_b5be458db78a45c6b4a4c94c302d714e(this);">
+            </div>
+            <div class="column">
+                <img src="./statics/team001.webp" alt="Lights"
+                    onclick="myFunction_b5be458db78a45c6b4a4c94c302d714e(this);">
+            </div>
+        </div>
+
+        <!-- The expanding image container -->
+        <div class="container">
+            <!-- Close the image -->
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">×</span>
+
+            <!-- Expanded image -->
+            <img id="expandedImg" style="width:100%">
+
+            <!-- Image text -->
+            <div id="imgtext"></div>
+        </div>
+
+        <script>
+            function myFunction_b5be458db78a45c6b4a4c94c302d714e(img) {
+                let mainElement = img.parentElement.parentElement.parentElement;
+                // Get the expanded image
+                let expandImg = mainElement.querySelector("#expandedImg");
+                // Get the image text
+                let imgText = mainElement.querySelector("#imgtext");
+                // Use the same src in the expanded image as the image being clicked on from the grid
+                expandImg.src = img.src;
+                // Use the value of the alt attribute of the clickable image as text inside the expanded image
+                imgText.innerHTML = img.alt;
+                // Show the container element (hidden with CSS)
+                expandImg.parentElement.style.display = "block";
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

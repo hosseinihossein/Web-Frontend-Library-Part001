@@ -1,0 +1,3 @@
+- Title: Image with Fade in Title
+- Description: An image card with hidden text that will fade in on the image by hoverin over the image.
+- Tags: image

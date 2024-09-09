@@ -1,0 +1,3 @@
+- Title: Text Columns
+- Description: Responsive columns of text content.
+- Tags: text container

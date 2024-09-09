@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a8a6fe8f9f3344fafb5df025791032056">
+        <style>
+            #sidenav6ffa384933044bada9f6bc0a7d436019 {
+                height: 100%;
+                width: 0;
+                position: absolute;
+                /*fixed*/
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #111;
+                overflow-x: hidden;
+                padding-top: 60px;
+                transition: 0.5s;
+            }
+
+            #sidenav6ffa384933044bada9f6bc0a7d436019 a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+            }
+
+            #sidenav6ffa384933044bada9f6bc0a7d436019 a:hover {
+                color: #f1f1f1;
+            }
+
+            @media screen and (max-height: 600px) {
+                #sidenav6ffa384933044bada9f6bc0a7d436019 {
+                    padding-top: 15px;
+                }
+
+                #sidenav6ffa384933044bada9f6bc0a7d436019 a {
+                    font-size: 18px;
+                }
+            }
+
+            #sidenav6ffa384933044bada9f6bc0a7d436019 .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+
+            #a8a6fe8f9f3344fafb5df025791032056 #main {
+                transition: 0.5s;
+                padding: 20px;
+                margin: 0;
+            }
+        </style>
+
+        <div id="sidenav6ffa384933044bada9f6bc0a7d436019">
+            <a href="javascript:void(0)" class="closebtn"
+                onclick="closeNav_sidenav6ffa384933044bada9f6bc0a7d436019()">×</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#clients">Clients</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div id="main">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav_sidenav6ffa384933044bada9f6bc0a7d436019()">☰
+                open</span>
+            <div style="height: 100px;text-align: center;font-size: 25px;">Main</div>
+            <div style="height: 100px;text-align: center;font-size: 25px;">1</div>
+            <div style="height: 100px;text-align: center;font-size: 25px;">2</div>
+            <div style="height: 100px;text-align: center;font-size: 25px;">3</div>
+            <div style="height: 100px;text-align: center;font-size: 25px;">4</div>
+        </div>
+
+        <script>
+            /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+            function openNav_sidenav6ffa384933044bada9f6bc0a7d436019() {
+                let sidenav = document.getElementById("sidenav6ffa384933044bada9f6bc0a7d436019")
+                sidenav.style.width = "250px";
+                sidenav.nextElementSibling.style.marginLeft = "250px";
+                sidenav.nextElementSibling.style.backgroundColor = "rgba(0,0,0,0.7)";
+            }
+
+            /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+            function closeNav_sidenav6ffa384933044bada9f6bc0a7d436019() {
+                let sidenav = document.getElementById("sidenav6ffa384933044bada9f6bc0a7d436019")
+                sidenav.style.width = "0";
+                sidenav.nextElementSibling.style.marginLeft = "0";
+                sidenav.nextElementSibling.style.backgroundColor = "rgba(0,0,0,0)";
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

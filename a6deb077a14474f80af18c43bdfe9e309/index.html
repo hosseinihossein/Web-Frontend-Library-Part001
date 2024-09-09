@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a6deb077a14474f80af18c43bdfe9e309">
+        <style>
+            #a6deb077a14474f80af18c43bdfe9e309 {
+                width: 50%;
+                min-width: 300px;
+                margin: 50px auto 0;
+            }
+
+            #a6deb077a14474f80af18c43bdfe9e309 #myProgress {
+                width: 100%;
+                background-color: #ddd;
+            }
+
+            #a6deb077a14474f80af18c43bdfe9e309 #myBar {
+                width: 1%;
+                height: 30px;
+                background-color: #04AA6D;
+            }
+        </style>
+
+        <div id="myProgress">
+            <div id="myBar"></div>
+        </div>
+
+        <br>
+        <button onclick="move_a6deb077a14474f80af18c43bdfe9e309(this)">Click Me</button>
+
+        <script>
+            function move_a6deb077a14474f80af18c43bdfe9e309(element) {
+                let i = 1;
+                let elem = element.parentElement.querySelector("#myBar");
+                let width = 1;
+                let id = setInterval(frame, 10);
+                function frame() {
+                    if (width >= 100) {
+                        clearInterval(id);
+                        i = 0;
+                    } else {
+                        width++;
+                        elem.style.width = width + "%";
+                    }
+                }
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

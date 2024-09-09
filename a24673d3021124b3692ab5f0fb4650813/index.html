@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a24673d3021124b3692ab5f0fb4650813">
+        <style>
+            #a24673d3021124b3692ab5f0fb4650813 {
+                width: fit-content;
+                margin: 50px auto 0;
+            }
+
+            #a24673d3021124b3692ab5f0fb4650813 .tooltip {
+                position: relative;
+                display: inline-block;
+            }
+
+            #a24673d3021124b3692ab5f0fb4650813 .tooltip .tooltiptext {
+                visibility: hidden;
+                width: 140px;
+                background-color: #555;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 5px;
+                position: absolute;
+                z-index: 1;
+                bottom: 150%;
+                left: 50%;
+                margin-left: -75px;
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+
+            #a24673d3021124b3692ab5f0fb4650813 .tooltip .tooltiptext::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: #555 transparent transparent transparent;
+            }
+
+            #a24673d3021124b3692ab5f0fb4650813 .tooltip:hover .tooltiptext {
+                visibility: visible;
+                opacity: 1;
+            }
+        </style>
+
+        <input type="text" value="Hello World" id="myInput">
+        <div class="tooltip">
+            <button onclick="myFunction_a24673d3021124b3692ab5f0fb4650813()"
+                onmouseout="outFunc_a24673d3021124b3692ab5f0fb4650813()">
+                <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                Copy text
+            </button>
+        </div>
+
+        <script>
+            function myFunction_a24673d3021124b3692ab5f0fb4650813() {
+                let mainElement = document.getElementById("a24673d3021124b3692ab5f0fb4650813");
+                let copyText = mainElement.querySelector("#myInput");
+                copyText.select();
+                copyText.setSelectionRange(0, 99999);
+
+                //if the element isn't an input or textArea we can copy its inner html
+                //copytext = someElement.innerHTML;
+                //navigator.clipboard.writeText(copyText);
+
+                navigator.clipboard.writeText(copyText.value);
+
+                let tooltip = mainElement.querySelector("#myTooltip");
+                tooltip.innerHTML = "Copied: " + copyText.value;
+            }
+
+            function outFunc_a24673d3021124b3692ab5f0fb4650813() {
+                let mainElement = document.getElementById("a24673d3021124b3692ab5f0fb4650813");
+                let tooltip = mainElement.querySelector("#myTooltip");
+                tooltip.innerHTML = "Copy to clipboard";
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

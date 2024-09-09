@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a6ec48b31d6fc4134a4f13fcd9f43c5e8">
+        <style>
+            #a6ec48b31d6fc4134a4f13fcd9f43c5e8 {
+                width: fit-content;
+                margin: auto;
+            }
+
+            #a6ec48b31d6fc4134a4f13fcd9f43c5e8 .flip-box {
+                background-color: transparent;
+                width: 300px;
+                height: 200px;
+                border: 1px solid #f1f1f1;
+                perspective: 1000px;
+            }
+
+            #a6ec48b31d6fc4134a4f13fcd9f43c5e8 .flip-box-inner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                transition: transform 0.8s;
+                transform-style: preserve-3d;
+            }
+
+            #a6ec48b31d6fc4134a4f13fcd9f43c5e8 .flip-box:hover .flip-box-inner {
+                transform: rotateX(180deg);
+            }
+
+            #a6ec48b31d6fc4134a4f13fcd9f43c5e8 .flip-box-front,
+            #a6ec48b31d6fc4134a4f13fcd9f43c5e8 .flip-box-back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+            }
+
+            #a6ec48b31d6fc4134a4f13fcd9f43c5e8 .flip-box-front {
+                background-color: #bbb;
+                color: black;
+            }
+
+            #a6ec48b31d6fc4134a4f13fcd9f43c5e8 .flip-box-back {
+                background-color: dodgerblue;
+                color: white;
+                transform: rotateX(180deg);
+            }
+        </style>
+
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <h2>Front Side</h2>
+                </div>
+                <div class="flip-box-back">
+                    <h2>Back Side</h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

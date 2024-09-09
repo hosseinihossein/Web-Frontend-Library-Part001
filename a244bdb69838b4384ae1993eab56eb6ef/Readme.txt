@@ -1,0 +1,3 @@
+- Title: Coupon Card
+- Description: A card with an image, a title and description that can be useful as coupon card.
+- Tags: card shopping

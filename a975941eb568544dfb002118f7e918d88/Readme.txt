@@ -1,0 +1,3 @@
+- Title: Date Card
+- Description:A summary card with a date, brief description and an image that can be used for appointments and schedules in calendar apps.
+- Tags: card summary_card

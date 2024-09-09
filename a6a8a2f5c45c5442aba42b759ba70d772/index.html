@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a6a8a2f5c45c5442aba42b759ba70d772">
+        <style>
+            #a6a8a2f5c45c5442aba42b759ba70d772 {
+                width: fit-content;
+                margin: auto;
+            }
+        </style>
+        <style>
+            #a6a8a2f5c45c5442aba42b759ba70d772 #passwordInput {
+                width: 100%;
+                height: 50px;
+                margin: 5px;
+                padding: 15px;
+            }
+        </style>
+
+        <label for="passwordInput">
+            <!-- Password field -->
+            Password: <input type="password" value="FakePSW" id="passwordInput">
+        </label>
+        <Label>
+            <!-- An element to toggle between password visibility -->
+            <input type="checkbox" onclick="myFunction_form7102a7f91f9b46fdabebfa910578936e(this)">
+            Show Password
+        </Label>
+
+        <script>
+            function myFunction_form7102a7f91f9b46fdabebfa910578936e(element) {
+                let passInput = element.parentElement.parentElement.querySelector("#passwordInput");
+                if (passInput.type === "password") {
+                    passInput.type = "text";
+                } else {
+                    passInput.type = "password";
+                }
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

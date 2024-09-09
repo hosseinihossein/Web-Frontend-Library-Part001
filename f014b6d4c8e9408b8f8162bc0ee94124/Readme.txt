@@ -1,0 +1,3 @@
+- Title: List
+- Description: A simple list of text items.
+- Tags: list

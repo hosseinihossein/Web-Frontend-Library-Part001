@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a24592b0e5f40430cb8d03114d28adbf1" class="Script_6b90208b45224d9ebe77d1caa4fc0a06">
+        <style>
+            #a24592b0e5f40430cb8d03114d28adbf1 {
+                position: relative;
+                /*height: 200px;*/
+                width: 500px;
+                min-width: 300px;
+                /*should be the same height as the images*/
+                margin: auto;
+            }
+
+            #a24592b0e5f40430cb8d03114d28adbf1 .img-comp-img {
+                position: absolute;
+                width: fit-content;
+                height: fit-content;
+                overflow: hidden;
+            }
+
+            #a24592b0e5f40430cb8d03114d28adbf1 .img-comp-img img {
+                display: block;
+                /*vertical-align: middle;*/
+                width: 500px;
+                height: 400px;
+                object-fit: cover;
+            }
+
+            #a24592b0e5f40430cb8d03114d28adbf1 .img-comp-slider {
+                position: absolute;
+                z-index: 1;
+                cursor: ew-resize;
+                /*set the appearance of the slider:*/
+                width: 40px;
+                height: 40px;
+                background-color: #2196F3;
+                opacity: 0.7;
+                border-radius: 50%;
+            }
+        </style>
+
+        <div class="img-comp-img">
+            <img src="./statics/deer001.webp">
+        </div>
+        <div class="img-comp-img img-comp-overlay">
+            <img src="./statics/nature001.webp">
+        </div>
+
+        <script>
+            /* Script_6b90208b45224d9ebe77d1caa4fc0a06 */
+
+            /* Find all elements with an "overlay" class: */
+            let mainElement_Script_6b90208b45224d9ebe77d1caa4fc0a06 = document.getElementsByClassName("Script_6b90208b45224d9ebe77d1caa4fc0a06");
+            for (let i = 0; i < mainElement_Script_6b90208b45224d9ebe77d1caa4fc0a06.length; i++) {
+                let overlay = mainElement_Script_6b90208b45224d9ebe77d1caa4fc0a06[i].getElementsByClassName("img-comp-overlay")[0];
+                compareImages_Script_6b90208b45224d9ebe77d1caa4fc0a06(overlay);
+            }
+            function compareImages_Script_6b90208b45224d9ebe77d1caa4fc0a06(img) {
+                let slider, clicked = 0, w, h;
+                /* Get the width and height of the img element */
+                w = img.offsetWidth;
+                h = img.offsetHeight;
+                /* Set the width of the img element to 50%: */
+                img.style.width = (w / 2) + "px";
+                /* Create slider: */
+                slider = document.createElement("DIV");
+                slider.setAttribute("class", "img-comp-slider");
+                /* Insert slider */
+                img.parentElement.insertBefore(slider, img);
+                /* Position the slider in the middle: */
+                slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+                slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+                /* Execute a function when the mouse button is pressed: */
+                slider.addEventListener("mousedown", slideReady);
+                /* And another function when the mouse button is released: */
+                window.addEventListener("mouseup", slideFinish);
+                /* Or touched (for touch screens: */
+                slider.addEventListener("touchstart", slideReady);
+                /* And released (for touch screens: */
+                window.addEventListener("touchend", slideFinish);
+
+                /* Execute a function when the slider is moved:*/
+                window.addEventListener("mousemove", slideMove);
+                window.addEventListener("touchmove", slideMove);
+
+                function slideReady(e) {
+                    /* Prevent any other actions that may occur when moving over the image: */
+                    e.preventDefault();
+                    /* The slider is now clicked and ready to move: */
+                    clicked = 1;
+                    /* Execute a function when the slider is moved: 
+                    window.addEventListener("mousemove", slideMove);
+                    window.addEventListener("touchmove", slideMove);*/
+                }
+
+                function slideFinish() {
+                    /* The slider is no longer clicked: */
+                    clicked = 0;
+                }
+
+                function slideMove(e) {
+                    let pos;
+                    /* If the slider is no longer clicked, exit this function: */
+                    if (clicked == 0) return false;
+                    /* Get the cursor's x position: */
+                    pos = getCursorPos(e)
+                    /* Prevent the slider from being positioned outside the image: */
+                    if (pos < 0) pos = 0;
+                    if (pos > w) pos = w;
+                    /* Execute a function that will resize the overlay image according to the cursor: */
+                    slide(pos);
+                }
+
+                function getCursorPos(e) {
+                    let a, x = 0;
+                    e = (e.changedTouches) ? e.changedTouches[0] : e;
+                    /* Get the x positions of the image: */
+                    a = img.getBoundingClientRect();
+                    /* Calculate the cursor's x coordinate, relative to the image: */
+                    x = e.pageX - a.left;
+                    /* Consider any page scrolling: */
+                    x = x - window.scrollX;
+                    return x;
+                }
+
+                function slide(x) {
+                    /* Resize the image: */
+                    img.style.width = x + "px";
+                    /* Position the slider: */
+                    slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+                }
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

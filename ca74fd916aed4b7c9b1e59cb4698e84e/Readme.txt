@@ -1,0 +1,3 @@
+- Title: Simple Menu
+- Description: A menu containing simple buttons.
+- Tags: menu, button

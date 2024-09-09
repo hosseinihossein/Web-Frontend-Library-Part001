@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Summary Card</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a4739238c101f48488a0307b8228de182">
+        <style>
+            #a4739238c101f48488a0307b8228de182 {
+                background-color: #2B2B2B;
+                color: white;
+                border-radius: 10px 30px 10px 10px;
+                width: 60vw;
+                height: 500px;
+                margin: 20px auto 0;
+            }
+
+            #a4739238c101f48488a0307b8228de182 .main {
+                background-color: #242424;
+                border-radius: 10px 30px 10px 10px;
+                position: relative;
+                width: 100%;
+            }
+
+            #a4739238c101f48488a0307b8228de182 .rate-box {
+                width: 150px;
+                height: 150px;
+                position: absolute;
+                right: 0;
+                top: 30px;
+                background-color: #2B2B2B;
+                border-radius: 10px 0 0 10px;
+                padding: 10px;
+            }
+
+            #a4739238c101f48488a0307b8228de182 .specs-box {
+                padding: 10px;
+                font-size: 20px;
+            }
+
+            #a4739238c101f48488a0307b8228de182 .specs-box>div {
+                margin: 10px;
+            }
+
+            #a4739238c101f48488a0307b8228de182 .spec-title {
+                color: gray;
+            }
+
+            #a4739238c101f48488a0307b8228de182 .spec-value {
+                display: inline-block;
+            }
+
+            #a4739238c101f48488a0307b8228de182 img {
+                float: left;
+                width: 25%;
+                object-fit: contain;
+                margin: 10px;
+                transition: 0.3s;
+            }
+
+            #a4739238c101f48488a0307b8228de182 img:hover {
+                filter: brightness(120%);
+            }
+
+            #a4739238c101f48488a0307b8228de182 header {
+                padding: 20px 30px;
+            }
+
+            #a4739238c101f48488a0307b8228de182 header h1 {
+                float: left;
+                margin: 0;
+            }
+
+            #a4739238c101f48488a0307b8228de182 a {
+                text-decoration: none;
+            }
+
+            #a4739238c101f48488a0307b8228de182 .description {
+                padding: 10px 10px 20px 10px;
+                /*border: 1px solid gray;
+                border-radius: 10px 30px 10px 10px;*/
+            }
+
+            #a4739238c101f48488a0307b8228de182 .description>p {
+                margin-top: 0;
+                text-indent: 2rem;
+            }
+
+            #a4739238c101f48488a0307b8228de182 .description>h3 {
+                margin: 10px 0;
+            }
+
+            #a4739238c101f48488a0307b8228de182 a:visited {
+                color: white;
+            }
+
+            #a4739238c101f48488a0307b8228de182 a:hover {
+                color: coral;
+            }
+
+            #a4739238c101f48488a0307b8228de182 header .bookmark-btn {
+                float: right;
+                cursor: pointer;
+                font-size: 20px;
+                border: none;
+                background-color: rgba(0, 0, 0, 0);
+                color: white;
+            }
+
+            #a4739238c101f48488a0307b8228de182 .more {
+                color: white;
+                background-color: #ff5791;
+                padding: 10px 30px;
+                display: inline-block;
+                border-radius: 10px 20px 10px 10px;
+                position: absolute;
+                right: 20px;
+                bottom: -20px;
+                font-size: 20px;
+            }
+
+            #a4739238c101f48488a0307b8228de182 .more:hover {
+                background-color: #f78da7;
+                color: white;
+            }
+
+            /****** tooltip ******/
+            #a4739238c101f48488a0307b8228de182 #tooltip {
+                position: relative;
+                /*display: inline-block;
+                border-bottom: 1px dotted black;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);*/
+            }
+
+            #a4739238c101f48488a0307b8228de182 #tooltip .tooltiptext {
+                visibility: hidden;
+                width: 120px;
+                background-color: #ff5791;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 5px 0;
+                position: absolute;
+                z-index: 1;
+                bottom: 150%;
+                left: 50%;
+                margin-left: -60px;
+                font-size: 14px;
+            }
+
+            #a4739238c101f48488a0307b8228de182 #tooltip .tooltiptext::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: #ff5791 transparent transparent transparent;
+            }
+
+            #a4739238c101f48488a0307b8228de182 #tooltip:hover .tooltiptext {
+                visibility: visible;
+            }
+        </style>
+
+        <article>
+            <header class="clearfix">
+                <h1><a href="">Oppenheimer</a></h1>
+                <button id="tooltip" class="bookmark-btn">
+                    <i class="fa-regular fa-bookmark">
+                    </i>
+                    <span class="tooltiptext">Add to favorites</span>
+                </button>
+            </header>
+            <div class="main">
+                <div class="clearfix">
+                    <a href=""><img src="./statics/Oppenheimer001.jpg" alt="movie image"></a>
+                    <div class="specs-box">
+                        <div><i style="margin-right: 5px;" class="fa-solid fa-film"></i>
+                            <span class="spec-title">genre:</span>
+                            <div class="spec-value"><a href="">drama</a>, <a href="">comedy</a>,
+                                <a href="">exciting</a>
+                            </div>
+                        </div>
+                        <div><i style="margin-right: 6px;" class="fa-solid fa-calendar-days"></i>
+                            <span class="spec-title">production year: </span>
+                            <a href="" class="spec-value">2023</a>
+                        </div>
+                        <div><i style="margin-right: 4px;" class="fa-solid fa-clock"></i>
+                            <span class="spec-title">duration: </span><span class="spec-value">131 minutes</span>
+                        </div>
+                        <div><i style=" position: relative;left: -2px;" class="fa-solid fa-tv"></i>
+                            <span class="spec-title">resulation: </span><span class="spec-value">1080p HDRip</span>
+                        </div>
+                        <div><i style="margin-right: 5px;" class="fa-solid fa-earth-americas"></i>
+                            <span class="spec-title">country: </span>
+                            <div class="spec-value">
+                                <a href="">USA</a>,
+                                <a href="">UK</a>
+                            </div>
+                        </div>
+                        <div><i style="position: relative;left: -2px;" class="fa-solid fa-language"></i>
+                            <span class="spec-title">language: </span>
+                            <div class="spec-value"><a href="">English</a></div>
+                        </div>
+                        <div><i style="margin-right: 10px;" class="fa-solid fa-user"></i><span
+                                class="spec-title">director:
+                            </span><a href="" class="spec-value">christopher
+                                nollan</a></div>
+                        <div><i style="position: relative;left: -4px;margin-right: 3px;"
+                                class="fa-solid fa-user-group"></i><span class="spec-title">cast:
+                            </span>
+                            <div class="spec-value"><a href="">Cillian Murphy</a>,
+                                <a href="">Florence Pugh</a>, <a href="">Robert Downey</a>, ...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rate-box">
+                    <div style="width: 100%; text-align: center;">
+                        <a href=""><i style="font-size: 40px;color: yellow; float: left;"
+                                class="fa-brands fa-imdb"></i></a>
+                        <span style="font-size: 14px;"><b style="font-size: 30px;"> 7.5/10</b> 12.411 votes</span>
+                    </div>
+                    <hr>
+                    <div style="width: 100%; text-align: center;">
+                        <a href=""><i style="font-size: 25px;color: yellow; float: left;"
+                                class="fa-solid fa-film"></i></a>
+                        <span style="font-size: 14px;"><b style="font-size: 30px;"> 7.5/10</b> 12.411 votes</span>
+                    </div>
+                </div>
+                <div class="description">
+                    <i style="float: left;margin-top: 12px; margin-right: 5px;" class="fa-solid fa-file-pen"></i>
+                    <h3> summary: </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea blanditiis neque nulla. Beatae
+                        expedita
+                        vero numquam quisquam sint minus hic. Quis officia distinctio magni, molestiae aspernatur eos
+                        esse
+                        atque. Eum...</p>
+                </div>
+                <div>
+                    <a class="more" href="">more / download</a>
+                </div>
+            </div>
+        </article>
+
+    </div>
+</body>
+
+</html>

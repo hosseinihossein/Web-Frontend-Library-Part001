@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="ef8c50af06a74b358d4097808c10a260" class="Script_b466cb9827734d0fbb4b0d0a268b4896">
+        <style>
+            #ef8c50af06a74b358d4097808c10a260 {
+                width: fit-content;
+                margin: 50px auto 0;
+            }
+
+            #ef8c50af06a74b358d4097808c10a260 ul,
+            #ef8c50af06a74b358d4097808c10a260 #myUL {
+                list-style-type: none;
+            }
+
+            #ef8c50af06a74b358d4097808c10a260 #myUL {
+                margin: 0;
+                padding: 0;
+            }
+
+            #ef8c50af06a74b358d4097808c10a260 .toggler {
+                cursor: pointer;
+                -webkit-user-select: none;
+                /* Safari 3.1+ */
+                -moz-user-select: none;
+                /* Firefox 2+ */
+                -ms-user-select: none;
+                /* IE 10+ */
+                user-select: none;
+            }
+
+            #ef8c50af06a74b358d4097808c10a260 .toggler::before {
+                content: "\2610";
+                color: black;
+                display: inline-block;
+                margin-right: 6px;
+            }
+
+            #ef8c50af06a74b358d4097808c10a260 .expanded::before {
+                content: "\2611";
+                color: dodgerblue;
+            }
+
+            #ef8c50af06a74b358d4097808c10a260 .nested {
+                display: none;
+            }
+
+            #ef8c50af06a74b358d4097808c10a260 .active {
+                display: block;
+            }
+        </style>
+
+        <ul id="myUL">
+            <li><span class="toggler">Beverages</span>
+                <ul class="nested">
+                    <li>Water</li>
+                    <li>Coffee</li>
+                    <li><span class="toggler">Tea</span>
+                        <ul class="nested">
+                            <li>Black Tea</li>
+                            <li>White Tea</li>
+                            <li><span class="toggler">Green Tea</span>
+                                <ul class="nested">
+                                    <li>Sencha</li>
+                                    <li>Gyokuro</li>
+                                    <li>Matcha</li>
+                                    <li>Pi Lo Chun</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <script>/*
+Script_b466cb9827734d0fbb4b0d0a268b4896
+*/
+
+            let mainElement_Script_b466cb9827734d0fbb4b0d0a268b4896 = document.getElementsByClassName("Script_b466cb9827734d0fbb4b0d0a268b4896");
+            for (let k = 0; k < mainElement_Script_b466cb9827734d0fbb4b0d0a268b4896.length; k++) {
+                let toggler = mainElement_Script_b466cb9827734d0fbb4b0d0a268b4896[k].getElementsByClassName("toggler");
+
+                for (let i = 0; i < toggler.length; i++) {
+                    toggler[i].addEventListener("click", function () {
+                        this.parentElement.querySelector(".nested").classList.toggle("active");
+                        this.classList.toggle("expanded");
+                    });
+                }
+            }
+
+        </script>
+
+    </div>
+</body>
+
+</html>

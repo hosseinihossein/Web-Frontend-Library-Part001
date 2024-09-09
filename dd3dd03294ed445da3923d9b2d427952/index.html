@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="dd3dd03294ed445da3923d9b2d427952">
+        <style>
+            #dd3dd03294ed445da3923d9b2d427952 {
+                width: fit-content;
+                margin: auto;
+            }
+        </style>
+
+        <button onclick="sortListDir_Script_65699694536e4c8a8956515a1381e159(this)">Sort the list</button>
+        <ul id="id01" class="sort_Script_65699694536e4c8a8956515a1381e159">
+            <li>Oslo</li>
+            <li>Stockholm</li>
+            <li>Helsinki</li>
+            <li>Berlin</li>
+            <li>Rome</li>
+            <li>Madrid</li>
+        </ul>
+
+        <script>/*
+Script_65699694536e4c8a8956515a1381e159
+*/
+
+
+            function sortListDir_Script_65699694536e4c8a8956515a1381e159(element) {
+                let lists = element.parentElement.getElementsByClassName("sort_Script_65699694536e4c8a8956515a1381e159");
+                for (let c = 0; c < lists.length; c++) {
+                    let list = lists[c];
+                    let i, switching, listItem, shouldSwitch, dir, switchcount = 0;
+                    switching = true;
+                    // Set the sorting direction to ascending:
+                    dir = "asc";
+                    // Make a loop that will continue until no switching has been done:
+                    while (switching) {
+                        // Start by saying: no switching is done:
+                        switching = false;
+                        listItem = list.getElementsByTagName("LI");
+                        // Loop through all list-items:
+                        for (i = 0; i < (listItem.length - 1); i++) {
+                            // Start by saying there should be no switching:
+                            shouldSwitch = false;
+                            /* Check if the next item should switch place with the current item,
+                            based on the sorting direction (asc or desc): */
+                            if (dir == "asc") {
+                                if (listItem[i].innerHTML.toLowerCase() > listItem[i + 1].innerHTML.toLowerCase()) {
+                                    /* If next item is alphabetically lower than current item,
+                                    mark as a switch and break the loop: */
+                                    shouldSwitch = true;
+                                    break;
+                                }
+                            } else if (dir == "desc") {
+                                if (listItem[i].innerHTML.toLowerCase() < listItem[i + 1].innerHTML.toLowerCase()) {
+                                    /* If next item is alphabetically higher than current item,
+                                    mark as a switch and break the loop: */
+                                    shouldSwitch = true;
+                                    break;
+                                }
+                            }
+                        }
+                        if (shouldSwitch) {
+                            /* If a switch has been marked, make the switch
+                            and mark that a switch has been done: */
+                            listItem[i].parentNode.insertBefore(listItem[i + 1], listItem[i]);
+                            switching = true;
+                            // Each time a switch is done, increase switchcount by 1:
+                            switchcount++;
+                        } else {
+                            /* If no switching has been done AND the direction is "asc",
+                            set the direction to "desc" and run the while loop again. */
+                            if (switchcount == 0 && dir == "asc") {
+                                dir = "desc";
+                                switching = true;
+                            }
+                        }
+                    }
+                }
+
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

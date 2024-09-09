@@ -1,0 +1,3 @@
+- Title: Next and Previous Buttons
+- Description: Two buttons with different background colors that can be used as next and previous buttons in simple paginations, sliders and so on.
+- Tags: button, pagination

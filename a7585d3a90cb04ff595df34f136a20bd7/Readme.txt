@@ -1,0 +1,3 @@
+- Title: Callout Container
+- Description: A card with fixed position on the page that can be popped out and removed.
+- Tags: popup container card

@@ -1,0 +1,3 @@
+- Title: Faded Button
+- Description: A faded button that will slowly appear strong when hover over. 
+- Tags: button

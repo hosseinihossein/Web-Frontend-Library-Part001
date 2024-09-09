@@ -1,0 +1,3 @@
+- Title: Image Gallery
+- Description: An image gallery with modal. Click on each image to open it in the modal.
+- Tags: image gallery modal

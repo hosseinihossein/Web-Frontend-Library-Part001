@@ -1,0 +1,3 @@
+- Title: Divider
+- Description: Customized dividers as horizontal lines.
+- Tags: divider

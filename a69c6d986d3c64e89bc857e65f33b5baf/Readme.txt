@@ -1,0 +1,3 @@
+- Title: Changing Icons
+- Description: Some fontawesome icons replacing eachother at a specified interval.
+- Tags: icon fa_icon

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a0e4c6b66427f46e783787c4c9167942e">
+        <style>
+            #a0e4c6b66427f46e783787c4c9167942e {
+                width: fit-content;
+                margin: auto;
+            }
+        </style>
+        <!-- #form4d8aeb36ee5046b0815d5a0625a1ee24 -->
+        <form onclick="loadSubjects(this)" name="form" id="form4d8aeb36ee5046b0815d5a0625a1ee24" action="">
+            Subjects: <select name="subject" id="subject">
+                <option value="" selected="selected">Select subject</option>
+            </select>
+            <br><br>
+            Topics: <select name="topic" id="topic">
+                <option value="" selected="selected">Please select subject first</option>
+            </select>
+            <br><br>
+            Chapters: <select name="chapter" id="chapter">
+                <option value="" selected="selected">Please select topic first</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <script>
+            let subjectObject_form4d8aeb36ee5046b0815d5a0625a1ee24 = {
+                "Front-end": {
+                    "HTML": ["Links", "Images", "Tables", "Lists"],
+                    "CSS": ["Borders", "Margins", "Backgrounds", "Float"],
+                    "JavaScript": ["Variables", "Operators", "Functions", "Conditions"]
+                },
+                "Back-end": {
+                    "PHP": ["Variables", "Strings", "Arrays"],
+                    "SQL": ["SELECT", "UPDATE", "DELETE"]
+                }
+            }
+            //window.onload = function () {
+            //    let mainElement = document.getElementById("form4d8aeb36ee5046b0815d5a0625a1ee24");
+            let isSet_form4d8aeb36ee5046b0815d5a0625a1ee24 = false;
+            function loadSubjects(element) {
+                if (isSet_form4d8aeb36ee5046b0815d5a0625a1ee24) return;
+
+                let subjectSel = element.querySelector("#subject");
+                let topicSel = element.querySelector("#topic");
+                let chapterSel = element.querySelector("#chapter");
+                for (let x in subjectObject_form4d8aeb36ee5046b0815d5a0625a1ee24) {
+                    subjectSel.options[subjectSel.options.length] = new Option(x, x);
+                }
+                subjectSel.onchange = function () {
+                    //empty Chapters- and Topics- dropdowns
+                    chapterSel.length = 1;
+                    topicSel.length = 1;
+                    //display correct values
+                    for (let y in subjectObject_form4d8aeb36ee5046b0815d5a0625a1ee24[this.value]) {
+                        topicSel.options[topicSel.options.length] = new Option(y, y);
+                    }
+                }
+                topicSel.onchange = function () {
+                    //empty Chapters dropdown
+                    chapterSel.length = 1;
+                    //display correct values
+                    let z = subjectObject_form4d8aeb36ee5046b0815d5a0625a1ee24[subjectSel.value][this.value];
+                    for (let i = 0; i < z.length; i++) {
+                        chapterSel.options[chapterSel.options.length] = new Option(z[i], z[i]);
+                    }
+                }
+
+                isSet_form4d8aeb36ee5046b0815d5a0625a1ee24 = true;
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

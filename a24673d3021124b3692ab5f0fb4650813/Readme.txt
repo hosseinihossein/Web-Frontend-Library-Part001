@@ -1,0 +1,3 @@
+- Title: Copy Text Button
+- Description: A button and an input that its text will be copied to the clipboard by clicking the button.
+- Tags: button input text_input clipboard

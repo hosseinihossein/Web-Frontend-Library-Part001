@@ -1,0 +1,3 @@
+- Title: Icon Button
+- Description: A customized icon button with animation. Can be useful for menus.
+- Tags: button menu

@@ -1,0 +1,3 @@
+- Title: Image Gallery
+- Description: An image gallery with a modal that contains the next and previous buttons.
+- Tags: image gallery modal

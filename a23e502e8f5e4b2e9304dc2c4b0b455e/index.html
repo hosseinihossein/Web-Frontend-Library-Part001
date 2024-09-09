@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a23e502e8f5e4b2e9304dc2c4b0b455e">
+        <style>
+            #a23e502e8f5e4b2e9304dc2c4b0b455e {
+                width: fit-content;
+                margin: 50px auto 0;
+            }
+
+            #a23e502e8f5e4b2e9304dc2c4b0b455e #battery01 {
+                font-size: 48px;
+            }
+        </style>
+
+        <i id="battery01" class="fa-solid fa-hourglass-end"></i>
+
+        <script>
+            let mainElement_a23e502e8f5e4b2e9304dc2c4b0b455e = document.getElementById("a23e502e8f5e4b2e9304dc2c4b0b455e");
+            function chargebattery_a23e502e8f5e4b2e9304dc2c4b0b455e() {
+                let element = mainElement_a23e502e8f5e4b2e9304dc2c4b0b455e.querySelector("#battery01");
+
+                element.className = "fa-solid fa-hourglass-start";
+
+                setTimeout(setClass, 1000, "fa-hourglass-half");
+
+                function setClass(faClass) {
+                    //console.log(faClass);
+                    element.className = "fa-solid " + faClass;
+                    if (faClass == "fa-hourglass-half") {
+                        setTimeout(setClass, 1000, "fa-hourglass-end");
+                    }
+                }
+            }
+            chargebattery_a23e502e8f5e4b2e9304dc2c4b0b455e();
+            setInterval(chargebattery_a23e502e8f5e4b2e9304dc2c4b0b455e, 3000);
+        </script>
+
+    </div>
+</body>
+
+</html>

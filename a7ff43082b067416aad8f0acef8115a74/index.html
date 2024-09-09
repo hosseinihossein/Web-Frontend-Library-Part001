@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Button</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a7ff43082b067416aad8f0acef8115a74">
+        <style>
+            #a7ff43082b067416aad8f0acef8115a74 {
+                width: fit-content;
+                margin: auto;
+            }
+
+            #a7ff43082b067416aad8f0acef8115a74 button {
+                display: inline-block;
+                border-radius: 4px;
+                background-color: #f4511e;
+                border: none;
+                color: #FFFFFF;
+                text-align: center;
+                font-size: 28px;
+                padding: 20px;
+                width: 200px;
+                transition: all 0.5s;
+                cursor: pointer;
+                margin: 5px;
+                vertical-align: middle;
+            }
+
+            #a7ff43082b067416aad8f0acef8115a74 button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+            #a7ff43082b067416aad8f0acef8115a74 button span:after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+
+            #a7ff43082b067416aad8f0acef8115a74 button:hover span {
+                padding-right: 25px;
+            }
+
+            #a7ff43082b067416aad8f0acef8115a74 button:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+        </style>
+        <button><span>Hover </span></button>
+
+    </div>
+</body>
+
+</html>

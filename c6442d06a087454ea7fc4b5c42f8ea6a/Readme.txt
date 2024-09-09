@@ -1,0 +1,3 @@
+- Title: Image and its Caption
+- Description: An image with a semi transparent background text box as the caption.
+- Tags: image

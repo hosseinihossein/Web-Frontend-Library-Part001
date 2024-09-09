@@ -1,0 +1,3 @@
+- Title: Table
+- Description: A table that horizontally can be scrolled.
+- Tags: table

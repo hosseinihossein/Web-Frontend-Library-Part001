@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a3d16f2c520b343e68fde2557e911d98b">
+        <style>
+            #a3d16f2c520b343e68fde2557e911d98b {
+                width: 300px;
+                margin: auto;
+                position: relative;
+                height: 400px;
+            }
+
+            /* Button used to open the contact form - fixed at the bottom of the page */
+            #a3d16f2c520b343e68fde2557e911d98b .open-button {
+                background-color: #555;
+                color: white;
+                padding: 16px 20px;
+                border: none;
+                cursor: pointer;
+                opacity: 0.8;
+                position: absolute;
+                /*fixed;*/
+                bottom: 23px;
+                /*right: 28px;*/
+                width: 280px;
+            }
+
+            /* The popup form - hidden by default */
+            #a3d16f2c520b343e68fde2557e911d98b .form-popup {
+                display: none;
+                position: absolute;
+                /*fixed;*/
+                bottom: 0;
+                right: 15px;
+                border: 3px solid #f1f1f1;
+                z-index: 9;
+            }
+
+            /* Add styles to the form container */
+            #a3d16f2c520b343e68fde2557e911d98b .form-container {
+                max-width: 300px;
+                padding: 10px;
+                background-color: white;
+            }
+
+            /* Full-width input fields */
+            #a3d16f2c520b343e68fde2557e911d98b .form-container input[type=text],
+            #a3d16f2c520b343e68fde2557e911d98b .form-container input[type=password] {
+                width: 100%;
+                padding: 15px;
+                margin: 5px 0 22px 0;
+                border: none;
+                background: #f1f1f1;
+            }
+
+            /* When the inputs get focus, do something */
+            #a3d16f2c520b343e68fde2557e911d98b .form-container input[type=text]:focus,
+            #a3d16f2c520b343e68fde2557e911d98b .form-container input[type=password]:focus {
+                background-color: #ddd;
+                outline: none;
+            }
+
+            /* Set a style for the submit/login button */
+            #a3d16f2c520b343e68fde2557e911d98b .form-container .btn {
+                background-color: #04AA6D;
+                color: white;
+                padding: 16px 20px;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                margin-bottom: 10px;
+                opacity: 0.8;
+            }
+
+            /* Add a red background color to the cancel button */
+            #a3d16f2c520b343e68fde2557e911d98b .form-container .cancel {
+                background-color: red;
+            }
+
+            /* Add some hover effects to buttons */
+            #a3d16f2c520b343e68fde2557e911d98b .form-container .btn:hover,
+            #a3d16f2c520b343e68fde2557e911d98b .open-button:hover {
+                opacity: 1;
+            }
+        </style>
+
+        <!-- A button to open the popup form -->
+        <button class="open-button" onclick="openForm_a3d16f2c520b343e68fde2557e911d98b()">Open Form</button>
+
+        <!-- The form -->
+        <div class="form-popup" style="display: none;">
+            <form action="" class="form-container">
+                <h1>Login</h1>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required="">
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required="">
+
+                <button type="submit" class="btn">Login</button>
+                <button type="button" class="btn cancel"
+                    onclick="closeForm_a3d16f2c520b343e68fde2557e911d98b()">Close</button>
+            </form>
+        </div>
+
+        <script>
+            let mainElement_a3d16f2c520b343e68fde2557e911d98b = document.getElementById("a3d16f2c520b343e68fde2557e911d98b");
+
+            function openForm_a3d16f2c520b343e68fde2557e911d98b() {
+                mainElement_a3d16f2c520b343e68fde2557e911d98b.getElementsByClassName("form-popup")[0].style.display = "block";
+            }
+
+            function closeForm_a3d16f2c520b343e68fde2557e911d98b() {
+                mainElement_a3d16f2c520b343e68fde2557e911d98b.getElementsByClassName("form-popup")[0].style.display = "none";
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

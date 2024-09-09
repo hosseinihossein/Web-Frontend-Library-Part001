@@ -1,0 +1,3 @@
+- Title: Expandable and Collapsible Lists
+- Description: A list with nested lists that can be expand and collapse to hide and reveal them.
+- Tags: collapsible expandable list

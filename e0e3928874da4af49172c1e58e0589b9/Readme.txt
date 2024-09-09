@@ -1,0 +1,3 @@
+- Title: Tab
+- Description: A window with tabs.
+- Tags: tab

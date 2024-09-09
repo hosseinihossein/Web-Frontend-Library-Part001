@@ -1,0 +1,3 @@
+- Title: Section Counter
+- Description: Some card with an icon, a title and a number that can be used as counters.
+- Tags: counter card fa_icon

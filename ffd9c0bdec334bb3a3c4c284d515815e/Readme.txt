@@ -1,0 +1,3 @@
+- Title: Movie Details Card
+- Description: A card with detail information about a movie specifications. 
+- Tags: card movie fa_icon

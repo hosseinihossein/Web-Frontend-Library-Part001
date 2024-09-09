@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a9912cdac93994628b185b7ca3f52a611">
+        <style>
+            #a9912cdac93994628b185b7ca3f52a611 {
+                width: fit-content;
+                margin: auto;
+            }
+        </style>
+        <!-- #forme55ee62864e748999b6a2e9c63d29734 -->
+        <p>Displays a warning if capslock is ON</p>
+
+        <div id="forme55ee62864e748999b6a2e9c63d29734">
+            <input type="text" class="Script_8adaa2ed314640c199b2a700ea4429b4" placeholder="some text ..">
+            <p style="display: none; color: red;">WARNING! Caps lock is ON.</p>
+        </div>
+
+        <script>
+
+            let mainElements_Script_8adaa2ed314640c199b2a700ea4429b4 = document.getElementsByClassName("Script_8adaa2ed314640c199b2a700ea4429b4");
+
+            for (let i = 0; i < mainElements_Script_8adaa2ed314640c199b2a700ea4429b4.length; i++) {
+                let warningText = document.createElement("P");
+                warningText.innerHTML = "WARNING! Capslock is ON.";
+
+                if (mainElements_Script_8adaa2ed314640c199b2a700ea4429b4[i].nextElementSibling?.tagName != warningText.tagName
+                    && mainElements_Script_8adaa2ed314640c199b2a700ea4429b4[i].nextElementSibling?.innerHTML != warningText.innerHTML) {
+                    mainElements_Script_8adaa2ed314640c199b2a700ea4429b4[i].after(warningText);
+                }
+                else {
+                    warningText = mainElements_Script_8adaa2ed314640c199b2a700ea4429b4[i].nextElementSibling;
+                }
+
+                warningText.style.display = "none";
+                warningText.style.color = "red";
+
+                // When the user presses any key on the keyboard, run the function
+                mainElements_Script_8adaa2ed314640c199b2a700ea4429b4[i].addEventListener("keyup", function (event) {
+                    // If "caps lock" is pressed, display the warning text
+                    if (event.getModifierState("CapsLock")) {
+                        warningText.style.display = "block";
+                    } else {
+                        warningText.style.display = "none"
+                    }
+                });
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+- Title: Image Gallery
+- Description: An image slider with navigation buttons and thumbnails to select images.
+- Tags: image gallery slide thumbnail

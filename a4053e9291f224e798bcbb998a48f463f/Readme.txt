@@ -1,0 +1,3 @@
+- Title: Right Side Dropdown
+- Description: A dropdown menu with float style value to the right.
+- Tags: dropdown

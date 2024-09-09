@@ -1,0 +1,3 @@
+- Title: Warning Checkbox
+- Description: A simple checkbox input that will show a warning text message if checked.
+- Tags: input checkbox

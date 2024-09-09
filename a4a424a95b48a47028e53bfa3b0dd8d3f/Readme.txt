@@ -1,0 +1,3 @@
+- Title: Login Form
+- Description: A login form with an image and simple credentials (username and password).
+- Tags: form login_form responsive

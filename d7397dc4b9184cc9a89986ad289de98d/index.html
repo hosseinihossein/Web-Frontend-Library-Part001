@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="d7397dc4b9184cc9a89986ad289de98d" class="clearfix">
+        <style>
+            /* Left column (menu) */
+            #d7397dc4b9184cc9a89986ad289de98d {
+                /*float: left;*/
+                width: fit-content;
+                padding: 0;
+                margin: auto;
+            }
+
+            #d7397dc4b9184cc9a89986ad289de98d h2 {
+                padding-left: 8px;
+            }
+
+            /* Style the search box */
+            #d7397dc4b9184cc9a89986ad289de98d #mySearch {
+                width: 100%;
+                font-size: 18px;
+                padding: 11px;
+                border: 1px solid #ddd;
+            }
+
+            /* Style the navigation menu inside the left column */
+            #d7397dc4b9184cc9a89986ad289de98d #myMenu {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            #d7397dc4b9184cc9a89986ad289de98d #myMenu li a {
+                padding: 12px;
+                text-decoration: none;
+                color: black;
+                display: block
+            }
+
+            #d7397dc4b9184cc9a89986ad289de98d #myMenu li a:hover {
+                background-color: #eee;
+            }
+
+            /* click dropdown */
+            #d7397dc4b9184cc9a89986ad289de98d #dropdown8a34e25db43d4d6c8a0a39140b8b50fd .dropbtn {
+                background-color: #3498DB;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+            }
+
+            #d7397dc4b9184cc9a89986ad289de98d #dropdown8a34e25db43d4d6c8a0a39140b8b50fd .dropbtn:hover,
+            #d7397dc4b9184cc9a89986ad289de98d #dropdown8a34e25db43d4d6c8a0a39140b8b50fd .dropbtn:focus {
+                background-color: #2980B9;
+            }
+
+            #d7397dc4b9184cc9a89986ad289de98d #dropdown8a34e25db43d4d6c8a0a39140b8b50fd {
+                position: relative;
+                display: inline-block;
+            }
+
+            #d7397dc4b9184cc9a89986ad289de98d #dropdown8a34e25db43d4d6c8a0a39140b8b50fd .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f1f1f1;
+                min-width: 160px;
+                overflow: auto;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+
+            #d7397dc4b9184cc9a89986ad289de98d #dropdown8a34e25db43d4d6c8a0a39140b8b50fd .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            #d7397dc4b9184cc9a89986ad289de98d #dropdown8a34e25db43d4d6c8a0a39140b8b50fd a:hover {
+                background-color: #ddd;
+            }
+
+            #d7397dc4b9184cc9a89986ad289de98d #dropdown8a34e25db43d4d6c8a0a39140b8b50fd .show {
+                display: block;
+            }
+        </style>
+
+        <div id="dropdown8a34e25db43d4d6c8a0a39140b8b50fd">
+            <button onclick="myFunction_dropdown8a34e25db43d4d6c8a0a39140b8b50fd(this)" class="dropbtn">Dropdown
+                ▼</button>
+            <div class="dropdown-content">
+                <input type="text" id="mySearch" onkeyup="myFunction_searchBar31e13a0eef1442bc8a8850d79afa0e26(this)"
+                    placeholder="Search.." title="Type in a category">
+                <ul id="myMenu">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">PHP</a></li>
+                    <li><a href="#">Python</a></li>
+                    <li><a href="#">jQuery</a></li>
+                    <li><a href="#">SQL</a></li>
+                    <li><a href="#">Bootstrap</a></li>
+                    <li><a href="#">Node.js</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <script>
+            function myFunction_searchBar31e13a0eef1442bc8a8850d79afa0e26(element) {
+                let parent = element.parentElement;
+                let input, filter, ul, li, a, i;
+                input = parent.querySelector("#mySearch");
+                filter = input.value.toUpperCase();
+                ul = parent.querySelector("#myMenu");
+                li = ul.getElementsByTagName("li");
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[0];
+                    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    }
+                }
+            }
+        </script>
+        <script>
+            function myFunction_dropdown8a34e25db43d4d6c8a0a39140b8b50fd(element) {
+
+                //console.log("onclick event fired");
+
+                if (element.innerHTML[element.innerHTML.length - 1] == '▼') {
+                    element.innerHTML = element.innerHTML.replace("▼", "&#9654;");
+                }
+                else if (element.innerHTML[element.innerHTML.length - 1] == '▶') {
+                    element.innerHTML = element.innerHTML.replace("▶", "&#9660;");
+                }
+
+                let dropdownContents = element.parentElement.getElementsByClassName("dropdown-content");
+
+                for (let i = 0; i < dropdownContents.length; i++) {
+                    dropdownContents[i].classList.toggle("show");
+                }
+            }
+
+        </script>
+
+    </div>
+</body>
+
+</html>

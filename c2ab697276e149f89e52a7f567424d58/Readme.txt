@@ -1,0 +1,3 @@
+- Title: Side Menu
+- Description: A simple menu located at the left side of the page.
+- Tags: sidebar menu

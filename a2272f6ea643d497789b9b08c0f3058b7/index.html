@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a2272f6ea643d497789b9b08c0f3058b7">
+        <style>
+            #a2272f6ea643d497789b9b08c0f3058b7 {
+                width: fit-content;
+                margin: 50px auto 0;
+            }
+
+            /* Popup container */
+            #a2272f6ea643d497789b9b08c0f3058b7 .popup {
+                position: relative;
+                display: inline-block;
+                cursor: pointer;
+
+                /**/
+                left: 50%;
+            }
+
+            /* The actual popup (appears on top) */
+            #a2272f6ea643d497789b9b08c0f3058b7 .popup .popuptext {
+                visibility: hidden;
+                width: 160px;
+                background-color: #555;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 8px 0;
+                position: absolute;
+                z-index: 1;
+                bottom: 125%;
+                left: 50%;
+                margin-left: -80px;
+            }
+
+            /* Popup arrow */
+            #a2272f6ea643d497789b9b08c0f3058b7 .popup .popuptext::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: #555 transparent transparent transparent;
+            }
+
+            /* Toggle this class when clicking on the popup container (hide and show the popup) */
+            #a2272f6ea643d497789b9b08c0f3058b7 .popup .show {
+                visibility: visible;
+                -webkit-animation: fadeIn 1s;
+                animation: fadeIn_a2272f6ea643d497789b9b08c0f3058b7 1s
+            }
+
+            /* Add animation (fade in the popup) */
+            @-webkit-keyframes fadeIn_a2272f6ea643d497789b9b08c0f3058b7 {
+                from {
+                    opacity: 0;
+                }
+
+                to {
+                    opacity: 1;
+                }
+            }
+
+            @keyframes fadeIn_a2272f6ea643d497789b9b08c0f3058b7 {
+                from {
+                    opacity: 0;
+                }
+
+                to {
+                    opacity: 1;
+                }
+            }
+        </style>
+
+        <div class="popup" onclick="myFunction_a2272f6ea643d497789b9b08c0f3058b7(this)">Click me!
+            <span class="popuptext" id="myPopup">Popup text...</span>
+        </div>
+
+        <script>
+            // When the user clicks on <div>, open the popup
+            function myFunction_a2272f6ea643d497789b9b08c0f3058b7(element) {
+                let popup = element.parentElement.querySelector("#myPopup");
+                popup.classList.toggle("show");
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

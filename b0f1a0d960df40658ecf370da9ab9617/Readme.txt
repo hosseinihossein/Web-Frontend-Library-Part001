@@ -1,0 +1,3 @@
+- Title: Image Card with Text
+- Description: A simple image with a hidden text at the botton of the image that will be appear when hover over the image.
+- Tags: image

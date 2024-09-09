@@ -1,0 +1,3 @@
+- Title: Image card with moving title
+- Description: An image card with hidden text that slides from the right side over the image by hovering on the image.
+- Tags: image text

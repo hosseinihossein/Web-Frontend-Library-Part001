@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a828ddfd34623487e97964dfd80c35c5d" class="clearfix">
+        <style>
+            #a828ddfd34623487e97964dfd80c35c5d {
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+                border-radius: 20px;
+                margin: auto;
+            }
+
+            #a828ddfd34623487e97964dfd80c35c5d img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.5;
+                position: absolute;
+                top: 0;
+                z-index: -1;
+            }
+
+            #a828ddfd34623487e97964dfd80c35c5d .grad-layout {
+                background: linear-gradient(90deg, rgba(0, 104, 104, 0.9), rgba(0, 0, 0, 0));
+                width: 100%;
+                opacity: 1;
+                overflow: hidden;
+            }
+
+            #a828ddfd34623487e97964dfd80c35c5d .grad-layout .column {
+                float: left;
+                margin: 30px 2%;
+
+            }
+
+            #a828ddfd34623487e97964dfd80c35c5d .grad-layout .column.left {
+                padding: 0 0 0 3%;
+                color: white;
+                width: 40%;
+            }
+
+            #a828ddfd34623487e97964dfd80c35c5d .grad-layout .column.left>div {
+                padding: 5px;
+                margin: 0;
+            }
+
+            #a828ddfd34623487e97964dfd80c35c5d .grad-layout .column.left ul {
+                list-style-position: outside;
+                padding: 0 20px;
+            }
+
+            #a828ddfd34623487e97964dfd80c35c5d .grad-layout .column.left li {
+                margin: 10px 0;
+            }
+
+            #a828ddfd34623487e97964dfd80c35c5d .grad-layout .column.left button {
+                display: none;
+                width: 80%;
+                margin: auto;
+                background-color: white;
+                color: rgba(0, 104, 104, 1);
+                border: none;
+                border-radius: 10px;
+                padding: 15px 20px;
+                font-size: 20px;
+            }
+
+            #a828ddfd34623487e97964dfd80c35c5d .grad-layout .column.left button:hover {
+                cursor: pointer;
+            }
+
+            #a828ddfd34623487e97964dfd80c35c5d .grad-layout .column.right {
+                padding: 0 1% 0 3%;
+                width: 50%;
+                display: block;
+            }
+
+            #a828ddfd34623487e97964dfd80c35c5d .grad-layout .column.right>form {
+                width: 100%;
+                background-color: white;
+                border-radius: 20px;
+                color: rgba(0, 104, 104, 1);
+                font-weight: bolder;
+                padding: 20px;
+                box-shadow: 0 0 20px rgb(77, 77, 77);
+            }
+
+            #a828ddfd34623487e97964dfd80c35c5d .grad-layout .column.right>form>div {
+                margin: 25px;
+            }
+
+            #a828ddfd34623487e97964dfd80c35c5d .grad-layout .column.right>form>div>* {
+                margin: 5px;
+                display: block;
+                font-size: 14px;
+            }
+
+            #a828ddfd34623487e97964dfd80c35c5d .grad-layout .column.right>form input {
+                background-color: rgb(235, 235, 235);
+                width: 100%;
+                line-height: 200%;
+                border-radius: 5px;
+                border: 1px solid lightgray;
+                font-size: 18px;
+            }
+
+            #a828ddfd34623487e97964dfd80c35c5d .grad-layout .column.right>form input[type=submit] {
+                background-color: rgb(0, 150, 150);
+                width: 100%;
+                line-height: 200%;
+                border-radius: 10px;
+                border: 1px solid rgb(0, 150, 150);
+                font-size: 24px;
+                color: white;
+            }
+
+            #a828ddfd34623487e97964dfd80c35c5d .grad-layout .column.right>form input[type=submit]:hover {
+                background-color: rgb(3, 107, 107);
+                cursor: pointer;
+            }
+
+            #a828ddfd34623487e97964dfd80c35c5d .grad-layout .column.right>form .close-span {
+                font-size: 20px;
+                float: right;
+                display: none;
+                cursor: pointer;
+            }
+
+            /*****************************************************/
+            /* Customize the label (the container) */
+            #a828ddfd34623487e97964dfd80c35c5d #form-box .container {
+                display: block;
+                position: relative;
+                padding-left: 35px;
+                margin-bottom: 12px;
+                cursor: pointer;
+                font-size: 14px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                color: black;
+            }
+
+            /* Hide the browser's default checkbox */
+            #a828ddfd34623487e97964dfd80c35c5d #form-box .container input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+            }
+
+            /* Create a custom checkbox */
+            #a828ddfd34623487e97964dfd80c35c5d #form-box .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 25px;
+                width: 25px;
+                background-color: #eee;
+                border: 1px solid lightgray;
+                border-radius: 5px;
+            }
+
+            /* On mouse-over, add a grey background color */
+            #a828ddfd34623487e97964dfd80c35c5d #form-box .container:hover input~.checkmark {
+                background-color: #ccc;
+            }
+
+            /* When the checkbox is checked, add a blue background */
+            #a828ddfd34623487e97964dfd80c35c5d #form-box .container input:checked~.checkmark {
+                background-color: #2196F3;
+            }
+
+            /* Create the checkmark/indicator (hidden when not checked) */
+            #a828ddfd34623487e97964dfd80c35c5d #form-box .checkmark:after {
+                content: "";
+                position: absolute;
+                display: none;
+            }
+
+            /* Show the checkmark when checked */
+            #a828ddfd34623487e97964dfd80c35c5d #form-box .container input:checked~.checkmark:after {
+                display: block;
+            }
+
+            /* Style the checkmark/indicator */
+            #a828ddfd34623487e97964dfd80c35c5d #form-box .container .checkmark:after {
+                left: 9px;
+                top: 5px;
+                width: 5px;
+                height: 10px;
+                border: solid white;
+                border-width: 0 3px 3px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+
+            /*****************************************************/
+            @media only screen and (max-width: 600px) {
+                #a828ddfd34623487e97964dfd80c35c5d .grad-layout .column.left {
+                    width: 100%;
+                    padding: 0 3%;
+                }
+
+                #a828ddfd34623487e97964dfd80c35c5d .grad-layout .column.right {
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                    display: none;
+                    padding: 0;
+                    margin: 0;
+                    bottom: 0;
+                }
+
+                #a828ddfd34623487e97964dfd80c35c5d .grad-layout .column.left button {
+                    display: block;
+                }
+
+                #a828ddfd34623487e97964dfd80c35c5d .grad-layout .column.right>form .close-span {
+                    display: inline;
+                }
+            }
+        </style>
+
+        <img src="./statics/computer001.webp" alt="deer">
+        <div class="grad-layout clearfix">
+            <div class="column left">
+                <div class="brand-logo clearfix">
+                    <h1>logo</h1>
+                </div>
+                <div>
+                    <h1>Romantic Hawaii Giveaway</h1>
+                </div>
+                <div>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam vitae saepe harum delectus
+                        repellendus? Soluta alias voluptate dolorum rem! Ab?
+                    </p>
+                </div>
+                <div>
+                    <h5>Stay includes:</h5>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, dolorem.</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div>
+                    <button onclick="openForm_a828ddfd34623487e97964dfd80c35c5d()">Form</button>
+                </div>
+            </div>
+            <div class="column right">
+                <form action="">
+                    <span class="close-span" onclick="closeForm_a828ddfd34623487e97964dfd80c35c5d()">×</span>
+                    <div>
+                        <label for="fullname">FULL NAME</label>
+                        <input type="text" name="fullname" id="">
+                    </div>
+                    <div>
+                        <label for="fullname">EMAIL ADDRESS</label>
+                        <input type="text" name="fullname" id="">
+                    </div>
+                    <div>
+                        <label for="fullname">PHONE NUMBER</label>
+                        <input type="text" name="fullname" id="">
+                    </div>
+                    <div>
+                        <label for="fullname">DATE OF BIRTH</label>
+                        <input type="date" name="fullname" id="">
+                    </div>
+                    <div>
+                        <div id="form-box">
+                            <label class="container">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque,
+                                aliquam eos. Temporibus ad,
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">I have read and agree to the <a href="">terms & conditions</a>
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="submit" value="Submit Now">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            function openForm_a828ddfd34623487e97964dfd80c35c5d() {
+                let formDiv = document.getElementById("a828ddfd34623487e97964dfd80c35c5d").getElementsByClassName("column right")[0];
+                formDiv.style.display = "block";
+            }
+            function closeForm_a828ddfd34623487e97964dfd80c35c5d() {
+                let formDiv = document.getElementById("a828ddfd34623487e97964dfd80c35c5d").getElementsByClassName("column right")[0];
+                formDiv.style.display = "none";
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

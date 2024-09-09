@@ -1,0 +1,3 @@
+- Title: Simple Register Form
+- Description: A simple register form. Fontawesome icons are used.
+- Tags: form register_form signup_form fa_icon

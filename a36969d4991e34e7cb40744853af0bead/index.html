@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a36969d4991e34e7cb40744853af0bead">
+        <style>
+            #a36969d4991e34e7cb40744853af0bead {
+                position: relative;
+                width: 185px;
+                height: 270px;
+                margin: auto;
+                color: white;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                overflow: hidden;
+                border-radius: 10px;
+            }
+
+            #a36969d4991e34e7cb40744853af0bead img {
+                border-radius: 5px;
+                object-fit: cover;
+                object-position: 80% 50%;
+                width: inherit;
+                height: inherit;
+                z-index: 0;
+            }
+
+            #a36969d4991e34e7cb40744853af0bead .infoDiv {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: inherit;
+                height: inherit;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                z-index: 1;
+            }
+
+            #a36969d4991e34e7cb40744853af0bead .overlayBox {
+                flex-grow: 80;
+                overflow: hidden;
+                position: relative;
+            }
+
+
+            #a36969d4991e34e7cb40744853af0bead .shadowBG {
+                position: absolute;
+                top: 70%;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 50%);
+                z-index: 0;
+                transition: all 0.2s ease-in;
+                border-radius: 5px;
+                overflow: hidden;
+            }
+
+            #a36969d4991e34e7cb40744853af0bead:hover .shadowBG {
+                top: -100%;
+            }
+
+            #a36969d4991e34e7cb40744853af0bead:hover .overlay {
+                height: 15%;
+                top: 85%;
+            }
+
+            #a36969d4991e34e7cb40744853af0bead:hover .description p {
+                visibility: visible;
+            }
+
+            #a36969d4991e34e7cb40744853af0bead .overlay {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                position: absolute;
+                height: 0;
+                top: 100%;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                transition: 0.5s ease;
+                overflow: hidden;
+            }
+
+            #a36969d4991e34e7cb40744853af0bead .description p {
+                margin: 0;
+                visibility: hidden;
+                transition: all 0.2s ease;
+                font-size: 14px;
+                padding: 5px;
+            }
+
+            #a36969d4991e34e7cb40744853af0bead .tags {
+                margin-bottom: 10px;
+            }
+
+            #a36969d4991e34e7cb40744853af0bead .tags a {
+                padding: 0 10px 3px 10px;
+                border-radius: 20px;
+                background-color: rgba(255, 255, 255, 0.5);
+                font-size: 14px;
+            }
+
+            #a36969d4991e34e7cb40744853af0bead .tags a:hover {
+                background-color: #ff5791
+            }
+
+            #a36969d4991e34e7cb40744853af0bead .title {
+                text-align: center;
+                font-weight: bold;
+            }
+
+            #a36969d4991e34e7cb40744853af0bead .title a {
+                color: white;
+                transition: color 0.5s;
+            }
+
+            #a36969d4991e34e7cb40744853af0bead .title a:hover {
+                color: #ff5791;
+                transition: color 0.3s;
+            }
+
+            #a36969d4991e34e7cb40744853af0bead a {
+                text-decoration: none;
+                color: white;
+            }
+
+            #a36969d4991e34e7cb40744853af0bead .rate,
+            #a36969d4991e34e7cb40744853af0bead .title {
+                flex-grow: 1;
+                border-top: 1px solid lightgray;
+                padding: 5px;
+            }
+
+            #a36969d4991e34e7cb40744853af0bead .rate span {
+                margin-left: 5px;
+            }
+        </style>
+
+        <img src="./statics/bird001.webp" alt="movie image">
+        <div class="shadowBG"></div>
+        <div class="infoDiv">
+            <div class="overlayBox">
+                <div class="description"><a href="">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel aut quidem, a quia
+                            neque pariatur repudiandae libero eveniet debitis alias ex ut quos, omnis quas
+                            officiis culpa saepe tempora delectus.</p>
+                    </a>
+                </div>
+                <div class="overlay">
+                    <div class="tags">
+                        <a href="">tag1</a>
+                        <a href="">tag2</a>
+                        <a href="">tag3</a>
+                    </div>
+                </div>
+            </div>
+            <div style="position: relative; overflow: hidden;" class="rate">
+                <div
+                    style="display: block; width: 32px; float: left; max-height: 20px; overflow: hidden; border: 1px solid white; border-radius: 3px;">
+                    <svg style="position: relative; top: -13px; left: -12px;" fill="#ffffff" width="55px" height="45px"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M13.646 10.237c-.057-.032-.16-.048-.313-.048v3.542c.201 0 .324-.041.371-.122s.07-.301.07-.66v-2.092c0-.244-.008-.4-.023-.469a.223.223 0 0 0-.105-.151zm3.499 1.182c-.082 0-.137.031-.162.091-.025.061-.037.214-.037.46v1.426c0 .237.014.389.041.456.029.066.086.1.168.1.086 0 .199-.035.225-.103.027-.069.039-.234.039-.495V11.97c0-.228-.014-.377-.043-.447-.032-.069-.147-.104-.231-.104z">
+                        </path>
+                        <path
+                            d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM6.631 14.663H5.229V9.266h1.402v5.397zm4.822 0H10.23l-.006-3.643-.49 3.643h-.875L8.342 11.1l-.004 3.563H7.111V9.266H8.93c.051.327.107.71.166 1.15l.201 1.371.324-2.521h1.832v5.397zm3.664-1.601c0 .484-.027.808-.072.97a.728.728 0 0 1-.238.383.996.996 0 0 1-.422.193c-.166.037-.418.055-.754.055h-1.699V9.266h1.047c.678 0 1.07.031 1.309.093.24.062.422.164.545.306.125.142.203.3.234.475.031.174.051.516.051 1.026v1.896zm3.654.362c0 .324-.023.565-.066.723a.757.757 0 0 1-.309.413.947.947 0 0 1-.572.174c-.158 0-.365-.035-.502-.104a1.144 1.144 0 0 1-.377-.312l-.088.344h-1.262V9.266h1.35v1.755a1.09 1.09 0 0 1 .375-.289c.137-.064.344-.096.504-.096.186 0 .348.029.484.087a.716.716 0 0 1 .44.549c.016.1.023.313.023.638v1.514z">
+                        </path>
+                    </svg>
+                </div>
+                <span style="color: #ff5791; font-size: 16px; position: relative; bottom: 1px;">8.5</span>
+                <span style="color: white; font-size: 10px; position: relative; bottom: 2px;">/10</span>
+            </div>
+            <div style="padding: 5px;" class="title"><a href="">movie name</a></div>
+        </div>
+
+    </div>
+</body>
+
+</html>

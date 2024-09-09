@@ -1,0 +1,3 @@
+- Title: Image with a Cutout Text
+- Description: A image with a cutout text on it. 
+- Tags: imge text

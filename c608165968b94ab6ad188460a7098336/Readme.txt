@@ -1,0 +1,3 @@
+- Title: Navigation Bar
+- Description: A Menu of buttons stacked on each other.
+- Tags: navbar menu button

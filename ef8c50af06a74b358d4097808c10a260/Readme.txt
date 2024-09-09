@@ -1,0 +1,3 @@
+- Title: Expandable and Collapsible Lists
+- Description: Some nested lists that can expand and collapse by clicking on the checkmark.
+- Tags: expandable collapsible list checkbox

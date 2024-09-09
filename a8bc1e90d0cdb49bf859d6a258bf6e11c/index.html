@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a8bc1e90d0cdb49bf859d6a258bf6e11c">
+        <style>
+            #a8bc1e90d0cdb49bf859d6a258bf6e11c .form-container {
+                width: 50%;
+                max-width: 500px;
+                margin: 1% auto;
+                background-color: white;
+                text-align: center;
+                padding: 1% 5%;
+                box-shadow: 5px 5px 30px rgb(0, 82, 136);
+                position: relative;
+            }
+
+            #a8bc1e90d0cdb49bf859d6a258bf6e11c .form-container>h1 {
+                color: black;
+                margin-bottom: 0;
+            }
+
+            #a8bc1e90d0cdb49bf859d6a258bf6e11c .form-container form>div {
+                margin: 10px auto;
+                position: relative;
+                overflow: hidden;
+            }
+
+            #a8bc1e90d0cdb49bf859d6a258bf6e11c .form-container form input {
+                width: 100%;
+                padding: 5px 3%;
+                font-size: 16px;
+                border: none;
+                border-bottom: 1px solid black;
+                margin-top: 10px;
+            }
+
+            #a8bc1e90d0cdb49bf859d6a258bf6e11c .form-container form span.necessary-star {
+                color: red;
+                position: absolute;
+                left: 3px;
+                top: 3px;
+            }
+
+            #a8bc1e90d0cdb49bf859d6a258bf6e11c .form-container form input[type=checkbox] {
+                width: fit-content;
+            }
+
+            #a8bc1e90d0cdb49bf859d6a258bf6e11c .form-container form>div.checkbox-container {
+                float: left;
+                width: fit-content;
+                margin: 10px auto 20px;
+            }
+
+            #a8bc1e90d0cdb49bf859d6a258bf6e11c .form-container form input[type=submit] {
+                width: 100%;
+                padding: 15px;
+                border: none;
+                color: white;
+                font-weight: 600;
+                letter-spacing: 1px;
+                cursor: pointer;
+                background-color: black;
+                margin-left: 0%;
+            }
+
+            #a8bc1e90d0cdb49bf859d6a258bf6e11c .form-container form .submit-container {
+                overflow: hidden;
+                width: 60%;
+                cursor: pointer;
+            }
+
+            #a8bc1e90d0cdb49bf859d6a258bf6e11c .form-container .blend-overlay {
+                position: relative;
+                left: -100%;
+                bottom: 0px;
+                padding: 17px 100%;
+                background-image: linear-gradient(to right, rgb(0, 82, 136), rgb(0, 182, 136), rgb(0, 82, 136));
+                background-blend-mode: lighten;
+                display: inline;
+                transition: all 0.5s;
+            }
+
+            #a8bc1e90d0cdb49bf859d6a258bf6e11c .form-container .blend-overlay:hover {
+                left: -200%;
+            }
+
+            #a8bc1e90d0cdb49bf859d6a258bf6e11c .form-container .close-span {
+                font-size: 40px;
+                position: absolute;
+                right: 10px;
+                top: 5px;
+                color: rgb(0, 182, 136);
+                cursor: pointer;
+            }
+
+            #a8bc1e90d0cdb49bf859d6a258bf6e11c .form-container .close-span:hover {
+                color: red;
+            }
+
+            #a8bc1e90d0cdb49bf859d6a258bf6e11c .form-container .blend-overlay-h1 {
+                position: relative;
+                left: 0%;
+                top: -25px;
+                padding: 8px 140px;
+                background-image: linear-gradient(to right, rgb(0, 82, 136), rgb(0, 182, 136));
+                background-blend-mode: lighten;
+                display: inline;
+            }
+
+            #a8bc1e90d0cdb49bf859d6a258bf6e11c .form-container .blend-overlay-input {
+                position: relative;
+                left: -200%;
+                bottom: -20px;
+                padding: 0px 50%;
+                background-image: linear-gradient(to right, rgb(0, 82, 136), rgb(0, 182, 136));
+                background-blend-mode: lighten;
+                display: inline;
+                transition: all 0.5s;
+            }
+
+            #a8bc1e90d0cdb49bf859d6a258bf6e11c .form-container input:focus+.blend-overlay-input {
+                left: -100%;
+            }
+
+            #a8bc1e90d0cdb49bf859d6a258bf6e11c .form-container form .fa-eye,
+            #a8bc1e90d0cdb49bf859d6a258bf6e11c .form-container form .fa-eye-slash {
+                position: absolute;
+                right: 5px;
+                bottom: 5px;
+                cursor: pointer;
+            }
+
+            #a8bc1e90d0cdb49bf859d6a258bf6e11c .form-container form .fa-eye-slash {
+                display: none;
+            }
+
+            @media screen and (max-width:800px) {
+                #a8bc1e90d0cdb49bf859d6a258bf6e11c .form-container {
+                    width: 80%;
+                }
+            }
+
+            @media screen and (max-width:600px) {
+                #a8bc1e90d0cdb49bf859d6a258bf6e11c .form-container {
+                    width: 95%;
+                }
+
+                #a8bc1e90d0cdb49bf859d6a258bf6e11c .form-container form .submit-container {
+                    width: 80%;
+                }
+            }
+        </style>
+
+        <div class="form-container">
+            <span class="close-span" onclick="close_a8bc1e90d0cdb49bf859d6a258bf6e11c(this)">×</span>
+            <h1>Registration Form</h1>
+            <div class="blend-overlay-h1"></div>
+            <form action="">
+                <div>
+                    <span class="necessary-star">*</span>
+                    <input type="text" placeholder="Name">
+                    <div class="blend-overlay-input"></div>
+                </div>
+                <div>
+                    <span class="necessary-star">*</span>
+                    <input type="email" placeholder="Email">
+                    <div class="blend-overlay-input"></div>
+                </div>
+                <div>
+                    <input type="text" placeholder="Country">
+                    <div class="blend-overlay-input"></div>
+                </div>
+                <div>
+                    <span class="necessary-star">*</span>
+                    <input type="tel" placeholder="Phone">
+                    <div class="blend-overlay-input"></div>
+                </div>
+                <div>
+                    <span class="necessary-star">*</span>
+                    <input type="password" placeholder="Password">
+                    <div class="blend-overlay-input"></div>
+                    <i class="fa-regular fa-eye" onclick="displayPassword_a8bc1e90d0cdb49bf859d6a258bf6e11c(this)"></i>
+                    <i class="fa-regular fa-eye-slash"
+                        onclick="hidePassword_a8bc1e90d0cdb49bf859d6a258bf6e11c(this)"></i>
+                </div>
+                <div class="checkbox-container">
+                    <label for="terms">
+                        <input type="checkbox" id="terms">
+                        Accept the <a href="">Terms and Conditions</a>
+                    </label>
+                </div>
+                <div class="submit-container" onclick="submitForm_a8bc1e90d0cdb49bf859d6a258bf6e11c(this)">
+                    <input type="submit" value="CREATE ACCOUNT">
+                    <div class="blend-overlay"></div>
+                </div>
+            </form>
+            <p>Already have an account? <a href="">Sign In</a></p>
+        </div>
+
+        <script>
+            function submitForm_a8bc1e90d0cdb49bf859d6a258bf6e11c(element) {
+                element.getElementsByTagName("input")[0].click();
+            }
+            function close_a8bc1e90d0cdb49bf859d6a258bf6e11c(element) {
+                element.parentElement.parentElement.style.display = "none";
+            }
+            function displayPassword_a8bc1e90d0cdb49bf859d6a258bf6e11c(element) {
+                element.parentElement.getElementsByTagName("input")[0].type = "text";
+                element.parentElement.getElementsByTagName("i")[1].style.display = "inline";
+                element.style.display = "none";
+            }
+            function hidePassword_a8bc1e90d0cdb49bf859d6a258bf6e11c(element) {
+                element.parentElement.getElementsByTagName("input")[0].type = "password";
+                element.parentElement.getElementsByTagName("i")[0].style.display = "inline";
+                element.style.display = "none";
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a281cea0c5ba843319675bb700551a419" class="clearfix">
+        <style>
+            #a281cea0c5ba843319675bb700551a419 {
+                width: 60%;
+                min-width: 700px;
+                min-height: 450px;
+                border-radius: 20px;
+                box-shadow: 3px 3px 30px rgba(200, 200, 200, 0.5);
+                position: relative;
+                margin: 40px auto;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .close-span {
+                position: absolute;
+                top: -20px;
+                right: -20px;
+                padding: 0px 11px;
+                font-size: 40px;
+                background-color: white;
+                border: none;
+                border-radius: 50%;
+                box-shadow: 1px 1px 10px rgba(200, 200, 200, 0.5);
+                color: lightgray;
+                cursor: pointer;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .close-span:hover {
+                color: rgb(230, 0, 0);
+                z-index: 1;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .left-col {
+                float: left;
+                width: 40%;
+                background-image: linear-gradient(to bottom, rgb(219, 0, 0) 20%, orangered 60%);
+                border-radius: 20px 0 0 20px;
+                color: white;
+                padding: 30px;
+                position: relative;
+                z-index: -1;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .left-col .price-box {
+                position: absolute;
+                bottom: 30px;
+                left: 0;
+                text-align: center;
+                width: 100%;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .left-col .info * {
+                margin: 3px 0;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .left-col .info p {
+                font-size: 14px;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .left-col>img {
+                height: 20vw;
+                min-height: 250px;
+                /*width: 15vw;*/
+                /*transform: rotate(90deg);*/
+                position: relative;
+                left: 20px;
+                top: -30px;
+                object-fit: cover;
+                /*position: absolute;*/
+                scale: 90%;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col {
+                float: right;
+                width: 60%;
+                padding: 30px 30px 0 30px;
+                background-color: white;
+                overflow: hidden;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col>h1 {
+                margin: 0;
+                position: relative;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col>h1 .new-tag {
+                font-size: 14px;
+                color: white;
+                background-color: red;
+                padding: 5px 10px;
+                border-radius: 5px;
+                font-weight: 100;
+                position: absolute;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col>p {
+                font-size: 14px;
+                font-weight: bold;
+                color: rgba(0, 0, 0, 0.8);
+                margin: 10px;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col .rate-box {
+                color: gray;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col .tab-box {
+                margin-top: 20px;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col .tab-button-box button {
+                background-color: rgba(0, 0, 0, 0);
+                border: none;
+                font-weight: bold;
+                color: gray;
+                cursor: pointer;
+                border-bottom: 2px solid white;
+                margin: 0 5px;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col .tab-button-box button:hover {
+                border-bottom: 2px solid gray;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col .tab-button-box button.active {
+                color: red;
+                border-bottom: 2px solid red;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col .quick-tab .description {
+                font-size: 15px;
+                font-weight: 600;
+                color: rgba(0, 0, 0, 0.8);
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col .size-box button {
+                width: 100%;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col .size-box p,
+            #a281cea0c5ba843319675bb700551a419 .right-col .color-box p {
+                font-weight: bold;
+                font-size: 15px;
+                margin-bottom: 10px;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col .size-box button {
+                background-color: rgba(0, 0, 0, 0);
+                border: none;
+                border-radius: 50px;
+                display: block;
+                float: left;
+                /*padding: 6px 10px;*/
+                width: 30px;
+                height: 30px;
+                margin: 0 6%;
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: bold;
+                color: rgba(0, 0, 0, 0.8);
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col .size-box button:hover {
+                background-color: lightgray;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col .size-box button.active {
+                background-color: orangered;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col .color-box button {
+                border: 5px solid white;
+                outline: 1px solid white;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                /*padding: 10px;*/
+                cursor: pointer;
+                margin: 0 5px;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col .color-box button:hover {
+                outline-color: lightgray;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col .color-box button.active.blue {
+                outline-color: rgb(0, 204, 255);
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col .color-box button.active.red {
+                outline-color: red;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col .color-box button.active.yellow {
+                outline-color: rgb(245, 245, 0);
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col .color-box button.active.black {
+                outline-color: black;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col .tab-content-box .tab {
+                display: none;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col .tab-content-box .tab.show {
+                display: block;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col>.button-box {
+                margin: 40px 0 20px;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col>.button-box button,
+            #a281cea0c5ba843319675bb700551a419 .right-col>.button-box a {
+                border: 2px solid white;
+                padding: 15px 30px;
+                font-size: 18px;
+                border-radius: 10px;
+                color: white;
+                background-color: lightgray;
+                text-decoration: none;
+                margin: 0 5px;
+                cursor: pointer;
+                text-align: center;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col>.button-box button {
+                background-color: rgb(0, 204, 255);
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col>.button-box button:hover {
+                border-color: orange;
+            }
+
+            #a281cea0c5ba843319675bb700551a419 .right-col>.button-box a:hover {
+                border-color: gray;
+            }
+
+            @media screen and (max-width:800px) {
+                #a281cea0c5ba843319675bb700551a419 {
+                    width: 90%;
+                    min-width: 500px;
+                }
+
+                #a281cea0c5ba843319675bb700551a419 .left-col {
+                    width: 100%;
+                    border-radius: 20px 20px 0 0;
+                }
+
+                #a281cea0c5ba843319675bb700551a419 .left-col .info {
+                    width: 50%;
+                    float: left;
+                }
+
+                #a281cea0c5ba843319675bb700551a419 .left-col>img {
+                    left: 10%;
+                    top: -50px;
+                }
+
+                #a281cea0c5ba843319675bb700551a419 .left-col .price-box {
+                    width: 50%;
+                    text-align: center;
+                }
+
+                #a281cea0c5ba843319675bb700551a419 .right-col {
+                    float: none;
+                    width: 100%;
+                    border-radius: 0 0 20px 20px;
+                }
+            }
+
+            @media screen and (max-width:500px) {
+                #a281cea0c5ba843319675bb700551a419 {
+                    width: 100%;
+                    min-width: 320px;
+                }
+
+                #a281cea0c5ba843319675bb700551a419 .left-col .info {
+                    width: 100%;
+                    float: left;
+                }
+
+                #a281cea0c5ba843319675bb700551a419 .left-col>img {
+                    left: 10%;
+                    /*top: -50px;*/
+                }
+
+                #a281cea0c5ba843319675bb700551a419 .left-col .price-box {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                #a281cea0c5ba843319675bb700551a419 .right-col>.button-box * {
+                    display: block;
+                    margin: 10px auto;
+                    width: 80%;
+                }
+
+                #a281cea0c5ba843319675bb700551a419 .right-col .tab-button-box button {
+                    margin: 0;
+                }
+            }
+        </style>
+
+        <span class="close-span" onclick="closeCard_a281cea0c5ba843319675bb700551a419(this)">×</span>
+        <div class="left-col">
+            <div class="brand-logo-box">
+                <h1>Brand Logo</h1>
+            </div>
+            <div class="info">
+                <h2>AIR STRUCTURE <b>19</b></h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque accusantium atque earum quas.
+                </p>
+            </div>
+            <div class="price-box">
+                <h1>$150</h1>
+                <p>plus $1.5 for delivery</p>
+            </div>
+            <img src="./statics/pizza001.webp" alt="">
+        </div>
+        <div class="right-col">
+            <h1>AIR STRUCTURE <b>19</b>
+                <span class="new-tag">NEW</span>
+            </h1>
+            <p>RUNNING COLLECTIONS</p>
+            <div class="rate-box">
+                <i class="fa-solid fa-star" style="color: black;"></i>
+                <i class="fa-solid fa-star" style="color: black;"></i>
+                <i class="fa-solid fa-star" style="color: black;"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="tab-box">
+                <div class="tab-button-box">
+                    <button class="active" onclick="displayTab_a281cea0c5ba843319675bb700551a419(this, 'quick-tab')">
+                        QUICK
+                    </button>
+                    <button onclick="displayTab_a281cea0c5ba843319675bb700551a419(this, 'details-tab')">DETAILS</button>
+                    <button onclick="displayTab_a281cea0c5ba843319675bb700551a419(this, 'reviews-tab')">REVIEWS</button>
+                    <button onclick="displayTab_a281cea0c5ba843319675bb700551a419(this, 'size-and-fit-tab')">SIZE
+                        & FIT
+                    </button>
+                </div>
+                <div class="tab-content-box">
+                    <div class="tab quick-tab show">
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum soluta
+                            deleniti dolore.
+                        </p>
+                        <div class="size-box">
+                            <p>SIZE</p>
+                            <div class="clearfix" style="width: 100%;">
+                                <button onclick="selectSize_a281cea0c5ba843319675bb700551a419(this, 7)">7</button>
+                                <button onclick="selectSize_a281cea0c5ba843319675bb700551a419(this, 8)">8</button>
+                                <button onclick="selectSize_a281cea0c5ba843319675bb700551a419(this, 9)"
+                                    class="active">9</button>
+                                <button onclick="selectSize_a281cea0c5ba843319675bb700551a419(this, 10)">10</button>
+                                <button onclick="selectSize_a281cea0c5ba843319675bb700551a419(this, 11)">11</button>
+                            </div>
+                        </div>
+                        <div class="color-box">
+                            <p>COLOR</p>
+                            <button onclick="selectColor_a281cea0c5ba843319675bb700551a419(this, 'blue')"
+                                class="blue active" style="background-color: rgb(0, 204, 255);"></button>
+                            <button onclick="selectColor_a281cea0c5ba843319675bb700551a419(this, 'red')" class="red"
+                                style="background-color: red;"></button>
+                            <button onclick="selectColor_a281cea0c5ba843319675bb700551a419(this, 'yellow')"
+                                class="yellow" style="background-color: rgb(245, 245, 0);"></button>
+                            <button onclick="selectColor_a281cea0c5ba843319675bb700551a419(this, 'black')" class="black"
+                                style="background-color: black;"></button>
+                        </div>
+                    </div>
+                    <div class="tab details-tab">
+                        <p>this is details tab</p>
+                    </div>
+                    <div class="tab reviews-tab">
+                        <p>this is reviews tab</p>
+                    </div>
+                    <div class="tab size-and-fit-tab">
+                        this is size and fit tab
+                    </div>
+                </div>
+            </div>
+            <form action="" id="formdd12b23eb31f4d6189e69d3b2540bc48">
+                <input class="size-input" name="size" type="number" value="9" hidden="">
+                <input class="color-input" name="color" type="text" value="blue" hidden="">
+            </form>
+            <div class="button-box">
+                <button type="submit" form="formdd12b23eb31f4d6189e69d3b2540bc48">ADD TO CART</button>
+                <a href="">WISHLIST</a>
+            </div>
+        </div>
+
+        <script>
+            function displayTab_a281cea0c5ba843319675bb700551a419(element, tabClassName) {
+                let allTabs = element.parentElement.parentElement.getElementsByClassName("tab");
+                for (let i = 0; i < allTabs.length; i++) {
+                    allTabs[i].classList.remove("show");
+                }
+                let selectedTab = element.parentElement.parentElement.getElementsByClassName(tabClassName)[0];
+                selectedTab.classList.add("show");
+
+                let allButtons = element.parentElement.getElementsByTagName("button");
+                for (let i = 0; i < allButtons.length; i++) {
+                    allButtons[i].classList.remove("active");
+                }
+                element.classList.add("active");
+            }
+
+            function selectSize_a281cea0c5ba843319675bb700551a419(element, size) {
+                let myForm = document.getElementById("formdd12b23eb31f4d6189e69d3b2540bc48");
+                let sizeInput = myForm.getElementsByClassName("size-input")[0];
+                sizeInput.value = size;
+                let allButtons = element.parentElement.getElementsByTagName("button");
+                for (let i = 0; i < allButtons.length; i++) {
+                    allButtons[i].classList.remove("active");
+                }
+                element.classList.add("active");
+            }
+
+            function selectColor_a281cea0c5ba843319675bb700551a419(element, color) {
+                let myForm = document.getElementById("formdd12b23eb31f4d6189e69d3b2540bc48");
+                let colorInput = myForm.getElementsByClassName("color-input")[0];
+                colorInput.value = color;
+                let allButtons = element.parentElement.getElementsByTagName("button");
+                for (let i = 0; i < allButtons.length; i++) {
+                    allButtons[i].classList.remove("active");
+                }
+                element.classList.add("active");
+            }
+
+            function closeCard_a281cea0c5ba843319675bb700551a419(element) {
+                element.parentElement.style.display = "none";
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

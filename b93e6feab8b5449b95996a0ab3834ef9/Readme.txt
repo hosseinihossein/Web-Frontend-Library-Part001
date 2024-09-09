@@ -1,0 +1,3 @@
+- Title: Table
+- Description: A simple table
+- Tags: table

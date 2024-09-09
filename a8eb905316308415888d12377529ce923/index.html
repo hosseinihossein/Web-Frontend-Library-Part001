@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a8eb905316308415888d12377529ce923" onclick="toggle_a8eb905316308415888d12377529ce923(this)">
+        <style>
+            #a8eb905316308415888d12377529ce923 {
+                display: block;
+                cursor: pointer;
+                width: fit-content;
+                margin: 50px auto;
+            }
+
+            #a8eb905316308415888d12377529ce923 .bar1,
+            #a8eb905316308415888d12377529ce923 .bar2,
+            #a8eb905316308415888d12377529ce923 .bar3 {
+                width: 35px;
+                height: 5px;
+                background-color: #333;
+                margin: 6px 0;
+                transition: 0.4s;
+            }
+
+            #a8eb905316308415888d12377529ce923.change .bar1 {
+                transform: translate(0, 11px) rotate(-45deg);
+            }
+
+            #a8eb905316308415888d12377529ce923.change .bar2 {
+                opacity: 0;
+            }
+
+            #a8eb905316308415888d12377529ce923.change .bar3 {
+                transform: translate(0, -11px) rotate(45deg);
+            }
+        </style>
+
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+
+        <script>
+            function toggle_a8eb905316308415888d12377529ce923(menuIcon) {
+                menuIcon.classList.toggle("change");
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

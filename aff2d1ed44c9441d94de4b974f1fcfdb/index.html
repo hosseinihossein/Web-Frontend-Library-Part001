@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="aff2d1ed44c9441d94de4b974f1fcfdb">
+        <style>
+            #aff2d1ed44c9441d94de4b974f1fcfdb {
+                width: 50%;
+                margin: 50px auto 0;
+            }
+
+            /* Set a style for all buttons */
+            #aff2d1ed44c9441d94de4b974f1fcfdb button {
+                display: block;
+                background-color: #04AA6D;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px auto;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                opacity: 0.9;
+            }
+
+            #aff2d1ed44c9441d94de4b974f1fcfdb button:hover {
+                opacity: 1;
+            }
+
+            /* Float cancel and delete buttons and add an equal width */
+            #aff2d1ed44c9441d94de4b974f1fcfdb .cancelbtn,
+            #aff2d1ed44c9441d94de4b974f1fcfdb .deletebtn {
+                float: left;
+                width: 50%;
+            }
+
+            /* Add a color to the cancel button */
+            #aff2d1ed44c9441d94de4b974f1fcfdb .cancelbtn {
+                background-color: #ccc;
+                color: black;
+            }
+
+            /* Add a color to the delete button */
+            #aff2d1ed44c9441d94de4b974f1fcfdb .deletebtn {
+                background-color: #f44336;
+            }
+
+            /* Add padding and center-align text to the container */
+            #aff2d1ed44c9441d94de4b974f1fcfdb .container {
+                padding: 16px;
+                text-align: center;
+            }
+
+            /* The Modal (background) */
+            #aff2d1ed44c9441d94de4b974f1fcfdb .modal {
+                display: none;
+                /* Hidden by default */
+                position: fixed;
+                /* Stay in place */
+                z-index: 2;
+                /* Sit on top */
+                left: 0;
+                top: 0;
+                width: 100%;
+                /* Full width */
+                height: 100%;
+                /* Full height */
+                overflow: auto;
+                /* Enable scroll if needed */
+                background-color: #474e5d;
+                padding-top: 50px;
+            }
+
+            /* Modal Content/Box */
+            #aff2d1ed44c9441d94de4b974f1fcfdb .modal-content {
+                background-color: #fefefe;
+                margin: 5% auto 15% auto;
+                /* 5% from the top, 15% from the bottom and centered */
+                border: 1px solid #888;
+                width: 80%;
+                /* Could be more or less, depending on screen size */
+            }
+
+            /* The Modal Close Button (x) */
+            #aff2d1ed44c9441d94de4b974f1fcfdb .close {
+                position: relative;
+                float: right;
+                right: 15px;
+                /*top: 15px;*/
+                font-size: 40px;
+                font-weight: bold;
+                color: #696969;
+            }
+
+            #aff2d1ed44c9441d94de4b974f1fcfdb .close:hover,
+            #aff2d1ed44c9441d94de4b974f1fcfdb .close:focus {
+                color: #f44336;
+                cursor: pointer;
+            }
+
+            /* Change styles for cancel button and delete button on extra small screens */
+            @media screen and (max-width: 300px) {
+
+                #aff2d1ed44c9441d94de4b974f1fcfdb .cancelbtn,
+                #aff2d1ed44c9441d94de4b974f1fcfdb .deletebtn {
+                    width: 100%;
+                }
+            }
+        </style>
+
+        <button onclick="this.parentElement.querySelector('#id01').style.display='block'">Open Modal</button>
+
+        <div id="id01" class="modal">
+            <form class="modal-content" action="/action_page.php">
+                <span onclick="this.parentElement.parentElement.style.display='none'" class="close"
+                    title="Close Modal">×</span>
+                <div class="container">
+                    <h1>Delete Account</h1>
+                    <p>Are you sure you want to delete your account?</p>
+
+                    <div class="clearfix">
+                        <button type="button"
+                            onclick="this.parentElement.parentElement.parentElement.parentElement.style.display='none'"
+                            class="cancelbtn">Cancel</button>
+                        <button type="button"
+                            onclick="this.parentElement.parentElement.parentElement.parentElement.style.display='none'"
+                            class="deletebtn">Delete</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <script>
+            // When the user clicks anywhere outside of the modal, close it
+            window.addEventListener("click", (event) => {
+                // Get the modal
+                let modal = document.getElementById('aff2d1ed44c9441d94de4b974f1fcfdb').querySelector("#id01");
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            });
+        </script>
+
+    </div>
+</body>
+
+</html>

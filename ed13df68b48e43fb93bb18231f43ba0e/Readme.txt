@@ -1,0 +1,3 @@
+- Title: Tooltip
+- Description: A text with a customized tooltip. Hover over the text to reveal the tooltip.
+- Tags: tooltip text

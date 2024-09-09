@@ -1,0 +1,3 @@
+- Title: Tab
+- Description: Some vertical tabs.
+- Tags: tab

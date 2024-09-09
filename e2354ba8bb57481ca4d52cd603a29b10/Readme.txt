@@ -1,0 +1,3 @@
+- Title: Plan Card
+- Description: A box with several tabs and plan cards. Each plan card includes a title, price and a list of features.
+- Tags: card plan price

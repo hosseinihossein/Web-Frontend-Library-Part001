@@ -1,0 +1,3 @@
+- Title: Navigation Bar
+- Description: A responsive navigation bar with icons. Fontawesome icons are used.
+- Tags: navbar fa_icon

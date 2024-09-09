@@ -1,0 +1,3 @@
+- Title: Movie Summary Card
+- Description: A summary card with an image, rate, tags, name and brief description that will be useful in movie websites.
+- Tags:card summary_card movie

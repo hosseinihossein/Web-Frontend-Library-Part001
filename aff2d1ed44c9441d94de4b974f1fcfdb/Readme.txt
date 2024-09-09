@@ -1,0 +1,3 @@
+- Title: Delete Account Modal
+- Description: A modal with a hidden content. Click on the button to open the modal. 
+- Tags: modal delete account

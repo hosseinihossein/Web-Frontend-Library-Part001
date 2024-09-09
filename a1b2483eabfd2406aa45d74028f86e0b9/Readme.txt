@@ -1,0 +1,3 @@
+- Title: Navigation Bar
+- Description: A navigation bar that its visibility can be toggled on scroll.
+- Tags: navbar

@@ -1,0 +1,3 @@
+- Title: Signup Form Modal
+- Description: A signup form located in a modal that's hidden. Click on the signup button to show the modal.
+- Tags: form signup modal

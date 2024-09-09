@@ -1,0 +1,3 @@
+- Title: Rate Star
+- Description: A rate box with fontawesome icons.
+- Tags: icon fa-icon

@@ -1,0 +1,3 @@
+- Title: Accordion
+- Description: A bunch of simple accordions with hidden text.
+- Tags: accordion text
