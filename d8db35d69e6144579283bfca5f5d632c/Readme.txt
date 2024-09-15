@@ -1,3 +1,3 @@
 - Title: Dropdown Button
 - Description: A simple button with separate dropdown section that uses a fontawesome icon.
-- Tags: button, dropdown
+- Tags: button dropdown

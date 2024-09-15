@@ -1,3 +1,3 @@
 - Title: Login Form
 - Description: A login form that contains a form for entering login credentials (username and password) as well as some options to login with social media accounts.
-- Tags: form login_form social_media
+- Tags: form login social_media

@@ -1,3 +1,3 @@
 - Title: Id Card
 - Description: An identification card with contact information and an image.
-- Tags: card summary_card
+- Tags: card summary

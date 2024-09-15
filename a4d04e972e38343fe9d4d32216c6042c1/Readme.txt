@@ -1,3 +1,3 @@
 - Title: Progress Bar
 - Description: Simple progress bars.
-- Tags: progress-bar
+- Tags: progress_bar

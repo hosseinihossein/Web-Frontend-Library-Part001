@@ -1,3 +1,3 @@
 - Title: Price Card
 - Description: A summary card with title, price, brief description and a list of features that can be used as a price card or plan card.
-- Tags: card summary_card 
+- Tags: card summary

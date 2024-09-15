@@ -1,3 +1,3 @@
 - Title: Row Image Gallery
 - Description: A Row of images with no-wrap. The gallery can be scrolled horizontally.
-- Tags: inage gallery
+- Tags: image gallery

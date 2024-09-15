@@ -1,3 +1,3 @@
 - Title: Register Form
-- Description: A simple form for registeration or signup. 
+- Description: A simple form for registration or signup. 
 - Tags: form resgister signup

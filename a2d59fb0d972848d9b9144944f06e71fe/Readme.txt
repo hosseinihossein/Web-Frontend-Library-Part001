@@ -1,3 +1,3 @@
 - Title: Shadow Button
 - Description: A simple button with shadow when hover on it.
-- Tags: button, hove, shadow
+- Tags: button

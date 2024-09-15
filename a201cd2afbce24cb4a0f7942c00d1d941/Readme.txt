@@ -1,3 +1,3 @@
 - Title: Shopping Card
 - Description: A summary card with an image, name, price, brief description and an add to cart button that can be useful in online shopping websites.
-- Tags: card summary_card shopping
+- Tags: card summary shopping

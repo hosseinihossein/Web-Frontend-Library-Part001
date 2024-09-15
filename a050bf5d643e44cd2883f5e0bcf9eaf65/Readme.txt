@@ -1,3 +1,3 @@
 - Title: Plan Card
 - Description: A summary card with a title, price, brief description and a list of features to offer a plan.
-- Tags: card summary_card
+- Tags: card summary

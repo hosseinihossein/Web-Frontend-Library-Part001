@@ -1,3 +1,3 @@
 - Title: Info Box
-- Description: A card with a title, a brief description and option buttons that can be used as information box, alert card or warning window and so on.
-- Tags: card summary_card
+- Description: A card with a title, a brief description and some option buttons that can be used as information box, alert card or warning window and so on.
+- Tags: card summary

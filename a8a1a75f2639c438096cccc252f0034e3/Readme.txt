@@ -1,3 +1,3 @@
 - Title: Colorful Menu
 - Description: A simple menu with colorful buttons.
-- Tags: menu, button
+- Tags: menu button

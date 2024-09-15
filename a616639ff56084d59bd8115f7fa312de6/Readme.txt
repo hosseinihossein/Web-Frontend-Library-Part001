@@ -1,3 +1,3 @@
 - Title: Icon Menu
 - Description: A menu of buttons decorated with fontawesome icons.
-- Tags: fa_icon, menu, button
+- Tags: fa_icon menu button

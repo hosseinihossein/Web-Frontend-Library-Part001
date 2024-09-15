@@ -1,3 +1,3 @@
 - Title: Silder Switch Button
 - Description: A rectangular slider button that can be swtched on and off.
-- Tags: button, switch, slider
+- Tags: button switch slider

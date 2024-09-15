@@ -1,3 +1,3 @@
 - Title: Search Form
 - Description: A simple search form. Fontawesome icons are used.
-- Tags: fa_icon form search text_input input
+- Tags: fa_icon form search text input

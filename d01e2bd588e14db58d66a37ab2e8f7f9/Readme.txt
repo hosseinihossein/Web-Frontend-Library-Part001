@@ -1,3 +1,3 @@
 - Title: Brands Logo Buttons
 - Description: Some circle buttons decorated with brands logo. Fontawesome icons are used.
-- Tags: button, brand, logo, fa_icon
+- Tags: button brand logo fa_icon

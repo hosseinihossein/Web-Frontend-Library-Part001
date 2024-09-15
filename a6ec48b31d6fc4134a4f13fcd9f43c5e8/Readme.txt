@@ -1,3 +1,3 @@
-- Title: Fliping Container
+- Title: Flipping Container
 - Description: Hover over the container to flip and display the back side.
 - Tags: container

@@ -1,3 +1,3 @@
 - Title: Image Card
-- Description: An image card with some text.
-- Tags: image card
+- Description: An image card with some text and a timer.
+- Tags: image card timer

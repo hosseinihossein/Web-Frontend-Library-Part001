@@ -1,3 +1,3 @@
 - Title: Shopping Card
-- Description: A card with two images, a product name, some options to customze the order and a add to nasket button to order an item.
+- Description: A card with two images, a product name, some options to customize the order and a add to basket button to order an item.
 - Tags: card shopping 

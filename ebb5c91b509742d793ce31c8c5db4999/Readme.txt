@@ -1,3 +1,3 @@
 - Title: Scroll To Top
 - Description: A red hidden button that reveals to the bottom right of the page when scroll down and makes the page scroll to the top when click it.
-- Tags: button, scroll
+- Tags: button scroll
