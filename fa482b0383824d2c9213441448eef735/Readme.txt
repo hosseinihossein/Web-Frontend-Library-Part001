@@ -1,3 +1,3 @@
-- Title: side Bar
-- Description: A simple side bar emnu.
+- Title: Side Bar
+- Description: A simple side bar menu.
 - Tags: sidebar navbar menu

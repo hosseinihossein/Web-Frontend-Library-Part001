@@ -1,3 +1,3 @@
 - Title: Table
-- Description: Hover on each row to change its backgroind color.
+- Description: Hover on each row to change its background color.
 - Tags: table

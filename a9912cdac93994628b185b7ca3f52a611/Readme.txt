@@ -1,3 +1,3 @@
 - Title: Capslock Warning
-- Description: A simple input that will show a warning red message if the capslock is on while writing in it.
+- Description: A simple input that will show a warning red message if the capslock key is on while writing in it.
 - Tags: input text

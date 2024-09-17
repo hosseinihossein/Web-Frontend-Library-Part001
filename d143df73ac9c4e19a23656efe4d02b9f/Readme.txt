@@ -1,3 +1,3 @@
 - Title: Multi Page Register Form
-- Description: A resgister form spreaded in several steps. Each form page needs to be completed to be allowed to go to the next page.
+- Description: A resgister form that's been spread in several steps. Each form page needs to be completed to be allowed to go to the next page.
 - Tags: form register

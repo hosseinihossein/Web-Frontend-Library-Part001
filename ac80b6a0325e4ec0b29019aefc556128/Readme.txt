@@ -1,3 +1,3 @@
-- Title: Vertical Taba
+- Title: Vertical Tabs
 - Description: Some vertical tabs. Hover over the header to open the tab.
 - Tags: tab

@@ -1,3 +1,3 @@
 - Title: Image Slider
-- Description: An automatic image slider with controll buttons to go next and previous.
+- Description: An automatic image slider with control buttons to go next and previous.
 - Tags: slider image

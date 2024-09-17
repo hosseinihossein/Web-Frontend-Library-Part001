@@ -1,3 +1,3 @@
 - Title: Menu
-- Description: A list of buttons that can be scrolled horizintally.
+- Description: A list of buttons that can be scrolled horizontally.
 - Tags: menu button

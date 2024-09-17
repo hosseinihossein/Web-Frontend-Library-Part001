@@ -1,3 +1,3 @@
 - Title: Responsive Text
-- Description: Resize the browser window to see how the text font size scales. 
+- Description: Resize the browser window to see how the text font size scales.
 - Tags: responsive text

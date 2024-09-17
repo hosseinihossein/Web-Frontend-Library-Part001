@@ -1,3 +1,3 @@
 - Title: Text Slider
-- Description: A slider with text content and controll buttons.
+- Description: A slider with text content and control buttons.
 - Tags: slider text

@@ -1,3 +1,3 @@
 - Title: Timer
-- Description: A simple timer that counts remaining days, hours, minuts and seconds till s specified date.
+- Description: A simple timer that counts remaining days, hours, minutes and seconds till s specified date.
 - Tags: timer

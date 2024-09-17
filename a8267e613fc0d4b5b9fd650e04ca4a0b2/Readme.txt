@@ -1,3 +1,3 @@
 - Title: Pagination
-- Description: Asimple pagination.
+- Description: A simple pagination.
 - Tags: pagination

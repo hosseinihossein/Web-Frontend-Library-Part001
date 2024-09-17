@@ -1,3 +1,3 @@
 - Title: Dropdown Button
-- Description: A button with dropdown menu. Click the dropdow button to open the menu.
+- Description: A button with dropdown menu. Click the dropdown button to open the menu.
 - Tags: button dropdown 

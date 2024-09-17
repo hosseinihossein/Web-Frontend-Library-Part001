@@ -1,3 +1,3 @@
-- Title: Signin Form
-- Description: A login form with background image. Fontawesome ions are used.
+- Title: Sign in Form
+- Description: A signin form with background image. Fontawesome ions are used.
 - Tags: form login

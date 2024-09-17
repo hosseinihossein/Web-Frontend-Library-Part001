@@ -1,3 +1,3 @@
 - Title: Responsive Containers
-- Description: Some responsive containers located in columns. They will stack on each other in small windows. 
+- Description: Some responsive containers located in columns. They will stack on each other in small windows.
 - Tags: responsive container

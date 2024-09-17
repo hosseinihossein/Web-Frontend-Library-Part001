@@ -1,3 +1,3 @@
 - Title: Navigation Bar
-- Description: A navigation bar with a drodown menu list and a logo.
+- Description: A navigation bar with a dropdown menu list and a logo.
 - Tags: navbar menu dropdown
