@@ -1,0 +1,3 @@
+- Title: Spinning Colorful Border
+- Description: An image card with two colors spinning around at its border.
+- Tags: image card spin
