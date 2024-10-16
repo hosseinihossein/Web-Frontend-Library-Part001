@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="sendMessagec7a4cdbe2a45427d9acd300e040980f1">
+        <style>
+            #sendMessagec7a4cdbe2a45427d9acd300e040980f1 {
+                position: relative;
+                width: 50%;
+                min-width: 410px;
+                margin: 300px auto 0;
+            }
+
+            #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #attached-file-name-div {
+                position: absolute;
+                top: -20px;
+                left: 30px;
+                display: none;
+                font-size: 14px;
+                text-wrap: nowrap;
+                z-index: 1;
+            }
+
+            #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #attached-file-name-span {
+                font-weight: bold;
+                display: inline-block;
+                /*max-width: 350px;
+                overflow: hidden;*/
+            }
+
+            #sendMessagec7a4cdbe2a45427d9acd300e040980f1 form {
+                width: 100%;
+            }
+
+            #sendMessagec7a4cdbe2a45427d9acd300e040980f1 form .text-input {
+                width: calc(100% - 50px - 10px);
+                margin: 0 5px;
+                font-size: 16px;
+                color: rgb(53, 53, 53);
+                padding: 15px 130px 15px 40px;
+                border: 1px solid lightgray;
+                border-radius: 20px;
+            }
+
+            #sendMessagec7a4cdbe2a45427d9acd300e040980f1 form button.send-btn {
+                border: none;
+                border-radius: 50%;
+                cursor: pointer;
+                font-size: 26px;
+                position: absolute;
+                top: 5px;
+                right: 15px;
+                padding: 5px 7px 5px 5px;
+                background-color: red;
+                color: white;
+            }
+
+            #sendMessagec7a4cdbe2a45427d9acd300e040980f1 form button.send-btn:hover {
+                background-color: rgb(0, 68, 170);
+                color: white;
+            }
+
+            #sendMessagec7a4cdbe2a45427d9acd300e040980f1 form #file-label {
+                position: absolute;
+                left: 10px;
+                top: 10px;
+                z-index: 1;
+                font-size: 20px;
+                cursor: pointer;
+                padding: 5px 8px;
+                border-radius: 5px;
+                color: gray;
+            }
+
+            #sendMessagec7a4cdbe2a45427d9acd300e040980f1 form #file-label:hover {
+                background-color: rgb(255, 214, 214);
+                color: #000;
+            }
+
+            #sendMessagec7a4cdbe2a45427d9acd300e040980f1 form #record-video-btn {
+                position: absolute;
+                right: 60px;
+                top: 10px;
+            }
+
+            #sendMessagec7a4cdbe2a45427d9acd300e040980f1 form #record-audio-btn {
+                position: absolute;
+                right: 100px;
+                top: 10px;
+                padding: 0 10px;
+            }
+
+            /*#emojiPickerecc27e8ad71644bab981b78cde69ccd9*/
+            #sendMessagec7a4cdbe2a45427d9acd300e040980f1 form button {
+                border: none;
+                border-radius: 5px;
+                background-color: rgba(0, 0, 0, 0);
+                font-size: 25px;
+                padding: 2px;
+                margin: 0;
+                cursor: pointer;
+                color: gray;
+            }
+
+            #sendMessagec7a4cdbe2a45427d9acd300e040980f1 form button:hover {
+                background-color: rgb(255, 214, 214);
+                color: rgb(15, 0, 80);
+                /*text-shadow: 0 0 10px rgb(15, 0, 80);*/
+            }
+
+            #emojiPickerecc27e8ad71644bab981b78cde69ccd9 {
+                position: absolute;
+                right: 145px;
+                top: 10px;
+                z-index: 0;
+            }
+
+            #emojiPickerecc27e8ad71644bab981b78cde69ccd9 .emoji-list {
+                position: absolute;
+                right: 0;
+                bottom: 35px;
+                width: 200px;
+                border: 1px solid lightgray;
+                border-radius: 10px;
+                background-color: white;
+                padding: 5px;
+                height: 150px;
+                overflow: auto;
+                display: none;
+                z-index: 1;
+            }
+
+            #emojiPickerecc27e8ad71644bab981b78cde69ccd9 .emoji-list.show {
+                display: block;
+            }
+        </style>
+
+        <div id="attached-file-name-div">
+            <span id="attached-file-name-span" style="font-weight: bold;">filename.format</span>
+            attached
+        </div>
+        <form action="" method="post" enctype="multipart/form-data"
+            onsubmit="/*sendMessage_sendMessagec7a4cdbe2a45427d9acd300e040980f1(this);return false;*/">
+            <div>
+                <input class="text-input" type="text" name="message" placeholder="Type your message here..." onkeypress="if(event.key === 'Enter'){ event.preventDefault();
+                    this.parentElement.parentElement.getElementsByClassName('send-btn')[0].click();}">
+                <label id="file-label" for="form-file">
+                    <i class="fa-solid fa-paperclip"></i>
+                    <input class="file-input" id="form-file" type="file" style="display: none;"
+                        oninput="showAttachedFileName(this)">
+                </label>
+                <button type="button" id="record-video-btn" onclick="displayVideoInModal_sendMessage()">
+                    <i class="fa-solid fa-video"></i>
+                </button>
+                <button type="button" id="record-audio-btn"><i class="fa-solid fa-microphone"></i></button>
+                <div id="emojiPickerecc27e8ad71644bab981b78cde69ccd9">
+                    <button class="emoji-btn" type="button"
+                        onclick="toggleShowEmojiList_emojiPickerecc27e8ad71644bab981b78cde69ccd9(this)">
+                        <i class="fa-regular fa-face-smile emoji-btn"></i>
+                    </button>
+                    <div class="emoji-list">
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128512</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128515</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128516</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128513</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128514</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#129321</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#129322</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#129392</button>
+
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128077;</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128078;</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128079;</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128075;</button>
+
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#129505;</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128148;</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128155;</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128157;</button>
+
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#129488</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128525</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128526</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128520</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128522</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128536</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128540</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128539</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128578</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128528</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128529</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128530</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128533</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128545</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128546</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128552</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128557</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128560</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128580</button>
+                        <button type="button"
+                            class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#129314</button>
+
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="send-btn">
+                <i class="fa-regular fa-paper-plane"></i>
+            </button>
+        </form>
+        <script>
+
+            function showAttachedFileName(element) {
+                let attachedFileNameDiv = document.getElementById("attached-file-name-div");
+                let attachedFileNameSpan = document.getElementById("attached-file-name-span");
+                if (!element.files[0]) {
+                    element.value = "";
+                    element.files = null;
+                    attachedFileNameSpan.innerHTML = "";
+                    attachedFileNameDiv.style.display = "none";
+                    return;
+                }
+                else {
+                    attachedFileNameSpan.innerHTML = element.files[0].name;
+                    attachedFileNameDiv.style.display = "block";
+                }
+            }
+
+            function toggleShowEmojiList_emojiPickerecc27e8ad71644bab981b78cde69ccd9(element) {
+                element.parentElement.getElementsByClassName("emoji-list")[0].classList.toggle("show");
+            }
+
+            function addEmoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9(element) {
+                let inputDiv = element.parentElement.parentElement.parentElement;
+                inputDiv.getElementsByTagName("input")[0].value += element.innerHTML;
+            }
+
+            let emojis = document.getElementById("emojiPickerecc27e8ad71644bab981b78cde69ccd9").getElementsByClassName("emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9");
+            for (let i = 0; i < emojis.length; i++) {
+                emojis[i].addEventListener("click", (event) => {
+                    addEmoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9(emojis[i]);
+                });
+            }
+
+            /*async function sendMessage_sendMessagec7a4cdbe2a45427d9acd300e040980f1(oFormElement) {
+                const formData = new FormData(oFormElement);
+
+                try {
+                    const response = await fetch(oFormElement.action, {
+                        method: 'POST',
+                        headers: {
+                            'RequestVerificationToken': getCookie('RequestVerificationToken')
+                        },
+                        body: formData
+                    });
+
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+
+                function getCookie(name) {
+                    var value = "; " + document.cookie;
+                    var parts = value.split("; " + name + "=");
+                    if (parts.length == 2) return parts.pop().split(";").shift();
+                }
+            }*/
+
+            window.addEventListener("click", (event) => {
+                //console.log(event.target);
+                if (!event.target.classList.contains("emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9") &&
+                    !event.target.classList.contains("emoji-btn")) {
+                    document.getElementsByClassName("emoji-list")[0].classList.remove("show");
+                }
+            });
+        </script>
+
+        <div id="modal-box-in-message-box">
+            <style>
+                #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box {
+                    width: fit-content;
+                    margin: auto;
+                }
+
+                #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box .image {
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    max-width: 400px;
+                    max-height: 300px;
+                }
+
+                #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box .image:hover {
+                    opacity: 0.7;
+                }
+
+                /* The Modal (background) */
+                #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box .modal {
+                    display: none;
+                    /* Hidden by default */
+                    position: fixed;
+                    /* Stay in place */
+                    z-index: 10;
+                    /* Sit on top */
+                    padding-top: 100px;
+                    /* Location of the box */
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    /* Full width */
+                    height: 100%;
+                    /* Full height */
+                    overflow: auto;
+                    /* Enable scroll if needed */
+                    background-color: rgb(0, 0, 0);
+                    /* Fallback color */
+                    background-color: rgba(0, 0, 0, 0.9);
+                    /* Black w/ opacity */
+                }
+
+                /* Modal Content (image) */
+                #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box #modal-video {
+                    margin: auto;
+                    display: block;
+                    width: 80%;
+                    max-width: 600px;
+                }
+
+                /*#sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box #modal-img {
+                    margin: auto;
+                    display: block;
+                    width: 80%;
+                    max-width: 700px;
+                }*/
+
+                #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box #manage-record-box {
+                    width: fit-content;
+                    margin: auto;
+                    text-align: center;
+                }
+
+                #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box #manage-record-box button {
+                    padding: 10px 20px;
+                    background-color: white;
+                    border: none;
+                    border-radius: 10px;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+
+                #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box #manage-record-box button:hover {
+                    color: red;
+                }
+
+                #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box #manage-record-box button i {
+                    font-size: 24px;
+                }
+
+                #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box #manage-record-box p {
+                    color: white;
+                    text-align: center;
+                }
+
+                /* Caption of Modal Image */
+                #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box .caption {
+                    margin: auto;
+                    display: block;
+                    width: 80%;
+                    max-width: 700px;
+                    text-align: center;
+                    color: #ccc;
+                    padding: 10px 0;
+                    height: 150px;
+                }
+
+                /* Add Animation */
+                #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box .modalImage,
+                #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box .caption {
+                    animation-name: zoom;
+                    animation-duration: 0.6s;
+                }
+
+                @keyframes zoom {
+                    from {
+                        transform: scale(0.1)
+                    }
+
+                    to {
+                        transform: scale(1)
+                    }
+                }
+
+                /* The Close Button */
+                #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box .close {
+                    position: absolute;
+                    top: 15px;
+                    right: 35px;
+                    color: #f1f1f1;
+                    font-size: 40px;
+                    font-weight: bold;
+                    transition: 0.3s;
+                }
+
+                #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box .close:hover,
+                #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box .close:focus {
+                    color: red;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+
+                /* 100% Image Width on Smaller Screens */
+                @media only screen and (max-width: 700px) {
+                    #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box .modalImage {
+                        width: 100%;
+                    }
+                }
+            </style>
+
+            <!-- The Modal -->
+            <div class="modal" onclick="/*if(event.target == this) closeModal_sendMessage(this);*/">
+                <span onclick="closeModal_sendMessage(this.parentElement)" class="close" title="Cancel">×</span>
+                <video src="" autoplay id="modal-video"></video>
+                <audio src="" controls id="modal-audio"></audio>
+                <div id="manage-record-box" class="clearfix">
+                    <button onclick="pressRecordButton(this)" title="Start Recording">
+                        <i class="fa-regular fa-circle-dot"></i>
+                    </button>
+                    <p>Status: Not Recorded</p>
+                    <span id="record-counter" style="color: white;"></span>
+                </div>
+            </div>
+
+            <script>
+                let mainElement_sendMessage = document.getElementById("modal-box-in-message-box");
+                let modal_sendMessage = mainElement_sendMessage.querySelector(".modal");
+                let modalVideo_sendMessage = modal_sendMessage.querySelector("#modal-video");
+                let modalAudio_sendMessage = modal_sendMessage.querySelector("#modal-audio");
+                let mediaStream_sendMessage;
+                let mediaRecorder_sendMessage;
+                let recordInterval;
+                let blob_sendMessage;
+                let videoUrl_sendMessage;
+                let dataChunks = [];
+                let displayMimeType = 'video/webm; codecs="vp8"';
+                let cameraMimeType = 'video/webm; codecs="vp8, opus"';
+                let recordMimeType;
+                let recrdingStatus = "Empty";
+                let recordCounterInterval;
+
+                async function displayVideoInModal_sendMessage() {
+                    let recordButton = document.getElementById("manage-record-box").getElementsByTagName("button")[0];
+                    let recordStatus = document.getElementById("manage-record-box").getElementsByTagName("p")[0];
+                    modalVideo_sendMessage.style.display = "block";
+                    modalAudio_sendMessage.style.display = "none";
+                    recordButton.innerHTML = '<i class="fa-regular fa-circle-dot"></i>';
+                    recordButton.title = "Start Recording";
+                    recordStatus.innerHTML = "Status: Not Recorded";
+                    modal_sendMessage.style.display = "block";
+                    mediaStream_sendMessage = await startGettingDisplayVideo();
+                    modalVideo_sendMessage.srcObject = mediaStream_sendMessage;
+                    modalVideo_sendMessage.setAttribute("autoplay", "true");
+                    modalVideo_sendMessage.removeAttribute("controls");
+                    modalVideo_sendMessage.setAttribute("muted", "true");
+                }
+
+                async function displayAudioInModal_sendMessagec7a4cdbe2a45427d9acd300e040980f1() {
+                    let recordButton = document.getElementById("manage-record-box").getElementsByTagName("button")[0];
+                    let recordStatus = document.getElementById("manage-record-box").getElementsByTagName("p")[0];
+                    modalVideo_sendMessage.style.display = "none";
+                    modalAudio_sendMessage.style.display = "block";
+                    recordButton.innerHTML = "Start Recording Audio";
+                    recordStatus = "Status: Not Recording";
+                    modal_sendMessage.style.display = "block";
+                    mediaStream_sendMessage = await startGettingUserAudio();
+                }
+
+                function closeModal_sendMessage(modal) {
+                    modal.style.display = "none";
+                    stopRecordingVideo();
+                    mediaStream_sendMessage = null;
+                    mediaRecorder_sendMessage = null;
+                    recordInterval = null;
+                    blob_sendMessage = null;
+                    videoUrl_sendMessage = null;
+                    dataChunks = [];
+                    recrdingStatus = "Empty";
+                    modalVideo_sendMessage.src = "";
+                    let recordCounterElmnt = document.getElementById("record-counter");
+                    recordCounterElmnt.innerHTML = "";
+                }
+
+                async function startGettingUserVideo() {
+                    recordMimeType = cameraMimeType;
+                    return await navigator.mediaDevices.getUserMedia({
+                        video: {
+                            width: 480,
+                            hieght: 480,
+                            frameRate: { ideal: 24, max: 30 },
+                            facingMode: "user",
+                        },
+                        audio: {
+                            echoCancellation: true,
+                            noiseSuppression: true,
+                            sampleRate: 44100,
+                        },
+                    });
+                }
+                async function startGettingDisplayVideo() {
+                    recordMimeType = displayMimeType;
+                    return await navigator.mediaDevices.getDisplayMedia({
+                        video: {
+                            cursor: 'always' | 'motion' | 'never',
+                            displaySurface: 'application' | 'browser' | 'monitor' | 'window'
+                        },
+                        audio: false,
+                    });
+                }
+                async function startGettingUserAudio() {
+                    return await navigator.mediaDevices.getUserMedia({
+                        video: false,
+                        audio: {
+                            echoCancellation: true,
+                            noiseSuppression: true,
+                            sampleRate: 44100,
+                        },
+                    });
+                }
+
+                function pressRecordButton(element) {
+                    let recordButtonElmnt = element;
+                    let recordStatusElmnt = element.nextElementSibling;
+                    let recordCounterElmnt = element.nextElementSibling.nextElementSibling;
+
+                    if (recrdingStatus == "Empty") {
+                        startRecordingVideo();
+                        recordButtonElmnt.innerHTML = '<i class="fa-solid fa-stop"></i>';
+                        recordButtonElmnt.title = "Stop Recording";
+                        recordStatusElmnt.innerHTML = "Status: Recording ...";
+                        recrdingStatus = "Recording";
+                        recordCounterElmnt.innerHTML = 0;
+                        recordCounterInterval = setInterval(() => {
+                            let recordCounter;
+                            if (recordCounterElmnt.innerHTML == "") {
+                                recordCounter = 0;
+                            }
+                            else {
+                                recordCounter = Number(recordCounterElmnt.innerHTML);
+                            }
+                            recordCounterElmnt.innerHTML = ++recordCounter;
+                        }, 1000);
+                    }
+                    else if (recrdingStatus == "Recording") {
+                        stopRecordingVideo();
+                        recordButtonElmnt.innerHTML = '<i class="fa-regular fa-paper-plane"></i>';
+                        recordButtonElmnt.title = "Send";
+                        recordStatusElmnt.innerHTML = "Status: Ready to send";
+                        recrdingStatus = "ReadyToSend";
+                        clearInterval(recordCounterInterval);
+                        recordCounterElmnt.innerHTML += " seconds";
+                    }
+                    else if (recrdingStatus == "ReadyToSend") {
+
+                    }
+                }
+
+                function startRecordingVideo() {
+
+                    mediaRecorder_sendMessage =
+                        new MediaRecorder(mediaStream_sendMessage);
+
+                    mediaRecorder_sendMessage
+                        .addEventListener("dataavailable", (e) => {
+                            dataChunks.push(e.data);
+                        });
+
+                    mediaRecorder_sendMessage
+                        .addEventListener("stop", (e) => {
+                            mediaStream_sendMessage.getTracks().forEach((track) => track.stop());
+
+                            blob_sendMessage = dataChunks[0];
+                            videoUrl_sendMessage = window.URL.createObjectURL(blob_sendMessage);
+
+                            modalVideo_sendMessage.srcObject = null;
+                            modalVideo_sendMessage.src = videoUrl_sendMessage;
+                            modalVideo_sendMessage.removeAttribute("autoplay");
+                            modalVideo_sendMessage.setAttribute("controls", "true");
+                            modalVideo_sendMessage.removeAttribute("muted");
+                            modalVideo_sendMessage.play();
+                        });
+
+                    mediaRecorder_sendMessage.start();
+                }
+
+                function stopRecordingVideo() {
+                    clearInterval(recordInterval);
+                    if (mediaRecorder_sendMessage) {
+                        mediaRecorder_sendMessage.stop();
+                    }
+
+                    mediaStream_sendMessage.getTracks().forEach((track) => track.stop());
+
+                }
+
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

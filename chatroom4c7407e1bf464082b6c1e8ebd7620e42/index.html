@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <div id="chatWindow3b211c10e84748a08bf7eed6f511c1b8" class="clearfix">
+        <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+        <style>
+            * {
+                box-sizing: border-box;
+                outline: 0;
+                font-family: Helvetica, Arial, sans-serif;
+            }
+
+            .clearfix::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
+            body {
+                font-size: 100%;
+            }
+
+            #chatWindow3b211c10e84748a08bf7eed6f511c1b8 {
+                width: 90%;
+                /*min-width: 800px;*/
+                height: 95vh;
+                margin: auto;
+                border: 2px solid gray;
+                border-radius: 10px;
+                overflow: hidden;
+                position: relative;
+                padding: 5px;
+            }
+
+            @media screen and (max-width:1000px) {
+                #chatWindow3b211c10e84748a08bf7eed6f511c1b8 {
+                    width: 100%;
+                }
+            }
+
+            /* width */
+            #chatWindow3b211c10e84748a08bf7eed6f511c1b8 *::-webkit-scrollbar {
+                width: 5px;
+            }
+
+            /* Track */
+            #chatWindow3b211c10e84748a08bf7eed6f511c1b8 *::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px grey;
+                border-radius: 10px;
+            }
+
+            /* Handle */
+            #chatWindow3b211c10e84748a08bf7eed6f511c1b8 *::-webkit-scrollbar-thumb {
+                background: red;
+                border-radius: 10px;
+            }
+
+            /* Handle on hover */
+            #chatWindow3b211c10e84748a08bf7eed6f511c1b8 *::-webkit-scrollbar-thumb:hover {
+                background: #b30000;
+            }
+        </style>
+        <!-------------------------------- chatrooms list -------------------------------->
+        <div id="chatroomList9baf98a03b4e4d10b198a5979a59433f">
+            <style>
+                #chatroomList9baf98a03b4e4d10b198a5979a59433f {
+                    /*width: 20%;
+                    min-width: 300px;*/
+                    width: 300px;
+                    height: 100%;
+                    /*border: 1px solid gray;*/
+                    float: left;
+                    background-color: white;
+                    overflow: hidden;
+                }
+
+                @media screen and (max-width:800px) {
+                    #chatroomList9baf98a03b4e4d10b198a5979a59433f {
+                        position: absolute;
+                        z-index: 2;
+                        width: 0;
+                        transition: 0.3s;
+                    }
+
+                    #chatroomList9baf98a03b4e4d10b198a5979a59433f.show {
+                        width: 300px;
+                    }
+                }
+            </style>
+            <div id="profile-summary">
+                <style>
+                    #chatroomList9baf98a03b4e4d10b198a5979a59433f #profile-summary {
+                        text-align: center;
+                    }
+
+                    #chatroomList9baf98a03b4e4d10b198a5979a59433f #profile-summary img {
+                        width: 100px;
+                        height: 100px;
+                        object-fit: cover;
+                        border-radius: 50%;
+                    }
+                </style>
+                <a href="" id="user-settings-link" title="Settings"><i class="fa-solid fa-gear"></i></a>
+                <img src="./statics/bird001.webp" alt="">
+                <p>User Name</p>
+            </div>
+
+            <div class="searchFilterListc9a4355d813f479a86c3d1f0395ddc45">
+                <style>
+                    .searchFilterListc9a4355d813f479a86c3d1f0395ddc45 {
+                        width: 100%;
+                        /*min-width: 300px;*/
+                        margin: auto;
+                        position: relative;
+                        height: calc(100% - 150px);
+                        /*border: 1px dashed gray;*/
+                        background-color: white;
+                    }
+
+                    .searchFilterListc9a4355d813f479a86c3d1f0395ddc45 #search-icon {
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                        z-index: 1;
+                        font-size: 22px;
+                        color: gray;
+                    }
+
+                    .searchFilterListc9a4355d813f479a86c3d1f0395ddc45 #myInput {
+                        width: 80%;
+                        font-size: 16px;
+                        padding: 12px 20px 12px 40px;
+                        /*border: 1px solid #ddd;*/
+                        border-radius: 15px;
+                        border: none;
+                        background-color: #eee;
+                        margin-bottom: 5px;
+                    }
+
+                    .searchFilterListc9a4355d813f479a86c3d1f0395ddc45 #add-contact-btn {
+                        border: none;
+                        border-radius: 5px;
+                        background-color: white;
+                        color: gray;
+                        font-size: 22px;
+                        padding: 5px 5px;
+                        position: relative;
+                        top: 3px;
+                        cursor: pointer;
+                    }
+
+                    .searchFilterListc9a4355d813f479a86c3d1f0395ddc45 #add-contact-btn:hover {
+                        background-color: lightgreen;
+                        color: #333;
+                    }
+
+                    .searchFilterListc9a4355d813f479a86c3d1f0395ddc45 #myUL {
+                        list-style-type: none;
+                        padding: 0;
+                        margin: 0;
+                        overflow-y: auto;
+                        height: calc(100% - 50px);
+                    }
+
+                    .searchFilterListc9a4355d813f479a86c3d1f0395ddc45 #myUL li {
+                        display: block;
+                        border: 2px solid white;
+                        border-radius: 25px;
+                        cursor: pointer;
+                        margin: 2px 0;
+                        overflow: hidden;
+                    }
+
+                    .searchFilterListc9a4355d813f479a86c3d1f0395ddc45 #myUL li:hover {
+                        /*background-color: #eee;*/
+                        border-color: #ddd;
+                    }
+
+                    .searchFilterListc9a4355d813f479a86c3d1f0395ddc45 #myUL li.selected {
+                        background-color: #ddd;
+                        border-color: #ddd;
+                    }
+
+                    .searchFilterListc9a4355d813f479a86c3d1f0395ddc45 #myUL li img {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        float: left;
+                        margin: 10px;
+                    }
+
+                    .searchFilterListc9a4355d813f479a86c3d1f0395ddc45 #myUL li .innerFilterItem {
+                        padding: 26px 0;
+                        display: block;
+                        float: left;
+                        font-size: 14px;
+                    }
+
+                    .searchFilterListc9a4355d813f479a86c3d1f0395ddc45 #myUL li .counter-notif {
+                        width: 20px;
+                        height: 20px;
+                        background-color: red;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        font-size: 12px;
+                        display: block;
+                        text-align: center;
+                        padding-top: 3px;
+                        color: white;
+                        float: right;
+                        margin: 10px;
+                    }
+                </style>
+
+                <input type="text" id="myInput" onkeyup="filter_Script_a0d21024282f453f8247fefa6ec435f2(this)"
+                    placeholder="Search for names..">
+                <span id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <button id="add-contact-btn" onclick="showContactsList()">
+                    <i class="fa-solid fa-user-plus" title="Contacts"></i>
+                </button>
+
+                <ul id="myUL" class="filterContainer">
+                    <li class="filterItems clearfix selected">
+                        <img src="./statics/Oppenheimer001.jpg" alt="">
+                        <span class="innerFilterItem" href="#">Oppenheimer</span>
+                        <span class="counter-notif">5</span>
+                    </li>
+                    <li class="filterItems clearfix">
+                        <img src="./statics/library002.webp" alt="">
+                        <span class="innerFilterItem" href="#">Library Group</span>
+                        <span class="counter-notif">15</span>
+                    </li>
+
+                    <li class="filterItems clearfix">
+                        <img src="./statics/pizza001.webp" alt="">
+                        <span class="innerFilterItem" href="#">Pizza</span>
+                        <span class="counter-notif">2</span>
+                    </li>
+                    <li class="filterItems clearfix">
+                        <img src="./statics/team001.webp" alt="">
+                        <span class="innerFilterItem" href="#">Emojis</span>
+                        <!--span class="counter-notif">5</span-->
+                    </li>
+
+                    <li class="filterItems clearfix">
+                        <img src="./statics/startup001.webp" alt="">
+                        <span class="innerFilterItem" href="#">Startup</span>
+                        <!--span class="counter-notif">5</span-->
+                    </li>
+                    <li class="filterItems clearfix">
+                        <img src="./statics/startup001.webp" alt="">
+                        <span class="innerFilterItem" href="#">Startup</span>
+                        <!--span class="counter-notif">5</span-->
+                    </li>
+                    <li class="filterItems clearfix">
+                        <img src="./statics/startup001.webp" alt="">
+                        <span class="innerFilterItem" href="#">Startup</span>
+                        <!--span class="counter-notif">5</span-->
+                    </li>
+                </ul>
+
+                <script>
+                    /* Script_a0d21024282f453f8247fefa6ec435f2 */
+
+                    function filter_Script_a0d21024282f453f8247fefa6ec435f2(inputElement) {
+                        let mainElement = inputElement.parentElement;
+                        // Declare variables
+                        let filter, filteredContainer, filteredItems, innerFilteredItem, i, txtValue;
+                        //inputElement = mainElement_searchFilterListc9a4355d813f479a86c3d1f0395ddc45.querySelector('#myInput');
+                        filter = inputElement.value.toUpperCase();
+                        filteredContainer = mainElement.getElementsByClassName("filterContainer")[0];
+                        filteredItems = filteredContainer.getElementsByClassName('filterItems');
+
+                        // Loop through all list items, and hide those who don't match the search query
+                        for (i = 0; i < filteredItems.length; i++) {
+                            innerFilteredItem = filteredItems[i].getElementsByClassName("innerFilterItem")[0];
+                            txtValue = innerFilteredItem.textContent || innerFilteredItem.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                filteredItems[i].style.display = "";
+                            } else {
+                                filteredItems[i].style.display = "none";
+                            }
+                        }
+                    }
+                </script>
+            </div>
+
+            <div id="blur-layout">
+                <style>
+                    #chatWindow3b211c10e84748a08bf7eed6f511c1b8 #blur-layout {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 100%;
+                        bottom: 100%;
+                        backdrop-filter: blur(5px);
+                        z-index: 2;
+                    }
+
+                    #chatWindow3b211c10e84748a08bf7eed6f511c1b8 #blur-layout.show {
+                        right: 0;
+                        bottom: 0;
+                    }
+                </style>
+            </div>
+            <div class="searchFilterListc9a4355d813f479a86c3d1f0395ddc45" id="contacts-list">
+                <style>
+                    .searchFilterListc9a4355d813f479a86c3d1f0395ddc45#contacts-list {
+                        position: absolute;
+                        top: 100px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 20%;
+                        min-width: 300px;
+                        z-index: 3;
+                        border-radius: 15px;
+                        box-shadow: 0 0px 10px gray;
+                        overflow: hidden;
+                        height: 0;
+                        transition: 0.3s;
+                    }
+
+                    .searchFilterListc9a4355d813f479a86c3d1f0395ddc45#contacts-list.show {
+                        height: calc(100% - 150px);
+                    }
+
+                    .searchFilterListc9a4355d813f479a86c3d1f0395ddc45#contacts-list #myInput {
+                        width: 100%;
+                    }
+
+                    .searchFilterListc9a4355d813f479a86c3d1f0395ddc45#contacts-list #search-icon {
+                        top: 35px;
+                    }
+
+                    .searchFilterListc9a4355d813f479a86c3d1f0395ddc45#contacts-list li {
+                        cursor: auto;
+                    }
+
+                    .searchFilterListc9a4355d813f479a86c3d1f0395ddc45#contacts-list .addOrRemoveIcons {
+                        color: gray;
+                        float: right;
+                        padding: 25px 20px 25px 10px;
+                        border: none;
+                        cursor: pointer;
+                        background-color: white;
+                        font-size: 16px;
+                    }
+
+                    .searchFilterListc9a4355d813f479a86c3d1f0395ddc45#contacts-list .addOrRemoveIcons:hover i.fa-plus {
+                        color: lawngreen;
+                    }
+
+                    .searchFilterListc9a4355d813f479a86c3d1f0395ddc45#contacts-list .addOrRemoveIcons:hover i.fa-trash-can {
+                        color: red;
+                    }
+                </style>
+
+                <span style="color: rgb(209, 0, 0);float: right;margin: 5px 10px;cursor: pointer;font-weight: bold;"
+                    onclick="this.parentElement.classList.remove('show');document.getElementById('blur-layout').classList.remove('show');">
+                    &times;
+                </span>
+                <input type="text" id="myInput" onkeyup="filter_Script_a0d21024282f453f8247fefa6ec435f2(this)"
+                    placeholder="Search for names..">
+                <span id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <!--button id="add-contact-btn"><i class="fa-solid fa-user-plus" title="Contacts"></i></button-->
+
+                <ul id="myUL" class="filterContainer">
+                    <li class="filterItems clearfix">
+                        <img src="./statics/Oppenheimer001.jpg" alt="">
+                        <span class="innerFilterItem" href="#">Oppenheimer</span>
+                        <button class="addOrRemoveIcons">
+                            <i class="fa-solid fa-plus"></i>
+                            <!--i class="fa-solid fa-trash-can"></i-->
+                        </button>
+                    </li>
+                    <li class="filterItems clearfix">
+                        <img src="./statics/library002.webp" alt="">
+                        <span class="innerFilterItem" href="#">Library Group</span>
+                        <button class="addOrRemoveIcons">
+                            <!--i class="fa-solid fa-plus"></i-->
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </li>
+
+                    <li class="filterItems clearfix">
+                        <img src="./statics/pizza001.webp" alt="">
+                        <span class="innerFilterItem" href="#">Pizza</span>
+                        <button class="addOrRemoveIcons">
+                            <i class="fa-solid fa-plus"></i>
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </li>
+                    <li class="filterItems clearfix">
+                        <img src="./statics/team001.webp" alt="">
+                        <span class="innerFilterItem" href="#">Emojis</span>
+                        <button class="addOrRemoveIcons">
+                            <i class="fa-solid fa-plus"></i>
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </li>
+
+                    <li class="filterItems clearfix">
+                        <img src="./statics/startup001.webp" alt="">
+                        <span class="innerFilterItem" href="#">Startup</span>
+                        <button class="addOrRemoveIcons">
+                            <i class="fa-solid fa-plus"></i>
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </li>
+                    <li class="filterItems clearfix">
+                        <img src="./statics/startup001.webp" alt="">
+                        <span class="innerFilterItem" href="#">Startup</span>
+                        <button class="addOrRemoveIcons">
+                            <i class="fa-solid fa-plus"></i>
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </li>
+                    <li class="filterItems clearfix">
+                        <img src="./statics/startup001.webp" alt="">
+                        <span class="innerFilterItem" href="#">Startup</span>
+                        <button class="addOrRemoveIcons">
+                            <i class="fa-solid fa-plus"></i>
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </li>
+                </ul>
+
+                <script>
+                    function showContactsList() {
+                        document.getElementById("contacts-list").classList.add("show");
+                        document.getElementById("blur-layout").classList.add("show");
+                    }
+                </script>
+            </div>
+
+        </div>
+        <!---------------------------------------------------------------->
+        <!-------------------------------- chat room --------------------------------->
+        <div id="chatroom4c7407e1bf464082b6c1e8ebd7620e42">
+            <style>
+                #chatroom4c7407e1bf464082b6c1e8ebd7620e42 {
+                    width: calc(100% - 300px);
+                    min-width: 410px;
+                    margin: auto;
+                    float: left;
+                    height: 100%;
+                }
+
+                @media screen and (max-width:800px) {
+                    #chatroom4c7407e1bf464082b6c1e8ebd7620e42 {
+                        width: 100%;
+                    }
+                }
+
+                #chatroom4c7407e1bf464082b6c1e8ebd7620e42 .dropdown-box {
+                    width: fit-content;
+                    /*margin: auto;*/
+                    position: relative;
+                }
+
+                #chatroom4c7407e1bf464082b6c1e8ebd7620e42 .dropdown-box .dropbtn {
+                    background-color: #eee;
+                    color: gray;
+                    padding: 5px 10px;
+                    font-size: 18px;
+                    border: none;
+                    cursor: pointer;
+                    border-radius: 10px;
+                    /*border: 1px solid gray;*/
+                }
+
+                #chatroom4c7407e1bf464082b6c1e8ebd7620e42 .dropdown-box .dropbtn:hover,
+                #chatroom4c7407e1bf464082b6c1e8ebd7620e42 .dropdown-box .dropbtn:focus {
+                    background-color: white;
+                    color: #333;
+                }
+
+                #chatroom4c7407e1bf464082b6c1e8ebd7620e42 .dropdown-box .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    right: 0;
+                    background-color: #f1f1f1;
+                    overflow: auto;
+                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                    z-index: 1;
+                    width: fit-content;
+                    font-size: 14px;
+                }
+
+                #chatroom4c7407e1bf464082b6c1e8ebd7620e42 .message-box.right .dropdown-box .dropdown-content {
+                    left: 0;
+                }
+
+                #chatroom4c7407e1bf464082b6c1e8ebd7620e42 .dropdown-box .dropdown-content a {
+                    color: black;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: block;
+                    text-wrap: nowrap;
+                }
+
+                #chatroom4c7407e1bf464082b6c1e8ebd7620e42 .dropdown-box a:hover {
+                    background-color: #ddd;
+                }
+
+                #chatroom4c7407e1bf464082b6c1e8ebd7620e42 .dropdown-box .show {
+                    display: block;
+                }
+            </style>
+            <!-------------------------------- header box -------------------------------->
+            <div id="header-box" class="clearfix">
+                <style>
+                    #chatroom4c7407e1bf464082b6c1e8ebd7620e42 #header-box {
+                        background-color: #fff;
+                    }
+
+                    #chatroom4c7407e1bf464082b6c1e8ebd7620e42 #header-box img {
+                        width: 50px;
+                        height: 50px;
+                        object-fit: cover;
+                        border-radius: 50%;
+                        float: left;
+                        display: block;
+                        margin: 2px 10px;
+                    }
+
+                    #chatroom4c7407e1bf464082b6c1e8ebd7620e42 #header-box p {
+                        margin: 0;
+                        padding: 10px 0 0;
+                        font-size: 14px;
+                        font-weight: bold;
+                    }
+
+                    #chatroom4c7407e1bf464082b6c1e8ebd7620e42 #header-box span {
+                        color: rgb(0, 255, 0);
+                        font-size: 12px;
+                    }
+                </style>
+                <div class="dropdown-box" style="float: right;">
+                    <button onclick="myFunction_dropdown_box(this)" class="dropbtn"
+                        style="background-color: #fff;padding: 15px 20px 5px 10px;">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="">Block</a>
+                        <a href="">Leave</a>
+                        <a href="">Delete</a>
+                    </div>
+                </div>
+                <button id="show-chatroom-list-btn"
+                    onclick="document.getElementById('chatroomList9baf98a03b4e4d10b198a5979a59433f').classList.toggle('show')">
+                    <style>
+                        #chatWindow3b211c10e84748a08bf7eed6f511c1b8 #show-chatroom-list-btn {
+                            float: right;
+                            font-size: 22px;
+                            background-color: white;
+                            border: none;
+                            margin: 10px;
+                            cursor: pointer;
+                            display: none;
+                        }
+
+                        @media screen and (max-width:800px) {
+                            #chatWindow3b211c10e84748a08bf7eed6f511c1b8 #show-chatroom-list-btn {
+                                display: inline-block;
+                            }
+                        }
+                    </style>
+                    <i class="fa-regular fa-rectangle-list"></i>
+                </button>
+                <img src="./statics/Oppenheimer001.jpg" alt="">
+                <p>Oppenheimer</p>
+                <span>Active Now</span>
+
+            </div>
+            <!---------------------------------------------------------------->
+            <!------------------------------- messages box --------------------------------->
+            <div id="a69192fdeb6b041718549b7c68ec617c2">
+                <style>
+                    #a69192fdeb6b041718549b7c68ec617c2 {
+                        width: 100%;
+                        height: calc(100% - 103px);
+                        margin: auto;
+                        background-color: #eee;
+                        overflow-y: auto;
+                        overflow-x: hidden;
+                        border-radius: 10px 10px 0 0;
+                    }
+
+                    @media screen and (max-width:600px) {
+                        #a69192fdeb6b041718549b7c68ec617c2 {
+                            width: 100%;
+                        }
+                    }
+
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box {
+                        margin: 40px 0;
+                        width: 100%;
+                        /*border: 1px solid gray;*/
+                    }
+
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box #img-box {
+                        padding: 0 10px 10px;
+                        position: relative;
+                        width: 70px;
+                    }
+
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box.left #img-box {
+                        float: left;
+                    }
+
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box.right #img-box {
+                        float: right;
+                    }
+
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box #img-box img {
+                        width: 50px;
+                        height: 50px;
+                        object-fit: cover;
+                        border-radius: 50%;
+                        overflow: hidden;
+                    }
+
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box .content-box {
+                        padding: 10px;
+                        max-width: 60%;
+                        position: relative;
+                        box-shadow: 1px 1px 5px gray;
+                    }
+
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box.left .content-box {
+                        float: left;
+                        background-color: white;
+                        border-radius: 0px 15px 15px 15px;
+                    }
+
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box.right .content-box {
+                        float: right;
+                        background-color: #ddd;
+                        border-radius: 15px 0px 15px 15px;
+                    }
+
+                    /*#a69192fdeb6b041718549b7c68ec617c2 .message-box .content-box::after {
+                        content: "13 Oct 2024 19:20";
+                        position: absolute;
+                        bottom: -20px;
+                        font-size: 12px;
+                        color: gray;
+                    }*/
+
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box.right .content-box .delivery-tick,
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box.right .content-box .seen-tick {
+                        position: absolute;
+                        left: 10px;
+                        bottom: 0;
+                        font-size: 12px;
+                        color: lawngreen;
+                    }
+
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box.left .content-box .delivery-tick,
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box.left .content-box .seen-tick {
+                        position: absolute;
+                        right: 10px;
+                        bottom: 0;
+                        font-size: 12px;
+                        color: lawngreen;
+                    }
+
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box.right .content-box .time-span {
+                        position: absolute;
+                        bottom: -20px;
+                        left: 10px;
+                        font-size: 12px;
+                        color: gray;
+                    }
+
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box.left .content-box .time-span {
+                        position: absolute;
+                        bottom: -20px;
+                        right: 10px;
+                        font-size: 12px;
+                        color: gray;
+                    }
+
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box.left .content-box::after {
+                        right: 10px;
+                    }
+
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box.right .content-box::after {
+                        left: 10px;
+                    }
+
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box .content-box .attached-file {
+                        padding: 20px;
+                        background-color: #eee;
+                        color: gray;
+                        width: fit-content;
+                        border-radius: 10px;
+                        overflow: hidden;
+                    }
+
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box .content-box .attached-file button,
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box .content-box .attached-file a,
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box .content-box .attached-img a {
+                        text-decoration: none;
+                        color: #333;
+                        font-size: 20px;
+                        margin: 10px;
+                        border: none;
+                        cursor: pointer;
+                    }
+
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box .content-box .attached-file button:hover,
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box .content-box .attached-file a:hover {
+
+                        color: #111;
+                    }
+
+                    /*#a69192fdeb6b041718549b7c68ec617c2 .message-box .content-box .attached-img {}*/
+
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box .content-box .attached-img img {
+                        width: 100%;
+                        max-height: 500px;
+                        object-fit: contain;
+                        cursor: pointer;
+                    }
+
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box .content-box .message-text {
+                        margin: 0;
+                        color: #333;
+                    }
+
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box.right .content-box .message-text {
+                        color: #222;
+                    }
+
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box #actions-box {
+                        width: fit-content;
+                        visibility: hidden;
+                        margin: 0 10px;
+                    }
+
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box.left #actions-box {
+                        float: left;
+                    }
+
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box.right #actions-box {
+                        float: right;
+                    }
+
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box:hover>#actions-box {
+                        visibility: visible;
+                    }
+
+                    #a69192fdeb6b041718549b7c68ec617c2 .message-box .dropdown-box {
+                        width: fit-content;
+                        /*margin: auto;*/
+                        position: relative;
+                    }
+
+                    /*#a69192fdeb6b041718549b7c68ec617c2 .message-box .dropdown-box .dropbtn {
+                    background-color: #eee;
+                    color: gray;
+                    padding: 5px 10px;
+                    font-size: 18px;
+                    border: none;
+                    cursor: pointer;
+                    border-radius: 10px;
+                }
+
+                #a69192fdeb6b041718549b7c68ec617c2 .message-box .dropdown-box .dropbtn:hover,
+                #a69192fdeb6b041718549b7c68ec617c2 .message-box .dropdown-box .dropbtn:focus {
+                    background-color: white;
+                    color: #333;
+                }
+
+                #a69192fdeb6b041718549b7c68ec617c2 .message-box .dropdown-box .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    right: 0;
+                    background-color: #f1f1f1;
+                    overflow: auto;
+                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                    z-index: 1;
+                    width: fit-content;
+                    font-size: 14px;
+                }
+
+                #a69192fdeb6b041718549b7c68ec617c2 .message-box.right .dropdown-box .dropdown-content {
+                    left: 0;
+                }
+
+                #a69192fdeb6b041718549b7c68ec617c2 .message-box .dropdown-box .dropdown-content a {
+                    color: black;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: block;
+                    text-wrap: nowrap;
+                }
+
+                #a69192fdeb6b041718549b7c68ec617c2 .message-box .dropdown-box a:hover {
+                    background-color: #ddd;
+                }
+
+                #a69192fdeb6b041718549b7c68ec617c2 .message-box .dropdown-box .show {
+                    display: block;
+                }*/
+                </style>
+
+                <div class="message-box left clearfix">
+                    <div id="img-box">
+                        <img src="./statics/Oppenheimer001.jpg" alt="user-img">
+                    </div>
+                    <div class="content-box">
+                        <p class="message-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla deleniti
+                            molestiae dolore
+                            dignissimos
+                            repellat reprehenderit consequuntur, earum nemo magnam numquam laborum assumenda eligendi
+                            impedit
+                            blanditiis vel. Unde quibusdam ab dolor. &#128525;
+                        </p>
+                        <!--span class="delivery-tick"><i class="fa-solid fa-check"></i></span-->
+                        <span class="seen-tick"><i class="fa-solid fa-check-double"></i></span>
+                        <span class="time-span">13 Oct 2024 19:20</span>
+                    </div>
+                    <div id="actions-box">
+                        <div class="dropdown-box">
+                            <button onclick="myFunction_dropdown_box(this)" class="dropbtn">
+                                <i class="fa-solid fa-bars"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="">Copy</a>
+                                <a href="">Edit</a>
+                                <a href="">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="message-box right clearfix">
+                    <div id="img-box">
+                        <img src="./statics/bird001.webp" alt="user-img">
+                    </div>
+                    <div class="content-box">
+                        <p>Lorem ipsum dolor sit amet &#128514;&#128514;&#128514;</p>
+                        <!--span class="delivery-tick"><i class="fa-solid fa-check"></i></span-->
+                        <span class="seen-tick"><i class="fa-solid fa-check-double"></i></span>
+                        <span class="time-span">13 Oct 2024 19:20</span>
+                    </div>
+                    <div id="actions-box">
+                        <div class="dropdown-box">
+                            <button onclick="myFunction_dropdown_box(this)" class="dropbtn">
+                                <i class="fa-solid fa-bars"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="">Copy</a>
+                                <a href="">Edit</a>
+                                <a href="">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="message-box right clearfix">
+                    <div id="img-box">
+                        <img src="./statics/bird001.webp" alt="user-img">
+                    </div>
+                    <div class="content-box">
+                        <p>Lorem ipsum &#128540;&#128540;</p>
+                        <!--span class="delivery-tick"><i class="fa-solid fa-check"></i></span-->
+                        <span class="seen-tick"><i class="fa-solid fa-check-double"></i></span>
+                        <span class="time-span">13 Oct 2024 19:20</span>
+                    </div>
+                    <div id="actions-box">
+                        <div class="dropdown-box">
+                            <button onclick="myFunction_dropdown_box(this)" class="dropbtn">
+                                <i class="fa-solid fa-bars"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="">Copy</a>
+                                <a href="">Edit</a>
+                                <a href="">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="message-box left clearfix">
+                    <div id="img-box">
+                        <img src="./statics/Oppenheimer001.jpg" alt="user-img">
+                    </div>
+                    <div class="content-box">
+                        <div class="attached-file">
+                            <i class="fa-solid fa-paperclip"></i>
+                            <span style="text-wrap: nowrap;">file name 001.mp4</span>
+                            <button onclick="displayVideoInModal('./statics/video01.mp4', 'fileCaption')">
+                                <i class="fa-solid fa-play"></i>
+                            </button>
+                            <!--a href="./statics/video01.mp4" download=""><i class="fa-solid fa-floppy-disk"></i></a-->
+                        </div>
+                        <p class="message-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, illo?
+                        </p>
+                        <!--span class="delivery-tick"><i class="fa-solid fa-check"></i></span-->
+                        <span class="seen-tick"><i class="fa-solid fa-check-double"></i></span>
+                        <span class="time-span">13 Oct 2024 19:20</span>
+                    </div>
+                    <div id="actions-box">
+                        <div class="dropdown-box">
+                            <button onclick="myFunction_dropdown_box(this)" class="dropbtn">
+                                <i class="fa-solid fa-bars"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="">Copy</a>
+                                <a href="">Save Attached File</a>
+                                <a href="">Edit</a>
+                                <a href="">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="message-box right clearfix">
+                    <div id="img-box">
+                        <img src="./statics/bird001.webp" alt="user-img">
+                    </div>
+                    <div class="content-box">
+                        <div class="attached-img">
+                            <img src="./statics/bird001.webp" alt=""
+                                onclick="displayImageInModal('./statics/bird001.webp','image caption')">
+                            <!--a href="./statics/bird001.webp" download=""><i class="fa-solid fa-floppy-disk"></i></a-->
+                        </div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        <span class="delivery-tick"><i class="fa-solid fa-check"></i></span>
+                        <!--span class="seen-tick"><i class="fa-solid fa-check-double"></i></span-->
+                        <span class="time-span">13 Oct 2024 19:20</span>
+                    </div>
+                    <div id="actions-box">
+                        <div class="dropdown-box">
+                            <button onclick="myFunction_dropdown_box(this)" class="dropbtn">
+                                <i class="fa-solid fa-bars"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="">Copy</a>
+                                <a href="">Save Attached Image</a>
+                                <a href="">Edit</a>
+                                <a href="">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="modal-box">
+                    <style>
+                        #a69192fdeb6b041718549b7c68ec617c2 #modal-box {
+                            width: fit-content;
+                            margin: auto;
+                        }
+
+                        #a69192fdeb6b041718549b7c68ec617c2 #modal-box .image {
+                            border-radius: 5px;
+                            cursor: pointer;
+                            transition: 0.3s;
+                            max-width: 400px;
+                            max-height: 300px;
+                        }
+
+                        #a69192fdeb6b041718549b7c68ec617c2 #modal-box .image:hover {
+                            opacity: 0.7;
+                        }
+
+                        /* The Modal (background) */
+                        #a69192fdeb6b041718549b7c68ec617c2 #modal-box .modal {
+                            display: none;
+                            /* Hidden by default */
+                            position: fixed;
+                            /* Stay in place */
+                            z-index: 10;
+                            /* Sit on top */
+                            padding-top: 100px;
+                            /* Location of the box */
+                            left: 0;
+                            top: 0;
+                            width: 100%;
+                            /* Full width */
+                            height: 100%;
+                            /* Full height */
+                            overflow: auto;
+                            /* Enable scroll if needed */
+                            background-color: rgb(0, 0, 0);
+                            /* Fallback color */
+                            background-color: rgba(0, 0, 0, 0.9);
+                            /* Black w/ opacity */
+                        }
+
+                        /* Modal Content (image) */
+                        #a69192fdeb6b041718549b7c68ec617c2 #modal-box #modal-video {
+                            margin: auto;
+                            display: block;
+                            width: 80%;
+                            max-width: 700px;
+                        }
+
+                        #a69192fdeb6b041718549b7c68ec617c2 #modal-box #modal-img {
+                            margin: auto;
+                            display: block;
+                            width: 80%;
+                            max-width: 700px;
+                        }
+
+                        /* Caption of Modal Image */
+                        #a69192fdeb6b041718549b7c68ec617c2 #modal-box .caption {
+                            margin: auto;
+                            display: block;
+                            width: 80%;
+                            max-width: 700px;
+                            text-align: center;
+                            color: #ccc;
+                            padding: 10px 0;
+                            height: 150px;
+                        }
+
+                        /* Add Animation */
+                        #a69192fdeb6b041718549b7c68ec617c2 #modal-box .modalImage,
+                        #a69192fdeb6b041718549b7c68ec617c2 #modal-box .caption {
+                            animation-name: zoom;
+                            animation-duration: 0.6s;
+                        }
+
+                        @keyframes zoom {
+                            from {
+                                transform: scale(0.1)
+                            }
+
+                            to {
+                                transform: scale(1)
+                            }
+                        }
+
+                        /* The Close Button */
+                        #a69192fdeb6b041718549b7c68ec617c2 #modal-box .close {
+                            position: absolute;
+                            top: 15px;
+                            right: 35px;
+                            color: #f1f1f1;
+                            font-size: 40px;
+                            font-weight: bold;
+                            transition: 0.3s;
+                        }
+
+                        #a69192fdeb6b041718549b7c68ec617c2 #modal-box .close:hover,
+                        #a69192fdeb6b041718549b7c68ec617c2 #modal-box .close:focus {
+                            color: #bbb;
+                            text-decoration: none;
+                            cursor: pointer;
+                        }
+
+                        /* 100% Image Width on Smaller Screens */
+                        @media only screen and (max-width: 700px) {
+                            #a69192fdeb6b041718549b7c68ec617c2 #modal-box .modalImage {
+                                width: 100%;
+                            }
+                        }
+                    </style>
+
+                    <!-- The Modal -->
+                    <div class="modal" onclick="if(event.target == this) this.style.display='none';">
+                        <span onclick="functin02_Script28e31197628946cab786f266a3650f7d(this)" class="close">×</span>
+                        <video src="" controls id="modal-video"></video>
+                        <img src="" alt="" id="modal-img">
+                        <div class="caption"></div>
+                    </div>
+
+                    <script>
+                        function displayVideoInModal(mediaLinkAddress, fileCaption) {
+                            let mainElement = document.getElementById("modal-box");
+                            let modal = mainElement.querySelector(".modal");
+                            let caption = mainElement.querySelector(".caption");
+                            let modalVideo = modal.querySelector("#modal-video");
+                            let modalImage = modal.querySelector("#modal-img");
+                            modalVideo.src = mediaLinkAddress;
+                            modalVideo.style.display = "block";
+                            modalImage.style.display = "none";
+                            modal.style.display = "block";
+                            caption.innerHTML = fileCaption;
+                        }
+
+                        function displayImageInModal(imageLinkAddress, imageCaption) {
+                            let mainElement = document.getElementById("modal-box");
+                            let modal = mainElement.querySelector(".modal");
+                            let caption = mainElement.querySelector(".caption");
+                            let modalVideo = modal.querySelector("#modal-video");
+                            let modalImage = modal.querySelector("#modal-img");
+                            modalImage.src = imageLinkAddress;
+                            modalVideo.style.display = "none";
+                            modalImage.style.display = "block";
+                            modal.style.display = "block";
+                            caption.innerHTML = imageCaption;
+                        }
+
+                        function functin02_Script28e31197628946cab786f266a3650f7d(element) {
+                            let modal = element.parentElement;
+                            modal.style.display = "none";
+                        }
+                    </script>
+                </div>
+
+                <script>
+                    let mainElement_a69192fdeb6b041718549b7c68ec617c2 = document.getElementById("a69192fdeb6b041718549b7c68ec617c2");
+                    mainElement_a69192fdeb6b041718549b7c68ec617c2.scrollTop = mainElement_a69192fdeb6b041718549b7c68ec617c2.scrollHeight;
+                </script>
+            </div>
+            <!---------------------------------------------------------------->
+            <!-------------------------------- send box -------------------------------->
+            <div id="sendMessagec7a4cdbe2a45427d9acd300e040980f1">
+                <style>
+                    #sendMessagec7a4cdbe2a45427d9acd300e040980f1 {
+                        position: relative;
+                        width: 100%;
+                        min-width: 410px;
+                        margin: 0px auto 0;
+                        background-color: #eee;
+                        border-radius: 0 0 10px 10px;
+                    }
+
+                    #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #attached-file-name-div {
+                        position: absolute;
+                        top: -20px;
+                        left: 30px;
+                        display: none;
+                        font-size: 14px;
+                        text-wrap: nowrap;
+                        z-index: 1;
+                    }
+
+                    #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #attached-file-name-span {
+                        font-weight: bold;
+                        display: inline-block;
+                        /*max-width: 350px;
+                        overflow: hidden;*/
+                    }
+
+                    #sendMessagec7a4cdbe2a45427d9acd300e040980f1 form {
+                        width: 100%;
+                    }
+
+                    #sendMessagec7a4cdbe2a45427d9acd300e040980f1 form .text-input {
+                        width: calc(100% - 50px - 10px);
+                        margin: 0 5px;
+                        font-size: 16px;
+                        color: rgb(53, 53, 53);
+                        padding: 15px 130px 15px 40px;
+                        border: 1px solid lightgray;
+                        border-radius: 20px;
+                    }
+
+                    #sendMessagec7a4cdbe2a45427d9acd300e040980f1 form button.send-btn {
+                        border: none;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        font-size: 26px;
+                        position: absolute;
+                        top: 5px;
+                        right: 15px;
+                        padding: 5px 7px 5px 5px;
+                        background-color: red;
+                        color: white;
+                    }
+
+                    #sendMessagec7a4cdbe2a45427d9acd300e040980f1 form button.send-btn:hover {
+                        background-color: rgb(0, 68, 170);
+                        color: white;
+                    }
+
+                    #sendMessagec7a4cdbe2a45427d9acd300e040980f1 form #file-label {
+                        position: absolute;
+                        left: 10px;
+                        top: 10px;
+                        z-index: 1;
+                        font-size: 20px;
+                        cursor: pointer;
+                        padding: 5px 8px;
+                        border-radius: 5px;
+                        color: gray;
+                    }
+
+                    #sendMessagec7a4cdbe2a45427d9acd300e040980f1 form #file-label:hover {
+                        background-color: rgb(255, 214, 214);
+                        color: #000;
+                    }
+
+                    #sendMessagec7a4cdbe2a45427d9acd300e040980f1 form #record-video-btn {
+                        position: absolute;
+                        right: 60px;
+                        top: 10px;
+                    }
+
+                    #sendMessagec7a4cdbe2a45427d9acd300e040980f1 form #record-audio-btn {
+                        position: absolute;
+                        right: 100px;
+                        top: 10px;
+                        padding: 0 10px;
+                    }
+
+                    /*#emojiPickerecc27e8ad71644bab981b78cde69ccd9*/
+                    #sendMessagec7a4cdbe2a45427d9acd300e040980f1 form button {
+                        border: none;
+                        border-radius: 5px;
+                        background-color: rgba(0, 0, 0, 0);
+                        font-size: 25px;
+                        padding: 2px;
+                        margin: 0;
+                        cursor: pointer;
+                        color: gray;
+                    }
+
+                    #sendMessagec7a4cdbe2a45427d9acd300e040980f1 form button:hover {
+                        background-color: rgb(255, 214, 214);
+                        color: rgb(15, 0, 80);
+                        /*text-shadow: 0 0 10px rgb(15, 0, 80);*/
+                    }
+
+                    #emojiPickerecc27e8ad71644bab981b78cde69ccd9 {
+                        position: absolute;
+                        right: 145px;
+                        top: 10px;
+                        z-index: 0;
+                    }
+
+                    #emojiPickerecc27e8ad71644bab981b78cde69ccd9 .emoji-list {
+                        position: absolute;
+                        right: 0;
+                        bottom: 35px;
+                        width: 200px;
+                        border: 1px solid lightgray;
+                        border-radius: 10px;
+                        background-color: white;
+                        padding: 5px;
+                        height: 150px;
+                        overflow: auto;
+                        display: none;
+                        z-index: 1;
+                    }
+
+                    #emojiPickerecc27e8ad71644bab981b78cde69ccd9 .emoji-list.show {
+                        display: block;
+                    }
+                </style>
+
+                <div id="attached-file-name-div">
+                    <span id="attached-file-name-span" style="font-weight: bold;">filename.format</span>
+                    attached
+                </div>
+                <form action="" method="post" enctype="multipart/form-data"
+                    onsubmit="/*sendMessage_sendMessagec7a4cdbe2a45427d9acd300e040980f1(this);return false;*/">
+                    <div>
+                        <input class="text-input" type="text" name="message" placeholder="Type your message here..."
+                            onkeypress="if(event.key === 'Enter'){ event.preventDefault();
+                        this.parentElement.parentElement.getElementsByClassName('send-btn')[0].click();}">
+                        <label id="file-label" for="form-file">
+                            <i class="fa-solid fa-paperclip"></i>
+                            <input class="file-input" id="form-file" type="file" style="display: none;"
+                                oninput="showAttachedFileName(this)">
+                        </label>
+                        <button type="button" id="record-video-btn" onclick="displayVideoInModal_sendMessage()">
+                            <i class="fa-solid fa-video"></i>
+                        </button>
+                        <button type="button" id="record-audio-btn"><i class="fa-solid fa-microphone"></i></button>
+                        <div id="emojiPickerecc27e8ad71644bab981b78cde69ccd9">
+                            <button class="emoji-btn" type="button"
+                                onclick="toggleShowEmojiList_emojiPickerecc27e8ad71644bab981b78cde69ccd9(this)">
+                                <i class="fa-regular fa-face-smile emoji-btn"></i>
+                            </button>
+                            <div class="emoji-list">
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128512</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128515</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128516</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128513</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128514</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#129321</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#129322</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#129392</button>
+
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128077;</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128078;</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128079;</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128075;</button>
+
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#129505;</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128148;</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128155;</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128157;</button>
+
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#129488</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128525</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128526</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128520</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128522</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128536</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128540</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128539</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128578</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128528</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128529</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128530</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128533</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128545</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128546</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128552</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128557</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128560</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#128580</button>
+                                <button type="button"
+                                    class="emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9">&#129314</button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="send-btn">
+                        <i class="fa-regular fa-paper-plane"></i>
+                    </button>
+                </form>
+                <script>
+
+                    function showAttachedFileName(element) {
+                        let attachedFileNameDiv = document.getElementById("attached-file-name-div");
+                        let attachedFileNameSpan = document.getElementById("attached-file-name-span");
+                        if (!element.files[0]) {
+                            element.value = "";
+                            element.files = null;
+                            attachedFileNameSpan.innerHTML = "";
+                            attachedFileNameDiv.style.display = "none";
+                            return;
+                        }
+                        else {
+                            attachedFileNameSpan.innerHTML = element.files[0].name;
+                            attachedFileNameDiv.style.display = "block";
+                        }
+                    }
+
+                    function toggleShowEmojiList_emojiPickerecc27e8ad71644bab981b78cde69ccd9(element) {
+                        element.parentElement.getElementsByClassName("emoji-list")[0].classList.toggle("show");
+                    }
+
+                    function addEmoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9(element) {
+                        let inputDiv = element.parentElement.parentElement.parentElement;
+                        inputDiv.getElementsByTagName("input")[0].value += element.innerHTML;
+                    }
+
+                    let emojis = document.getElementById("emojiPickerecc27e8ad71644bab981b78cde69ccd9").getElementsByClassName("emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9");
+                    for (let i = 0; i < emojis.length; i++) {
+                        emojis[i].addEventListener("click", (event) => {
+                            addEmoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9(emojis[i]);
+                        });
+                    }
+
+                    /*async function sendMessage_sendMessagec7a4cdbe2a45427d9acd300e040980f1(oFormElement) {
+                        const formData = new FormData(oFormElement);
+        
+                        try {
+                            const response = await fetch(oFormElement.action, {
+                                method: 'POST',
+                                headers: {
+                                    'RequestVerificationToken': getCookie('RequestVerificationToken')
+                                },
+                                body: formData
+                            });
+        
+                        } catch (error) {
+                            console.error('Error:', error);
+                        }
+        
+                        function getCookie(name) {
+                            var value = "; " + document.cookie;
+                            var parts = value.split("; " + name + "=");
+                            if (parts.length == 2) return parts.pop().split(";").shift();
+                        }
+                    }*/
+
+                    window.addEventListener("click", (event) => {
+                        //console.log(event.target);
+                        if (!event.target.classList.contains("emoji_emojiPickerecc27e8ad71644bab981b78cde69ccd9") &&
+                            !event.target.classList.contains("emoji-btn")) {
+                            document.getElementsByClassName("emoji-list")[0].classList.remove("show");
+                        }
+                    });
+                </script>
+
+                <div id="modal-box-in-message-box">
+                    <style>
+                        #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box {
+                            width: fit-content;
+                            margin: auto;
+                        }
+
+                        #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box .image {
+                            border-radius: 5px;
+                            cursor: pointer;
+                            transition: 0.3s;
+                            max-width: 400px;
+                            max-height: 300px;
+                        }
+
+                        #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box .image:hover {
+                            opacity: 0.7;
+                        }
+
+                        /* The Modal (background) */
+                        #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box .modal {
+                            display: none;
+                            /* Hidden by default */
+                            position: fixed;
+                            /* Stay in place */
+                            z-index: 10;
+                            /* Sit on top */
+                            padding-top: 100px;
+                            /* Location of the box */
+                            left: 0;
+                            top: 0;
+                            width: 100%;
+                            /* Full width */
+                            height: 100%;
+                            /* Full height */
+                            overflow: auto;
+                            /* Enable scroll if needed */
+                            background-color: rgb(0, 0, 0);
+                            /* Fallback color */
+                            background-color: rgba(0, 0, 0, 0.9);
+                            /* Black w/ opacity */
+                        }
+
+                        /* Modal Content (image) */
+                        #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box #modal-video {
+                            margin: auto;
+                            display: block;
+                            width: 80%;
+                            max-width: 600px;
+                        }
+
+                        /*#sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box #modal-img {
+                        margin: auto;
+                        display: block;
+                        width: 80%;
+                        max-width: 700px;
+                    }*/
+
+                        #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box #manage-record-box {
+                            width: fit-content;
+                            margin: auto;
+                            text-align: center;
+                        }
+
+                        #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box #manage-record-box button {
+                            padding: 10px 20px;
+                            background-color: white;
+                            border: none;
+                            border-radius: 10px;
+                            font-weight: bold;
+                            cursor: pointer;
+                        }
+
+                        #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box #manage-record-box button:hover {
+                            color: red;
+                        }
+
+                        #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box #manage-record-box button i {
+                            font-size: 24px;
+                        }
+
+                        #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box #manage-record-box p {
+                            color: white;
+                            text-align: center;
+                        }
+
+                        /* Caption of Modal Image */
+                        #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box .caption {
+                            margin: auto;
+                            display: block;
+                            width: 80%;
+                            max-width: 700px;
+                            text-align: center;
+                            color: #ccc;
+                            padding: 10px 0;
+                            height: 150px;
+                        }
+
+                        /* Add Animation */
+                        #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box .modalImage,
+                        #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box .caption {
+                            animation-name: zoom;
+                            animation-duration: 0.6s;
+                        }
+
+                        @keyframes zoom {
+                            from {
+                                transform: scale(0.1)
+                            }
+
+                            to {
+                                transform: scale(1)
+                            }
+                        }
+
+                        /* The Close Button */
+                        #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box .close {
+                            position: absolute;
+                            top: 15px;
+                            right: 35px;
+                            color: #f1f1f1;
+                            font-size: 40px;
+                            font-weight: bold;
+                            transition: 0.3s;
+                        }
+
+                        #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box .close:hover,
+                        #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box .close:focus {
+                            color: red;
+                            text-decoration: none;
+                            cursor: pointer;
+                        }
+
+                        /* 100% Image Width on Smaller Screens */
+                        @media only screen and (max-width: 700px) {
+                            #sendMessagec7a4cdbe2a45427d9acd300e040980f1 #modal-box-in-message-box .modalImage {
+                                width: 100%;
+                            }
+                        }
+                    </style>
+
+                    <!-- The Modal -->
+                    <div class="modal" onclick="/*if(event.target == this) closeModal_sendMessage(this);*/">
+                        <span onclick="closeModal_sendMessage(this.parentElement)" class="close" title="Cancel">×</span>
+                        <video src="" autoplay id="modal-video"></video>
+                        <audio src="" controls id="modal-audio"></audio>
+                        <div id="manage-record-box" class="clearfix">
+                            <button onclick="pressRecordButton(this)" title="Start Recording">
+                                <i class="fa-regular fa-circle-dot"></i>
+                            </button>
+                            <p>Status: Not Recorded</p>
+                            <span id="record-counter" style="color: white;"></span>
+                        </div>
+                    </div>
+
+                    <script>
+                        let mainElement_sendMessage = document.getElementById("modal-box-in-message-box");
+                        let modal_sendMessage = mainElement_sendMessage.querySelector(".modal");
+                        let modalVideo_sendMessage = modal_sendMessage.querySelector("#modal-video");
+                        let modalAudio_sendMessage = modal_sendMessage.querySelector("#modal-audio");
+                        let mediaStream_sendMessage;
+                        let mediaRecorder_sendMessage;
+                        let recordInterval;
+                        let blob_sendMessage;
+                        let videoUrl_sendMessage;
+                        let dataChunks = [];
+                        let displayMimeType = 'video/webm; codecs="vp8"';
+                        let cameraMimeType = 'video/webm; codecs="vp8, opus"';
+                        let recordMimeType;
+                        let recrdingStatus = "Empty";
+                        let recordCounterInterval;
+
+                        async function displayVideoInModal_sendMessage() {
+                            let recordButton = document.getElementById("manage-record-box").getElementsByTagName("button")[0];
+                            let recordStatus = document.getElementById("manage-record-box").getElementsByTagName("p")[0];
+                            modalVideo_sendMessage.style.display = "block";
+                            modalAudio_sendMessage.style.display = "none";
+                            recordButton.innerHTML = '<i class="fa-regular fa-circle-dot"></i>';
+                            recordButton.title = "Start Recording";
+                            recordStatus.innerHTML = "Status: Not Recorded";
+                            modal_sendMessage.style.display = "block";
+                            mediaStream_sendMessage = await startGettingDisplayVideo();
+                            modalVideo_sendMessage.srcObject = mediaStream_sendMessage;
+                            modalVideo_sendMessage.setAttribute("autoplay", "true");
+                            modalVideo_sendMessage.removeAttribute("controls");
+                            modalVideo_sendMessage.setAttribute("muted", "true");
+                        }
+
+                        async function displayAudioInModal_sendMessagec7a4cdbe2a45427d9acd300e040980f1() {
+                            let recordButton = document.getElementById("manage-record-box").getElementsByTagName("button")[0];
+                            let recordStatus = document.getElementById("manage-record-box").getElementsByTagName("p")[0];
+                            modalVideo_sendMessage.style.display = "none";
+                            modalAudio_sendMessage.style.display = "block";
+                            recordButton.innerHTML = "Start Recording Audio";
+                            recordStatus = "Status: Not Recording";
+                            modal_sendMessage.style.display = "block";
+                            mediaStream_sendMessage = await startGettingUserAudio();
+                        }
+
+                        function closeModal_sendMessage(modal) {
+                            modal.style.display = "none";
+                            stopRecordingVideo();
+                            mediaStream_sendMessage = null;
+                            mediaRecorder_sendMessage = null;
+                            recordInterval = null;
+                            blob_sendMessage = null;
+                            videoUrl_sendMessage = null;
+                            dataChunks = [];
+                            recrdingStatus = "Empty";
+                            modalVideo_sendMessage.src = "";
+                            let recordCounterElmnt = document.getElementById("record-counter");
+                            recordCounterElmnt.innerHTML = "";
+                        }
+
+                        async function startGettingUserVideo() {
+                            recordMimeType = cameraMimeType;
+                            return await navigator.mediaDevices.getUserMedia({
+                                video: {
+                                    width: 480,
+                                    hieght: 480,
+                                    frameRate: { ideal: 24, max: 30 },
+                                    facingMode: "user",
+                                },
+                                audio: {
+                                    echoCancellation: true,
+                                    noiseSuppression: true,
+                                    sampleRate: 44100,
+                                },
+                            });
+                        }
+                        async function startGettingDisplayVideo() {
+                            recordMimeType = displayMimeType;
+                            return await navigator.mediaDevices.getDisplayMedia({
+                                video: {
+                                    cursor: 'always' | 'motion' | 'never',
+                                    displaySurface: 'application' | 'browser' | 'monitor' | 'window'
+                                },
+                                audio: false,
+                            });
+                        }
+                        async function startGettingUserAudio() {
+                            return await navigator.mediaDevices.getUserMedia({
+                                video: false,
+                                audio: {
+                                    echoCancellation: true,
+                                    noiseSuppression: true,
+                                    sampleRate: 44100,
+                                },
+                            });
+                        }
+
+                        function pressRecordButton(element) {
+                            let recordButtonElmnt = element;
+                            let recordStatusElmnt = element.nextElementSibling;
+                            let recordCounterElmnt = element.nextElementSibling.nextElementSibling;
+
+                            if (recrdingStatus == "Empty") {
+                                startRecordingVideo();
+                                recordButtonElmnt.innerHTML = '<i class="fa-solid fa-stop"></i>';
+                                recordButtonElmnt.title = "Stop Recording";
+                                recordStatusElmnt.innerHTML = "Status: Recording ...";
+                                recrdingStatus = "Recording";
+                                recordCounterElmnt.innerHTML = 0;
+                                recordCounterInterval = setInterval(() => {
+                                    let recordCounter;
+                                    if (recordCounterElmnt.innerHTML == "") {
+                                        recordCounter = 0;
+                                    }
+                                    else {
+                                        recordCounter = Number(recordCounterElmnt.innerHTML);
+                                    }
+                                    recordCounterElmnt.innerHTML = ++recordCounter;
+                                }, 1000);
+                            }
+                            else if (recrdingStatus == "Recording") {
+                                stopRecordingVideo();
+                                recordButtonElmnt.innerHTML = '<i class="fa-regular fa-paper-plane"></i>';
+                                recordButtonElmnt.title = "Send";
+                                recordStatusElmnt.innerHTML = "Status: Ready to send";
+                                recrdingStatus = "ReadyToSend";
+                                clearInterval(recordCounterInterval);
+                                recordCounterElmnt.innerHTML += " seconds";
+                            }
+                            else if (recrdingStatus == "ReadyToSend") {
+
+                            }
+                        }
+
+                        function startRecordingVideo() {
+
+                            mediaRecorder_sendMessage =
+                                new MediaRecorder(mediaStream_sendMessage);
+
+                            mediaRecorder_sendMessage
+                                .addEventListener("dataavailable", (e) => {
+                                    dataChunks.push(e.data);
+                                });
+
+                            mediaRecorder_sendMessage
+                                .addEventListener("stop", (e) => {
+                                    mediaStream_sendMessage.getTracks().forEach((track) => track.stop());
+
+                                    blob_sendMessage = dataChunks[0];
+                                    videoUrl_sendMessage = window.URL.createObjectURL(blob_sendMessage);
+
+                                    modalVideo_sendMessage.srcObject = null;
+                                    modalVideo_sendMessage.src = videoUrl_sendMessage;
+                                    modalVideo_sendMessage.removeAttribute("autoplay");
+                                    modalVideo_sendMessage.setAttribute("controls", "true");
+                                    modalVideo_sendMessage.removeAttribute("muted");
+                                    modalVideo_sendMessage.play();
+                                });
+
+                            mediaRecorder_sendMessage.start();
+                        }
+
+                        function stopRecordingVideo() {
+                            clearInterval(recordInterval);
+                            if (mediaRecorder_sendMessage) {
+                                mediaRecorder_sendMessage.stop();
+                            }
+
+                            mediaStream_sendMessage.getTracks().forEach((track) => track.stop());
+
+                        }
+
+                    </script>
+                </div>
+            </div>
+            <!---------------------------------------------------------------->
+
+            <script>
+                function myFunction_dropdown_box(element) {
+                    let dropdownContents = element.parentElement.getElementsByClassName("dropdown-content");
+
+                    for (let i = 0; i < dropdownContents.length; i++) {
+                        dropdownContents[i].classList.toggle("show");
+                    }
+                }
+
+                window.addEventListener("click", (event) => {
+                    let mainElements = document.getElementsByClassName("dropdown-box");
+                    for (let mainElmnt of mainElements) {
+                        let dropButton = mainElmnt.getElementsByClassName("dropbtn")[0];
+                        let dropButton_i = dropButton.querySelector("i");
+                        if (event.target != dropButton && event.target != dropButton_i) {
+                            mainElmnt.getElementsByClassName("dropdown-content")[0].classList.remove("show");
+                        }
+                    }
+                });
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

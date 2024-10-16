@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a69192fdeb6b041718549b7c68ec617c2">
+        <style>
+            #a69192fdeb6b041718549b7c68ec617c2 {
+                width: 70%;
+                height: 90vh;
+                margin: auto;
+                background-color: #eee;
+                overflow-y: auto;
+                overflow-x: hidden;
+            }
+
+            @media screen and (max-width:600px) {
+                #a69192fdeb6b041718549b7c68ec617c2 {
+                    width: 100%;
+                }
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box {
+                margin: 40px 0;
+                width: 100%;
+                /*border: 1px solid gray;*/
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box #img-box {
+                padding: 0 10px 10px;
+                position: relative;
+                width: 70px;
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box.left #img-box {
+                float: left;
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box.right #img-box {
+                float: right;
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box #img-box img {
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box .content-box {
+                padding: 10px;
+                max-width: 60%;
+                position: relative;
+                box-shadow: 1px 1px 5px gray;
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box.left .content-box {
+                float: left;
+                background-color: white;
+                border-radius: 0px 15px 15px 15px;
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box.right .content-box {
+                float: right;
+                background-color: #ddd;
+                border-radius: 15px 0px 15px 15px;
+            }
+
+            /*#a69192fdeb6b041718549b7c68ec617c2 .message-box .content-box::after {
+                content: "13 Oct 2024 19:20";
+                position: absolute;
+                bottom: -20px;
+                font-size: 12px;
+                color: gray;
+            }*/
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box.right .content-box .delivery-tick,
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box.right .content-box .seen-tick {
+                position: absolute;
+                left: 10px;
+                bottom: 0;
+                font-size: 12px;
+                color: lawngreen;
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box.left .content-box .delivery-tick,
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box.left .content-box .seen-tick {
+                position: absolute;
+                right: 10px;
+                bottom: 0;
+                font-size: 12px;
+                color: lawngreen;
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box.right .content-box .time-span {
+                position: absolute;
+                bottom: -20px;
+                left: 10px;
+                font-size: 12px;
+                color: gray;
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box.left .content-box .time-span {
+                position: absolute;
+                bottom: -20px;
+                right: 10px;
+                font-size: 12px;
+                color: gray;
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box.left .content-box::after {
+                right: 10px;
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box.right .content-box::after {
+                left: 10px;
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box .content-box .attached-file {
+                padding: 20px;
+                background-color: #eee;
+                color: gray;
+                width: fit-content;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box .content-box .attached-file button,
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box .content-box .attached-file a,
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box .content-box .attached-img a {
+                text-decoration: none;
+                color: #333;
+                font-size: 20px;
+                margin: 10px;
+                border: none;
+                cursor: pointer;
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box .content-box .attached-file button:hover,
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box .content-box .attached-file a:hover {
+
+                color: #111;
+            }
+
+            /*#a69192fdeb6b041718549b7c68ec617c2 .message-box .content-box .attached-img {}*/
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box .content-box .attached-img img {
+                width: 100%;
+                max-height: 500px;
+                object-fit: contain;
+                cursor: pointer;
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box .content-box .message-text {
+                margin: 0;
+                color: #444;
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box.right .content-box .message-text {
+                color: #222;
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box #actions-box {
+                width: fit-content;
+                visibility: hidden;
+                margin: 0 10px;
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box.left #actions-box {
+                float: left;
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box.right #actions-box {
+                float: right;
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box:hover>#actions-box {
+                visibility: visible;
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box .dropdown-box {
+                width: fit-content;
+                /*margin: auto;*/
+                position: relative;
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box .dropdown-box .dropbtn {
+                background-color: #eee;
+                color: gray;
+                padding: 5px 10px;
+                font-size: 18px;
+                border: none;
+                cursor: pointer;
+                border-radius: 10px;
+                /*border: 1px solid gray;*/
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box .dropdown-box .dropbtn:hover,
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box .dropdown-box .dropbtn:focus {
+                background-color: white;
+                color: #333;
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box .dropdown-box .dropdown-content {
+                display: none;
+                position: absolute;
+                right: 0;
+                background-color: #f1f1f1;
+                overflow: auto;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+                width: fit-content;
+                font-size: 14px;
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box.right .dropdown-box .dropdown-content {
+                left: 0;
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box .dropdown-box .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-wrap: nowrap;
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box .dropdown-box a:hover {
+                background-color: #ddd;
+            }
+
+            #a69192fdeb6b041718549b7c68ec617c2 .message-box .dropdown-box .show {
+                display: block;
+            }
+        </style>
+
+        <div class="message-box left clearfix">
+            <div id="img-box">
+                <img src="./statics/Oppenheimer001.jpg" alt="user-img">
+            </div>
+            <div class="content-box">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla deleniti molestiae dolore dignissimos
+                    repellat reprehenderit consequuntur, earum nemo magnam numquam laborum assumenda eligendi impedit
+                    blanditiis vel. Unde quibusdam ab dolor. &#128525;
+                </p>
+                <!--span class="delivery-tick"><i class="fa-solid fa-check"></i></span-->
+                <span class="seen-tick"><i class="fa-solid fa-check-double"></i></span>
+                <span class="time-span">13 Oct 2024 19:20</span>
+            </div>
+            <div id="actions-box">
+                <div class="dropdown-box">
+                    <button onclick="myFunction_dropdown_box(this)" class="dropbtn">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="">Copy</a>
+                        <a href="">Edit</a>
+                        <a href="">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="message-box right clearfix">
+            <div id="img-box">
+                <img src="./statics/bird001.webp" alt="user-img">
+            </div>
+            <div class="content-box">
+                <p>Lorem ipsum dolor sit amet &#128514;&#128514;&#128514;</p>
+                <!--span class="delivery-tick"><i class="fa-solid fa-check"></i></span-->
+                <span class="seen-tick"><i class="fa-solid fa-check-double"></i></span>
+                <span class="time-span">13 Oct 2024 19:20</span>
+            </div>
+            <div id="actions-box">
+                <div class="dropdown-box">
+                    <button onclick="myFunction_dropdown_box(this)" class="dropbtn">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="">Copy</a>
+                        <a href="">Edit</a>
+                        <a href="">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="message-box right clearfix">
+            <div id="img-box">
+                <img src="./statics/bird001.webp" alt="user-img">
+            </div>
+            <div class="content-box">
+                <p>Lorem ipsum &#128540;&#128540;</p>
+                <!--span class="delivery-tick"><i class="fa-solid fa-check"></i></span-->
+                <span class="seen-tick"><i class="fa-solid fa-check-double"></i></span>
+                <span class="time-span">13 Oct 2024 19:20</span>
+            </div>
+            <div id="actions-box">
+                <div class="dropdown-box">
+                    <button onclick="myFunction_dropdown_box(this)" class="dropbtn">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="">Copy</a>
+                        <a href="">Edit</a>
+                        <a href="">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="message-box left clearfix">
+            <div id="img-box">
+                <img src="./statics/Oppenheimer001.jpg" alt="user-img">
+            </div>
+            <div class="content-box">
+                <div class="attached-file">
+                    <i class="fa-solid fa-paperclip"></i>
+                    <span style="text-wrap: nowrap;">file name 001.mp4</span>
+                    <button onclick="displayVideoInModal('./statics/video01.mp4', 'fileCaption')">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                    <!--a href="./statics/video01.mp4" download=""><i class="fa-solid fa-floppy-disk"></i></a-->
+                </div>
+                <p class="message-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, illo?</p>
+                <!--span class="delivery-tick"><i class="fa-solid fa-check"></i></span-->
+                <span class="seen-tick"><i class="fa-solid fa-check-double"></i></span>
+                <span class="time-span">13 Oct 2024 19:20</span>
+            </div>
+            <div id="actions-box">
+                <div class="dropdown-box">
+                    <button onclick="myFunction_dropdown_box(this)" class="dropbtn">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="">Copy</a>
+                        <a href="">Save Attached File</a>
+                        <a href="">Edit</a>
+                        <a href="">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="message-box right clearfix">
+            <div id="img-box">
+                <img src="./statics/bird001.webp" alt="user-img">
+            </div>
+            <div class="content-box">
+                <div class="attached-img">
+                    <img src="./statics/bird001.webp" alt=""
+                        onclick="displayImageInModal('./statics/bird001.webp','image caption')">
+                    <!--a href="./statics/bird001.webp" download=""><i class="fa-solid fa-floppy-disk"></i></a-->
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <span class="delivery-tick"><i class="fa-solid fa-check"></i></span>
+                <!--span class="seen-tick"><i class="fa-solid fa-check-double"></i></span-->
+                <span class="time-span">13 Oct 2024 19:20</span>
+            </div>
+            <div id="actions-box">
+                <div class="dropdown-box">
+                    <button onclick="myFunction_dropdown_box(this)" class="dropbtn">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="">Copy</a>
+                        <a href="">Save Attached Image</a>
+                        <a href="">Edit</a>
+                        <a href="">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-box">
+            <style>
+                #a69192fdeb6b041718549b7c68ec617c2 #modal-box {
+                    width: fit-content;
+                    margin: auto;
+                }
+
+                #a69192fdeb6b041718549b7c68ec617c2 #modal-box .image {
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    max-width: 400px;
+                    max-height: 300px;
+                }
+
+                #a69192fdeb6b041718549b7c68ec617c2 #modal-box .image:hover {
+                    opacity: 0.7;
+                }
+
+                /* The Modal (background) */
+                #a69192fdeb6b041718549b7c68ec617c2 #modal-box .modal {
+                    display: none;
+                    /* Hidden by default */
+                    position: fixed;
+                    /* Stay in place */
+                    z-index: 10;
+                    /* Sit on top */
+                    padding-top: 100px;
+                    /* Location of the box */
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    /* Full width */
+                    height: 100%;
+                    /* Full height */
+                    overflow: auto;
+                    /* Enable scroll if needed */
+                    background-color: rgb(0, 0, 0);
+                    /* Fallback color */
+                    background-color: rgba(0, 0, 0, 0.9);
+                    /* Black w/ opacity */
+                }
+
+                /* Modal Content (image) */
+                #a69192fdeb6b041718549b7c68ec617c2 #modal-box #modal-video {
+                    margin: auto;
+                    display: block;
+                    width: 80%;
+                    max-width: 700px;
+                }
+
+                #a69192fdeb6b041718549b7c68ec617c2 #modal-box #modal-img {
+                    margin: auto;
+                    display: block;
+                    width: 80%;
+                    max-width: 700px;
+                }
+
+                /* Caption of Modal Image */
+                #a69192fdeb6b041718549b7c68ec617c2 #modal-box .caption {
+                    margin: auto;
+                    display: block;
+                    width: 80%;
+                    max-width: 700px;
+                    text-align: center;
+                    color: #ccc;
+                    padding: 10px 0;
+                    height: 150px;
+                }
+
+                /* Add Animation */
+                #a69192fdeb6b041718549b7c68ec617c2 #modal-box .modalImage,
+                #a69192fdeb6b041718549b7c68ec617c2 #modal-box .caption {
+                    animation-name: zoom;
+                    animation-duration: 0.6s;
+                }
+
+                @keyframes zoom {
+                    from {
+                        transform: scale(0.1)
+                    }
+
+                    to {
+                        transform: scale(1)
+                    }
+                }
+
+                /* The Close Button */
+                #a69192fdeb6b041718549b7c68ec617c2 #modal-box .close {
+                    position: absolute;
+                    top: 15px;
+                    right: 35px;
+                    color: #f1f1f1;
+                    font-size: 40px;
+                    font-weight: bold;
+                    transition: 0.3s;
+                }
+
+                #a69192fdeb6b041718549b7c68ec617c2 #modal-box .close:hover,
+                #a69192fdeb6b041718549b7c68ec617c2 #modal-box .close:focus {
+                    color: #bbb;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+
+                /* 100% Image Width on Smaller Screens */
+                @media only screen and (max-width: 700px) {
+                    #a69192fdeb6b041718549b7c68ec617c2 #modal-box .modalImage {
+                        width: 100%;
+                    }
+                }
+            </style>
+
+            <!-- The Modal -->
+            <div class="modal" onclick="if(event.target == this) this.style.display='none';">
+                <span onclick="functin02_Script28e31197628946cab786f266a3650f7d(this)" class="close">×</span>
+                <video src="" controls id="modal-video"></video>
+                <img src="" alt="" id="modal-img">
+                <div class="caption"></div>
+            </div>
+
+            <script>
+                function displayVideoInModal(mediaLinkAddress, fileCaption) {
+                    let mainElement = document.getElementById("modal-box");
+                    let modal = mainElement.querySelector(".modal");
+                    let caption = mainElement.querySelector(".caption");
+                    let modalVideo = modal.querySelector("#modal-video");
+                    let modalImage = modal.querySelector("#modal-img");
+                    modalVideo.src = mediaLinkAddress;
+                    modalVideo.style.display = "block";
+                    modalImage.style.display = "none";
+                    modal.style.display = "block";
+                    caption.innerHTML = fileCaption;
+                }
+
+                function displayImageInModal(imageLinkAddress, imageCaption) {
+                    let mainElement = document.getElementById("modal-box");
+                    let modal = mainElement.querySelector(".modal");
+                    let caption = mainElement.querySelector(".caption");
+                    let modalVideo = modal.querySelector("#modal-video");
+                    let modalImage = modal.querySelector("#modal-img");
+                    modalImage.src = imageLinkAddress;
+                    modalVideo.style.display = "none";
+                    modalImage.style.display = "block";
+                    modal.style.display = "block";
+                    caption.innerHTML = imageCaption;
+                }
+
+                function functin02_Script28e31197628946cab786f266a3650f7d(element) {
+                    let modal = element.parentElement;
+                    modal.style.display = "none";
+                }
+            </script>
+        </div>
+
+        <script>
+            function myFunction_dropdown_box(element) {
+                let dropdownContents = element.parentElement.getElementsByClassName("dropdown-content");
+
+                for (let i = 0; i < dropdownContents.length; i++) {
+                    dropdownContents[i].classList.toggle("show");
+                }
+            }
+        </script>
+
+        <script>
+            window.addEventListener("click", (event) => {
+                let mainElements = document.getElementsByClassName("dropdown-box");
+                for (let mainElmnt of mainElements) {
+                    let dropButton = mainElmnt.getElementsByClassName("dropbtn")[0];
+                    let dropButton_i = dropButton.querySelector("i");
+                    if (event.target != dropButton && event.target != dropButton_i) {
+                        mainElmnt.getElementsByClassName("dropdown-content")[0].classList.remove("show");
+                    }
+                }
+            });
+        </script>
+    </div>
+</body>
+
+</html>

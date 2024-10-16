@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="chatroomList9baf98a03b4e4d10b198a5979a59433f">
+        <style>
+            #chatroomList9baf98a03b4e4d10b198a5979a59433f {
+                width: 20%;
+                min-width: 300px;
+                height: 90vh;
+                /*border: 1px solid gray;*/
+            }
+        </style>
+        <div id="profile-summary">
+            <style>
+                #chatroomList9baf98a03b4e4d10b198a5979a59433f #profile-summary {
+                    text-align: center;
+                }
+
+                #chatroomList9baf98a03b4e4d10b198a5979a59433f #profile-summary img {
+                    width: 100px;
+                    height: 100px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            </style>
+            <a href="" id="user-settings-link" title="Settings"><i class="fa-solid fa-gear"></i></a>
+            <img src="./statics/bird001.webp" alt="">
+            <p>User Name</p>
+        </div>
+
+        <div class="searchFilterListc9a4355d813f479a86c3d1f0395ddc45">
+            <style>
+                .searchFilterListc9a4355d813f479a86c3d1f0395ddc45 {
+                    width: 100%;
+                    /*min-width: 300px;*/
+                    margin: auto;
+                    position: relative;
+                    height: calc(100% - 150px);
+                    /*border: 1px dashed gray;*/
+                    background-color: white;
+                }
+
+                .searchFilterListc9a4355d813f479a86c3d1f0395ddc45 #search-icon {
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    z-index: 1;
+                    font-size: 22px;
+                    color: gray;
+                }
+
+                .searchFilterListc9a4355d813f479a86c3d1f0395ddc45 #myInput {
+                    width: 80%;
+                    font-size: 16px;
+                    padding: 12px 20px 12px 40px;
+                    /*border: 1px solid #ddd;*/
+                    border-radius: 15px;
+                    border: none;
+                    background-color: #eee;
+                    margin-bottom: 5px;
+                }
+
+                .searchFilterListc9a4355d813f479a86c3d1f0395ddc45 #add-contact-btn {
+                    border: none;
+                    border-radius: 5px;
+                    background-color: white;
+                    color: gray;
+                    font-size: 22px;
+                    padding: 5px 5px;
+                    position: relative;
+                    top: 3px;
+                    cursor: pointer;
+                }
+
+                .searchFilterListc9a4355d813f479a86c3d1f0395ddc45 #add-contact-btn:hover {
+                    background-color: lightgreen;
+                    color: #333;
+                }
+
+                .searchFilterListc9a4355d813f479a86c3d1f0395ddc45 #myUL {
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+                    overflow-y: auto;
+                    height: calc(100% - 50px);
+                }
+
+                .searchFilterListc9a4355d813f479a86c3d1f0395ddc45 #myUL li {
+                    display: block;
+                    border: 2px solid white;
+                    border-radius: 25px;
+                    cursor: pointer;
+                    margin: 2px 0;
+                    overflow: hidden;
+                }
+
+                .searchFilterListc9a4355d813f479a86c3d1f0395ddc45 #myUL li:hover {
+                    /*background-color: #eee;*/
+                    border-color: #ddd;
+                }
+
+                .searchFilterListc9a4355d813f479a86c3d1f0395ddc45 #myUL li.selected {
+                    background-color: #ddd;
+                    border-color: #ddd;
+                }
+
+                .searchFilterListc9a4355d813f479a86c3d1f0395ddc45 #myUL li img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    float: left;
+                    margin: 10px;
+                }
+
+                .searchFilterListc9a4355d813f479a86c3d1f0395ddc45 #myUL li .innerFilterItem {
+                    padding: 26px 0;
+                    display: block;
+                    float: left;
+                    font-size: 14px;
+                }
+
+                .searchFilterListc9a4355d813f479a86c3d1f0395ddc45 #myUL li .counter-notif {
+                    width: 20px;
+                    height: 20px;
+                    background-color: red;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    font-size: 12px;
+                    display: block;
+                    text-align: center;
+                    padding-top: 3px;
+                    color: white;
+                    float: right;
+                    margin: 10px;
+                }
+            </style>
+
+            <input type="text" id="myInput" onkeyup="filter_Script_a0d21024282f453f8247fefa6ec435f2(this)"
+                placeholder="Search for names..">
+            <span id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <button id="add-contact-btn" onclick="showContactsList()">
+                <i class="fa-solid fa-user-plus" title="Contacts"></i>
+            </button>
+
+            <ul id="myUL" class="filterContainer">
+                <li class="filterItems clearfix selected">
+                    <img src="./statics/Oppenheimer001.jpg" alt="">
+                    <span class="innerFilterItem" href="#">Oppenheimer</span>
+                    <span class="counter-notif">5</span>
+                </li>
+                <li class="filterItems clearfix">
+                    <img src="./statics/library002.webp" alt="">
+                    <span class="innerFilterItem" href="#">Library Group</span>
+                    <span class="counter-notif">15</span>
+                </li>
+
+                <li class="filterItems clearfix">
+                    <img src="./statics/pizza001.webp" alt="">
+                    <span class="innerFilterItem" href="#">Pizza</span>
+                    <span class="counter-notif">2</span>
+                </li>
+                <li class="filterItems clearfix">
+                    <img src="./statics/team001.webp" alt="">
+                    <span class="innerFilterItem" href="#">Emojis</span>
+                    <!--span class="counter-notif">5</span-->
+                </li>
+
+                <li class="filterItems clearfix">
+                    <img src="./statics/startup001.webp" alt="">
+                    <span class="innerFilterItem" href="#">Startup</span>
+                    <!--span class="counter-notif">5</span-->
+                </li>
+                <li class="filterItems clearfix">
+                    <img src="./statics/startup001.webp" alt="">
+                    <span class="innerFilterItem" href="#">Startup</span>
+                    <!--span class="counter-notif">5</span-->
+                </li>
+                <li class="filterItems clearfix">
+                    <img src="./statics/startup001.webp" alt="">
+                    <span class="innerFilterItem" href="#">Startup</span>
+                    <!--span class="counter-notif">5</span-->
+                </li>
+            </ul>
+
+            <script>
+                /* Script_a0d21024282f453f8247fefa6ec435f2 */
+
+                function filter_Script_a0d21024282f453f8247fefa6ec435f2(inputElement) {
+                    let mainElement = inputElement.parentElement;
+                    // Declare variables
+                    let filter, filteredContainer, filteredItems, innerFilteredItem, i, txtValue;
+                    //inputElement = mainElement_searchFilterListc9a4355d813f479a86c3d1f0395ddc45.querySelector('#myInput');
+                    filter = inputElement.value.toUpperCase();
+                    filteredContainer = mainElement.getElementsByClassName("filterContainer")[0];
+                    filteredItems = filteredContainer.getElementsByClassName('filterItems');
+
+                    // Loop through all list items, and hide those who don't match the search query
+                    for (i = 0; i < filteredItems.length; i++) {
+                        innerFilteredItem = filteredItems[i].getElementsByClassName("innerFilterItem")[0];
+                        txtValue = innerFilteredItem.textContent || innerFilteredItem.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            filteredItems[i].style.display = "";
+                        } else {
+                            filteredItems[i].style.display = "none";
+                        }
+                    }
+                }
+            </script>
+        </div>
+
+        <div class="searchFilterListc9a4355d813f479a86c3d1f0395ddc45" id="contacts-list">
+            <style>
+                .searchFilterListc9a4355d813f479a86c3d1f0395ddc45#contacts-list {
+                    position: absolute;
+                    top: 100px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 20%;
+                    min-width: 300px;
+                    z-index: 1;
+                    border-radius: 15px;
+                    box-shadow: 0 0px 10px gray;
+                    overflow: hidden;
+                    height: 0;
+                    transition: 0.3s;
+                }
+
+                .searchFilterListc9a4355d813f479a86c3d1f0395ddc45#contacts-list.show {
+                    height: calc(100% - 150px);
+                }
+
+                .searchFilterListc9a4355d813f479a86c3d1f0395ddc45#contacts-list #myInput {
+                    width: 100%;
+                }
+
+                .searchFilterListc9a4355d813f479a86c3d1f0395ddc45#contacts-list #search-icon {
+                    top: 35px;
+                }
+
+                .searchFilterListc9a4355d813f479a86c3d1f0395ddc45#contacts-list li {
+                    cursor: auto;
+                }
+
+                .searchFilterListc9a4355d813f479a86c3d1f0395ddc45#contacts-list .addOrRemoveIcons {
+                    color: gray;
+                    float: right;
+                    padding: 25px 20px 25px 10px;
+                    border: none;
+                    cursor: pointer;
+                    background-color: white;
+                    font-size: 16px;
+                }
+
+                .searchFilterListc9a4355d813f479a86c3d1f0395ddc45#contacts-list .addOrRemoveIcons:hover i.fa-plus {
+                    color: lawngreen;
+                }
+
+                .searchFilterListc9a4355d813f479a86c3d1f0395ddc45#contacts-list .addOrRemoveIcons:hover i.fa-trash-can {
+                    color: red;
+                }
+            </style>
+
+            <span style="color: rgb(209, 0, 0);float: right;margin: 5px 10px;cursor: pointer;font-weight: bold;"
+                onclick="this.parentElement.classList.remove('show')">
+                &times;
+            </span>
+            <input type="text" id="myInput" onkeyup="filter_Script_a0d21024282f453f8247fefa6ec435f2(this)"
+                placeholder="Search for names..">
+            <span id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <!--button id="add-contact-btn"><i class="fa-solid fa-user-plus" title="Contacts"></i></button-->
+
+            <ul id="myUL" class="filterContainer">
+                <li class="filterItems clearfix">
+                    <img src="./statics/Oppenheimer001.jpg" alt="">
+                    <span class="innerFilterItem" href="#">Oppenheimer</span>
+                    <button class="addOrRemoveIcons">
+                        <i class="fa-solid fa-plus"></i>
+                        <!--i class="fa-solid fa-trash-can"></i-->
+                    </button>
+                </li>
+                <li class="filterItems clearfix">
+                    <img src="./statics/library002.webp" alt="">
+                    <span class="innerFilterItem" href="#">Library Group</span>
+                    <button class="addOrRemoveIcons">
+                        <!--i class="fa-solid fa-plus"></i-->
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </li>
+
+                <li class="filterItems clearfix">
+                    <img src="./statics/pizza001.webp" alt="">
+                    <span class="innerFilterItem" href="#">Pizza</span>
+                    <button class="addOrRemoveIcons">
+                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </li>
+                <li class="filterItems clearfix">
+                    <img src="./statics/team001.webp" alt="">
+                    <span class="innerFilterItem" href="#">Emojis</span>
+                    <button class="addOrRemoveIcons">
+                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </li>
+
+                <li class="filterItems clearfix">
+                    <img src="./statics/startup001.webp" alt="">
+                    <span class="innerFilterItem" href="#">Startup</span>
+                    <button class="addOrRemoveIcons">
+                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </li>
+                <li class="filterItems clearfix">
+                    <img src="./statics/startup001.webp" alt="">
+                    <span class="innerFilterItem" href="#">Startup</span>
+                    <button class="addOrRemoveIcons">
+                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </li>
+                <li class="filterItems clearfix">
+                    <img src="./statics/startup001.webp" alt="">
+                    <span class="innerFilterItem" href="#">Startup</span>
+                    <button class="addOrRemoveIcons">
+                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </li>
+            </ul>
+
+            <script>
+                function showContactsList() {
+                    document.getElementById("contacts-list").classList.add("show");
+                }
+            </script>
+        </div>
+
+    </div>
+</body>
+
+</html>
