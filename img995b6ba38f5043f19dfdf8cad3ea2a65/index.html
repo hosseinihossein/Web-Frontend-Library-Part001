@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="img995b6ba38f5043f19dfdf8cad3ea2a65">
+        <style>
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                overflow: hidden;
+                background-color: #222;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card {
+                position: absolute;
+                transition: all 0.5s ease-in;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.ordered {
+                bottom: 10px;
+                width: 150px;
+                height: 200px;
+                z-index: 1;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 5px 0 15px black;
+                cursor: pointer;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.ordered:hover img {
+                filter: brightness(100%);
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.o4 {
+                right: -100px;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.o3 {
+                right: 70px;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.o2 {
+                right: 240px;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.o1 {
+                right: 410px;
+            }
+
+            @media screen and (max-width:600px) {
+                #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.ordered {
+                    width: 120px;
+                    height: 150px;
+                }
+
+                #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.o4 {
+                    right: -50px;
+                }
+
+                #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.o3 {
+                    right: 80px;
+                }
+
+                #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.o2 {
+                    right: 210px;
+                }
+
+                #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.o1 {
+                    right: 340px;
+                }
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                filter: brightness(80%);
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.ordered .description {
+                position: absolute;
+                color: white;
+                bottom: -150px;
+                left: 5px;
+                overflow: hidden;
+                transition: all 0.5s ease-in;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.ordered .description .title {
+                font-size: 16px;
+                max-width: 150px;
+            }
+
+            @media screen and (max-width:600px) {
+                #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.ordered .description {
+                    bottom: -180px;
+                }
+
+                #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.ordered .description .title {
+                    font-size: 14px;
+                }
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.big {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                /*left: 0;*/
+                right: 0;
+                /*top: 0;*/
+                bottom: 0;
+                border-radius: 0;
+                z-index: 0;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.big .description {
+                position: absolute;
+                bottom: 20vh;
+                left: 5vw;
+                max-width: 25vw;
+                color: white;
+                overflow: hidden;
+                transition: all 0.5s ease-in;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.big .description * {
+                transition: all 0.5s ease-in;
+            }
+
+            @media screen and (max-width:800px) {
+                #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.big .description {
+                    max-width: 90vw;
+                    top: 10vh;
+                }
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.big .description .summary {
+                font-size: 14px;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.big .description .details-link {
+                cursor: pointer;
+                border: 2px solid white;
+                border-radius: 20px;
+                padding: 10px 30px;
+                background-color: rgba(0, 0, 0, 0.5);
+                margin-top: 30px;
+                display: block;
+                width: fit-content;
+                transition: none;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.big .description .details-link:hover {
+                border-color: yellow;
+                color: yellow;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 #nav-btns {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: fit-content;
+                z-index: 2;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 #nav-btns button {
+                color: white;
+                font-size: 30px;
+                background-color: rgba(0, 0, 0, 0.5);
+                border: 1px solid white;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                cursor: pointer;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 #nav-btns button:hover {
+                border-color: yellow;
+                color: yellow;
+            }
+
+            @media screen and (max-width:600px) {
+                #img995b6ba38f5043f19dfdf8cad3ea2a65 #nav-btns {
+                    display: none;
+                }
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .description .rates .imdb-logo {
+                width: 40px;
+                height: 20px;
+                object-fit: cover;
+                background-color: transparent;
+                display: block;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .description .rates .imdb-rate {
+                padding-left: 45px;
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .description .rates .year {
+                float: right;
+            }
+        </style>
+
+        <div class="img-card big">
+            <img src="./statics/cloudComputing001.webp" alt="">
+            <div class="description">
+                <div class="rates clearfix">
+                    <img class="imdb-logo" src="./statics/IMDb_logo.png" alt="">
+                    <span class="imdb-rate">6.5</span>
+                    <span class="year"><i class="fa-solid fa-calendar"></i> 2024</span>
+                </div>
+                <h1 class="title">MOVIE TITLE</h1>
+                <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, doloribus quod
+                    nobis ea ipsam assumenda.
+                </p>
+                <a class="details-link">Watch & More</a>
+            </div>
+        </div>
+        <div class="img-card ordered o1">
+            <img src="./statics/lampsAndLaptopcentered.jpg" alt="">
+            <div class="description">
+                <div class="rates clearfix">
+                    <img class="imdb-logo" src="./statics/IMDb_logo.png" alt="">
+                    <span class="imdb-rate">6.5</span>
+                    <span class="year"><i class="fa-solid fa-calendar"></i> 2024</span>
+                </div>
+                <h1 class="title">LONG LONG MOVIE TITLE</h1>
+                <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, doloribus quod
+                    nobis ea ipsam assumenda.
+                </p>
+                <a class="details-link">Watch & More</a>
+            </div>
+        </div>
+        <div class="img-card ordered o2">
+            <img src="./statics/matrixGreenCode.webp" alt="">
+            <div class="description">
+                <div class="rates clearfix">
+                    <img class="imdb-logo" src="./statics/IMDb_logo.png" alt="">
+                    <span class="imdb-rate">6.5</span>
+                    <span class="year"><i class="fa-solid fa-calendar"></i> 2024</span>
+                </div>
+                <h1 class="title">MOVIE TITLE</h1>
+                <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, doloribus quod
+                    nobis ea ipsam assumenda.
+                </p>
+                <a class="details-link">Watch & More</a>
+            </div>
+        </div>
+        <div class="img-card ordered o3">
+            <img src="./statics/laptopAndLamp.webp" alt="">
+            <div class="description">
+                <div class="rates clearfix">
+                    <img class="imdb-logo" src="./statics/IMDb_logo.png" alt="">
+                    <span class="imdb-rate">6.5</span>
+                    <span class="year"><i class="fa-solid fa-calendar"></i> 2024</span>
+                </div>
+                <h1 class="title">MOVIE TITLE</h1>
+                <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, doloribus quod
+                    nobis ea ipsam assumenda.
+                </p>
+                <a class="details-link">Watch & More</a>
+            </div>
+        </div>
+        <div class="img-card ordered o4">
+            <img src="./statics/nature001.webp" alt="">
+            <div class="description">
+                <div class="rates clearfix">
+                    <img class="imdb-logo" src="./statics/IMDb_logo.png" alt="">
+                    <span class="imdb-rate">6.5</span>
+                    <span class="year"><i class="fa-solid fa-calendar"></i> 2024</span>
+                </div>
+                <h1 class="title">MOVIE TITLE</h1>
+                <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, doloribus quod
+                    nobis ea ipsam assumenda.
+                </p>
+                <a class="details-link">Watch & More</a>
+            </div>
+        </div>
+
+        <div id="nav-btns">
+            <button onclick="nextImage()">&LeftAngleBracket;</button>
+            <button onclick="previousImage()">&RightAngleBracket;</button>
+        </div>
+
+        <script>
+            let mainElement_img995b6ba38f5043f19dfdf8cad3ea2a65 = document.getElementById("img995b6ba38f5043f19dfdf8cad3ea2a65");
+            function nextImage() {
+                let o1 = mainElement_img995b6ba38f5043f19dfdf8cad3ea2a65.getElementsByClassName("o1")[0];
+                let o2 = mainElement_img995b6ba38f5043f19dfdf8cad3ea2a65.getElementsByClassName("o2")[0];
+                let o3 = mainElement_img995b6ba38f5043f19dfdf8cad3ea2a65.getElementsByClassName("o3")[0];
+                let o4 = mainElement_img995b6ba38f5043f19dfdf8cad3ea2a65.getElementsByClassName("o4")[0];
+                let big = mainElement_img995b6ba38f5043f19dfdf8cad3ea2a65.getElementsByClassName("big")[0];
+                o1.className = "img-card big";
+                o2.className = "img-card ordered o1";
+                o3.className = "img-card ordered o2";
+                o4.className = "img-card ordered o3";
+                big.className = "img-card ordered o4";
+                big.style.opacity = "0";
+                setTimeout(() => { big.style.opacity = "1"; }, 400);
+            }
+            function previousImage() {
+                let o1 = mainElement_img995b6ba38f5043f19dfdf8cad3ea2a65.getElementsByClassName("o1")[0];
+                let o2 = mainElement_img995b6ba38f5043f19dfdf8cad3ea2a65.getElementsByClassName("o2")[0];
+                let o3 = mainElement_img995b6ba38f5043f19dfdf8cad3ea2a65.getElementsByClassName("o3")[0];
+                let o4 = mainElement_img995b6ba38f5043f19dfdf8cad3ea2a65.getElementsByClassName("o4")[0];
+                let big = mainElement_img995b6ba38f5043f19dfdf8cad3ea2a65.getElementsByClassName("big")[0];
+                o1.className = "img-card ordered o2";
+                o2.className = "img-card ordered o3";
+                o3.className = "img-card ordered o4";
+                o4.className = "img-card big";
+                big.className = "img-card ordered o1";
+                big.style.opacity = "0";
+                setTimeout(() => { big.style.opacity = "1"; }, 400);
+            }
+
+            function setOnClickForOrderedImgCards() {
+                let imgCards = mainElement_img995b6ba38f5043f19dfdf8cad3ea2a65.getElementsByClassName("img-card");
+                for (let imgCrad of imgCards) {
+                    imgCrad.addEventListener("click", () => {
+                        pressOrdered(imgCrad);
+                    });
+                }
+            }
+
+            function pressOrdered(o) {
+                let big = mainElement_img995b6ba38f5043f19dfdf8cad3ea2a65.getElementsByClassName("big")[0];
+                bigClassName = big.className;
+                big.className = o.className;
+                o.className = bigClassName;
+            }
+            setOnClickForOrderedImgCards();
+        </script>
+    </div>
+</body>
+
+</html>
