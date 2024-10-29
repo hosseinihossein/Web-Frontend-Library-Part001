@@ -1,3 +1,3 @@
 - Title: Drop Down
-- Description: A hoverable dropdown button with rotating angle. There's a hidden content box with dark background. Hover oer the drop down button to reveal the content.
+- Description: A hoverable dropdown button with rotating angle. There's a hidden content box with dark background. Hover over the drop down button to reveal the content.
 - Tags: dropdown button
