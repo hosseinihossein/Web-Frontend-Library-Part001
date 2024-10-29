@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+            background-color: #444;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="navbarc9688e3a36eb4b83814687ea3dfa42c7" class="clearfix">
+        <style>
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 {
+                /*background-color: rgba(0, 0, 0, 0.2);*/
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 0 50px;
+                /*border: 1px solid white;*/
+            }
+
+            @media screen and (max-width:1000px) {
+                #navbarc9688e3a36eb4b83814687ea3dfa42c7 {
+                    padding: 0;
+                }
+            }
+
+            /********************************************************/
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 #navbar-logo {
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+                overflow: hidden;
+                border: 1px solid yellow;
+                border-radius: 50%;
+                float: left;
+                transition: all 0.2s ease-out;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 #navbar-logo:hover {
+                /*background-color: #333;*/
+                filter: brightness(150%);
+            }
+
+            /********************************************************/
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown {
+                position: relative;
+                display: block;
+                width: fit-content;
+                float: left;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown .dropbtn {
+                background-color: rgba(0, 0, 0, 0);
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+                transition: all 0.2s ease-out;
+                color: #ddd;
+                font-size: 14px;
+                height: 50px;
+                width: fit-content;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown:hover .dropbtn {
+                color: yellow;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown .dropbtn .angle {
+                transition: all 0.2s ease-out;
+                position: absolute;
+                font-size: 20px;
+                /*background-color: #ccc;*/
+                top: 14px;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown:hover .angle {
+                rotate: -180deg;
+                display: inline-block;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown .dropdown-content {
+                display: flex;
+                flex-direction: row;
+                height: 0;
+                width: fit-content;
+                position: absolute;
+                top: 20px;
+                left: 0;
+                background-color: #333;
+                /*min-width: 160px;*/
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+                overflow: hidden;
+                transition: all 0.2s ease-out;
+                opacity: 0;
+                border-radius: 10px;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown.categories {
+                display: none;
+            }
+
+            @media screen and (max-width:800px) {
+                #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown {
+                    display: none;
+                }
+
+                #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown.categories {
+                    display: block;
+                }
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown:hover .dropdown-content {
+                opacity: 1;
+                top: 50px;
+                height: fit-content;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown .dropdown-content a {
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                color: #ccc;
+                font-size: 14px;
+                width: fit-content;
+                text-wrap: nowrap;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown .dropdown-content a:hover {
+                color: yellow;
+            }
+
+            /********************************************************/
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .search-box {
+                width: fit-content;
+                float: left;
+                margin: 5px;
+                position: relative;
+                /*left: 50%;*/
+                /*transform: translateX(-50%);*/
+            }
+
+            /*@media screen and (max-width:700px) {
+                #navbarc9688e3a36eb4b83814687ea3dfa42c7 .search-box {
+                    margin: 5px;
+                }
+            }*/
+
+            /* Style the search field */
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .search-box form.searchForm input[type=text] {
+                padding: 10px 35px 10px 10px;
+                font-size: 17px;
+                border: none;
+                border-radius: 20px;
+                float: left;
+                /*width: fit-content;*/
+                width: 200px;
+                background-color: rgba(0, 225, 255, 0.2);
+                color: yellow;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .search-box form.searchForm input[type=text]::placeholder {
+                color: rgba(255, 255, 0, 0.5);
+                font-size: 14px;
+            }
+
+            /* Style the submit button */
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .search-box form.searchForm button {
+                float: left;
+                /*width: 20px;*/
+                padding: 10px;
+                background-color: rgba(0, 0, 0, 0);
+                color: rgba(255, 255, 0, 0.7);
+                font-size: 17px;
+                border: none;
+                /*border-left: 1px solid rgba(255, 255, 0, 1);*/
+                cursor: pointer;
+                position: absolute;
+                right: 0px;
+                /*z-index: 1;*/
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .search-box form.searchForm button:hover {
+                color: yellow;
+            }
+        </style>
+
+        <a href="index.html">
+            <img id="navbar-logo" src="./statics/HLogo.png" alt="">
+        </a>
+
+        <div class="dropdown">
+            <button class="dropbtn">Movie <span class="angle">&blacktriangledown;</span></button>
+            <div class="dropdown-content clearfix">
+                <div>
+                    <a href="#">IMDb 250</a>
+                    <a href="#">horror</a>
+                    <a href="#">comedy</a>
+                </div>
+                <div>
+                    <a href="#">IMDb 250</a>
+                    <a href="#">horror</a>
+                    <a href="#">comedy</a>
+                </div>
+                <div>
+                    <a href="#">IMDb 250</a>
+                    <a href="#">horror</a>
+                    <a href="#">comedy</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Serial <span class="angle">&blacktriangledown;</span></button>
+            <div class="dropdown-content clearfix">
+                <div>
+                    <a href="#">IMDb 250</a>
+                    <a href="#">horror</a>
+                    <a href="#">comedy</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Animation <span class="angle">&blacktriangledown;</span></button>
+            <div class="dropdown-content clearfix">
+                <div>
+                    <a href="#">IMDb 250</a>
+                    <a href="#">horror</a>
+                    <a href="#">comedy</a>
+                </div>
+                <div>
+                    <a href="#">IMDb 250</a>
+                    <a href="#">horror</a>
+                    <a href="#">comedy</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Anime <span class="angle">&blacktriangledown;</span></button>
+            <div class="dropdown-content clearfix">
+                <div>
+                    <a href="#">IMDb 250</a>
+                    <a href="#">horror</a>
+                    <a href="#">comedy</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="dropdown categories" style="position: static;">
+            <button class="dropbtn">Categories <span class="angle">&blacktriangledown;</span></button>
+            <div class="dropdown-content clearfix">
+                <div id="a551c262641c644419af39637427612ac" class="Scriptd5b6b606f4934bdd8c8850bd3f2937ff">
+                    <style>
+                        #a551c262641c644419af39637427612ac {
+                            width: 100%;
+                            min-width: 300px;
+                        }
+
+                        #a551c262641c644419af39637427612ac .links {
+                            overflow: hidden;
+                            border: none;
+                            outline: 0;
+                            width: fit-content;
+                        }
+
+                        #a551c262641c644419af39637427612ac .links button {
+                            background-color: inherit;
+                            float: left;
+                            border: none;
+                            outline: none;
+                            cursor: pointer;
+                            padding: 14px 16px;
+                            transition: 0.3s;
+                            font-size: 14px;
+                            width: fit-content;
+                            height: 50px;
+                            color: white;
+                        }
+
+                        /*#a551c262641c644419af39637427612ac .links button:hover {
+                            background-color: #ddd;
+                        }*/
+
+                        #a551c262641c644419af39637427612ac .tabcontent {
+                            display: none;
+                            flex-direction: row;
+                            flex-wrap: nowrap;
+                            color: white;
+                            border: none;
+                            animation: fadeEffect 0.5s;
+                            overflow: hidden;
+                            width: 100%;
+                        }
+
+                        @keyframes fadeEffect {
+                            from {
+                                opacity: 0;
+                            }
+
+                            to {
+                                opacity: 1;
+                            }
+                        }
+
+                        #a551c262641c644419af39637427612ac #Movie,
+                        #a551c262641c644419af39637427612ac .links .Movie.active {
+                            background-color: rgba(253, 33, 33, 0.2);
+                        }
+
+                        #a551c262641c644419af39637427612ac #Serial,
+                        #a551c262641c644419af39637427612ac .links .Serial.active {
+                            background-color: rgba(0, 190, 0, 0.2);
+                        }
+
+                        #a551c262641c644419af39637427612ac #Animation,
+                        #a551c262641c644419af39637427612ac .links .Animation.active {
+                            background-color: rgba(0, 132, 255, 0.2);
+                        }
+
+                        #a551c262641c644419af39637427612ac #Anime,
+                        #a551c262641c644419af39637427612ac .links .Anime.active {
+                            background-color: rgba(255, 165, 0, 0.2);
+                        }
+
+                        #a551c262641c644419af39637427612ac .tabcontent h3 {
+                            padding: 50px 0 0 50px;
+                            font-weight: normal;
+                            font-size: xx-large;
+                        }
+                    </style>
+
+                    <div class="links clearfix">
+                        <button class="tablink Movie defaultOpen active">Movie</button>
+                        <button class="tablink Serial">Serial</button>
+                        <button class="tablink Animation">Animation</button>
+                        <button class="tablink Anime">Anime</button>
+                    </div>
+
+                    <div id="Movie" class="tabcontent clearfix" style="display: flex;">
+                        <!--h3>Movie</h3>
+                        <p class="" style="padding: 0 0 50px 50px;">Movie is where the heart is..</p-->
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                    </div>
+
+                    <div id="Serial" class="tabcontent clearfix">
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                    </div>
+
+                    <div id="Animation" class="tabcontent clearfix">
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                    </div>
+
+                    <div id="Anime" class="tabcontent clearfix">
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                    </div>
+
+                    <script>
+
+                        let mainElements_Scriptd5b6b606f4934bdd8c8850bd3f2937ff = document.getElementsByClassName("Scriptd5b6b606f4934bdd8c8850bd3f2937ff");
+
+                        for (let i = 0; i < mainElements_Scriptd5b6b606f4934bdd8c8850bd3f2937ff.length; i++) {
+                            let mainElement = mainElements_Scriptd5b6b606f4934bdd8c8850bd3f2937ff.item(i);
+                            let siblingTabLinks = mainElement.getElementsByClassName("tablink");
+                            //let siblingTabContents = mainElements[i].getElementsByClassName("tabcontent");
+
+                            console.log("siblingTabLinks: " + siblingTabLinks.length);
+
+                            for (let j = 0; j < siblingTabLinks.length; j++) {
+
+                                let cityName = siblingTabLinks.item(j).innerHTML;
+
+                                siblingTabLinks.item(j).addEventListener("click", function () {
+                                    removeActive_Scriptd5b6b606f4934bdd8c8850bd3f2937ff(mainElement.id);
+
+                                    setDisplayNone_Scriptd5b6b606f4934bdd8c8850bd3f2937ff(mainElement.id);
+
+                                    mainElement.querySelector(`#${cityName}`).style.display = "flex";
+                                    siblingTabLinks.item(j).classList.add("active");
+                                });
+                            }
+
+                            mainElement.querySelector(".defaultOpen").click();
+                        }
+                        // remove active From Sibling TabLinks' classList
+                        function removeActive_Scriptd5b6b606f4934bdd8c8850bd3f2937ff(mainElementId) {
+                            let mainElement = document.getElementById(mainElementId);
+                            let siblingTabLinks = mainElement.getElementsByClassName("tablink");
+                            for (let i = 0; i < siblingTabLinks.length; i++) {
+                                siblingTabLinks[i].classList.remove("active");
+                            }
+                        }
+
+                        // set display to none for all tabcontent element
+                        function setDisplayNone_Scriptd5b6b606f4934bdd8c8850bd3f2937ff(mainElementId) {
+                            let mainElement = document.getElementById(mainElementId);
+                            let siblingTabContents = mainElement.getElementsByClassName("tabcontent");
+                            for (let i = 0; i < siblingTabContents.length; i++) {
+                                siblingTabContents[i].style.display = "none";
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-box" class="">
+            <form class="searchForm" action="">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+
+        <div id="user-container">
+            <style>
+                #navbarc9688e3a36eb4b83814687ea3dfa42c7 #user-container {
+                    float: right;
+                }
+            </style>
+            <div class="user-account-container">
+                <style>
+                    #navbarc9688e3a36eb4b83814687ea3dfa42c7 .user-account-dropdown {
+                        cursor: pointer;
+                    }
+                </style>
+                <div class="user-account-dropdown">
+                    <style>
+                        #navbarc9688e3a36eb4b83814687ea3dfa42c7 .user-account-dropdown img {
+                            width: 50px;
+                            height: 50px;
+                            object-fit: cover;
+                            border-radius: 50%;
+                            background-color: transparent;
+                        }
+                    </style>
+                    <img src="./statics/defaultProfile.jpg" alt="" class="user-img">
+
+                    <style>
+                        #navbarc9688e3a36eb4b83814687ea3dfa42c7 .user-menu-container {
+                            position: absolute;
+                            right: 50px;
+                        }
+
+                        @media screen and (max-width:1000px) {
+                            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .user-menu-container {
+                                right: 0px;
+                            }
+                        }
+                    </style>
+                    <div class="user-menu-container">
+                        <style>
+                            .menu714118d2b2e9457a94134762e94de1ec {
+                                background-color: aliceblue;
+                                color: black;
+                                width: 250px;
+                                padding: 0px;
+                                border-radius: 20px;
+                                box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+                                height: 0;
+                                overflow: hidden;
+                                transition: all 0.2s;
+                                cursor: auto;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec a {
+                                text-decoration: none;
+                                color: inherit;
+                            }
+
+                            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .user-account-dropdown:hover .menu714118d2b2e9457a94134762e94de1ec {
+                                height: 350px;
+                                padding: 20px 10px;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec>div {
+                                background-color: white;
+                                border-radius: 10px;
+                                width: 100%;
+                                margin: 10px auto;
+                                padding: 0 10px;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec .profile-box {
+                                padding: 10px 20px;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec .profile-box img {
+                                width: 40px;
+                                height: 40px;
+                                object-fit: cover;
+                                border-radius: 50%;
+                                float: left;
+                                margin-right: 5px;
+                            }
+
+                            /************* login *************/
+
+                            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .user-account-dropdown:hover .menu714118d2b2e9457a94134762e94de1ec.login {
+                                height: 230px;
+                                padding: 20px 10px;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec.login .profile-box {
+                                padding: 10px 20px;
+                                text-align: center;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec.login .profile-box img {
+                                width: 40px;
+                                height: 40px;
+                                object-fit: cover;
+                                border-radius: 50%;
+                                margin-left: 70px;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec .profile-box .name {
+                                font-size: 14px;
+                                font-weight: bold;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec .profile-box .email {
+                                font-size: 12px;
+                                color: gray;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec ul {
+                                list-style-type: none;
+                                padding: 10px 0;
+                                font-size: 10px;
+                                color: gray;
+                                font-weight: bold;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec li {
+                                padding: 10px;
+                                cursor: pointer;
+                                font-weight: normal;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec li:hover {
+                                background-color: azure;
+                                color: black;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec li {
+                                font-size: 14px;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec li i {
+                                margin-right: 5px;
+                            }
+
+                            /***************************** dark-mode *****************************/
+
+                            .menu714118d2b2e9457a94134762e94de1ec.dark-mode {
+                                background-color: rgb(30, 30, 30);
+                                color: white;
+                                /*box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);*/
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec.dark-mode>div {
+                                background-color: rgb(50, 50, 50);
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec.dark-mode li:hover {
+                                background-color: rgb(40, 40, 40);
+                                color: white;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec.dark-mode ul {
+                                color: lightgray;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec.dark-mode .profile-box .email {
+                                color: lightgray;
+                            }
+                        </style>
+
+                        <div class="menu714118d2b2e9457a94134762e94de1ec dark-mode">
+                            <div class="profile-box clearfix">
+                                <img src="./statics/defaultProfile.jpg" alt="user image">
+                                <span class="name">Username</span>
+                                <br>
+                                <span class="email">username@Email.com</span>
+                            </div>
+                            <div class="management-div">
+                                <ul>Manage
+                                    <li>
+                                        <a asp-controller="Account" asp-action="Dashboard">
+                                            <i class="fa-solid fa-chart-line"></i>
+                                            Dashborad
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a asp-controller="Account" asp-action="Settings">
+                                            <i class="fa-solid fa-gear"></i>
+                                            Settings
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a asp-controller="Inventory" asp-action="WebForm">
+                                            <i class="fa-regular fa-newspaper"></i>
+                                            Purchase
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="work-div">
+                                <ul>Account
+                                    <li>
+                                        <a asp-controller="Account" asp-action="Logout"
+                                            asp-route-returnUrl="@currentUrl">
+                                            <i class="fa-solid fa-right-from-bracket"></i>
+                                            Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="menu714118d2b2e9457a94134762e94de1ec login dark-mode">
+                            <div class="profile-box clearfix">
+                                <img src="./statics/defaultProfile.jpg" alt="">
+                            </div>
+                            <div class="management-div">
+                                <ul>Account
+                                    <li>
+                                        <a asp-controller="Account" asp-action="Login"
+                                            asp-route-returnUrl="@currentUrl">
+                                            <i class="fa-solid fa-right-to-bracket"></i>
+                                            Login
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a asp-controller="Account" asp-action="SignUp">
+                                            <i class="fa-solid fa-user-plus"></i>
+                                            Create a new account
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
