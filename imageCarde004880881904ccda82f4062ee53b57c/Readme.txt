@@ -1,0 +1,3 @@
+- Title: Image Card
+- Description: A movie image card with title, summary and some other useful information about the movie.
+- Tags: card image movie

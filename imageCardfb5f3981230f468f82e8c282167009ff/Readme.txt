@@ -1,0 +1,3 @@
+- Title: Image Card
+- Description: A simple small image card with some hidden info that can be revealed when hover over the image. 
+- Tags: image card
