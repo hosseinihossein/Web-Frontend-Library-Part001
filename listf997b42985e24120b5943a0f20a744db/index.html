@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="imageListf997b42985e24120b5943a0f20a744db">
+        <style>
+            #imageListf997b42985e24120b5943a0f20a744db {
+                width: fit-content;
+                margin: auto;
+                /*background-color: #333;*/
+                padding: 20px;
+                border-radius: 20px;
+                border: 1px solid gray;
+            }
+
+            #imageListf997b42985e24120b5943a0f20a744db img {
+                width: 30px;
+                height: 100px;
+                object-fit: cover;
+                border-radius: 20px;
+                overflow: hidden;
+                transition: 0.3s;
+            }
+        </style>
+
+        <img src="./statics/bird001.webp" alt="">
+        <img src="./statics/nature001.webp" alt="">
+        <img src="./statics/Oppenheimer001.jpg" alt="">
+        <img src="./statics/pizza001.webp" alt="">
+        <img src="./statics/team001.webp" alt="">
+
+        <script>
+            let mainElement_imageListf997b42985e24120b5943a0f20a744db = document.getElementById("imageListf997b42985e24120b5943a0f20a744db");
+            let images_imageListf997b42985e24120b5943a0f20a744db = mainElement_imageListf997b42985e24120b5943a0f20a744db.getElementsByTagName("img");
+
+            mainElement_imageListf997b42985e24120b5943a0f20a744db.addEventListener("mouseenter", () => {
+                images_imageListf997b42985e24120b5943a0f20a744db[2].style.width = "100px";
+            });
+
+            mainElement_imageListf997b42985e24120b5943a0f20a744db.addEventListener("mouseleave", () => {
+                for (let img of images_imageListf997b42985e24120b5943a0f20a744db) {
+                    img.style.width = "30px";
+                }
+            });
+
+            for (let image of images_imageListf997b42985e24120b5943a0f20a744db) {
+                image.addEventListener("mouseenter", () => {
+                    for (let img of images_imageListf997b42985e24120b5943a0f20a744db) {
+                        img.style.width = "30px";
+                    }
+                    image.style.width = "100px";
+                });
+            }
+        </script>
+    </div>
+</body>
+
+</html>

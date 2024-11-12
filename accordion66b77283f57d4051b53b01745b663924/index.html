@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+            background-color: #111;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="accordion66b77283f57d4051b53b01745b663924">
+        <style>
+            #accordion66b77283f57d4051b53b01745b663924 {
+                background-color: #292929;
+                color: white;
+                padding: 20px;
+                border-radius: 10px;
+                width: 80vw;
+                margin: 0 auto;
+            }
+
+            #accordion66b77283f57d4051b53b01745b663924 .header {
+                font-size: 18px;
+                padding: 0 20px 20px 20px;
+                display: inline-block;
+                border-bottom: 2px solid #e388a7;
+                position: relative;
+                top: 2px;
+            }
+
+            #accordion66b77283f57d4051b53b01745b663924 .header i {
+                color: pink;
+            }
+        </style>
+
+        <div class="header">
+            <i class="fa-solid fa-download"></i>
+            <span>Download</span>
+        </div>
+
+        <hr style="margin: 0 0 20px 0;border-color: yellow;">
+
+        <div class="accordion-box">
+            <style>
+                #accordion66b77283f57d4051b53b01745b663924 .accordion-container {
+                    margin-bottom: 10px;
+                }
+
+                #accordion66b77283f57d4051b53b01745b663924 .accordion-container:first-child {
+                    margin-top: 10px;
+                }
+
+                #accordion66b77283f57d4051b53b01745b663924 .accordion-container .accordion {
+                    background-color: #1d1d1d;
+                    color: white;
+                    cursor: pointer;
+                    padding: 20px;
+                    width: 100%;
+                    border: 1px solid black;
+                    border-radius: 10px;
+                    text-align: left;
+                    outline: none;
+                    font-size: 14px;
+                    transition: 0.4s;
+                }
+
+                #accordion66b77283f57d4051b53b01745b663924 .accordion-container .accordion.active {
+                    border-radius: 10px 10px 0 0;
+                    color: #ff9fdd;
+                }
+
+                /*#accordion66b77283f57d4051b53b01745b663924 .accordion-container .accordion:hover {
+                    box-shadow: 0 0 5px white;
+                }*/
+
+                #accordion66b77283f57d4051b53b01745b663924 .accordion-container .accordion span {
+                    padding: 0px 10px;
+                    border-left: 1px solid white;
+                    margin: 5px 0;
+                    display: inline-block;
+                }
+
+                #accordion66b77283f57d4051b53b01745b663924 .accordion-container .accordion span.info-span {
+                    color: #aaa;
+                    font-size: 14px;
+                }
+
+                #accordion66b77283f57d4051b53b01745b663924 .accordion-container .panel {
+                    padding: 0px 18px;
+                    background-color: white;
+                    overflow: hidden;
+                    max-height: 0;
+                    transition: all 0.2s ease-out;
+                    background-color: black;
+                    border-radius: 0 0 10px 10px;
+                    font-size: 14px;
+                }
+
+                #accordion66b77283f57d4051b53b01745b663924 .accordion-container .accordion:after {
+                    content: '\02795';
+                    /* Unicode character for "plus" sign (+) */
+                    font-size: 14px;
+                    color: white;
+                    float: right;
+                    margin-left: 5px;
+                }
+
+                #accordion66b77283f57d4051b53b01745b663924 .accordion-container .accordion.active:after {
+                    content: "\2796";
+                    /* Unicode character for "minus" sign (-) */
+                }
+
+                #accordion66b77283f57d4051b53b01745b663924 .accordion-container a {
+                    text-decoration: none;
+                    padding: 10px 20px;
+                    background-color: #292929;
+                    border: 2px solid #292929;
+                    border-radius: 20px;
+                    margin: 0 3px;
+                    color: white;
+                    /*font-weight: bold;*/
+                }
+
+                #accordion66b77283f57d4051b53b01745b663924 .accordion-container a:hover {
+                    background-color: #1b1b1b;
+                    color: #f55dbf;
+                }
+            </style>
+
+            <div class="accordion-container">
+                <button class="accordion" onclick="toggleActive_a57b97f9bd6d9494090be0bc07cd8608f(this)">
+                    <span>Season 01</span>
+                    <span>Completed</span>
+                </button>
+                <div class="panel">
+
+                    <div class="accordion-container">
+                        <button class="accordion"
+                            onclick="toggleActive_a57b97f9bd6d9494090be0bc07cd8608f(this, this.parentElement.parentElement)">
+                            <span>WEB-DL x265 10bit 720p</span>
+                            <span title="Soft Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                            <span title="Dubbed"><i class="fa-solid fa-headset"></i></span>
+                            <span><i class="fa-solid fa-folder-tree"></i> 08 episodes</span>
+                            <span>size: 120MB</span>
+                            <span class="info-span"><i style="color: orangered;" class="fa-solid fa-circle-info"></i>
+                                Colors have more depth and intensity in 10-bit versions
+                            </span>
+                        </button>
+                        <div class="panel">
+                            <div class="clearfix"
+                                style="margin: 10px;padding: 10px;border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+                                <div style="float: left;margin: 35px 10px;">
+                                    <a href="" download="">01</a>
+                                    <a href="" download="">02</a>
+                                    <a href="" download="">03</a>
+                                    <a href="" download="">04</a>
+                                    <a href="" download="">05</a>
+                                    <a href="" download="">06</a>
+                                    <a href="" download="">07</a>
+                                    <a href="" download="">08</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-container">
+                        <button class="accordion"
+                            onclick="toggleActive_a57b97f9bd6d9494090be0bc07cd8608f(this, this.parentElement.parentElement)">
+                            <span>WEB-DL x265 10bit 1080p</span>
+                            <span title="Soft Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                            <span title="Dubbed"><i class="fa-solid fa-headset"></i></span>
+                            <span><i class="fa-solid fa-folder-tree"></i> 08 episodes</span>
+                            <span>size: 220MB</span>
+                            <span class="info-span"><i style="color: orangered;" class="fa-solid fa-circle-info"></i>
+                                Colors have more depth and intensity in 10-bit versions
+                            </span>
+                        </button>
+                        <div class="panel">
+                            <div class="clearfix"
+                                style="margin: 10px;padding: 10px;border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+                                <div style="float: left;margin: 35px 10px;">
+                                    <a href="" download="">01</a>
+                                    <a href="" download="">02</a>
+                                    <a href="" download="">03</a>
+                                    <a href="" download="">04</a>
+                                    <a href="" download="">05</a>
+                                    <a href="" download="">06</a>
+                                    <a href="" download="">07</a>
+                                    <a href="" download="">08</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-container">
+                <button class="accordion" onclick="toggleActive_a57b97f9bd6d9494090be0bc07cd8608f(this)">
+                    <span>Season 02</span>
+                    <!--span>Completed</span-->
+                </button>
+                <div class="panel">
+
+                    <div class="accordion-container">
+                        <button class="accordion"
+                            onclick="toggleActive_a57b97f9bd6d9494090be0bc07cd8608f(this, this.parentElement.parentElement)">
+                            <span>WEB-DL x265 10bit 720p</span>
+                            <span title="Soft Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                            <span title="Dubbed"><i class="fa-solid fa-headset"></i></span>
+                            <span><i class="fa-solid fa-folder-tree"></i> 03 episodes</span>
+                            <span>size: 120MB</span>
+                            <span class="info-span"><i style="color: orangered;" class="fa-solid fa-circle-info"></i>
+                                Colors have more depth and intensity in 10-bit versions
+                            </span>
+                        </button>
+                        <div class="panel">
+                            <div class="clearfix"
+                                style="margin: 10px;padding: 10px;border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+                                <div style="float: left;margin: 35px 10px;">
+                                    <a href="" download="">01</a>
+                                    <a href="" download="">02</a>
+                                    <a href="" download="">03</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-container">
+                        <button class="accordion"
+                            onclick="toggleActive_a57b97f9bd6d9494090be0bc07cd8608f(this, this.parentElement.parentElement)">
+                            <span>WEB-DL x265 10bit 1080p</span>
+                            <span title="Soft Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                            <span title="Dubbed"><i class="fa-solid fa-headset"></i></span>
+                            <span><i class="fa-solid fa-folder-tree"></i> 03 episodes</span>
+                            <span>size: 220MB</span>
+                            <span class="info-span"><i style="color: orangered;" class="fa-solid fa-circle-info"></i>
+                                Colors have more depth and intensity in 10-bit versions
+                            </span>
+                        </button>
+                        <div class="panel">
+                            <div class="clearfix"
+                                style="margin: 10px;padding: 10px;border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+                                <div style="float: left;margin: 35px 10px;">
+                                    <a href="" download="">01</a>
+                                    <a href="" download="">02</a>
+                                    <a href="" download="">03</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-container">
+                <button class="accordion" onclick="toggleActive_a57b97f9bd6d9494090be0bc07cd8608f(this)">
+                    <span>Original</span>
+                    <span title="Soft Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                    <span title="Dubbed"><i class="fa-solid fa-headset"></i></span>
+                    <span class="info-span"><i style="color: orangered;" class="fa-solid fa-circle-info"></i>
+                        Colors have more depth and intensity in 10-bit versions
+                    </span>
+                </button>
+                <div class="panel">
+                    <div class="clearfix"
+                        style="margin: 10px;padding: 10px;border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+                        <div style="float: left;margin: 35px 10px;">
+                            <a href=""><i style="color: #f55dbf;" class="fa-solid fa-download"></i> Download with direct
+                                link</a>
+                            <a href=""><i style="color: #f55dbf;" class=" fa-solid fa-image"></i> Sample resolution</a>
+                        </div>
+                        <div style="float: right;text-align: center;">
+                            <h2 style="color: #f55dbf; margin: 20px;">WEB-DL x265 10bit 720p</h2>
+                            <span>size: 1.2 GB</span>
+                        </div>
+                    </div>
+                    <div class="clearfix"
+                        style="margin: 10px;padding: 10px;border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+                        <div style="float: left;margin: 35px 10px;">
+                            <a href=""><i style="color: #f55dbf;" class="fa-solid fa-download"></i> Download with direct
+                                link</a>
+                            <a href=""><i style="color: #f55dbf;" class=" fa-solid fa-image"></i> Sample resolution</a>
+                        </div>
+                        <div style="float: right;text-align: center;">
+                            <h2 style="color: #f55dbf; margin: 20px;">WEB-DL x265 10bit 1080p</h2>
+                            <span>size: 3.5 GB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-container">
+                <button class="accordion" onclick="toggleActive_a57b97f9bd6d9494090be0bc07cd8608f(this)">
+                    <span>Dubbed</span>
+                    <span title="Soft Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                    <span title="Dubbed"><i class="fa-solid fa-headset"></i></span>
+                    <span class="info-span"><i style="color: orangered;" class="fa-solid fa-circle-info"></i>
+                        Colors have more depth and intensity in 10-bit versions
+                    </span>
+                </button>
+                <div class="panel">
+                    <div class="clearfix"
+                        style="margin: 10px;padding: 10px;border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+                        <div style="float: left;margin: 35px 10px;">
+                            <a href=""><i style="color: #f55dbf;" class="fa-solid fa-download"></i> Download with direct
+                                link</a>
+                            <a href=""><i style="color: #f55dbf;" class=" fa-solid fa-image"></i> Sample resolution</a>
+                        </div>
+                        <div style="float: right;text-align: center;">
+                            <h2 style="color: #f55dbf; margin: 20px;">WEB-DL x265 10bit 720p</h2>
+                            <span>size: 1.2 GB</span>
+                        </div>
+                    </div>
+                    <div class="clearfix"
+                        style="margin: 10px;padding: 10px;border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+                        <div style="float: left;margin: 35px 10px;">
+                            <a href=""><i style="color: #f55dbf;" class="fa-solid fa-download"></i> Download with direct
+                                link</a>
+                            <a href=""><i style="color: #f55dbf;" class=" fa-solid fa-image"></i> Sample resolution</a>
+                        </div>
+                        <div style="float: right;text-align: center;">
+                            <h2 style="color: #f55dbf; margin: 20px;">WEB-DL x265 10bit 1080p</h2>
+                            <span>size: 3.5 GB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <span style="color: #aaa;font-size: 14px;">
+                <i style="color: orangered;" class="fa-solid fa-circle-info"></i>
+                Colors have more depth and intensity in 10-bit versions
+            </span>
+
+            <script>
+                function toggleActive_a57b97f9bd6d9494090be0bc07cd8608f(btn, parentPanel = null) {
+                    btn.classList.toggle("active");
+                    let panel = btn.nextElementSibling;
+                    if (parseInt(panel.style.maxHeight) > 0) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                    if (parentPanel != null) {
+                        parentPanel.style.maxHeight = (parentPanel.scrollHeight + panel.scrollHeight) + "px";
+                    }
+                }
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

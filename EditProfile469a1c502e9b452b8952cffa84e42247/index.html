@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="EditProfile469a1c502e9b452b8952cffa84e42247" class="dark-mode">
+        <style>
+            #EditProfile469a1c502e9b452b8952cffa84e42247 {
+                position: relative;
+                box-shadow: 0 0 5px gray;
+                max-width: 60%;
+                min-width: 600px;
+                min-height: 240px;
+                margin: auto;
+                padding: 20px 120px 20px;
+                border-radius: 3px;
+            }
+
+            @media screen and (max-width:800px) {
+                #EditProfile469a1c502e9b452b8952cffa84e42247 {
+                    width: 100%;
+                    min-width: 100%;
+                    max-width: none;
+                    margin-top: 100px;
+                    padding: 120px 20px 40px;
+                }
+
+            }
+
+            #EditProfile469a1c502e9b452b8952cffa84e42247.dark-mode {
+                box-shadow: 0 0 5px #ccc;
+                background-color: black;
+            }
+
+            #EditProfile469a1c502e9b452b8952cffa84e42247 #img-box {
+                position: absolute;
+                left: -100px;
+                width: 200px;
+                height: 200px;
+
+            }
+
+            @media screen and (max-width:800px) {
+                #EditProfile469a1c502e9b452b8952cffa84e42247 #img-box {
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: -100px;
+                }
+            }
+
+            #EditProfile469a1c502e9b452b8952cffa84e42247 #profile-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+                overflow: hidden;
+                box-shadow: 0 0 3px gray;
+            }
+
+            #EditProfile469a1c502e9b452b8952cffa84e42247.dark-mode #profile-img {
+                box-shadow: 0 0 3px #ccc;
+            }
+
+            /*#EditProfile469a1c502e9b452b8952cffa84e42247 #edit-form {}*/
+
+            #EditProfile469a1c502e9b452b8952cffa84e42247 #edit-form label {
+                color: black;
+            }
+
+            #EditProfile469a1c502e9b452b8952cffa84e42247.dark-mode #edit-form label {
+                color: white;
+                font-size: 14px;
+                margin: 10px 0;
+                padding: 1px 0;
+            }
+
+            #EditProfile469a1c502e9b452b8952cffa84e42247 #edit-form input[type=text] {
+                background-color: rgba(255, 255, 255, 1);
+                color: black;
+                font-size: 16px;
+                padding: 5px 10px;
+                border: 1px solid gray;
+                border-radius: 5px;
+                margin: 10px 0;
+            }
+
+            #EditProfile469a1c502e9b452b8952cffa84e42247 #edit-form #info2 label {
+                display: block;
+                margin: 20px 0;
+            }
+
+            #EditProfile469a1c502e9b452b8952cffa84e42247 #edit-form #info2 input[type=text] {
+                display: block;
+                width: 100%;
+            }
+
+            #EditProfile469a1c502e9b452b8952cffa84e42247 #edit-form input[type=checkbox] {
+                width: 18px;
+                height: 18px;
+            }
+
+            #EditProfile469a1c502e9b452b8952cffa84e42247 #edit-form #img-box label {
+                cursor: pointer;
+                font-size: 18px;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                text-align: center;
+                padding-top: 5px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -15px;
+                background-color: darkblue;
+                color: white;
+                margin: 0;
+            }
+
+            #EditProfile469a1c502e9b452b8952cffa84e42247 #edit-form #img-box input[type=file] {
+                display: none;
+            }
+
+            #EditProfile469a1c502e9b452b8952cffa84e42247 #edit-form #info3 textarea {
+                max-width: calc(100% - 20px);
+                min-width: calc(100% - 20px);
+                height: 100px;
+                padding: 5px 10px;
+                background-color: white;
+                margin: 10px;
+            }
+
+            #EditProfile469a1c502e9b452b8952cffa84e42247 #username-h3 {
+                margin-top: 0;
+            }
+
+            @media screen and (max-width:800px) {
+                #EditProfile469a1c502e9b452b8952cffa84e42247 #username-h3 {
+                    text-align: center;
+                }
+            }
+
+            #EditProfile469a1c502e9b452b8952cffa84e42247.dark-mode #username-h3 {
+                color: white;
+            }
+
+            #EditProfile469a1c502e9b452b8952cffa84e42247 .left {
+                float: left;
+                margin: 0 0 0 20px;
+                width: calc(60% - 10px);
+                /*border: 1px solid gray;*/
+            }
+
+            #EditProfile469a1c502e9b452b8952cffa84e42247 #info1,
+            #EditProfile469a1c502e9b452b8952cffa84e42247 #info2 {
+                border-bottom: 1px solid #ddd;
+            }
+
+            #EditProfile469a1c502e9b452b8952cffa84e42247.dark-mode #info1,
+            #EditProfile469a1c502e9b452b8952cffa84e42247.dark-mode #info2 {
+                border-bottom: 1px solid #222;
+            }
+
+            #EditProfile469a1c502e9b452b8952cffa84e42247 p {
+                margin: 10px 0;
+                font-size: 14px;
+            }
+
+            #EditProfile469a1c502e9b452b8952cffa84e42247.dark-mode p {
+                color: white;
+            }
+
+            #EditProfile469a1c502e9b452b8952cffa84e42247 .title,
+            #EditProfile469a1c502e9b452b8952cffa84e42247.dark-mode .title {
+                margin: 0;
+                font-size: 14px;
+                color: gray;
+            }
+
+            #EditProfile469a1c502e9b452b8952cffa84e42247 pre {
+                font-size: 14px;
+                color: #333;
+                margin: 10px 0 0 0;
+                text-wrap: wrap;
+            }
+
+            #EditProfile469a1c502e9b452b8952cffa84e42247.dark-mode pre {
+                color: #ccc;
+            }
+
+            #EditProfile469a1c502e9b452b8952cffa84e42247 .bold {
+                font-weight: bold;
+            }
+
+            #EditProfile469a1c502e9b452b8952cffa84e42247 #submit-btn {
+                text-decoration: none;
+                font-size: 14px;
+                padding: 5px 10px;
+                border-radius: 10px;
+                border: none;
+                color: black;
+                opacity: 0.7;
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+                background-color: transparent;
+                cursor: pointer;
+            }
+
+            #EditProfile469a1c502e9b452b8952cffa84e42247 #submit-btn:hover {
+                opacity: 1;
+                box-shadow: 0 0 3px gray;
+            }
+
+            #EditProfile469a1c502e9b452b8952cffa84e42247.dark-mode #submit-btn {
+                color: white;
+            }
+        </style>
+        <form id="edit-form" action="" enctype="multipart/form-data">
+            <div id="img-box">
+                <img id="profile-img" src="./statics/bird001.webp" alt="">
+                <label for="edit-img-input" title="Change Image"><i class="fa-solid fa-camera"></i>
+                    <input id="edit-img-input" type="file" oninput="showThumbnail(this)">
+                </label>
+            </div>
+            <div id="info1">
+                <label for="username-input">Username:</label>
+                <input type="text" value="username">
+            </div>
+            <div id="info2" class="clearfix">
+                <p class="title">Contact:</p>
+                <div class="left" style="max-width: calc(40% - 40px);">
+                    <label>Full Name:</label>
+                    <label>Email:</label>
+                    <label>Phone:</label>
+                    <label for="">Display Contact info Publicly:</label>
+                </div>
+                <div class="left">
+                    <input type="text" value="user full name" placeholder="FullName">
+                    <input type="text" value="useremail@company.com" placeholder="Email">
+                    <input type="text" value="(+1) 555 55 55 5555" placeholder="Phone">
+                    <input type="checkbox">
+                </div>
+            </div>
+            <div id="info3">
+                <p class="title">Bio:</p>
+                <textarea name="" id="">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+Delectus earum cum illo, magni nisi maiores,
+provident dicta non adipisci eaque distinctio, soluta voluptas eos saepe.</textarea>
+            </div>
+            <button type="submit" id="submit-btn" href="">Submit</button>
+        </form>
+        <script>
+            function showThumbnail(element) {
+                if (element.files[0]) {
+                    if (element.files[0].size > 200 * 1024) {
+                        alert("The selected image needs to be less than 200KB!");
+                        element.value = null;
+                        return;
+                    }
+                    let showcaseImage = element.parentElement.previousElementSibling;
+                    let reader = new FileReader();
+                    reader.onload = (e) => {
+                        showcaseImage.src = e.target.result;
+                    };
+                    reader.readAsDataURL(element.files[0]);
+                    /*showcaseImage.style.display = "block";*/
+                }
+                /*else {
+                    let showcaseImage = element.nextElementSibling;
+                    showcaseImage.src = "";
+                    showcaseImage.style.display = "none";
+                }*/
+            }
+        </script>
+    </div>
+</body>
+
+</html>

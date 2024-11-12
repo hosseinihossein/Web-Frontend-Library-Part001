@@ -1,0 +1,3 @@
+- Title: Slider Box
+- Description: A box with some cards that can be clicked and dragged smoothly.
+- Tags: drag slide slider card container

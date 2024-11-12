@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"-->
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+            background-color: black;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="profile2fe71d9d50fa4b6dbe4362bf03104734" class="dark-mode">
+        <style>
+            #profile2fe71d9d50fa4b6dbe4362bf03104734 {
+                position: relative;
+                box-shadow: 0 0 5px gray;
+                max-width: 60%;
+                min-width: 560px;
+                min-height: 240px;
+                margin: auto;
+                padding: 20px 120px;
+                border-radius: 3px;
+            }
+
+            @media screen and (max-width:600px) {
+                #profile2fe71d9d50fa4b6dbe4362bf03104734 {
+                    width: 100%;
+                    min-width: 100%;
+                    max-width: none;
+                    margin-top: 100px;
+                    padding: 120px 20px 20px;
+                }
+
+            }
+
+            #profile2fe71d9d50fa4b6dbe4362bf03104734.dark-mode {
+                box-shadow: 0 0 5px #ccc;
+            }
+
+            #profile2fe71d9d50fa4b6dbe4362bf03104734 #profile-img {
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 50%;
+                overflow: hidden;
+                left: -100px;
+                box-shadow: 0 0 3px gray;
+            }
+
+            @media screen and (max-width:600px) {
+                #profile2fe71d9d50fa4b6dbe4362bf03104734 #profile-img {
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: -100px;
+                }
+            }
+
+            #profile2fe71d9d50fa4b6dbe4362bf03104734.dark-mode #profile-img {
+                box-shadow: 0 0 3px #ccc;
+            }
+
+            #profile2fe71d9d50fa4b6dbe4362bf03104734 #username-h3 {
+                margin-top: 0;
+            }
+
+            @media screen and (max-width:600px) {
+                #profile2fe71d9d50fa4b6dbe4362bf03104734 #username-h3 {
+                    text-align: center;
+                }
+            }
+
+            #profile2fe71d9d50fa4b6dbe4362bf03104734.dark-mode #username-h3 {
+                color: white;
+            }
+
+            #profile2fe71d9d50fa4b6dbe4362bf03104734 .left {
+                float: left;
+                margin: 0 20px;
+            }
+
+            #profile2fe71d9d50fa4b6dbe4362bf03104734 #info1,
+            #profile2fe71d9d50fa4b6dbe4362bf03104734 #info2 {
+                border-bottom: 1px solid #ddd;
+            }
+
+            #profile2fe71d9d50fa4b6dbe4362bf03104734.dark-mode #info1,
+            #profile2fe71d9d50fa4b6dbe4362bf03104734.dark-mode #info2 {
+                border-bottom: 1px solid #222;
+            }
+
+            #profile2fe71d9d50fa4b6dbe4362bf03104734 p {
+                margin: 10px 0;
+                font-size: 14px;
+            }
+
+            #profile2fe71d9d50fa4b6dbe4362bf03104734.dark-mode p {
+                color: white;
+            }
+
+            #profile2fe71d9d50fa4b6dbe4362bf03104734 .title,
+            #profile2fe71d9d50fa4b6dbe4362bf03104734.dark-mode .title {
+                margin: 0;
+                font-size: 14px;
+                color: gray;
+            }
+
+            #profile2fe71d9d50fa4b6dbe4362bf03104734 pre {
+                font-size: 14px;
+                color: #333;
+                margin: 10px 0 0 0;
+                text-wrap: wrap;
+            }
+
+            #profile2fe71d9d50fa4b6dbe4362bf03104734.dark-mode pre {
+                color: #ccc;
+            }
+
+            #profile2fe71d9d50fa4b6dbe4362bf03104734 .bold {
+                font-weight: bold;
+            }
+
+            #profile2fe71d9d50fa4b6dbe4362bf03104734 #edit-link {
+                text-decoration: none;
+                font-size: 14px;
+                padding: 5px 10px;
+                border-radius: 10px;
+                /*border: 1px solid gray;*/
+                color: black;
+                opacity: 0.7;
+                position: absolute;
+                right: 10px;
+                top: 10px;
+            }
+
+            #profile2fe71d9d50fa4b6dbe4362bf03104734 #edit-link:hover {
+                opacity: 1;
+                box-shadow: 0 0 3px gray;
+            }
+
+            #profile2fe71d9d50fa4b6dbe4362bf03104734.dark-mode #edit-link {
+                color: white;
+            }
+        </style>
+        <img id="profile-img" src="./statics/bird001.webp" alt="">
+        <div id="info1">
+            <h3 id="username-h3">UserName</h3>
+        </div>
+        <div id="info2" class="clearfix">
+            <p class="title">Contact:</p>
+            <div class="left">
+                <p>Full Name:</p>
+                <p>Email:</p>
+                <p>Phone:</p>
+            </div>
+            <div class="left">
+                <p class="bold">user full name</p>
+                <p class="bold">useremail@company.com</p>
+                <p class="bold">(+1) 555 55 55 5555</p>
+            </div>
+        </div>
+        <div id="info3">
+            <p class="title">Bio:</p>
+            <pre>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+Delectus earum cum illo, magni nisi maiores,
+provident dicta non adipisci eaque distinctio, soluta voluptas eos saepe.</pre>
+        </div>
+        <a id="edit-link" href="">Edit</a>
+    </div>
+</body>
+
+</html>
