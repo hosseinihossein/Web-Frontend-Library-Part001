@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+
+    <!----------------------------------------------------------------->
+
+    <div id="commentbox7ede10ed5f974d38a0eba405cd494715" class="clearfix">
+        <style>
+            #commentbox7ede10ed5f974d38a0eba405cd494715 {
+                width: 60%;
+                margin: auto;
+            }
+        </style>
+
+        <style>
+            .commentd1a6fd35cc894a87ab0050406100447c {
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                background-color: #272727;
+                color: white;
+                padding: 0px 10px 30px 10px;
+                border-radius: 10px;
+                border: 1px solid black;
+                margin: 5px auto 0px;
+                width: 100%;
+                position: relative;
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c:hover {
+                background-color: #333333;
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c.reply {
+                width: 95%;
+                margin-left: 5%;
+            }
+
+            /*.commentd1a6fd35cc894a87ab0050406100447c.spoil {
+                filter: blur(5px);
+            }*/
+
+            .commentd1a6fd35cc894a87ab0050406100447c>div {
+                margin: 10px 10px 0 10px;
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c span,
+            .commentd1a6fd35cc894a87ab0050406100447c button {
+                margin: 5px;
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c span.date {
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: 12px;
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c img {
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c .left {
+                float: left;
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c .review-box {
+                /*float: right;*/
+                position: absolute;
+                right: 5px;
+                bottom: 5px;
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c i {
+                font-size: 14px;
+
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c button {
+                border: 1px solid #ef6e9c;
+                background-color: #272727;
+                border-radius: 20px;
+                color: white;
+                /*padding: 5px 15px 10px 15px;*/
+                padding: 5px;
+                margin: 0px;
+                cursor: pointer;
+                font-size: 12px;
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c button:hover {
+                /*background-color: #ef6e9c;*/
+                background-color: #e2004f;
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c .user-name {
+                color: #ef6e9c;
+                margin: 5px;
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c a {
+                text-decoration: none;
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c .comment-box p {
+                line-height: 1.5rem;
+                /*letter-spacing: 1px;*/
+                margin: 5px;
+                font-size: 14px;
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c .spoil-div {
+                position: absolute;
+                z-index: 1;
+                /*width: 100%;*/
+                top: -10px;
+                bottom: 0px;
+                right: -10px;
+                left: -10px;
+                text-align: center;
+                backdrop-filter: blur(5px) brightness(50%);
+                /*filter: brightness(50%);*/
+                border-radius: 10px;
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c .spoil-div * {
+                display: inline-block;
+                /*transform: translateY(50%);*/
+                margin-top: 10px;
+            }
+        </style>
+
+        <div class="commentd1a6fd35cc894a87ab0050406100447c">
+            <div class="user-image-box">
+                <img src="./statics/defaultProfile.jpg" alt="">
+            </div>
+            <div class="comment-box">
+                <div class="clearfix">
+                    <div class="left">
+                        <a href="" class="user-name"><b>username1</b></a>
+                        <span class="date">12/25/2023</span>
+                    </div>
+                    <div class="review-box">
+                        <button class="reply-btn" onclick="function01_modalcf829ce8e2b48eeaf98607844fc5dbe(this)">
+                            <i class="fa-solid fa-reply"></i><span> Reply</span>
+                        </button>
+                        <button class="like-btn">
+                            <!--i class="fa-regular fa-thumbs-up"></i-->
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            <span> 16</span>
+                        </button>
+                        <button class="dislike-btn">
+                            <i class="fa-regular fa-thumbs-down"></i>
+                            <!--i class="fa-solid fa-thumbs-down"></i-->
+                            <span> 4</span>
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam aliquid temporibus molestias
+                        mollitia natus. Odio voluptas officia voluptates laboriosam pariatur dicta, ullam corrupti!
+                        Quibusdam sunt accusantium veritatis architecto officia eum cupiditate deleniti. Dolorem placeat
+                        aliquid sed voluptate provident veniam aliquam eveniet esse illum voluptatum totam debitis
+                        atque, dolorum beatae molestiae.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="commentd1a6fd35cc894a87ab0050406100447c reply">
+            <div class="user-image-box">
+                <img src="./statics/defaultProfile.jpg" alt="">
+            </div>
+            <div class="comment-box">
+                <div class="clearfix">
+                    <div class="left">
+                        <a href="" class="user-name"><b>username2</b></a><span style="font-size: 14px;">to
+                            username1</span>
+                        <span class="date">12/25/2023</span>
+                    </div>
+                    <div class="review-box">
+                        <button class="reply-btn" onclick="function01_modalcf829ce8e2b48eeaf98607844fc5dbe(this)">
+                            <i class="fa-solid fa-reply"></i><span> Reply</span>
+                        </button>
+                        <button class="like-btn">
+                            <!--i class="fa-regular fa-thumbs-up"></i-->
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            <span> 16</span>
+                        </button>
+                        <button class="dislike-btn">
+                            <i class="fa-regular fa-thumbs-down"></i>
+                            <!--i class="fa-solid fa-thumbs-down"></i-->
+                            <span> 4</span>
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam aliquid temporibus molestias
+                        mollitia natus.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="commentd1a6fd35cc894a87ab0050406100447c spoil">
+            <div class="spoil-div">
+                <span style="font-size: 14px;">
+                    <i style="color: orangered;font-size: 16px;" class="fa-solid fa-circle-info"></i>
+                    This comment seems to spoil the story!
+                </span>
+                <button onclick="this.parentElement.style.display='none'">Reveal</button>
+            </div>
+            <div class="user-image-box">
+                <img src="./statics/defaultProfile.jpg" alt="">
+            </div>
+            <div class="comment-box">
+                <div class="clearfix">
+                    <div class="left">
+                        <a href="" class="user-name"><b>username3</b></a>
+                        <span class="date">12/25/2023</span>
+                    </div>
+                    <div class="review-box">
+                        <button class="reply-btn" onclick="function01_modalcf829ce8e2b48eeaf98607844fc5dbe(this)">
+                            <i class="fa-solid fa-reply"></i><span> Reply</span>
+                        </button>
+                        <button class="like-btn">
+                            <!--i class="fa-regular fa-thumbs-up"></i-->
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            <span> 16</span>
+                        </button>
+                        <button class="dislike-btn">
+                            <i class="fa-regular fa-thumbs-down"></i>
+                            <!--i class="fa-solid fa-thumbs-down"></i-->
+                            <span> 4</span>
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!----------------------------------------------------------------->
+    <div id="modalcf829ce8e2b48eeaf98607844fc5dbe">
+        <style>
+            #modalcf829ce8e2b48eeaf98607844fc5dbe {
+                width: fit-content;
+                margin: 50px auto 0;
+            }
+
+            /* The Modal (background) */
+            #modalcf829ce8e2b48eeaf98607844fc5dbe .modal {
+                display: none;
+                /* Hidden by default */
+                position: fixed;
+                /* Stay in place */
+                z-index: 2;
+                /* Sit on top */
+                left: 0;
+                top: 0;
+                width: 100%;
+                /* Full width */
+                height: 100%;
+                /* Full height */
+                overflow: auto;
+                /* Enable scroll if needed */
+                background-color: rgb(0, 0, 0);
+                /* Fallback color */
+                background-color: rgba(0, 0, 0, 0.4);
+                /* Black w/ opacity */
+                backdrop-filter: blur(5px);
+            }
+
+            /* Modal Content/Box */
+            #modalcf829ce8e2b48eeaf98607844fc5dbe .modal-content {
+                margin: auto;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 60%;
+            }
+
+            /* The Close Button */
+            #modalcf829ce8e2b48eeaf98607844fc5dbe .close {
+                color: white;
+                /*float: right;*/
+                font-size: 28px;
+                font-weight: bold;
+                position: absolute;
+                right: 5px;
+                top: 0;
+            }
+
+            #modalcf829ce8e2b48eeaf98607844fc5dbe .close:hover,
+            #modalcf829ce8e2b48eeaf98607844fc5dbe .close:focus {
+                color: red;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        </style>
+
+        <!-- Trigger/Open The Modal -->
+        <!--button id="myBtn" onclick="function01_modalcf829ce8e2b48eeaf98607844fc5dbe(this)">Open Modal</button-->
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal" style="display: none;"
+            onclick="if(event.target==this){this.style.display = 'none';}">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="this.parentElement.parentElement.style.display = 'none'">×</span>
+
+                <div id="commentForm509a7539aa2a497183cc187ae239d9cb">
+                    <style>
+                        #commentForm509a7539aa2a497183cc187ae239d9cb {
+                            width: 100%;
+                            min-width: 300px;
+                            margin: auto;
+                        }
+
+                        #commentForm509a7539aa2a497183cc187ae239d9cb form {
+                            background-color: #272727;
+                            padding: 10px;
+                            margin: auto;
+                            overflow: hidden;
+                            border-radius: 10px;
+                        }
+
+                        #commentForm509a7539aa2a497183cc187ae239d9cb form textarea {
+                            width: 100%;
+                            max-width: 100%;
+                            min-width: 100%;
+                            font-family: Helvetica, Arial, sans-serif;
+                            font-size: 16px;
+                            padding: 10px;
+                            outline: none;
+                            color: white;
+                            background-color: #494949;
+                            border: none;
+                            border-radius: 10px 10px 0 10px;
+                        }
+
+                        #commentForm509a7539aa2a497183cc187ae239d9cb form .left {
+                            float: left;
+                            margin-left: 10px;
+                        }
+
+                        #commentForm509a7539aa2a497183cc187ae239d9cb form .left p {
+                            margin-bottom: 10px;
+                        }
+
+                        #commentForm509a7539aa2a497183cc187ae239d9cb form .right {
+                            float: right;
+                            padding: 10px;
+                        }
+
+                        #commentForm509a7539aa2a497183cc187ae239d9cb form .right button {
+                            margin: 10px;
+                            padding: 10px 20px;
+                            background-color: #272727;
+                            color: white;
+                            border: 2px solid white;
+                            border-radius: 20px;
+                            cursor: pointer;
+                            font-size: 14px;
+                        }
+
+                        #commentForm509a7539aa2a497183cc187ae239d9cb form .right button:hover {
+                            background-color: #ef6e9c;
+                            border: 2px solid #ef6e9c;
+                        }
+                    </style>
+                    <form action="">
+                        <p id="reply-form-username" style="color: white;font-size: 14px;font-weight: normal;">To
+                            username:</p>
+                        <textarea name="comment" id="comment-text-area" cols="30" rows="2"
+                            placeholder="type your comment here ..."></textarea>
+                        <div class="clearfix">
+                            <div class="left">
+                                <!-- Rectangular switch -->
+
+                                <style>
+                                    /* The switch - the box around the slider */
+                                    #buttone278cca5da014ad69e59ca9c70eaf572 {
+                                        font-family: Helvetica, Arial, sans-serif;
+                                        color: white;
+                                    }
+
+                                    #buttone278cca5da014ad69e59ca9c70eaf572>p {
+                                        display: block;
+                                        font-size: 14px;
+                                    }
+
+                                    #buttone278cca5da014ad69e59ca9c70eaf572 .switch {
+                                        position: relative;
+                                        display: inline-block;
+                                        width: 70px;
+                                        height: 34px;
+                                        color: white;
+                                        font-size: 14px;
+                                    }
+
+                                    /* Hide default HTML checkbox */
+                                    #buttone278cca5da014ad69e59ca9c70eaf572 .switch input {
+                                        opacity: 0;
+                                        width: 0;
+                                        height: 0;
+                                    }
+
+                                    /* The slider */
+                                    #buttone278cca5da014ad69e59ca9c70eaf572 .slider {
+                                        position: absolute;
+                                        cursor: pointer;
+                                        top: 0;
+                                        left: 0;
+                                        right: 0;
+                                        bottom: 0;
+                                        background-color: black;
+                                        -webkit-transition: .4s;
+                                        transition: .4s;
+                                        padding: 8px 6px;
+                                    }
+
+                                    #buttone278cca5da014ad69e59ca9c70eaf572 .slider span {
+                                        margin-right: 15px;
+                                        font-family: Helvetica, Arial, sans-serif;
+                                    }
+
+                                    #buttone278cca5da014ad69e59ca9c70eaf572 .slider:before {
+                                        position: absolute;
+                                        content: "";
+                                        height: 34px;
+                                        width: 34px;
+                                        left: -1px;
+                                        bottom: 0px;
+                                        background-color: #ef6e9c;
+                                        mix-blend-mode: lighten;
+                                        -webkit-transition: .4s;
+                                        transition: .4s;
+                                    }
+
+                                    #buttone278cca5da014ad69e59ca9c70eaf572 input:checked+.slider:before {
+                                        width: 38px;
+                                        -webkit-transform: translateX(34px);
+                                        -ms-transform: translateX(34px);
+                                        transform: translateX(34px);
+                                    }
+
+                                    #buttone278cca5da014ad69e59ca9c70eaf572 .slider.round {
+                                        border-radius: 34px;
+                                    }
+
+                                    #buttone278cca5da014ad69e59ca9c70eaf572 .slider.round:before {
+                                        border-radius: 34px;
+                                    }
+                                </style>
+
+                                <div id="buttone278cca5da014ad69e59ca9c70eaf572">
+                                    <p><b>Contains spoiled contents?</b></p>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"><span><b>No</b></span><span><b>Yes</b></span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <button type="submit"><i class="fa-regular fa-paper-plane"></i> Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function function01_modalcf829ce8e2b48eeaf98607844fc5dbe(btn) {
+                let username = btn.parentElement.previousElementSibling.getElementsByClassName("user-name")[0].innerText;
+                let modal = document.getElementById("myModal");
+                modal.querySelector("#reply-form-username").innerHTML = "To " + username + " :";
+                modal.style.display = "block";
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

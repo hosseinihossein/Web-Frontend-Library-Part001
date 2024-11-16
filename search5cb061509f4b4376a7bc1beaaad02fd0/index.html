@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+            background-color: #111;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="search5cb061509f4b4376a7bc1beaaad02fd0">
+        <style>
+            #search5cb061509f4b4376a7bc1beaaad02fd0 {
+                padding: 10px;
+                border-bottom: 1px dashed gray;
+            }
+
+            #search5cb061509f4b4376a7bc1beaaad02fd0 form>div {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            #search5cb061509f4b4376a7bc1beaaad02fd0 form input[type=number] {
+                width: fit-content;
+                font-size: 16px;
+                padding: 12px 20px;
+                border: 1px solid #111;
+                border-radius: 10px;
+                display: block;
+                background-color: rgb(20, 40, 50);
+                overflow: visible;
+                color: #eee;
+                position: relative;
+            }
+
+            #search5cb061509f4b4376a7bc1beaaad02fd0 form input[type=number]::placeholder {
+                color: #aaa;
+            }
+
+            #search5cb061509f4b4376a7bc1beaaad02fd0 form button[type=submit] {
+                border: 2px solid white;
+                border-radius: 20px;
+                font-size: 16px;
+                font-weight: bold;
+                padding: 10px 20px;
+                color: white;
+                background-color: transparent;
+                cursor: pointer;
+                float: right;
+            }
+
+            #search5cb061509f4b4376a7bc1beaaad02fd0 form button[type=submit]:hover {
+                background-color: rgb(20, 40, 50);
+                color: lawngreen;
+                border-color: rgb(20, 40, 50);
+            }
+        </style>
+
+        <style>
+            .filterc989389831344968860237078e2a16f7 {
+                width: fit-content;
+                margin: 2px;
+                border: 1p solid gray;
+                position: relative;
+                /*float: left;*/
+            }
+
+            .filterc989389831344968860237078e2a16f7::after {
+                content: "";
+                border-top: 2px solid white;
+                border-left: 2px solid white;
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                padding: 3px;
+                rotate: 225deg;
+                transition: 0.3s;
+            }
+
+            .filterc989389831344968860237078e2a16f7.focused::after {
+                rotate: 45deg;
+                top: 18px;
+            }
+
+            .filterc989389831344968860237078e2a16f7 .mySelectInput {
+                width: 100%;
+                font-size: 16px;
+                padding: 12px 20px;
+                border: 2px solid #111;
+                border-radius: 10px;
+                display: block;
+                background-color: rgb(20, 40, 50);
+                overflow: visible;
+                color: #eee;
+                position: relative;
+            }
+
+            .filterc989389831344968860237078e2a16f7.focused .mySelectInput {
+                background-color: rgb(30, 60, 70);
+                border-color: white;
+            }
+
+            .filterc989389831344968860237078e2a16f7 .mySelectInput::placeholder {
+                color: #aaa;
+            }
+
+            .filterc989389831344968860237078e2a16f7 .filterContainer {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                height: 0px;
+                overflow: auto;
+                transition: 0.3s;
+                border-radius: 5px;
+                position: relative;
+                background-color: rgb(30, 60, 70);
+                max-height: 200px;
+                position: absolute;
+                z-index: 1;
+                width: 100%;
+            }
+
+            .filterc989389831344968860237078e2a16f7 .filterContainer li button {
+                border: 1px solid rgb(20, 40, 50);
+                /*margin-top: -1px;*/
+                background-color: rgb(30, 60, 70);
+                padding: 12px 20px;
+                font-size: 14px;
+                color: white;
+                display: block;
+                width: 100%;
+                text-align: start;
+                cursor: pointer;
+                position: relative;
+                z-index: 1;
+            }
+
+            .filterc989389831344968860237078e2a16f7 .filterContainer li button:hover {
+                background-color: rgb(30, 80, 90);
+            }
+
+            .filterc989389831344968860237078e2a16f7 .filterContainer li button.active {
+                background-color: rgb(30, 80, 90);
+            }
+
+            /***************** scroll ********************/
+            /* width */
+            .filterc989389831344968860237078e2a16f7 .filterContainer::-webkit-scrollbar {
+                width: 5px;
+            }
+
+            /* Track */
+            .filterc989389831344968860237078e2a16f7 .filterContainer::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px grey;
+                border-radius: 10px;
+            }
+
+            /* Handle */
+            .filterc989389831344968860237078e2a16f7 .filterContainer::-webkit-scrollbar-thumb {
+                background: red;
+                border-radius: 10px;
+            }
+
+            /* Handle on hover */
+            .filterc989389831344968860237078e2a16f7 .filterContainer::-webkit-scrollbar-thumb:hover {
+                background: #b30000;
+            }
+        </style>
+
+        <style>
+            .sliderButton52e0ab269f5c4b208af0f84c11f3528f {
+                width: fit-content;
+                border: 2px solid white;
+                border-radius: 10px;
+                padding: 14px 30px;
+                position: relative;
+                overflow: visible;
+                margin: 15px 10px;
+            }
+
+            .sliderButton52e0ab269f5c4b208af0f84c11f3528f::before {
+                content: "Title";
+                position: absolute;
+                top: -14px;
+                left: 5px;
+                background-color: #111;
+                color: white;
+                padding: 5px;
+                font-size: 14px;
+            }
+
+            .sliderButton52e0ab269f5c4b208af0f84c11f3528f#dubbed-div::before {
+                content: "Dubbed";
+            }
+
+            .sliderButton52e0ab269f5c4b208af0f84c11f3528f#subtitle-div::before {
+                content: "Subtitle";
+            }
+
+            .sliderButton52e0ab269f5c4b208af0f84c11f3528f#fourK-div::before {
+                content: "4K";
+            }
+
+            .sliderButton52e0ab269f5c4b208af0f84c11f3528f#threeD-div::before {
+                content: "3D";
+            }
+
+            /* The switch - the box around the slider */
+            .sliderButton52e0ab269f5c4b208af0f84c11f3528f .switch {
+                position: relative;
+                display: inline-block;
+                width: 32px;
+                height: 22px;
+            }
+
+            /* Hide default HTML checkbox */
+            .sliderButton52e0ab269f5c4b208af0f84c11f3528f .switch input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+
+            /* The slider */
+            .sliderButton52e0ab269f5c4b208af0f84c11f3528f .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: transparent;
+                -webkit-transition: .4s;
+                transition: .4s;
+                border: 2px solid white;
+            }
+
+            .sliderButton52e0ab269f5c4b208af0f84c11f3528f .slider:before {
+                position: absolute;
+                content: "";
+                height: 10px;
+                width: 10px;
+                left: 3px;
+                bottom: 4px;
+                background-color: white;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+
+            .sliderButton52e0ab269f5c4b208af0f84c11f3528f input:checked+.slider {
+                background-color: lawngreen;
+            }
+
+            .sliderButton52e0ab269f5c4b208af0f84c11f3528f input:focus+.slider {
+                box-shadow: 0 0 1px lawngreen;
+            }
+
+            .sliderButton52e0ab269f5c4b208af0f84c11f3528f input:checked+.slider:before {
+                -webkit-transform: translateX(12px);
+                -ms-transform: translateX(12px);
+                transform: translateX(12px);
+            }
+
+            /* Rounded sliders*/
+            .sliderButton52e0ab269f5c4b208af0f84c11f3528f .slider.round {
+                border-radius: 20px;
+            }
+
+            .sliderButton52e0ab269f5c4b208af0f84c11f3528f .slider.round:before {
+                border-radius: 50%;
+            }
+        </style>
+
+        <form action="" class="clearfix">
+            <div class="clearfix">
+                <div class="filterc989389831344968860237078e2a16f7">
+                    <input type="text" class="mySelectInput"
+                        onkeyup="if(event.key != 'ArrowUp' && event.key != 'ArrowDown'){filter_Script_a0d21024282f453f8247fefa6ec435f2(this);}"
+                        placeholder="Type" autocomplete="off">
+
+                    <ul class="filterContainer">
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">All
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Movie
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Series
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Animation
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Anime
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="filterc989389831344968860237078e2a16f7">
+                    <input type="text" class="mySelectInput"
+                        onkeyup="if(event.key != 'ArrowUp' && event.key != 'ArrowDown'){filter_Script_a0d21024282f453f8247fefa6ec435f2(this);}"
+                        placeholder="Genre" autocomplete="off">
+
+                    <ul class="filterContainer">
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Any
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Adventure
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Action
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Biography
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Comedy
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Crime
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Documentary
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Drama
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Experimental
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Fantasy
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Historical
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Horror
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Romance
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Sci-Fi
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Talk-Show
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Thriller
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Western
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Musical
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">War
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="filterc989389831344968860237078e2a16f7">
+                    <input type="text" class="mySelectInput"
+                        onkeyup="if(event.key != 'ArrowUp' && event.key != 'ArrowDown'){filter_Script_a0d21024282f453f8247fefa6ec435f2(this);}"
+                        placeholder="Country" autocomplete="off">
+
+                    <ul class="filterContainer">
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Any
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">US
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Canada
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">UK
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Italy
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Spain
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Japan
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Korea
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">India
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">France
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Australia
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="filterc989389831344968860237078e2a16f7">
+                    <input type="text" class="mySelectInput"
+                        onkeyup="if(event.key != 'ArrowUp' && event.key != 'ArrowDown'){filter_Script_a0d21024282f453f8247fefa6ec435f2(this);}"
+                        placeholder="Language" autocomplete="off">
+
+                    <ul class="filterContainer">
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Any
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">English
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Spanish
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Japanese
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="filterc989389831344968860237078e2a16f7">
+                    <input type="text" class="mySelectInput"
+                        onkeyup="if(event.key != 'ArrowUp' && event.key != 'ArrowDown'){filter_Script_a0d21024282f453f8247fefa6ec435f2(this);}"
+                        placeholder="IMDb" autocomplete="off">
+
+                    <ul class="filterContainer">
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Any
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">+9
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">+8
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">+7
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">+6
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">+5
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="filterc989389831344968860237078e2a16f7">
+                    <input type="text" class="mySelectInput"
+                        onkeyup="if(event.key != 'ArrowUp' && event.key != 'ArrowDown'){filter_Script_a0d21024282f453f8247fefa6ec435f2(this);}"
+                        placeholder="Sort By" autocomplete="off">
+
+                    <ul class="filterContainer">
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Any
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Newest
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Oldest
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">IMDb
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Rotten Tomatoes
+                            </button>
+                        </li>
+                        <li class="filterItems">
+                            <button type="button"
+                                onclick="this.parentElement.parentElement.previousElementSibling.value = this.innerText;this.parentElement.parentElement.previousElementSibling.focus();"
+                                class="innerFilterItem">Clients Rates
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="margin: 2px;">
+                    <input type="number" placeholder="From Year">
+                </div>
+
+                <div style="margin: 2px;">
+                    <input type="number" placeholder="To Year">
+                </div>
+            </div>
+
+            <div class="clearfix">
+                <div class="sliderButton52e0ab269f5c4b208af0f84c11f3528f" id="dubbed-div">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <div class="sliderButton52e0ab269f5c4b208af0f84c11f3528f" id="subtitle-div">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <div class="sliderButton52e0ab269f5c4b208af0f84c11f3528f" id="fourK-div">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <div class="sliderButton52e0ab269f5c4b208af0f84c11f3528f" id="threeD-div">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit">Search</button>
+        </form>
+
+        <script>
+            let mainElements_filterc989389831344968860237078e2a16f7 = document.getElementsByClassName("filterc989389831344968860237078e2a16f7");
+            for (let mainElement of mainElements_filterc989389831344968860237078e2a16f7) {
+                mainElement.querySelector(".mySelectInput").addEventListener("focus", () => {
+                    if (!mainElement.classList.contains("focused")) {
+                        mainElement.querySelector('.filterContainer').style.height = mainElement.querySelector('.filterContainer').scrollHeight + 'px';
+                        mainElement.classList.add("focused");
+                    }
+                });
+
+                mainElement.querySelector(".mySelectInput").addEventListener("keydown", (e) => {
+                    if (e.key == "ArrowDown") {
+                        let activeBtnIndex = -1;
+                        let innerBtns = mainElement.getElementsByClassName("innerFilterItem");
+                        for (let i = 0; i < innerBtns.length; i++) {
+                            if (innerBtns[i].classList.contains("active")) {
+                                activeBtnIndex = i;
+                                innerBtns[i].classList.remove("active");
+                            }
+                        }
+                        if (activeBtnIndex >= innerBtns.length - 1) {
+                            activeBtnIndex = innerBtns.length - 2;
+                        }
+                        innerBtns[activeBtnIndex + 1].classList.add("active");
+                        mainElement.querySelector(".mySelectInput").value = innerBtns[activeBtnIndex + 1].innerText;
+
+                        let topScroll = 0;
+                        for (let i = 0; i <= activeBtnIndex; i++) {
+                            topScroll += innerBtns[i].offsetHeight;
+                        }
+                        let innerBtnHeight = innerBtns[activeBtnIndex + 1].offsetHeight;
+                        if (topScroll + innerBtnHeight > (200 + mainElement.querySelector('.filterContainer').scrollTop)) {
+                            mainElement.querySelector('.filterContainer').scrollTop = (topScroll + innerBtnHeight) - 200;
+                        }
+                    }
+                    if (e.key == "ArrowUp") {
+                        let activeBtnIndex = -1;
+                        let innerBtns = mainElement.getElementsByClassName("innerFilterItem");
+                        for (let i = 0; i < innerBtns.length; i++) {
+                            if (innerBtns[i].classList.contains("active")) {
+                                activeBtnIndex = i;
+                                innerBtns[i].classList.remove("active");
+                            }
+                        }
+                        if (activeBtnIndex <= 0) {
+                            activeBtnIndex = 1;
+                        }
+                        innerBtns[activeBtnIndex - 1].classList.add("active");
+                        mainElement.querySelector(".mySelectInput").value = innerBtns[activeBtnIndex - 1].innerText;
+
+                        let topScroll = 0;
+                        for (let i = 0; i <= activeBtnIndex - 1; i++) {
+                            topScroll += innerBtns[i].offsetHeight;
+                        }
+                        let innerBtnHeight = innerBtns[activeBtnIndex - 1].offsetHeight;
+                        if (topScroll - innerBtnHeight < (mainElement.querySelector('.filterContainer').scrollTop)) {
+                            mainElement.querySelector('.filterContainer').scrollTop = topScroll - innerBtnHeight;
+                        }
+                    }
+                });
+            }
+
+            document.addEventListener("click", (e) => {
+                for (let mainElement of mainElements_filterc989389831344968860237078e2a16f7) {
+                    if (e.target != mainElement.querySelector(".mySelectInput")) {
+                        if (mainElement.classList.contains("focused")) {
+                            mainElement.querySelector(".filterContainer").style.height = "0";
+                            mainElement.classList.remove("focused");
+                        }
+                    }
+                }
+            });
+
+            function filter_Script_a0d21024282f453f8247fefa6ec435f2(inputElement) {
+                let mainElement = inputElement.parentElement;
+                // Declare variables
+                let filter, filteredContainer, filteredItems, innerFilteredItem, i, txtValue;
+                //inputElement = mainElement_filterc989389831344968860237078e2a16f7.querySelector('.mySelectInput');
+                filter = inputElement.value.toUpperCase();
+                filteredContainer = mainElement.getElementsByClassName("filterContainer")[0];
+                filteredItems = filteredContainer.getElementsByClassName('filterItems');
+
+                // Loop through all list items, and hide those who don't match the search query
+                for (i = 0; i < filteredItems.length; i++) {
+                    innerFilteredItem = filteredItems[i].getElementsByClassName("innerFilterItem")[0];
+                    txtValue = innerFilteredItem.textContent || innerFilteredItem.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        filteredItems[i].style.display = "";
+                    } else {
+                        filteredItems[i].style.display = "none";
+                    }
+                }
+
+                //filteredContainer.style.height = "0px";
+                let ulHeight = 0;
+                for (let childElement of filteredContainer.children) {
+                    ulHeight += childElement.clientHeight;
+                }
+                filteredContainer.style.height = ulHeight + 'px';
+            }
+        </script>
+    </div>
+</body>
+
+</html>

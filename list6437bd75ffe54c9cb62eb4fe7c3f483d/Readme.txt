@@ -1,3 +1,3 @@
 - Title: Image Crad Slider
-- Description: A box containing some movie cards that can be clicked and dragged and slid smoothly.
+- Description: A box containing some movie cards that can be clicked, dragged and slid smoothly.
 - Tags: image movie slide slider card container

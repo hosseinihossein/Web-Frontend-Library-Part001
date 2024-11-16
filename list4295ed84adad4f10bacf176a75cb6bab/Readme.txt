@@ -1,3 +1,3 @@
-- Title:
-- Description:
-- Tags:
+- Title: Image Gallery
+- Description: A list of small images arranged in a row with a title on the top.
+- Tags: image card list gallery movie

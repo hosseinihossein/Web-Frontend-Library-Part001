@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <div id="a39b3e38d0235477f8327b96651535943">
+        <style>
+            #a39b3e38d0235477f8327b96651535943 {
+                margin: 20px auto 0;
+                width: fit-content;
+                height: 110px;
+                text-wrap: nowrap;
+                text-align: center;
+                background-color: #242424;
+                overflow: hidden;
+                padding: 10px;
+                border-radius: 10px;
+                font-family: Helvetica, Arial, sans-serif;
+            }
+
+            #a39b3e38d0235477f8327b96651535943 .your-vote i {
+                font-size: 18px;
+            }
+
+            #a39b3e38d0235477f8327b96651535943 p {
+                color: white;
+            }
+
+            #a39b3e38d0235477f8327b96651535943 .your-vote>div {
+                mix-blend-mode: lighten;
+            }
+
+            #a39b3e38d0235477f8327b96651535943 .star-ratings-range {
+                width: 70%;
+                text-wrap: nowrap;
+                position: relative;
+                overflow: hidden;
+                /*border-bottom: 1px solid gold;*/
+            }
+
+            #a39b3e38d0235477f8327b96651535943 .reg-stars {
+                position: relative;
+                z-index: 1;
+                color: gray;
+            }
+
+            #a39b3e38d0235477f8327b96651535943 a:visited {
+                color: gray;
+            }
+        </style>
+
+        <div class="your-vote">
+            <div class="reg-stars">
+                <a class="star1" href=""><i class="fa-regular fa-star"></i></a>
+                <a class="star2" href=""><i class="fa-regular fa-star"></i></a>
+                <a class="star3" href=""><i class="fa-regular fa-star"></i></a>
+                <a class="star4" href=""><i class="fa-regular fa-star"></i></a>
+                <a class="star5" href=""><i class="fa-regular fa-star"></i></a>
+            </div>
+            <div class="star-ratings-range" style="top: -20px;">
+                <i style="color: red;" class="fa-solid fa-star"></i>
+                <i style="color: red;" class="fa-solid fa-star"></i>
+                <i style="color: red;" class="fa-solid fa-star"></i>
+                <i style="color: red;" class="fa-solid fa-star"></i>
+                <i style="color: red;" class="fa-solid fa-star"></i>
+            </div>
+            <div class="star-ratings-range" style="top: -40px;">
+                <i style="color: rgb(0, 255, 0);" class="fa-solid fa-star"></i>
+                <i style="color: rgb(0, 255, 0);" class="fa-solid fa-star"></i>
+                <i style="color: rgb(0, 255, 0);" class="fa-solid fa-star"></i>
+                <i style="color: rgb(0, 255, 0);" class="fa-solid fa-star"></i>
+                <i style="color: rgb(0, 255, 0);" class="fa-solid fa-star"></i>
+            </div>
+        </div>
+        <p class="rate" style="position: relative; top: -40px;">rate: 70%</p>
+        <p class="vote" style="position: relative; top: -40px;">200 votes</p>
+
+        <script>
+            let mainElement_a39b3e38d0235477f8327b96651535943 = document.getElementById("a39b3e38d0235477f8327b96651535943");
+            let anchors_a39b3e38d0235477f8327b96651535943 = mainElement_a39b3e38d0235477f8327b96651535943.getElementsByTagName("A");
+
+            for (let j = 0; j < anchors_a39b3e38d0235477f8327b96651535943.length; j++) {
+                anchors_a39b3e38d0235477f8327b96651535943[j].addEventListener("mouseover", (event) => {
+                    for (let i = 0; i <= j; i++) {
+                        anchors_a39b3e38d0235477f8327b96651535943[i].style.color = "gold";
+                        anchors_a39b3e38d0235477f8327b96651535943[i].style.textShadow = "0 0 10px gold";
+                    }
+                });
+            }
+
+            for (let j = 0; j < anchors_a39b3e38d0235477f8327b96651535943.length; j++) {
+                anchors_a39b3e38d0235477f8327b96651535943[j].addEventListener("mouseleave", (event) => {
+                    for (let i = 0; i < anchors_a39b3e38d0235477f8327b96651535943.length; i++) {
+                        anchors_a39b3e38d0235477f8327b96651535943[i].style.color = "gray";
+                        anchors_a39b3e38d0235477f8327b96651535943[i].style.textShadow = "none";
+                    }
+                });
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>
