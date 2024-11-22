@@ -38,13 +38,13 @@
                 margin: auto;
             }
         </style>
-        <div id="sliderflex63fd6343172747a693f2bcf76e7b2d51">
+        <div class="sliderflex63fd6343172747a693f2bcf76e7b2d51">
             <style>
-                #sliderflex63fd6343172747a693f2bcf76e7b2d51 {
+                .sliderflex63fd6343172747a693f2bcf76e7b2d51 {
                     display: flex;
                     flex-direction: row;
                     flex-wrap: nowrap;
-                    position: absolute;
+                    position: relative;
                     left: 0px;
                     overflow-x: visible;
                 }
@@ -52,7 +52,7 @@
 
             <style>
                 .carde004880881904ccda82f4062ee53b57c {
-                    width: 250px;
+                    min-width: 250px;
                     height: 250px;
                     background-color: gray;
                     margin: 10px;
@@ -131,9 +131,10 @@
             </div>
 
             <script>
-
-                let dragabale_sliderflex63fd6343172747a693f2bcf76e7b2d51 = document.getElementById("sliderflex63fd6343172747a693f2bcf76e7b2d51");
-                dragFlexBox_a4cfae93e514e49329578e445b2562084(dragabale_sliderflex63fd6343172747a693f2bcf76e7b2d51);
+                let dragabales_sliderflex63fd6343172747a693f2bcf76e7b2d51 = document.getElementsByClassName("sliderflex63fd6343172747a693f2bcf76e7b2d51");
+                for (let dragable of dragabales_sliderflex63fd6343172747a693f2bcf76e7b2d51) {
+                    dragFlexBox_a4cfae93e514e49329578e445b2562084(dragable);
+                }
 
                 function dragFlexBox_a4cfae93e514e49329578e445b2562084(element) {
                     element.addEventListener("mousedown", e => dragMouseDown(e));
@@ -153,11 +154,23 @@
                         }
 
                         let left = (Number)(element.style.left.replace("px", ""));
-                        if (left > 0) { left = 0; }
-                        //console.log(document.body.offsetWidth - element.offsetWidth);
-                        let parentOfFlexBox = document.getElementById("parent_sliderflex63fd6343172747a693f2bcf76e7b2d51");
-                        if (left < (parentOfFlexBox.offsetWidth - element.offsetWidth)) { left = parentOfFlexBox.offsetWidth - element.offsetWidth; }
-                        element.style.left = (left + e.movementX) + "px";
+                        let moveLength = (left + e.movementX);
+                        let parentOfFlexBox = element.parentElement;
+                        /*console.log(parentOfFlexBox.offsetWidth - element.offsetWidth);
+        
+                        if ((parentOfFlexBox.offsetWidth - element.offsetWidth) >= 0) {
+                            return;
+                        }*/
+
+                        if (moveLength > 0) { moveLength = 0; }
+                        /*if (moveLength < (parentOfFlexBox.offsetWidth - element.offsetWidth)) {
+                            moveLength = parentOfFlexBox.offsetWidth - element.offsetWidth;
+                        }*/
+                        if (moveLength < (parentOfFlexBox.offsetWidth - element.scrollWidth)) {
+                            moveLength = (parentOfFlexBox.offsetWidth - element.scrollWidth);
+                        }
+                        //console.log(element.scrollWidth);
+                        element.style.left = moveLength + "px";
 
                         element.style.cursor = "grabbing";
                     }

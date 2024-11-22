@@ -63,13 +63,13 @@
                 margin: auto;
             }
         </style>
-        <div id="list4295ed84adad4f10bacf176a75cb6bab">
+        <div class="list4295ed84adad4f10bacf176a75cb6bab">
             <style>
-                #list4295ed84adad4f10bacf176a75cb6bab {
+                .list4295ed84adad4f10bacf176a75cb6bab {
                     display: flex;
                     flex-direction: row;
                     flex-wrap: nowrap;
-                    position: absolute;
+                    position: relative;
                     left: 0px;
                     overflow-x: visible;
                 }
@@ -523,50 +523,10 @@
 
             <script>
 
-                /*let dragabales_imageCarde004880881904ccda82f4062ee53b57c = document.getElementsByClassName("imageCarde004880881904ccda82f4062ee53b57c");
-                for (let imagecard of dragabales_imageCarde004880881904ccda82f4062ee53b57c) {
-                    dragImageCard_a4cfae93e514e49329578e445b2562084(imagecard);
+                let dragables_list4295ed84adad4f10bacf176a75cb6bab = document.getElementsByClassName("list4295ed84adad4f10bacf176a75cb6bab");
+                for (let dragable of dragables_list4295ed84adad4f10bacf176a75cb6bab) {
+                    dragFlexBox_a4cfae93e514e49329578e445b2562084(dragable);
                 }
-
-                function dragImageCard_a4cfae93e514e49329578e445b2562084(element) {
-                    element.addEventListener("mousedown", e => dragMouseDown(e));
-                    let onclickfun;
-
-                    function dragMouseDown(e) {
-                        e.preventDefault();
-                        document.onmouseup = closeDragElement;
-                        document.onmousemove = elementDrag;
-
-                        //for (let dragable of dragables_a4cfae93e514e49329578e445b2562084) {
-                        //dragable.style.transition = null;
-                        //dragable.style.cursor = "grabbing";
-                        //}
-                        //dragabale_list4295ed84adad4f10bacf176a75cb6bab.style.transition = null;
-                        //dragabale_list4295ed84adad4f10bacf176a75cb6bab.style.cursor = "grabbing";
-                    }
-
-                    function elementDrag(e) {
-                        e.preventDefault();
-                        onclickfun = element.onclick;
-                        element.getElementsByTagName("a")[0].onclick = (e) => e.preventDefault();
-
-                        //for (let dragable of dragables_a4cfae93e514e49329578e445b2562084) {
-                        //dragable.style.left = (dragable.offsetLeft + e.movementX) + "px";
-                        //}
-
-                        let left = (Number)(element.parentElement.style.left.replace("px", ""));
-                        element.parentElement.style.left = (left + e.movementX) + "px";
-                    }
-
-                    function closeDragElement(e) {
-                        setTimeout(() => { element.getElementsByTagName("a")[0].onclick = onclickfun; }, 500);
-                        document.onmouseup = null;
-                        document.onmousemove = null;
-                    }
-                }*/
-
-                let dragabale_list4295ed84adad4f10bacf176a75cb6bab = document.getElementById("list4295ed84adad4f10bacf176a75cb6bab");
-                dragFlexBox_a4cfae93e514e49329578e445b2562084(dragabale_list4295ed84adad4f10bacf176a75cb6bab);
 
                 function dragFlexBox_a4cfae93e514e49329578e445b2562084(element) {
                     element.addEventListener("mousedown", e => dragMouseDown(e));
@@ -586,11 +546,23 @@
                         }
 
                         let left = (Number)(element.style.left.replace("px", ""));
-                        if (left > 0) { left = 0; }
-                        //console.log(document.body.offsetWidth - element.offsetWidth);
-                        let parentOfFlexBox = document.getElementById("parent_list4295ed84adad4f10bacf176a75cb6bab");
-                        if (left < (parentOfFlexBox.offsetWidth - element.offsetWidth)) { left = parentOfFlexBox.offsetWidth - element.offsetWidth; }
-                        element.style.left = (left + e.movementX) + "px";
+                        let moveLength = (left + e.movementX);
+                        let parentOfFlexBox = element.parentElement;
+                        /*console.log(parentOfFlexBox.offsetWidth - element.offsetWidth);
+        
+                        if ((parentOfFlexBox.offsetWidth - element.offsetWidth) >= 0) {
+                            return;
+                        }*/
+
+                        if (moveLength > 0) { moveLength = 0; }
+                        /*if (moveLength < (parentOfFlexBox.offsetWidth - element.offsetWidth)) {
+                            moveLength = parentOfFlexBox.offsetWidth - element.offsetWidth;
+                        }*/
+                        if (moveLength < (parentOfFlexBox.offsetWidth - element.scrollWidth)) {
+                            moveLength = (parentOfFlexBox.offsetWidth - element.scrollWidth);
+                        }
+                        //console.log(element.scrollWidth);
+                        element.style.left = moveLength + "px";
 
                         element.style.cursor = "grabbing";
                     }
