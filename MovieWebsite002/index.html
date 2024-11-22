@@ -1,0 +1,2976 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+            background-color: #111;
+            overflow-x: hidden;
+        }
+    </style>
+    <!----------------------------------------------------------------->
+    <!--------------------------------- navbar -------------------------------->
+    <div id="navbarc9688e3a36eb4b83814687ea3dfa42c7" class="clearfix">
+        <style>
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 {
+                /*background-color: rgba(0, 0, 0, 0.2);*/
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 0 50px;
+                /*border: 1px solid white;*/
+                z-index: 10;
+                backdrop-filter: blur(5px) brightness(50%);
+            }
+
+            @media screen and (max-width:1000px) {
+                #navbarc9688e3a36eb4b83814687ea3dfa42c7 {
+                    padding: 0;
+                }
+            }
+
+            /********************************************************/
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 #navbar-logo {
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+                overflow: hidden;
+                border: 1px solid yellow;
+                border-radius: 50%;
+                float: left;
+                transition: all 0.2s ease-out;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 #navbar-logo:hover {
+                /*background-color: #333;*/
+                filter: brightness(150%);
+            }
+
+            /********************************************************/
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown {
+                position: relative;
+                display: block;
+                width: fit-content;
+                float: left;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown .dropbtn {
+                background-color: rgba(0, 0, 0, 0);
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+                transition: all 0.2s ease-out;
+                color: #ddd;
+                font-size: 14px;
+                height: 50px;
+                width: fit-content;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown:hover .dropbtn {
+                color: yellow;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown .dropbtn .angle {
+                transition: all 0.2s ease-out;
+                position: absolute;
+                font-size: 20px;
+                /*background-color: #ccc;*/
+                top: 14px;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown:hover .angle {
+                rotate: -180deg;
+                display: inline-block;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown .dropdown-content {
+                display: flex;
+                flex-direction: row;
+                height: 0;
+                width: fit-content;
+                position: absolute;
+                top: 20px;
+                left: 0;
+                background-color: #333;
+                /*min-width: 160px;*/
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+                overflow: hidden;
+                transition: all 0.2s ease-out;
+                opacity: 0;
+                border-radius: 10px;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown.categories {
+                display: none;
+            }
+
+            @media screen and (max-width:800px) {
+                #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown {
+                    display: none;
+                }
+
+                #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown.categories {
+                    display: block;
+                }
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown:hover .dropdown-content {
+                opacity: 1;
+                top: 50px;
+                height: fit-content;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown .dropdown-content a {
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                color: #ccc;
+                font-size: 14px;
+                width: fit-content;
+                text-wrap: nowrap;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown .dropdown-content a:hover {
+                color: yellow;
+            }
+
+            /********************************************************/
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .search-box {
+                width: fit-content;
+                float: left;
+                margin: 5px;
+                position: relative;
+                /*left: 50%;*/
+                /*transform: translateX(-50%);*/
+            }
+
+            /*@media screen and (max-width:700px) {
+                #navbarc9688e3a36eb4b83814687ea3dfa42c7 .search-box {
+                    margin: 5px;
+                }
+            }*/
+
+            /* Style the search field */
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .search-box form.searchForm input[type=text] {
+                padding: 10px 35px 10px 10px;
+                font-size: 17px;
+                border: none;
+                border-radius: 20px;
+                float: left;
+                /*width: fit-content;*/
+                width: 200px;
+                background-color: rgba(0, 225, 255, 0.2);
+                color: yellow;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .search-box form.searchForm input[type=text]::placeholder {
+                color: rgba(255, 255, 0, 0.5);
+                font-size: 14px;
+            }
+
+            /* Style the submit button */
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .search-box form.searchForm button {
+                float: left;
+                /*width: 20px;*/
+                padding: 10px;
+                background-color: rgba(0, 0, 0, 0);
+                color: rgba(255, 255, 0, 0.7);
+                font-size: 17px;
+                border: none;
+                /*border-left: 1px solid rgba(255, 255, 0, 1);*/
+                cursor: pointer;
+                position: absolute;
+                right: 0px;
+                /*z-index: 1;*/
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .search-box form.searchForm button:hover {
+                color: yellow;
+            }
+        </style>
+
+        <a href="index.html">
+            <img id="navbar-logo" src="./statics/HLogo.webp" alt="">
+        </a>
+
+        <div class="dropdown">
+            <button class="dropbtn">Movie <span class="angle">&blacktriangledown;</span></button>
+            <div class="dropdown-content clearfix">
+                <div>
+                    <a href="#">IMDb 250</a>
+                    <a href="#">horror</a>
+                    <a href="#">comedy</a>
+                </div>
+                <div>
+                    <a href="#">IMDb 250</a>
+                    <a href="#">horror</a>
+                    <a href="#">comedy</a>
+                </div>
+                <div>
+                    <a href="#">IMDb 250</a>
+                    <a href="#">horror</a>
+                    <a href="#">comedy</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Serial <span class="angle">&blacktriangledown;</span></button>
+            <div class="dropdown-content clearfix">
+                <div>
+                    <a href="#">IMDb 250</a>
+                    <a href="#">horror</a>
+                    <a href="#">comedy</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Animation <span class="angle">&blacktriangledown;</span></button>
+            <div class="dropdown-content clearfix">
+                <div>
+                    <a href="#">IMDb 250</a>
+                    <a href="#">horror</a>
+                    <a href="#">comedy</a>
+                </div>
+                <div>
+                    <a href="#">IMDb 250</a>
+                    <a href="#">horror</a>
+                    <a href="#">comedy</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Anime <span class="angle">&blacktriangledown;</span></button>
+            <div class="dropdown-content clearfix">
+                <div>
+                    <a href="#">IMDb 250</a>
+                    <a href="#">horror</a>
+                    <a href="#">comedy</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="dropdown categories" style="position: static;">
+            <button class="dropbtn">Categories <span class="angle">&blacktriangledown;</span></button>
+            <div class="dropdown-content clearfix">
+                <div id="a551c262641c644419af39637427612ac" class="Scriptd5b6b606f4934bdd8c8850bd3f2937ff">
+                    <style>
+                        #a551c262641c644419af39637427612ac {
+                            width: 100%;
+                            min-width: 300px;
+                        }
+
+                        #a551c262641c644419af39637427612ac .links {
+                            overflow: hidden;
+                            border: none;
+                            outline: 0;
+                            width: fit-content;
+                        }
+
+                        #a551c262641c644419af39637427612ac .links button {
+                            background-color: inherit;
+                            float: left;
+                            border: none;
+                            outline: none;
+                            cursor: pointer;
+                            padding: 14px 16px;
+                            transition: 0.3s;
+                            font-size: 14px;
+                            width: fit-content;
+                            height: 50px;
+                            color: white;
+                        }
+
+                        /*#a551c262641c644419af39637427612ac .links button:hover {
+                            background-color: #ddd;
+                        }*/
+
+                        #a551c262641c644419af39637427612ac .tabcontent {
+                            display: none;
+                            flex-direction: row;
+                            flex-wrap: nowrap;
+                            color: white;
+                            border: none;
+                            animation: fadeEffect 0.5s;
+                            overflow: hidden;
+                            width: 100%;
+                        }
+
+                        @keyframes fadeEffect {
+                            from {
+                                opacity: 0;
+                            }
+
+                            to {
+                                opacity: 1;
+                            }
+                        }
+
+                        #a551c262641c644419af39637427612ac #Movie,
+                        #a551c262641c644419af39637427612ac .links .Movie.active {
+                            background-color: rgba(253, 33, 33, 0.2);
+                        }
+
+                        #a551c262641c644419af39637427612ac #Serial,
+                        #a551c262641c644419af39637427612ac .links .Serial.active {
+                            background-color: rgba(0, 190, 0, 0.2);
+                        }
+
+                        #a551c262641c644419af39637427612ac #Animation,
+                        #a551c262641c644419af39637427612ac .links .Animation.active {
+                            background-color: rgba(0, 132, 255, 0.2);
+                        }
+
+                        #a551c262641c644419af39637427612ac #Anime,
+                        #a551c262641c644419af39637427612ac .links .Anime.active {
+                            background-color: rgba(255, 165, 0, 0.2);
+                        }
+
+                        #a551c262641c644419af39637427612ac .tabcontent h3 {
+                            padding: 50px 0 0 50px;
+                            font-weight: normal;
+                            font-size: xx-large;
+                        }
+                    </style>
+
+                    <div class="links clearfix">
+                        <button class="tablink Movie defaultOpen active">Movie</button>
+                        <button class="tablink Serial">Serial</button>
+                        <button class="tablink Animation">Animation</button>
+                        <button class="tablink Anime">Anime</button>
+                    </div>
+
+                    <div id="Movie" class="tabcontent clearfix" style="display: flex;">
+                        <!--h3>Movie</h3>
+                        <p class="" style="padding: 0 0 50px 50px;">Movie is where the heart is..</p-->
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                    </div>
+
+                    <div id="Serial" class="tabcontent clearfix">
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                    </div>
+
+                    <div id="Animation" class="tabcontent clearfix">
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                    </div>
+
+                    <div id="Anime" class="tabcontent clearfix">
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                    </div>
+
+                    <script>
+
+                        let mainElements_Scriptd5b6b606f4934bdd8c8850bd3f2937ff = document.getElementsByClassName("Scriptd5b6b606f4934bdd8c8850bd3f2937ff");
+
+                        for (let i = 0; i < mainElements_Scriptd5b6b606f4934bdd8c8850bd3f2937ff.length; i++) {
+                            let mainElement = mainElements_Scriptd5b6b606f4934bdd8c8850bd3f2937ff.item(i);
+                            let siblingTabLinks = mainElement.getElementsByClassName("tablink");
+                            //let siblingTabContents = mainElements[i].getElementsByClassName("tabcontent");
+
+                            //console.log("siblingTabLinks: " + siblingTabLinks.length);
+
+                            for (let j = 0; j < siblingTabLinks.length; j++) {
+
+                                let cityName = siblingTabLinks.item(j).innerHTML;
+
+                                siblingTabLinks.item(j).addEventListener("click", function () {
+                                    removeActive_Scriptd5b6b606f4934bdd8c8850bd3f2937ff(mainElement.id);
+
+                                    setDisplayNone_Scriptd5b6b606f4934bdd8c8850bd3f2937ff(mainElement.id);
+
+                                    mainElement.querySelector(`#${cityName}`).style.display = "flex";
+                                    siblingTabLinks.item(j).classList.add("active");
+                                });
+                            }
+
+                            mainElement.querySelector(".defaultOpen").click();
+                        }
+                        // remove active From Sibling TabLinks' classList
+                        function removeActive_Scriptd5b6b606f4934bdd8c8850bd3f2937ff(mainElementId) {
+                            let mainElement = document.getElementById(mainElementId);
+                            let siblingTabLinks = mainElement.getElementsByClassName("tablink");
+                            for (let i = 0; i < siblingTabLinks.length; i++) {
+                                siblingTabLinks[i].classList.remove("active");
+                            }
+                        }
+
+                        // set display to none for all tabcontent element
+                        function setDisplayNone_Scriptd5b6b606f4934bdd8c8850bd3f2937ff(mainElementId) {
+                            let mainElement = document.getElementById(mainElementId);
+                            let siblingTabContents = mainElement.getElementsByClassName("tabcontent");
+                            for (let i = 0; i < siblingTabContents.length; i++) {
+                                siblingTabContents[i].style.display = "none";
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-box" class="">
+            <form class="searchForm" action="">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+
+        <div id="user-container">
+            <style>
+                #navbarc9688e3a36eb4b83814687ea3dfa42c7 #user-container {
+                    float: right;
+                }
+            </style>
+            <div class="user-account-container">
+                <style>
+                    #navbarc9688e3a36eb4b83814687ea3dfa42c7 .user-account-dropdown {
+                        cursor: pointer;
+                    }
+                </style>
+                <div class="user-account-dropdown">
+                    <style>
+                        #navbarc9688e3a36eb4b83814687ea3dfa42c7 .user-account-dropdown img {
+                            width: 50px;
+                            height: 50px;
+                            object-fit: cover;
+                            border-radius: 50%;
+                            background-color: transparent;
+                        }
+                    </style>
+                    <img src="./statics/defaultProfile.jpg" alt="" class="user-img">
+
+                    <style>
+                        #navbarc9688e3a36eb4b83814687ea3dfa42c7 .user-menu-container {
+                            position: absolute;
+                            right: 50px;
+                        }
+
+                        @media screen and (max-width:1000px) {
+                            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .user-menu-container {
+                                right: 0px;
+                            }
+                        }
+                    </style>
+                    <div class="user-menu-container">
+                        <style>
+                            .menu714118d2b2e9457a94134762e94de1ec {
+                                background-color: aliceblue;
+                                color: black;
+                                width: 250px;
+                                padding: 0px;
+                                border-radius: 20px;
+                                box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+                                height: 0;
+                                overflow: hidden;
+                                transition: all 0.2s;
+                                cursor: auto;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec a {
+                                text-decoration: none;
+                                color: inherit;
+                            }
+
+                            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .user-account-dropdown:hover .menu714118d2b2e9457a94134762e94de1ec {
+                                height: 350px;
+                                padding: 20px 10px;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec>div {
+                                background-color: white;
+                                border-radius: 10px;
+                                width: 100%;
+                                margin: 10px auto;
+                                padding: 0 10px;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec .profile-box {
+                                padding: 10px 20px;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec .profile-box img {
+                                width: 40px;
+                                height: 40px;
+                                object-fit: cover;
+                                border-radius: 50%;
+                                float: left;
+                                margin-right: 5px;
+                            }
+
+                            /************* login *************/
+
+                            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .user-account-dropdown:hover .menu714118d2b2e9457a94134762e94de1ec.login {
+                                height: 230px;
+                                padding: 20px 10px;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec.login .profile-box {
+                                padding: 10px 20px;
+                                text-align: center;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec.login .profile-box img {
+                                width: 40px;
+                                height: 40px;
+                                object-fit: cover;
+                                border-radius: 50%;
+                                margin-left: 70px;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec .profile-box .name {
+                                font-size: 14px;
+                                font-weight: bold;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec .profile-box .email {
+                                font-size: 12px;
+                                color: gray;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec ul {
+                                list-style-type: none;
+                                padding: 10px 0;
+                                font-size: 10px;
+                                color: gray;
+                                font-weight: bold;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec li {
+                                padding: 10px;
+                                cursor: pointer;
+                                font-weight: normal;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec li:hover {
+                                background-color: azure;
+                                color: black;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec li {
+                                font-size: 14px;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec li i {
+                                margin-right: 5px;
+                            }
+
+                            /***************************** dark-mode *****************************/
+
+                            .menu714118d2b2e9457a94134762e94de1ec.dark-mode {
+                                background-color: rgb(30, 30, 30);
+                                color: white;
+                                /*box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);*/
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec.dark-mode>div {
+                                background-color: rgb(50, 50, 50);
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec.dark-mode li:hover {
+                                background-color: rgb(40, 40, 40);
+                                color: white;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec.dark-mode ul {
+                                color: lightgray;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec.dark-mode .profile-box .email {
+                                color: lightgray;
+                            }
+                        </style>
+
+                        <div class="menu714118d2b2e9457a94134762e94de1ec dark-mode">
+                            <div class="profile-box clearfix">
+                                <img src="./statics/defaultProfile.jpg" alt="user image">
+                                <span class="name">Username</span>
+                                <br>
+                                <span class="email">username@Email.com</span>
+                            </div>
+                            <div class="management-div">
+                                <ul>Manage
+                                    <li>
+                                        <a href="./profile.html">
+                                            <i class="fa-solid fa-chart-line"></i>
+                                            Dashborad
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./settings.html">
+                                            <i class="fa-solid fa-gear"></i>
+                                            Settings
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fa-regular fa-newspaper"></i>
+                                            Purchase
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="work-div">
+                                <ul>Account
+                                    <li>
+                                        <a asp-controller="Account" asp-action="Logout"
+                                            asp-route-returnUrl="@currentUrl">
+                                            <i class="fa-solid fa-right-from-bracket"></i>
+                                            Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="menu714118d2b2e9457a94134762e94de1ec login dark-mode">
+                            <div class="profile-box clearfix">
+                                <img src="./statics/defaultProfile.jpg" alt="">
+                            </div>
+                            <div class="management-div">
+                                <ul>Account
+                                    <li>
+                                        <a href="./login.html">
+                                            <i class="fa-solid fa-right-to-bracket"></i>
+                                            Login
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./signup.html">
+                                            <i class="fa-solid fa-user-plus"></i>
+                                            Create a new account
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------------------------------------------------------------->
+    <!--------------------------------- slider -------------------------------->
+    <div id="img995b6ba38f5043f19dfdf8cad3ea2a65">
+        <style>
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card {
+                position: absolute;
+                transition: all 0.5s ease;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.ordered {
+                bottom: 10px;
+                width: 150px;
+                height: 200px;
+                z-index: 1;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 5px 0 15px black;
+                cursor: pointer;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.ordered:hover img {
+                filter: brightness(100%);
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.o4 {
+                right: -100px;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.o3 {
+                right: 70px;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.o2 {
+                right: 240px;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.o1 {
+                right: 410px;
+            }
+
+            @media screen and (max-width:600px) {
+                #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.ordered {
+                    width: 120px;
+                    height: 150px;
+                }
+
+                #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.o4 {
+                    right: -50px;
+                }
+
+                #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.o3 {
+                    right: 80px;
+                }
+
+                #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.o2 {
+                    right: 210px;
+                }
+
+                #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.o1 {
+                    right: 340px;
+                }
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                filter: brightness(80%);
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.ordered .description {
+                position: absolute;
+                color: white;
+                bottom: -150px;
+                left: 5px;
+                overflow: hidden;
+                transition: all 0.5s ease-in;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.ordered .description .title {
+                font-size: 16px;
+                max-width: 150px;
+            }
+
+            @media screen and (max-width:600px) {
+                #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.ordered .description {
+                    bottom: -180px;
+                }
+
+                #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.ordered .description .title {
+                    font-size: 14px;
+                }
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.big {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                /*left: 0;*/
+                right: 0;
+                /*top: 0;*/
+                bottom: 0;
+                border-radius: 0px;
+                z-index: 0;
+                overflow: hidden;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.big .description {
+                position: absolute;
+                bottom: 20vh;
+                left: 5vw;
+                max-width: 25vw;
+                color: white;
+                overflow: hidden;
+                transition: all 0.5s ease-in;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.big .description * {
+                transition: all 0.5s ease-in;
+            }
+
+            @media screen and (max-width:800px) {
+                #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.big .description {
+                    max-width: 90vw;
+                    top: 10vh;
+                }
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.big .description .summary {
+                font-size: 14px;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.big .description .details-link {
+                cursor: pointer;
+                border: 2px solid white;
+                border-radius: 20px;
+                padding: 10px 30px;
+                background-color: rgba(0, 0, 0, 0.5);
+                margin-top: 30px;
+                display: block;
+                width: fit-content;
+                transition: none;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .img-card.big .description .details-link:hover {
+                border-color: yellow;
+                color: yellow;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 #nav-btns {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: fit-content;
+                z-index: 2;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 #nav-btns button {
+                color: white;
+                font-size: 30px;
+                background-color: rgba(0, 0, 0, 0.5);
+                border: 1px solid white;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                cursor: pointer;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 #nav-btns button:hover {
+                border-color: yellow;
+                color: yellow;
+            }
+
+            @media screen and (max-width:600px) {
+                #img995b6ba38f5043f19dfdf8cad3ea2a65 #nav-btns {
+                    display: none;
+                }
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .description .rates .imdb-logo {
+                width: 40px;
+                height: 20px;
+                object-fit: cover;
+                background-color: transparent;
+                display: block;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .description .rates .imdb-rate {
+                padding-left: 45px;
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 .description .rates .year {
+                float: right;
+            }
+
+            /*#img995b6ba38f5043f19dfdf8cad3ea2a65 #shadow-image-card {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0px;
+                top: 0px;
+                border-radius: 0px;
+                z-index: -1;
+            }
+
+            #img995b6ba38f5043f19dfdf8cad3ea2a65 #shadow-image-card img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                filter: blur(50px);
+            }*/
+        </style>
+
+        <div class="img-card big">
+            <img src="./statics/vampirediaries_bg001.jpg" alt="">
+            <div class="description">
+                <div class="rates clearfix">
+                    <img class="imdb-logo" src="./statics/IMDb_logo.png" alt="">
+                    <span class="imdb-rate">6.5</span>
+                    <span class="year"><i class="fa-solid fa-calendar"></i> 2024</span>
+                </div>
+                <h1 class="title">MOVIE TITLE</h1>
+                <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, doloribus quod
+                    nobis ea ipsam assumenda.
+                </p>
+                <a class="details-link">Watch & More</a>
+            </div>
+        </div>
+        <div class="img-card ordered o1">
+            <img src="./statics/oppenheimer_bg.jfif" alt="">
+            <div class="description">
+                <div class="rates clearfix">
+                    <img class="imdb-logo" src="./statics/IMDb_logo.png" alt="">
+                    <span class="imdb-rate">6.5</span>
+                    <span class="year"><i class="fa-solid fa-calendar"></i> 2024</span>
+                </div>
+                <h1 class="title">LONG LONG MOVIE TITLE</h1>
+                <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, doloribus quod
+                    nobis ea ipsam assumenda.
+                </p>
+                <a class="details-link">Watch & More</a>
+            </div>
+        </div>
+        <div class="img-card ordered o2">
+            <img src="./statics/darkknightjoker_bg.jpg" alt="">
+            <div class="description">
+                <div class="rates clearfix">
+                    <img class="imdb-logo" src="./statics/IMDb_logo.png" alt="">
+                    <span class="imdb-rate">6.5</span>
+                    <span class="year"><i class="fa-solid fa-calendar"></i> 2024</span>
+                </div>
+                <h1 class="title">MOVIE TITLE</h1>
+                <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, doloribus quod
+                    nobis ea ipsam assumenda.
+                </p>
+                <a class="details-link">Watch & More</a>
+            </div>
+        </div>
+        <div class="img-card ordered o3">
+            <img src="./statics/interstellar_bg001.webp" alt="">
+            <div class="description">
+                <div class="rates clearfix">
+                    <img class="imdb-logo" src="./statics/IMDb_logo.png" alt="">
+                    <span class="imdb-rate">6.5</span>
+                    <span class="year"><i class="fa-solid fa-calendar"></i> 2024</span>
+                </div>
+                <h1 class="title">MOVIE TITLE</h1>
+                <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, doloribus quod
+                    nobis ea ipsam assumenda.
+                </p>
+                <a class="details-link">Watch & More</a>
+            </div>
+        </div>
+        <div class="img-card ordered o4">
+            <img src="./statics/strangerthings_bg.webp" alt="">
+            <div class="description">
+                <div class="rates clearfix">
+                    <img class="imdb-logo" src="./statics/IMDb_logo.png" alt="">
+                    <span class="imdb-rate">6.5</span>
+                    <span class="year"><i class="fa-solid fa-calendar"></i> 2024</span>
+                </div>
+                <h1 class="title">MOVIE TITLE</h1>
+                <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, doloribus quod
+                    nobis ea ipsam assumenda.
+                </p>
+                <a class="details-link">Watch & More</a>
+            </div>
+        </div>
+
+        <div id="nav-btns">
+            <button
+                onclick="nextImage();clearInterval(nextImageInterval_img995b6ba38f5043f19dfdf8cad3ea2a65);">&LeftAngleBracket;</button>
+            <button
+                onclick="previousImage();clearInterval(nextImageInterval_img995b6ba38f5043f19dfdf8cad3ea2a65);">&RightAngleBracket;</button>
+        </div>
+
+        <!--div id="shadow-image-card">
+            <img src="./statics/vampirediaries_bg001.jpg" alt="">
+        </div-->
+
+        <script>
+            let nextImageInterval_img995b6ba38f5043f19dfdf8cad3ea2a65 = 0;
+            //let shadowImageCard_img995b6ba38f5043f19dfdf8cad3ea2a65 = document.getElementById("img995b6ba38f5043f19dfdf8cad3ea2a65").querySelector("#shadow-image-card");
+            let mainElement_img995b6ba38f5043f19dfdf8cad3ea2a65 = document.getElementById("img995b6ba38f5043f19dfdf8cad3ea2a65");
+            function nextImage() {
+                let o1 = mainElement_img995b6ba38f5043f19dfdf8cad3ea2a65.getElementsByClassName("o1")[0];
+                let o2 = mainElement_img995b6ba38f5043f19dfdf8cad3ea2a65.getElementsByClassName("o2")[0];
+                let o3 = mainElement_img995b6ba38f5043f19dfdf8cad3ea2a65.getElementsByClassName("o3")[0];
+                let o4 = mainElement_img995b6ba38f5043f19dfdf8cad3ea2a65.getElementsByClassName("o4")[0];
+                let big = mainElement_img995b6ba38f5043f19dfdf8cad3ea2a65.getElementsByClassName("big")[0];
+                o1.className = "img-card big";
+                o2.className = "img-card ordered o1";
+                o3.className = "img-card ordered o2";
+                o4.className = "img-card ordered o3";
+                big.className = "img-card ordered o4";
+                big.style.opacity = "0";
+                setTimeout(() => { big.style.opacity = "1"; }, 500);
+
+                /*shadowImageCard_img995b6ba38f5043f19dfdf8cad3ea2a65.removeChild(shadowImageCard_img995b6ba38f5043f19dfdf8cad3ea2a65.firstElementChild);
+                let newShadowImage = document.createElement("img");
+                newShadowImage.setAttribute("src", o1.firstElementChild.src);
+                shadowImageCard_img995b6ba38f5043f19dfdf8cad3ea2a65.appendChild(newShadowImage);*/
+            }
+            function previousImage() {
+                let o1 = mainElement_img995b6ba38f5043f19dfdf8cad3ea2a65.getElementsByClassName("o1")[0];
+                let o2 = mainElement_img995b6ba38f5043f19dfdf8cad3ea2a65.getElementsByClassName("o2")[0];
+                let o3 = mainElement_img995b6ba38f5043f19dfdf8cad3ea2a65.getElementsByClassName("o3")[0];
+                let o4 = mainElement_img995b6ba38f5043f19dfdf8cad3ea2a65.getElementsByClassName("o4")[0];
+                let big = mainElement_img995b6ba38f5043f19dfdf8cad3ea2a65.getElementsByClassName("big")[0];
+                o1.className = "img-card ordered o2";
+                o2.className = "img-card ordered o3";
+                o3.className = "img-card ordered o4";
+                o4.className = "img-card big";
+                big.className = "img-card ordered o1";
+                big.style.opacity = "0";
+                setTimeout(() => { big.style.opacity = "1"; }, 500);
+
+                /*shadowImageCard_img995b6ba38f5043f19dfdf8cad3ea2a65.removeChild(shadowImageCard_img995b6ba38f5043f19dfdf8cad3ea2a65.firstElementChild);
+                let newShadowImage = document.createElement("img");
+                newShadowImage.setAttribute("src", o4.firstElementChild.src);
+                shadowImageCard_img995b6ba38f5043f19dfdf8cad3ea2a65.appendChild(newShadowImage);*/
+            }
+
+            function setOnClickForOrderedImgCards() {
+                let imgCards = mainElement_img995b6ba38f5043f19dfdf8cad3ea2a65.getElementsByClassName("img-card");
+                for (let imgCrad of imgCards) {
+                    imgCrad.addEventListener("click", () => {
+                        pressOrdered(imgCrad);
+                    });
+                }
+            }
+
+            function pressOrdered(o) {
+                let big = mainElement_img995b6ba38f5043f19dfdf8cad3ea2a65.getElementsByClassName("big")[0];
+                bigClassName = big.className;
+                big.className = o.className;
+                o.className = bigClassName;
+
+                clearInterval(nextImageInterval_img995b6ba38f5043f19dfdf8cad3ea2a65);
+
+                /*shadowImageCard_img995b6ba38f5043f19dfdf8cad3ea2a65.removeChild(shadowImageCard_img995b6ba38f5043f19dfdf8cad3ea2a65.firstElementChild);
+                let newShadowImage = document.createElement("img");
+                newShadowImage.setAttribute("src", o.firstElementChild.src);
+                shadowImageCard_img995b6ba38f5043f19dfdf8cad3ea2a65.appendChild(newShadowImage);*/
+            }
+
+            setOnClickForOrderedImgCards();
+            nextImageInterval_img995b6ba38f5043f19dfdf8cad3ea2a65 = setInterval(nextImage, 5000);
+        </script>
+    </div>
+    <!----------------------------------------------------------------->
+    <!-------------------------------- hottest --------------------------------->
+    <style>
+        #hottestHR4295ed84adad4f10bacf176a75cb6bab {
+            width: 80%;
+            margin-bottom: 20px;
+            margin-top: calc(100vh + 100px);
+            margin-right: 5%;
+            position: relative;
+            overflow: visible;
+            border-color: rgba(255, 255, 255, 0.2);
+            /*float: right;*/
+        }
+
+        #hottestHR4295ed84adad4f10bacf176a75cb6bab::before {
+            content: "HOTTESTS";
+            font-weight: bold;
+            background-color: transparent;
+            position: absolute;
+            left: -150px;
+            color: white;
+            transform: translateY(-50%);
+            padding: 10px 20px;
+        }
+    </style>
+    <hr id="hottestHR4295ed84adad4f10bacf176a75cb6bab">
+
+    <div id="hottestList4295ed84adad4f10bacf176a75cb6bab">
+        <style>
+            #hottestList4295ed84adad4f10bacf176a75cb6bab {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                width: 90%;
+                margin: auto;
+                /*background-color: black;*/
+                /*border-bottom: 1px dashed rgba(255, 255, 255, 0.2);*/
+            }
+        </style>
+
+        <style>
+            .imageCardfb5f3981230f468f82e8c282167009ff {
+                width: 100px;
+                height: 150px;
+                border-radius: 15px;
+                overflow: hidden;
+                position: relative;
+                transition: 0.3s;
+                margin: 10px;
+            }
+
+            .imageCardfb5f3981230f468f82e8c282167009ff:hover {
+                box-shadow: 0 0px 20px black;
+            }
+
+            .imageCardfb5f3981230f468f82e8c282167009ff img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: 0.3s;
+            }
+
+            .imageCardfb5f3981230f468f82e8c282167009ff:hover img {
+                filter: brightness(70%);
+            }
+
+            .imageCardfb5f3981230f468f82e8c282167009ff .info {
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                width: fit-content;
+                transform: translate(-50%, -50%);
+                color: white;
+                font-size: 14px;
+                opacity: 0;
+                transition: 0.3s;
+            }
+
+            .imageCardfb5f3981230f468f82e8c282167009ff:hover .info {
+                opacity: 1;
+                top: 50%;
+            }
+
+            .imageCardfb5f3981230f468f82e8c282167009ff .info p {
+                margin: 0 auto;
+                text-align: center;
+            }
+        </style>
+
+        <div class="imageCardfb5f3981230f468f82e8c282167009ff">
+            <a href="">
+                <img src="./statics/darkknightjoker_fg.jpg" alt="">
+                <div class="info">
+                    <p>Batman</p>
+                    <p>Dark Knight</p>
+                    <p>2008</p>
+                </div>
+            </a>
+        </div>
+        <div class="imageCardfb5f3981230f468f82e8c282167009ff">
+            <a href="">
+                <img src="./statics/interstellar_fg.jpg" alt="">
+                <div class="info">
+                    <p>Interstellar</p>
+                    <!--p>Bird</p-->
+                    <p>2014</p>
+                </div>
+            </a>
+        </div>
+        <div class="imageCardfb5f3981230f468f82e8c282167009ff">
+            <a href="./Oppenheimer.html">
+                <img src="./statics/Oppenheimer001.jpg" alt="">
+                <div class="info">
+                    <p>Oppenheimer</p>
+                    <!--p>Bird</p-->
+                    <p>2023</p>
+                </div>
+            </a>
+        </div>
+        <div class="imageCardfb5f3981230f468f82e8c282167009ff">
+            <a href="">
+                <img src="./statics/vampirediaries_fg.jpg" alt="">
+                <div class="info">
+                    <p>Vampire Diaries</p>
+                    <!--p>Bird</p-->
+                    <p>2009</p>
+                </div>
+            </a>
+        </div>
+        <div class="imageCardfb5f3981230f468f82e8c282167009ff">
+            <a href="">
+                <img src="./statics/strangerthings_fg001.webp" alt="">
+                <div class="info">
+                    <p>Stranger Things</p>
+                    <!--p>Bird</p-->
+                    <p>2016</p>
+                </div>
+            </a>
+        </div>
+        <!--div class="imageCardfb5f3981230f468f82e8c282167009ff">
+            <a href="">
+                <img src="./statics/bird001.webp" alt="">
+                <div class="info">
+                    <p>Beautiful</p>
+                    <p>Bird</p>
+                    <p>2024</p>
+                </div>
+            </a>
+        </div>
+        <div class="imageCardfb5f3981230f468f82e8c282167009ff">
+            <a href="">
+                <img src="./statics/bird001.webp" alt="">
+                <div class="info">
+                    <p>Beautiful</p>
+                    <p>Bird</p>
+                    <p>2024</p>
+                </div>
+            </a>
+        </div>
+        <div class="imageCardfb5f3981230f468f82e8c282167009ff">
+            <a href="">
+                <img src="./statics/bird001.webp" alt="">
+                <div class="info">
+                    <p>Beautiful</p>
+                    <p>Bird</p>
+                    <p>2024</p>
+                </div>
+            </a>
+        </div>
+        <div class="imageCardfb5f3981230f468f82e8c282167009ff">
+            <a href="">
+                <img src="./statics/bird001.webp" alt="">
+                <div class="info">
+                    <p>Beautiful</p>
+                    <p>Bird</p>
+                    <p>2024</p>
+                </div>
+            </a>
+        </div>
+        <div class="imageCardfb5f3981230f468f82e8c282167009ff">
+            <a href="">
+                <img src="./statics/bird001.webp" alt="">
+                <div class="info">
+                    <p>Beautiful</p>
+                    <p>Bird</p>
+                    <p>2024</p>
+                </div>
+            </a>
+        </div-->
+    </div>
+    <!----------------------------------------------------------------->
+    <!-------------------------------- Updated --------------------------------->
+
+    <!-------------- styles --------------->
+    <style>
+        .parent_list4295ed84adad4f10bacf176a75cb6bab {
+            position: relative;
+            width: 90%;
+            margin: auto;
+            /*height: 350px;*/
+        }
+
+        .dragableList4295ed84adad4f10bacf176a75cb6bab {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            position: relative;
+            left: 0px;
+            overflow-x: visible;
+            /*transition: 0.3s;*/
+        }
+
+        .imageCarde004880881904ccda82f4062ee53b57c {
+            width: 22%;
+            min-width: 280px;
+            min-height: 300px;
+            border-radius: 20px;
+            background-color: #222;
+            padding: 10px;
+            /*margin: auto;*/
+            margin: 10px;
+            position: relative;
+            transition: 0.3s;
+            overflow: hidden;
+        }
+
+        .imageCarde004880881904ccda82f4062ee53b57c.shrinkable {
+            min-width: 150px;
+        }
+
+        .imageCarde004880881904ccda82f4062ee53b57c:hover {
+            background-color: #333;
+        }
+
+        .imageCarde004880881904ccda82f4062ee53b57c a {
+            text-decoration: none;
+        }
+
+        .imageCarde004880881904ccda82f4062ee53b57c .main-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .imageCarde004880881904ccda82f4062ee53b57c:hover .main-img {
+            filter: brightness(60%);
+        }
+
+        .imageCarde004880881904ccda82f4062ee53b57c .description {
+            color: white;
+            opacity: 0;
+            width: 90%;
+            position: absolute;
+            top: 90px;
+            transform: translateY(-50%);
+            padding: 10px;
+            font-size: 14px;
+            text-align: start;
+            transition: 0.3s;
+        }
+
+        .imageCarde004880881904ccda82f4062ee53b57c:hover .description {
+            opacity: 1;
+            top: 100px;
+        }
+
+        .imageCarde004880881904ccda82f4062ee53b57c .genres {
+            opacity: 0;
+            position: absolute;
+            top: 190px;
+            transform: translateY(-50%);
+            transition: 0.3s;
+        }
+
+        .imageCarde004880881904ccda82f4062ee53b57c:hover .genres {
+            opacity: 1;
+            top: 200px;
+        }
+
+        .imageCarde004880881904ccda82f4062ee53b57c .genres span.genre {
+            color: white;
+            background-color: rgba(128, 128, 128, 0.5);
+            border-radius: 20px;
+            font-size: 14px;
+            padding: 2px 5px;
+        }
+
+        .imageCarde004880881904ccda82f4062ee53b57c .icons {
+            position: absolute;
+            top: 5px;
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        .imageCarde004880881904ccda82f4062ee53b57c:hover .icons {
+            opacity: 1;
+            top: 10px;
+        }
+
+        .imageCarde004880881904ccda82f4062ee53b57c .icons span {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: rgba(128, 128, 128, 0.5);
+            color: white;
+            text-align: center;
+            padding-top: 7px;
+        }
+
+        .imageCarde004880881904ccda82f4062ee53b57c .brief-description {
+            color: #aaa;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .imageCarde004880881904ccda82f4062ee53b57c .title {
+            margin: 10px 0;
+            color: white;
+        }
+
+        .imageCarde004880881904ccda82f4062ee53b57c .rates .imdb-img {
+            width: 40px;
+            height: 20px;
+            object-fit: contain;
+        }
+
+        .imageCarde004880881904ccda82f4062ee53b57c .rates .imdb-rate {
+            color: white;
+            font-size: 14px;
+            position: relative;
+            top: -5px;
+        }
+
+        .imageCarde004880881904ccda82f4062ee53b57c .rates .rotten-tomatoes-img {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+        }
+
+        .imageCarde004880881904ccda82f4062ee53b57c .rates .rotten-tomatoes-rate {
+            color: white;
+            font-size: 14px;
+            position: relative;
+            top: -5px;
+        }
+    </style>
+
+    <!-------------- Updated Series --------------->
+    <style>
+        #updateSeriesHR4295ed84adad4f10bacf176a75cb6bab {
+            width: 80%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            margin-right: 5%;
+            position: relative;
+            overflow: visible;
+            border-color: rgba(255, 255, 255, 0.2);
+            /*float: right;*/
+        }
+
+        #updateSeriesHR4295ed84adad4f10bacf176a75cb6bab::before {
+            content: "Series";
+            font-weight: bold;
+            /*background-color: #111;*/
+            position: absolute;
+            left: -150px;
+            color: white;
+            transform: translateY(-50%);
+            padding: 10px 20px;
+        }
+    </style>
+    <hr id="updateSeriesHR4295ed84adad4f10bacf176a75cb6bab">
+
+    <div class="parent_list4295ed84adad4f10bacf176a75cb6bab">
+        <div class="dragableList4295ed84adad4f10bacf176a75cb6bab">
+            <!--div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/vampirediaries_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/strangerthings_fg001.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/Oppenheimer001.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/interstellar_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/darkknightjoker_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div-->
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/vampirediaries_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/strangerthings_fg001.webp" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/Oppenheimer001.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/interstellar_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/darkknightjoker_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="dragableList4295ed84adad4f10bacf176a75cb6bab row2">
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/Oppenheimer001.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/interstellar_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/darkknightjoker_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/strangerthings_fg001.webp" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/vampirediaries_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!--div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/vampirediaries_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/strangerthings_fg001.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/Oppenheimer001.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/interstellar_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/darkknightjoker_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div-->
+
+        </div>
+    </div>
+
+    <!-------------- Updated Animes --------------->
+    <style>
+        #updateAnimesHR4295ed84adad4f10bacf176a75cb6bab {
+            width: 80%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            margin-right: 5%;
+            position: relative;
+            overflow: visible;
+            border-color: rgba(255, 255, 255, 0.2);
+            /*float: right;*/
+        }
+
+        #updateAnimesHR4295ed84adad4f10bacf176a75cb6bab::before {
+            content: "Anime";
+            font-weight: bold;
+            /*background-color: #111;*/
+            position: absolute;
+            left: -150px;
+            color: white;
+            transform: translateY(-50%);
+            padding: 10px 20px;
+        }
+    </style>
+    <hr id="updateAnimesHR4295ed84adad4f10bacf176a75cb6bab">
+
+    <div class="parent_list4295ed84adad4f10bacf176a75cb6bab">
+        <div class="dragableList4295ed84adad4f10bacf176a75cb6bab">
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/vampirediaries_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/strangerthings_fg001.webp" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/Oppenheimer001.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/interstellar_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/darkknightjoker_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-------------- Updated Korean Series --------------->
+    <style>
+        #updateKoreanSeriesHR4295ed84adad4f10bacf176a75cb6bab {
+            width: 80%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            margin-right: 5%;
+            position: relative;
+            overflow: visible;
+            border-color: rgba(255, 255, 255, 0.2);
+            /*float: right;*/
+        }
+
+        #updateKoreanSeriesHR4295ed84adad4f10bacf176a75cb6bab::before {
+            content: "Korean Series";
+            font-weight: bold;
+            /*background-color: #111;*/
+            position: absolute;
+            left: -150px;
+            color: white;
+            transform: translateY(-50%);
+            padding: 10px 20px;
+        }
+    </style>
+    <hr id="updateKoreanSeriesHR4295ed84adad4f10bacf176a75cb6bab">
+
+    <div class="parent_list4295ed84adad4f10bacf176a75cb6bab">
+        <div class="dragableList4295ed84adad4f10bacf176a75cb6bab">
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/vampirediaries_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/strangerthings_fg001.webp" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/Oppenheimer001.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/interstellar_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c">
+                <a href="">
+                    <img class="main-img" src="./statics/darkknightjoker_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate eos
+                        autem
+                        ad
+                        ducimus placeat inventore libero obcaecati rem, eligendi illo odio ut corrupti voluptatum.
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-------------- Updated Movies --------------->
+    <style>
+        #updateMoviesHR4295ed84adad4f10bacf176a75cb6bab {
+            width: 80%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            margin-right: 5%;
+            position: relative;
+            overflow: visible;
+            border-color: rgba(255, 255, 255, 0.2);
+            /*float: right;*/
+        }
+
+        #updateMoviesHR4295ed84adad4f10bacf176a75cb6bab::before {
+            content: "Movies";
+            font-weight: bold;
+            /*background-color: #111;*/
+            position: absolute;
+            left: -150px;
+            color: white;
+            transform: translateY(-50%);
+            padding: 10px 20px;
+        }
+    </style>
+    <hr id="updateMoviesHR4295ed84adad4f10bacf176a75cb6bab">
+
+    <div class="parent_list4295ed84adad4f10bacf176a75cb6bab">
+        <div class="dragableList4295ed84adad4f10bacf176a75cb6bab">
+            <div class="imageCarde004880881904ccda82f4062ee53b57c shrinkable">
+                <a href="">
+                    <img class="main-img" src="./statics/vampirediaries_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c shrinkable">
+                <a href="">
+                    <img class="main-img" src="./statics/strangerthings_fg001.webp" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c shrinkable">
+                <a href="">
+                    <img class="main-img" src="./statics/vampirediaries_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c shrinkable">
+                <a href="">
+                    <img class="main-img" src="./statics/Oppenheimer001.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c shrinkable">
+                <a href="">
+                    <img class="main-img" src="./statics/vampirediaries_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c shrinkable">
+                <a href="">
+                    <img class="main-img" src="./statics/interstellar_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c shrinkable">
+                <a href="">
+                    <img class="main-img" src="./statics/darkknightjoker_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c shrinkable">
+                <a href="">
+                    <img class="main-img" src="./statics/interstellar_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="dragableList4295ed84adad4f10bacf176a75cb6bab row2">
+            <div class="imageCarde004880881904ccda82f4062ee53b57c shrinkable">
+                <a href="">
+                    <img class="main-img" src="./statics/vampirediaries_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c shrinkable">
+                <a href="">
+                    <img class="main-img" src="./statics/strangerthings_fg001.webp" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c shrinkable">
+                <a href="">
+                    <img class="main-img" src="./statics/Oppenheimer001.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c shrinkable">
+                <a href="">
+                    <img class="main-img" src="./statics/interstellar_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c shrinkable">
+                <a href="">
+                    <img class="main-img" src="./statics/darkknightjoker_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imageCarde004880881904ccda82f4062ee53b57c shrinkable">
+                <a href="">
+                    <img class="main-img" src="./statics/interstellar_fg.jpg" alt="">
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                    </p>
+                    <div class="genres">
+                        <span class="genre">Biography</span>
+                        <span class="genre">Drama</span>
+                        <span class="genre">History</span>
+                    </div>
+                    <div class="icons">
+                        <span title="Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                        <span title="Dubbed"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+                    <p class="brief-description">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h4 class="title">Movie Title</h4>
+                    <div class="rates">
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                            <span class="imdb-rate"> 8.3</span>
+                        </div>
+                        <div style="float: left;margin: 0 5px;">
+                            <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                            <span class="rotten-tomatoes-rate"> 93%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-------------- Updated scripts --------------->
+    <script>
+        let dragables_list4295ed84adad4f10bacf176a75cb6bab = document.getElementsByClassName("dragableList4295ed84adad4f10bacf176a75cb6bab");
+        for (let dragable of dragables_list4295ed84adad4f10bacf176a75cb6bab) {
+            dragFlexBox_a4cfae93e514e49329578e445b2562084(dragable);
+        }
+
+        function dragFlexBox_a4cfae93e514e49329578e445b2562084(element) {
+            element.addEventListener("mousedown", e => dragMouseDown(e));
+            let anchors = element.getElementsByTagName("a");
+            let onclickfun = []
+
+            function dragMouseDown(e) {
+                e.preventDefault();
+                document.onmouseup = closeDragElement;
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e.preventDefault();
+                for (let i = 0; i < anchors.length; i++) {
+                    anchors[i].onclick = (e) => e.preventDefault();
+                }
+
+                let left = (Number)(element.style.left.replace("px", ""));
+                let moveLength = (left + e.movementX);
+                let parentOfFlexBox = element.parentElement;
+                /*console.log(parentOfFlexBox.offsetWidth - element.offsetWidth);
+
+                if ((parentOfFlexBox.offsetWidth - element.offsetWidth) >= 0) {
+                    return;
+                }*/
+
+                if (moveLength > 0) { moveLength = 0; }
+                /*if (moveLength < (parentOfFlexBox.offsetWidth - element.offsetWidth)) {
+                    moveLength = parentOfFlexBox.offsetWidth - element.offsetWidth;
+                }*/
+                if (moveLength < (parentOfFlexBox.offsetWidth - element.scrollWidth)) {
+                    moveLength = (parentOfFlexBox.offsetWidth - element.scrollWidth);
+                }
+                //console.log(element.scrollWidth);
+                element.style.left = moveLength + "px";
+
+                element.style.cursor = "grabbing";
+            }
+
+            function closeDragElement(e) {
+                e.preventDefault();
+                for (let i = 0; i < anchors.length; i++) {
+                    setTimeout(() => { anchors[i].onclick = null; }, 10);
+                }
+                document.onmouseup = null;
+                document.onmousemove = null;
+
+                element.style.cursor = "auto";
+            }
+        }
+    </script>
+    <!----------------------------------------------------------------->
+</body>
+
+</html>

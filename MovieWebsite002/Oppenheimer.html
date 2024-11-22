@@ -1,0 +1,2497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        body {
+            font-size: 100%;
+            overflow-x: hidden;
+            background-color: black;
+            margin: 0;
+        }
+    </style>
+
+    <!--------------------------------- navbar -------------------------------->
+    <div id="navbarc9688e3a36eb4b83814687ea3dfa42c7" class="clearfix">
+        <style>
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 {
+                /*background-color: rgba(0, 0, 0, 0.2);*/
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 0 50px;
+                /*border: 1px solid white;*/
+                z-index: 10;
+                backdrop-filter: blur(5px) brightness(50%);
+            }
+
+            @media screen and (max-width:1000px) {
+                #navbarc9688e3a36eb4b83814687ea3dfa42c7 {
+                    padding: 0;
+                }
+            }
+
+            /********************************************************/
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 #navbar-logo {
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+                overflow: hidden;
+                border: 1px solid yellow;
+                border-radius: 50%;
+                float: left;
+                transition: all 0.2s ease-out;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 #navbar-logo:hover {
+                /*background-color: #333;*/
+                filter: brightness(150%);
+            }
+
+            /********************************************************/
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown {
+                position: relative;
+                display: block;
+                width: fit-content;
+                float: left;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown .dropbtn {
+                background-color: rgba(0, 0, 0, 0);
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+                transition: all 0.2s ease-out;
+                color: #ddd;
+                font-size: 14px;
+                height: 50px;
+                width: fit-content;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown:hover .dropbtn {
+                color: yellow;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown .dropbtn .angle {
+                transition: all 0.2s ease-out;
+                position: absolute;
+                font-size: 20px;
+                /*background-color: #ccc;*/
+                top: 14px;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown:hover .angle {
+                rotate: -180deg;
+                display: inline-block;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown .dropdown-content {
+                display: flex;
+                flex-direction: row;
+                height: 0;
+                width: fit-content;
+                position: absolute;
+                top: 20px;
+                left: 0;
+                background-color: #333;
+                /*min-width: 160px;*/
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+                overflow: hidden;
+                transition: all 0.2s ease-out;
+                opacity: 0;
+                border-radius: 10px;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown.categories {
+                display: none;
+            }
+
+            @media screen and (max-width:800px) {
+                #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown {
+                    display: none;
+                }
+
+                #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown.categories {
+                    display: block;
+                }
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown:hover .dropdown-content {
+                opacity: 1;
+                top: 50px;
+                height: fit-content;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown .dropdown-content a {
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                color: #ccc;
+                font-size: 14px;
+                width: fit-content;
+                text-wrap: nowrap;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .dropdown .dropdown-content a:hover {
+                color: yellow;
+            }
+
+            /********************************************************/
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .search-box {
+                width: fit-content;
+                float: left;
+                margin: 5px;
+                position: relative;
+                /*left: 50%;*/
+                /*transform: translateX(-50%);*/
+            }
+
+            /*@media screen and (max-width:700px) {
+                #navbarc9688e3a36eb4b83814687ea3dfa42c7 .search-box {
+                    margin: 5px;
+                }
+            }*/
+
+            /* Style the search field */
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .search-box form.searchForm input[type=text] {
+                padding: 10px 35px 10px 10px;
+                font-size: 17px;
+                border: none;
+                border-radius: 20px;
+                float: left;
+                /*width: fit-content;*/
+                width: 200px;
+                background-color: rgba(0, 225, 255, 0.2);
+                color: yellow;
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .search-box form.searchForm input[type=text]::placeholder {
+                color: rgba(255, 255, 0, 0.5);
+                font-size: 14px;
+            }
+
+            /* Style the submit button */
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .search-box form.searchForm button {
+                float: left;
+                /*width: 20px;*/
+                padding: 10px;
+                background-color: rgba(0, 0, 0, 0);
+                color: rgba(255, 255, 0, 0.7);
+                font-size: 17px;
+                border: none;
+                /*border-left: 1px solid rgba(255, 255, 0, 1);*/
+                cursor: pointer;
+                position: absolute;
+                right: 0px;
+                /*z-index: 1;*/
+            }
+
+            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .search-box form.searchForm button:hover {
+                color: yellow;
+            }
+        </style>
+
+        <a href="index.html">
+            <img id="navbar-logo" src="./statics/HLogo.webp" alt="">
+        </a>
+
+        <div class="dropdown">
+            <button class="dropbtn">Movie <span class="angle">&blacktriangledown;</span></button>
+            <div class="dropdown-content clearfix">
+                <div>
+                    <a href="#">IMDb 250</a>
+                    <a href="#">horror</a>
+                    <a href="#">comedy</a>
+                </div>
+                <div>
+                    <a href="#">IMDb 250</a>
+                    <a href="#">horror</a>
+                    <a href="#">comedy</a>
+                </div>
+                <div>
+                    <a href="#">IMDb 250</a>
+                    <a href="#">horror</a>
+                    <a href="#">comedy</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Serial <span class="angle">&blacktriangledown;</span></button>
+            <div class="dropdown-content clearfix">
+                <div>
+                    <a href="#">IMDb 250</a>
+                    <a href="#">horror</a>
+                    <a href="#">comedy</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Animation <span class="angle">&blacktriangledown;</span></button>
+            <div class="dropdown-content clearfix">
+                <div>
+                    <a href="#">IMDb 250</a>
+                    <a href="#">horror</a>
+                    <a href="#">comedy</a>
+                </div>
+                <div>
+                    <a href="#">IMDb 250</a>
+                    <a href="#">horror</a>
+                    <a href="#">comedy</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Anime <span class="angle">&blacktriangledown;</span></button>
+            <div class="dropdown-content clearfix">
+                <div>
+                    <a href="#">IMDb 250</a>
+                    <a href="#">horror</a>
+                    <a href="#">comedy</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="dropdown categories" style="position: static;">
+            <button class="dropbtn">Categories <span class="angle">&blacktriangledown;</span></button>
+            <div class="dropdown-content clearfix">
+                <div id="a551c262641c644419af39637427612ac" class="Scriptd5b6b606f4934bdd8c8850bd3f2937ff">
+                    <style>
+                        #a551c262641c644419af39637427612ac {
+                            width: 100%;
+                            min-width: 300px;
+                        }
+
+                        #a551c262641c644419af39637427612ac .links {
+                            overflow: hidden;
+                            border: none;
+                            outline: 0;
+                            width: fit-content;
+                        }
+
+                        #a551c262641c644419af39637427612ac .links button {
+                            background-color: inherit;
+                            float: left;
+                            border: none;
+                            outline: none;
+                            cursor: pointer;
+                            padding: 14px 16px;
+                            transition: 0.3s;
+                            font-size: 14px;
+                            width: fit-content;
+                            height: 50px;
+                            color: white;
+                        }
+
+                        /*#a551c262641c644419af39637427612ac .links button:hover {
+                            background-color: #ddd;
+                        }*/
+
+                        #a551c262641c644419af39637427612ac .tabcontent {
+                            display: none;
+                            flex-direction: row;
+                            flex-wrap: nowrap;
+                            color: white;
+                            border: none;
+                            animation: fadeEffect 0.5s;
+                            overflow: hidden;
+                            width: 100%;
+                        }
+
+                        @keyframes fadeEffect {
+                            from {
+                                opacity: 0;
+                            }
+
+                            to {
+                                opacity: 1;
+                            }
+                        }
+
+                        #a551c262641c644419af39637427612ac #Movie,
+                        #a551c262641c644419af39637427612ac .links .Movie.active {
+                            background-color: rgba(253, 33, 33, 0.2);
+                        }
+
+                        #a551c262641c644419af39637427612ac #Serial,
+                        #a551c262641c644419af39637427612ac .links .Serial.active {
+                            background-color: rgba(0, 190, 0, 0.2);
+                        }
+
+                        #a551c262641c644419af39637427612ac #Animation,
+                        #a551c262641c644419af39637427612ac .links .Animation.active {
+                            background-color: rgba(0, 132, 255, 0.2);
+                        }
+
+                        #a551c262641c644419af39637427612ac #Anime,
+                        #a551c262641c644419af39637427612ac .links .Anime.active {
+                            background-color: rgba(255, 165, 0, 0.2);
+                        }
+
+                        #a551c262641c644419af39637427612ac .tabcontent h3 {
+                            padding: 50px 0 0 50px;
+                            font-weight: normal;
+                            font-size: xx-large;
+                        }
+                    </style>
+
+                    <div class="links clearfix">
+                        <button class="tablink Movie defaultOpen active">Movie</button>
+                        <button class="tablink Serial">Serial</button>
+                        <button class="tablink Animation">Animation</button>
+                        <button class="tablink Anime">Anime</button>
+                    </div>
+
+                    <div id="Movie" class="tabcontent clearfix" style="display: flex;">
+                        <!--h3>Movie</h3>
+                        <p class="" style="padding: 0 0 50px 50px;">Movie is where the heart is..</p-->
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                    </div>
+
+                    <div id="Serial" class="tabcontent clearfix">
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                    </div>
+
+                    <div id="Animation" class="tabcontent clearfix">
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                    </div>
+
+                    <div id="Anime" class="tabcontent clearfix">
+                        <div>
+                            <a href="#">IMDb 250</a>
+                            <a href="#">horror</a>
+                            <a href="#">comedy</a>
+                        </div>
+                    </div>
+
+                    <script>
+
+                        let mainElements_Scriptd5b6b606f4934bdd8c8850bd3f2937ff = document.getElementsByClassName("Scriptd5b6b606f4934bdd8c8850bd3f2937ff");
+
+                        for (let i = 0; i < mainElements_Scriptd5b6b606f4934bdd8c8850bd3f2937ff.length; i++) {
+                            let mainElement = mainElements_Scriptd5b6b606f4934bdd8c8850bd3f2937ff.item(i);
+                            let siblingTabLinks = mainElement.getElementsByClassName("tablink");
+                            //let siblingTabContents = mainElements[i].getElementsByClassName("tabcontent");
+
+                            //console.log("siblingTabLinks: " + siblingTabLinks.length);
+
+                            for (let j = 0; j < siblingTabLinks.length; j++) {
+
+                                let cityName = siblingTabLinks.item(j).innerHTML;
+
+                                siblingTabLinks.item(j).addEventListener("click", function () {
+                                    removeActive_Scriptd5b6b606f4934bdd8c8850bd3f2937ff(mainElement.id);
+
+                                    setDisplayNone_Scriptd5b6b606f4934bdd8c8850bd3f2937ff(mainElement.id);
+
+                                    mainElement.querySelector(`#${cityName}`).style.display = "flex";
+                                    siblingTabLinks.item(j).classList.add("active");
+                                });
+                            }
+
+                            mainElement.querySelector(".defaultOpen").click();
+                        }
+                        // remove active From Sibling TabLinks' classList
+                        function removeActive_Scriptd5b6b606f4934bdd8c8850bd3f2937ff(mainElementId) {
+                            let mainElement = document.getElementById(mainElementId);
+                            let siblingTabLinks = mainElement.getElementsByClassName("tablink");
+                            for (let i = 0; i < siblingTabLinks.length; i++) {
+                                siblingTabLinks[i].classList.remove("active");
+                            }
+                        }
+
+                        // set display to none for all tabcontent element
+                        function setDisplayNone_Scriptd5b6b606f4934bdd8c8850bd3f2937ff(mainElementId) {
+                            let mainElement = document.getElementById(mainElementId);
+                            let siblingTabContents = mainElement.getElementsByClassName("tabcontent");
+                            for (let i = 0; i < siblingTabContents.length; i++) {
+                                siblingTabContents[i].style.display = "none";
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-box" class="">
+            <form class="searchForm" action="">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+
+        <div id="user-container">
+            <style>
+                #navbarc9688e3a36eb4b83814687ea3dfa42c7 #user-container {
+                    float: right;
+                }
+            </style>
+            <div class="user-account-container">
+                <style>
+                    #navbarc9688e3a36eb4b83814687ea3dfa42c7 .user-account-dropdown {
+                        cursor: pointer;
+                    }
+                </style>
+                <div class="user-account-dropdown">
+                    <style>
+                        #navbarc9688e3a36eb4b83814687ea3dfa42c7 .user-account-dropdown img {
+                            width: 50px;
+                            height: 50px;
+                            object-fit: cover;
+                            border-radius: 50%;
+                            background-color: transparent;
+                        }
+                    </style>
+                    <img src="./statics/defaultProfile.jpg" alt="" class="user-img">
+
+                    <style>
+                        #navbarc9688e3a36eb4b83814687ea3dfa42c7 .user-menu-container {
+                            position: absolute;
+                            right: 50px;
+                        }
+
+                        @media screen and (max-width:1000px) {
+                            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .user-menu-container {
+                                right: 0px;
+                            }
+                        }
+                    </style>
+                    <div class="user-menu-container">
+                        <style>
+                            .menu714118d2b2e9457a94134762e94de1ec {
+                                background-color: aliceblue;
+                                color: black;
+                                width: 250px;
+                                padding: 0px;
+                                border-radius: 20px;
+                                box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+                                height: 0;
+                                overflow: hidden;
+                                transition: all 0.2s;
+                                cursor: auto;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec a {
+                                text-decoration: none;
+                                color: inherit;
+                            }
+
+                            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .user-account-dropdown:hover .menu714118d2b2e9457a94134762e94de1ec {
+                                height: 350px;
+                                padding: 20px 10px;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec>div {
+                                background-color: white;
+                                border-radius: 10px;
+                                width: 100%;
+                                margin: 10px auto;
+                                padding: 0 10px;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec .profile-box {
+                                padding: 10px 20px;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec .profile-box img {
+                                width: 40px;
+                                height: 40px;
+                                object-fit: cover;
+                                border-radius: 50%;
+                                float: left;
+                                margin-right: 5px;
+                            }
+
+                            /************* login *************/
+
+                            #navbarc9688e3a36eb4b83814687ea3dfa42c7 .user-account-dropdown:hover .menu714118d2b2e9457a94134762e94de1ec.login {
+                                height: 230px;
+                                padding: 20px 10px;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec.login .profile-box {
+                                padding: 10px 20px;
+                                text-align: center;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec.login .profile-box img {
+                                width: 40px;
+                                height: 40px;
+                                object-fit: cover;
+                                border-radius: 50%;
+                                margin-left: 70px;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec .profile-box .name {
+                                font-size: 14px;
+                                font-weight: bold;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec .profile-box .email {
+                                font-size: 12px;
+                                color: gray;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec ul {
+                                list-style-type: none;
+                                padding: 10px 0;
+                                font-size: 10px;
+                                color: gray;
+                                font-weight: bold;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec li {
+                                padding: 10px;
+                                cursor: pointer;
+                                font-weight: normal;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec li:hover {
+                                background-color: azure;
+                                color: black;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec li {
+                                font-size: 14px;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec li i {
+                                margin-right: 5px;
+                            }
+
+                            /***************************** dark-mode *****************************/
+
+                            .menu714118d2b2e9457a94134762e94de1ec.dark-mode {
+                                background-color: rgb(30, 30, 30);
+                                color: white;
+                                /*box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);*/
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec.dark-mode>div {
+                                background-color: rgb(50, 50, 50);
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec.dark-mode li:hover {
+                                background-color: rgb(40, 40, 40);
+                                color: white;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec.dark-mode ul {
+                                color: lightgray;
+                            }
+
+                            .menu714118d2b2e9457a94134762e94de1ec.dark-mode .profile-box .email {
+                                color: lightgray;
+                            }
+                        </style>
+
+                        <div class="menu714118d2b2e9457a94134762e94de1ec dark-mode">
+                            <div class="profile-box clearfix">
+                                <img src="./statics/defaultProfile.jpg" alt="user image">
+                                <span class="name">Username</span>
+                                <br>
+                                <span class="email">username@Email.com</span>
+                            </div>
+                            <div class="management-div">
+                                <ul>Manage
+                                    <li>
+                                        <a href="./profile.html">
+                                            <i class="fa-solid fa-chart-line"></i>
+                                            Dashborad
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./settings.html">
+                                            <i class="fa-solid fa-gear"></i>
+                                            Settings
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fa-regular fa-newspaper"></i>
+                                            Purchase
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="work-div">
+                                <ul>Account
+                                    <li>
+                                        <a asp-controller="Account" asp-action="Logout"
+                                            asp-route-returnUrl="@currentUrl">
+                                            <i class="fa-solid fa-right-from-bracket"></i>
+                                            Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="menu714118d2b2e9457a94134762e94de1ec login dark-mode">
+                            <div class="profile-box clearfix">
+                                <img src="./statics/defaultProfile.jpg" alt="">
+                            </div>
+                            <div class="management-div">
+                                <ul>Account
+                                    <li>
+                                        <a href="./login.html">
+                                            <i class="fa-solid fa-right-to-bracket"></i>
+                                            Login
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./signup.html">
+                                            <i class="fa-solid fa-user-plus"></i>
+                                            Create a new account
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--------------------------------- play card -------------------------------->
+    <div id="movieCard377f4e4d8da44dec8eb75874f9e085e4" class="clearfix">
+        <style>
+            #movieCard377f4e4d8da44dec8eb75874f9e085e4 {
+                position: relative;
+                width: 100vw;
+                height: 100vh;
+                overflow: hidden;
+                padding: 20px;
+            }
+
+            @media screen and (max-width:800px) {
+                #movieCard377f4e4d8da44dec8eb75874f9e085e4 {
+                    height: fit-content;
+                }
+            }
+
+            #movieCard377f4e4d8da44dec8eb75874f9e085e4 .bg-img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                filter: brightness(40%);
+                z-index: 0;
+            }
+
+            #movieCard377f4e4d8da44dec8eb75874f9e085e4 .trailer-link {
+                display: block;
+                float: left;
+                width: 300px;
+                height: 400px;
+                text-decoration: none;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 0 55px black;
+            }
+
+            #movieCard377f4e4d8da44dec8eb75874f9e085e4 .main-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            #movieCard377f4e4d8da44dec8eb75874f9e085e4 .main-container {
+                margin-top: 50vh;
+                transform: translateY(-50%);
+            }
+
+            @media screen and (max-width:800px) {
+                #movieCard377f4e4d8da44dec8eb75874f9e085e4 .main-container {
+                    margin-top: 0;
+                    transform: translateY(0%);
+                }
+            }
+
+            #movieCard377f4e4d8da44dec8eb75874f9e085e4 .info {
+                color: white;
+                margin: 20px;
+                max-width: calc(100% - 350px);
+            }
+
+            @media screen and (max-width:800px) {
+                #movieCard377f4e4d8da44dec8eb75874f9e085e4 .info {
+                    max-width: 100%;
+                }
+            }
+
+            #movieCard377f4e4d8da44dec8eb75874f9e085e4 .bookmark-btn {
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                color: white;
+                font-size: 24px;
+                margin-left: 20px;
+                position: relative;
+                top: -20px;
+            }
+
+            #movieCard377f4e4d8da44dec8eb75874f9e085e4 .genre {
+                text-decoration: none;
+                color: white;
+                background-color: rgba(128, 128, 128, 0.5);
+                padding: 5px 10px;
+                border-radius: 20px;
+                font-size: 14px;
+                font-weight: normal;
+                opacity: 0.8;
+                transition: 0.1s;
+            }
+
+            #movieCard377f4e4d8da44dec8eb75874f9e085e4 .genre:hover {
+                opacity: 1;
+            }
+
+            #movieCard377f4e4d8da44dec8eb75874f9e085e4 .imdb-img {
+                width: 40px;
+                height: 20px;
+                object-fit: contain;
+            }
+
+            #movieCard377f4e4d8da44dec8eb75874f9e085e4 .rotten-tomatoes-img {
+                width: 20px;
+                height: 20px;
+                object-fit: contain;
+            }
+
+            #movieCard377f4e4d8da44dec8eb75874f9e085e4 .rate-box span {
+                position: relative;
+                top: -3px;
+            }
+
+            #movieCard377f4e4d8da44dec8eb75874f9e085e4 p {
+                color: #ddd;
+                width: fit-content;
+            }
+
+            #movieCard377f4e4d8da44dec8eb75874f9e085e4 .play-box button {
+                border: none;
+                /*background-color: rgb(193, 60, 255);*/
+                background-color: rgb(170, 51, 71);
+                color: white;
+                font-size: 20px;
+                padding: 10px 20px;
+                border-radius: 10px;
+                transition: 0.2s;
+                cursor: pointer;
+            }
+
+            #movieCard377f4e4d8da44dec8eb75874f9e085e4 .play-box button:hover {
+                background-color: rgb(238, 255, 0);
+                color: #333;
+            }
+        </style>
+        <img class="bg-img" src="./statics/oppenheimer_bg.jfif" alt="">
+        <div class="clearfix main-container">
+            <!--a class="trailer-link" href="">
+                <img class="main-img" src="./statics/library002.webp" alt="">
+            </a-->
+            <div id="a1a947d7ca6ac4a8d847e0f9eeb502022" title="Trailer">
+                <style>
+                    #a1a947d7ca6ac4a8d847e0f9eeb502022 {
+                        width: 300px;
+                        height: 400px;
+                        border: none;
+                        border-radius: 15px;
+                        padding: 3px;
+                        overflow: hidden;
+                        position: relative;
+                        z-index: 0;
+                        float: left;
+                        cursor: pointer;
+                    }
+
+                    @media screen and (max-width:800px) {
+                        #a1a947d7ca6ac4a8d847e0f9eeb502022 {
+                            float: none;
+                            margin: auto;
+                        }
+
+                    }
+
+                    #a1a947d7ca6ac4a8d847e0f9eeb502022 .fa-circle-play {
+                        font-size: 50px;
+                        color: pink;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        z-index: 3;
+                        transition: 0.3s;
+                    }
+
+                    #a1a947d7ca6ac4a8d847e0f9eeb502022:hover .fa-circle-play {
+                        /*font-size: 70px;*/
+                        scale: 150%;
+                        transform: translate(-35%, -35%);
+                    }
+
+                    #a1a947d7ca6ac4a8d847e0f9eeb502022 #container {
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;
+                        border-radius: 12px;
+                        position: relative;
+                        z-index: 2;
+                    }
+
+                    #a1a947d7ca6ac4a8d847e0f9eeb502022 img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+                    #a1a947d7ca6ac4a8d847e0f9eeb502022 #spinner {
+                        width: 500px;
+                        height: 500px;
+                        top: -50px;
+                        left: -100px;
+                        position: absolute;
+                        z-index: 1;
+                        background-image: conic-gradient(yellow 0deg, rgba(255, 255, 0, 0) 90deg, rgba(255, 255, 0, 0) 180deg, rgb(255, 0, 255) 180deg, rgba(255, 0, 255, 0) 270deg);
+                        -webkit-animation: spin_a1a947d7ca6ac4a8d847e0f9eeb502022 5s linear infinite;
+                        animation: spin_a1a947d7ca6ac4a8d847e0f9eeb502022 5s linear infinite;
+                    }
+
+                    /* Safari */
+                    @-webkit-keyframes spin_a1a947d7ca6ac4a8d847e0f9eeb502022 {
+                        0% {
+                            -webkit-transform: rotate(0deg);
+                        }
+
+                        100% {
+                            -webkit-transform: rotate(-360deg);
+                        }
+                    }
+
+                    @keyframes spin_a1a947d7ca6ac4a8d847e0f9eeb502022 {
+                        0% {
+                            transform: rotate(0deg);
+                        }
+
+                        100% {
+                            transform: rotate(-360deg);
+                        }
+                    }
+                </style>
+                <i class="fa-regular fa-circle-play"></i>
+                <div id="container">
+                    <img src="./statics/Oppenheimer001.jpg" alt="">
+                </div>
+                <div id="spinner"></div>
+            </div>
+            <div class="info clearfix" style="float: left;">
+                <h1 class="Title">Oppenheimer
+                    <button onclick="doBookmark(this)" class="bookmark-btn" title="bookmark"><i
+                            class="fa-regular fa-bookmark"></i></button>
+                    <button onclick="undoBookmark(this)" class="bookmark-btn" title="un-bookmark"
+                        style="display: none;"><i class="fa-solid fa-bookmark"></i></button>
+                </h1>
+                <script>
+                    function doBookmark(btn) {
+                        btn.style.display = "none";
+                        btn.nextElementSibling.style.display = "inline-block"
+                    }
+                    function undoBookmark(btn) {
+                        btn.style.display = "none";
+                        btn.previousElementSibling.style.display = "inline-block"
+                    }
+                </script>
+                <p style="font-weight: bold;"><i class="fa-solid fa-calendar"></i> <span>2023</span></p>
+                <p style="font-weight: bold;">Genre:
+                    <a href="" class="genre">Biography</a>
+                    <a href="" class="genre">Drama</a>
+                    <a href="" class="genre">History</a>
+                </p>
+                <p class="summary">The story of American scientist J. Robert Oppenheimer and his role in the development
+                    of the atomic bomb.</p>
+                <div class="rate-box clearfix">
+                    <div style="float: left;margin: 5px;">
+                        <img class="imdb-img" src="./statics/IMDb_logo.png" alt="">
+                        <span class="rate">6.5</span>
+                    </div>
+                    <div style="float: left;margin: 5px;">
+                        <img class="rotten-tomatoes-img" src="./statics/rotten-tomatoes-logo.png" alt="">
+                        <span class="rate">75%</span>
+                    </div>
+                </div>
+                <p style="background-color: #222;padding: 5px 10px;border-radius: 20px;">
+                    <i class="fa-solid fa-file-circle-plus" style="color: rgb(0, 255, 170);"></i>
+                    Season-03 Episode-08 added!
+                </p>
+                <div class="play-box">
+                    <button>Play Movie <i class="fa-regular fa-circle-play"></i></button>
+                    <button>Play The Last Episode <i class="fa-regular fa-circle-play"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------------------- stars --------------------------------->
+    <style>
+        #hr4295ed84adad4f10bacf176a75cb6bab {
+            width: 80%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            margin-right: 5%;
+            position: relative;
+            overflow: visible;
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        #hr4295ed84adad4f10bacf176a75cb6bab::before {
+            content: "Stars";
+            font-weight: bold;
+            /*background-color: #111;*/
+            position: absolute;
+            left: -150px;
+            color: white;
+            transform: translateY(-50%);
+            padding: 10px 20px;
+        }
+    </style>
+    <hr id="hr4295ed84adad4f10bacf176a75cb6bab">
+
+    <div class="list0f0062c14120458daadbd37422973d95">
+        <style>
+            .list0f0062c14120458daadbd37422973d95 {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                width: 90%;
+                margin: auto;
+                /*background-color: black;*/
+                /*border-bottom: 1px dashed rgba(255, 255, 255, 0.2);*/
+            }
+        </style>
+
+        <style>
+            .imageCardfb5f3981230f468f82e8c282167009ff {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                overflow: hidden;
+                position: relative;
+                transition: 0.3s;
+                margin: 10px;
+            }
+
+            .imageCardfb5f3981230f468f82e8c282167009ff:hover {
+                box-shadow: 0 0px 20px black;
+            }
+
+            .imageCardfb5f3981230f468f82e8c282167009ff img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: 0.3s;
+            }
+
+            .imageCardfb5f3981230f468f82e8c282167009ff:hover img {
+                filter: brightness(70%);
+            }
+
+            .imageCardfb5f3981230f468f82e8c282167009ff .info {
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                width: fit-content;
+                transform: translate(-50%, -50%);
+                color: white;
+                font-size: 14px;
+                opacity: 0;
+                transition: 0.3s;
+            }
+
+            .imageCardfb5f3981230f468f82e8c282167009ff:hover .info {
+                opacity: 1;
+                top: 50%;
+            }
+
+            .imageCardfb5f3981230f468f82e8c282167009ff .info p {
+                margin: 0 auto;
+                text-align: center;
+            }
+        </style>
+
+        <div class="imageCardfb5f3981230f468f82e8c282167009ff">
+            <a href="">
+                <img src="./statics/Oppenheimer001.jpg" alt="">
+                <div class="info">
+                    <p>Beautiful</p>
+                    <p>Bird</p>
+                    <p>2024</p>
+                </div>
+            </a>
+        </div>
+        <div class="imageCardfb5f3981230f468f82e8c282167009ff">
+            <a href="">
+                <img src="./statics/Oppenheimer001.jpg" alt="">
+                <div class="info">
+                    <p>Beautiful</p>
+                    <p>Bird</p>
+                    <p>2024</p>
+                </div>
+            </a>
+        </div>
+        <div class="imageCardfb5f3981230f468f82e8c282167009ff">
+            <a href="">
+                <img src="./statics/Oppenheimer001.jpg" alt="">
+                <div class="info">
+                    <p>Beautiful</p>
+                    <p>Bird</p>
+                    <p>2024</p>
+                </div>
+            </a>
+        </div>
+        <div class="imageCardfb5f3981230f468f82e8c282167009ff">
+            <a href="">
+                <img src="./statics/Oppenheimer001.jpg" alt="">
+                <div class="info">
+                    <p>Beautiful</p>
+                    <p>Bird</p>
+                    <p>2024</p>
+                </div>
+            </a>
+        </div>
+        <div class="imageCardfb5f3981230f468f82e8c282167009ff">
+            <a href="">
+                <img src="./statics/Oppenheimer001.jpg" alt="">
+                <div class="info">
+                    <p>Beautiful</p>
+                    <p>Bird</p>
+                    <p>2024</p>
+                </div>
+            </a>
+        </div>
+        <div class="imageCardfb5f3981230f468f82e8c282167009ff">
+            <a href="">
+                <img src="./statics/Oppenheimer001.jpg" alt="">
+                <div class="info">
+                    <p>Beautiful</p>
+                    <p>Bird</p>
+                    <p>2024</p>
+                </div>
+            </a>
+        </div>
+        <div class="imageCardfb5f3981230f468f82e8c282167009ff">
+            <a href="">
+                <img src="./statics/Oppenheimer001.jpg" alt="">
+                <div class="info">
+                    <p>Beautiful</p>
+                    <p>Bird</p>
+                    <p>2024</p>
+                </div>
+            </a>
+        </div>
+        <div class="imageCardfb5f3981230f468f82e8c282167009ff">
+            <a href="">
+                <img src="./statics/Oppenheimer001.jpg" alt="">
+                <div class="info">
+                    <p>Beautiful</p>
+                    <p>Bird</p>
+                    <p>2024</p>
+                </div>
+            </a>
+        </div>
+        <div class="imageCardfb5f3981230f468f82e8c282167009ff">
+            <a href="">
+                <img src="./statics/Oppenheimer001.jpg" alt="">
+                <div class="info">
+                    <p>Beautiful</p>
+                    <p>Bird</p>
+                    <p>2024</p>
+                </div>
+            </a>
+        </div>
+        <div class="imageCardfb5f3981230f468f82e8c282167009ff">
+            <a href="">
+                <img src="./statics/Oppenheimer001.jpg" alt="">
+                <div class="info">
+                    <p>Beautiful</p>
+                    <p>Bird</p>
+                    <p>2024</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-------------------------------- directors --------------------------------->
+    <style>
+        #directorsHR4295ed84adad4f10bacf176a75cb6bab {
+            width: 80%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            margin-right: 5%;
+            position: relative;
+            overflow: visible;
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        #directorsHR4295ed84adad4f10bacf176a75cb6bab::before {
+            content: "Directors";
+            font-weight: bold;
+            /*background-color: #111;*/
+            position: absolute;
+            left: -150px;
+            color: white;
+            transform: translateY(-50%);
+            padding: 10px 20px;
+        }
+    </style>
+    <hr id="directorsHR4295ed84adad4f10bacf176a75cb6bab">
+
+    <div class="list0f0062c14120458daadbd37422973d95">
+        <div class="imageCardfb5f3981230f468f82e8c282167009ff">
+            <a href="">
+                <img src="./statics/Oppenheimer001.jpg" alt="">
+                <div class="info">
+                    <p>Beautiful</p>
+                    <p>Bird</p>
+                    <p>2024</p>
+                </div>
+            </a>
+        </div>
+        <div class="imageCardfb5f3981230f468f82e8c282167009ff">
+            <a href="">
+                <img src="./statics/Oppenheimer001.jpg" alt="">
+                <div class="info">
+                    <p>Beautiful</p>
+                    <p>Bird</p>
+                    <p>2024</p>
+                </div>
+            </a>
+        </div>
+        <div class="imageCardfb5f3981230f468f82e8c282167009ff">
+            <a href="">
+                <img src="./statics/Oppenheimer001.jpg" alt="">
+                <div class="info">
+                    <p>Beautiful</p>
+                    <p>Bird</p>
+                    <p>2024</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-------------------------------- downloads --------------------------------->
+    <div id="accordion66b77283f57d4051b53b01745b663924">
+        <style>
+            #accordion66b77283f57d4051b53b01745b663924 {
+                background-color: #292929;
+                color: white;
+                padding: 20px;
+                border-radius: 10px;
+                width: 80vw;
+                margin: 50px auto;
+            }
+
+            #accordion66b77283f57d4051b53b01745b663924 .header {
+                font-size: 18px;
+                padding: 0 20px 20px 20px;
+                display: inline-block;
+                border-bottom: 2px solid #e388a7;
+                position: relative;
+                top: 2px;
+            }
+
+            #accordion66b77283f57d4051b53b01745b663924 .header i {
+                color: pink;
+            }
+        </style>
+
+        <div class="header">
+            <i class="fa-solid fa-download"></i>
+            <span>Download</span>
+        </div>
+
+        <hr style="margin: 0 0 20px 0;border-color: yellow;">
+
+        <div class="accordion-box">
+            <style>
+                #accordion66b77283f57d4051b53b01745b663924 .accordion-container {
+                    margin-bottom: 10px;
+                }
+
+                #accordion66b77283f57d4051b53b01745b663924 .accordion-container:first-child {
+                    margin-top: 10px;
+                }
+
+                #accordion66b77283f57d4051b53b01745b663924 .accordion-container .accordion {
+                    background-color: #1d1d1d;
+                    color: white;
+                    cursor: pointer;
+                    padding: 20px;
+                    width: 100%;
+                    border: 1px solid black;
+                    border-radius: 10px;
+                    text-align: left;
+                    outline: none;
+                    font-size: 14px;
+                    transition: 0.4s;
+                }
+
+                #accordion66b77283f57d4051b53b01745b663924 .accordion-container .accordion.active {
+                    border-radius: 10px 10px 0 0;
+                    color: #ff9fdd;
+                }
+
+                /*#accordion66b77283f57d4051b53b01745b663924 .accordion-container .accordion:hover {
+                    box-shadow: 0 0 5px white;
+                }*/
+
+                #accordion66b77283f57d4051b53b01745b663924 .accordion-container .accordion span {
+                    padding: 0px 10px;
+                    border-left: 1px solid white;
+                    margin: 5px 0;
+                    display: inline-block;
+                }
+
+                #accordion66b77283f57d4051b53b01745b663924 .accordion-container .accordion span.info-span {
+                    color: #aaa;
+                    font-size: 14px;
+                }
+
+                #accordion66b77283f57d4051b53b01745b663924 .accordion-container .panel {
+                    padding: 0px 18px;
+                    background-color: white;
+                    overflow: hidden;
+                    max-height: 0;
+                    transition: all 0.2s ease-out;
+                    background-color: black;
+                    border-radius: 0 0 10px 10px;
+                    font-size: 14px;
+                }
+
+                #accordion66b77283f57d4051b53b01745b663924 .accordion-container .accordion:after {
+                    content: '\02795';
+                    /* Unicode character for "plus" sign (+) */
+                    font-size: 14px;
+                    color: white;
+                    float: right;
+                    margin-left: 5px;
+                }
+
+                #accordion66b77283f57d4051b53b01745b663924 .accordion-container .accordion.active:after {
+                    content: "\2796";
+                    /* Unicode character for "minus" sign (-) */
+                }
+
+                #accordion66b77283f57d4051b53b01745b663924 .accordion-container a {
+                    text-decoration: none;
+                    padding: 10px 20px;
+                    background-color: #292929;
+                    border: 2px solid #292929;
+                    border-radius: 20px;
+                    margin: 0 3px;
+                    color: white;
+                    /*font-weight: bold;*/
+                }
+
+                #accordion66b77283f57d4051b53b01745b663924 .accordion-container a:hover {
+                    background-color: #1b1b1b;
+                    color: #f55dbf;
+                }
+            </style>
+
+            <div class="accordion-container">
+                <button class="accordion" onclick="toggleActive_a57b97f9bd6d9494090be0bc07cd8608f(this)">
+                    <span>Season 01</span>
+                    <span>Completed</span>
+                </button>
+                <div class="panel">
+
+                    <div class="accordion-container">
+                        <button class="accordion"
+                            onclick="toggleActive_a57b97f9bd6d9494090be0bc07cd8608f(this, this.parentElement.parentElement)">
+                            <span>WEB-DL x265 10bit 720p</span>
+                            <span title="Soft Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                            <span title="Dubbed"><i class="fa-solid fa-headset"></i></span>
+                            <span><i class="fa-solid fa-folder-tree"></i> 08 episodes</span>
+                            <span>size: 120MB</span>
+                            <span class="info-span"><i style="color: orangered;" class="fa-solid fa-circle-info"></i>
+                                Colors have more depth and intensity in 10-bit versions
+                            </span>
+                        </button>
+                        <div class="panel">
+                            <div class="clearfix"
+                                style="margin: 10px;padding: 10px;border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+                                <div style="float: left;margin: 35px 10px;">
+                                    <a href="" download="">01</a>
+                                    <a href="" download="">02</a>
+                                    <a href="" download="">03</a>
+                                    <a href="" download="">04</a>
+                                    <a href="" download="">05</a>
+                                    <a href="" download="">06</a>
+                                    <a href="" download="">07</a>
+                                    <a href="" download="">08</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-container">
+                        <button class="accordion"
+                            onclick="toggleActive_a57b97f9bd6d9494090be0bc07cd8608f(this, this.parentElement.parentElement)">
+                            <span>WEB-DL x265 10bit 1080p</span>
+                            <span title="Soft Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                            <span title="Dubbed"><i class="fa-solid fa-headset"></i></span>
+                            <span><i class="fa-solid fa-folder-tree"></i> 08 episodes</span>
+                            <span>size: 220MB</span>
+                            <span class="info-span"><i style="color: orangered;" class="fa-solid fa-circle-info"></i>
+                                Colors have more depth and intensity in 10-bit versions
+                            </span>
+                        </button>
+                        <div class="panel">
+                            <div class="clearfix"
+                                style="margin: 10px;padding: 10px;border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+                                <div style="float: left;margin: 35px 10px;">
+                                    <a href="" download="">01</a>
+                                    <a href="" download="">02</a>
+                                    <a href="" download="">03</a>
+                                    <a href="" download="">04</a>
+                                    <a href="" download="">05</a>
+                                    <a href="" download="">06</a>
+                                    <a href="" download="">07</a>
+                                    <a href="" download="">08</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-container">
+                <button class="accordion" onclick="toggleActive_a57b97f9bd6d9494090be0bc07cd8608f(this)">
+                    <span>Season 02</span>
+                    <!--span>Completed</span-->
+                </button>
+                <div class="panel">
+
+                    <div class="accordion-container">
+                        <button class="accordion"
+                            onclick="toggleActive_a57b97f9bd6d9494090be0bc07cd8608f(this, this.parentElement.parentElement)">
+                            <span>WEB-DL x265 10bit 720p</span>
+                            <span title="Soft Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                            <span title="Dubbed"><i class="fa-solid fa-headset"></i></span>
+                            <span><i class="fa-solid fa-folder-tree"></i> 03 episodes</span>
+                            <span>size: 120MB</span>
+                            <span class="info-span"><i style="color: orangered;" class="fa-solid fa-circle-info"></i>
+                                Colors have more depth and intensity in 10-bit versions
+                            </span>
+                        </button>
+                        <div class="panel">
+                            <div class="clearfix"
+                                style="margin: 10px;padding: 10px;border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+                                <div style="float: left;margin: 35px 10px;">
+                                    <a href="" download="">01</a>
+                                    <a href="" download="">02</a>
+                                    <a href="" download="">03</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-container">
+                        <button class="accordion"
+                            onclick="toggleActive_a57b97f9bd6d9494090be0bc07cd8608f(this, this.parentElement.parentElement)">
+                            <span>WEB-DL x265 10bit 1080p</span>
+                            <span title="Soft Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                            <span title="Dubbed"><i class="fa-solid fa-headset"></i></span>
+                            <span><i class="fa-solid fa-folder-tree"></i> 03 episodes</span>
+                            <span>size: 220MB</span>
+                            <span class="info-span"><i style="color: orangered;" class="fa-solid fa-circle-info"></i>
+                                Colors have more depth and intensity in 10-bit versions
+                            </span>
+                        </button>
+                        <div class="panel">
+                            <div class="clearfix"
+                                style="margin: 10px;padding: 10px;border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+                                <div style="float: left;margin: 35px 10px;">
+                                    <a href="" download="">01</a>
+                                    <a href="" download="">02</a>
+                                    <a href="" download="">03</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-container">
+                <button class="accordion" onclick="toggleActive_a57b97f9bd6d9494090be0bc07cd8608f(this)">
+                    <span>Original</span>
+                    <span title="Soft Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                    <span title="Dubbed"><i class="fa-solid fa-headset"></i></span>
+                    <span class="info-span"><i style="color: orangered;" class="fa-solid fa-circle-info"></i>
+                        Colors have more depth and intensity in 10-bit versions
+                    </span>
+                </button>
+                <div class="panel">
+                    <div class="clearfix"
+                        style="margin: 10px;padding: 10px;border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+                        <div style="float: left;margin: 35px 10px;">
+                            <a href=""><i style="color: #f55dbf;" class="fa-solid fa-download"></i> Download with direct
+                                link</a>
+                            <a href=""><i style="color: #f55dbf;" class=" fa-solid fa-image"></i> Sample resolution</a>
+                        </div>
+                        <div style="float: right;text-align: center;">
+                            <h2 style="color: #f55dbf; margin: 20px;">WEB-DL x265 10bit 720p</h2>
+                            <span>size: 1.2 GB</span>
+                        </div>
+                    </div>
+                    <div class="clearfix"
+                        style="margin: 10px;padding: 10px;border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+                        <div style="float: left;margin: 35px 10px;">
+                            <a href=""><i style="color: #f55dbf;" class="fa-solid fa-download"></i> Download with direct
+                                link</a>
+                            <a href=""><i style="color: #f55dbf;" class=" fa-solid fa-image"></i> Sample resolution</a>
+                        </div>
+                        <div style="float: right;text-align: center;">
+                            <h2 style="color: #f55dbf; margin: 20px;">WEB-DL x265 10bit 1080p</h2>
+                            <span>size: 3.5 GB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-container">
+                <button class="accordion" onclick="toggleActive_a57b97f9bd6d9494090be0bc07cd8608f(this)">
+                    <span>Dubbed</span>
+                    <span title="Soft Subtitle"><i class="fa-solid fa-closed-captioning"></i></span>
+                    <span title="Dubbed"><i class="fa-solid fa-headset"></i></span>
+                    <span class="info-span"><i style="color: orangered;" class="fa-solid fa-circle-info"></i>
+                        Colors have more depth and intensity in 10-bit versions
+                    </span>
+                </button>
+                <div class="panel">
+                    <div class="clearfix"
+                        style="margin: 10px;padding: 10px;border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+                        <div style="float: left;margin: 35px 10px;">
+                            <a href=""><i style="color: #f55dbf;" class="fa-solid fa-download"></i> Download with direct
+                                link</a>
+                            <a href=""><i style="color: #f55dbf;" class=" fa-solid fa-image"></i> Sample resolution</a>
+                        </div>
+                        <div style="float: right;text-align: center;">
+                            <h2 style="color: #f55dbf; margin: 20px;">WEB-DL x265 10bit 720p</h2>
+                            <span>size: 1.2 GB</span>
+                        </div>
+                    </div>
+                    <div class="clearfix"
+                        style="margin: 10px;padding: 10px;border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+                        <div style="float: left;margin: 35px 10px;">
+                            <a href=""><i style="color: #f55dbf;" class="fa-solid fa-download"></i> Download with direct
+                                link</a>
+                            <a href=""><i style="color: #f55dbf;" class=" fa-solid fa-image"></i> Sample resolution</a>
+                        </div>
+                        <div style="float: right;text-align: center;">
+                            <h2 style="color: #f55dbf; margin: 20px;">WEB-DL x265 10bit 1080p</h2>
+                            <span>size: 3.5 GB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <span style="color: #aaa;font-size: 14px;">
+                <i style="color: orangered;" class="fa-solid fa-circle-info"></i>
+                Colors have more depth and intensity in 10-bit versions
+            </span>
+
+            <script>
+                function toggleActive_a57b97f9bd6d9494090be0bc07cd8608f(btn, parentPanel = null) {
+                    btn.classList.toggle("active");
+                    let panel = btn.nextElementSibling;
+                    if (parseInt(panel.style.maxHeight) > 0) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                    if (parentPanel != null) {
+                        parentPanel.style.maxHeight = (parentPanel.scrollHeight + panel.scrollHeight) + "px";
+                    }
+                }
+            </script>
+        </div>
+    </div>
+
+    <!-------------------------------- reviews --------------------------------->
+    <style>
+        #reviewsHR4295ed84adad4f10bacf176a75cb6bab {
+            width: 80%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            margin-right: 5%;
+            position: relative;
+            overflow: visible;
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        #reviewsHR4295ed84adad4f10bacf176a75cb6bab::before {
+            content: "Reviews";
+            font-weight: bold;
+            /*background-color: #111;*/
+            position: absolute;
+            left: -150px;
+            color: white;
+            transform: translateY(-50%);
+            padding: 10px 20px;
+        }
+    </style>
+    <hr id="reviewsHR4295ed84adad4f10bacf176a75cb6bab">
+    <!-------------------------------- Comment Form --------------------------------->
+    <div>
+        <!----------------------------------------------------------------->
+        <div id="a407f2dc7d749464b924eff4d583b5502">
+            <style>
+                #a407f2dc7d749464b924eff4d583b5502 {
+                    margin: 0 auto;
+                    padding: 10px;
+                    background-color: #3a3a3a;
+                    font-family: Helvetica, Arial, sans-serif;
+                    width: fit-content;
+                    color: white;
+                }
+
+                #a407f2dc7d749464b924eff4d583b5502 button {
+                    padding: 10px 20px;
+                    margin: 10px;
+                    background-color: #3a3a3a;
+                    color: white;
+                    border: 2px solid white;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    transition: 0.3s;
+                }
+
+                #a407f2dc7d749464b924eff4d583b5502 button:hover {
+                    border: 2px solid #ef6e9c;
+                }
+            </style>
+
+            <p>Please login to submit your review!</p>
+            <div>
+                <button>
+                    <i class="fa-solid fa-right-to-bracket"></i> Login
+                </button>
+                <button>
+                    <i class="fa-solid fa-user-plus"></i> Sign Up
+                </button>
+            </div>
+        </div>
+
+        <!----------------------------------------------------------------->
+        <div id="commentForm509a7539aa2a497183cc187ae239d9cb">
+            <style>
+                #commentForm509a7539aa2a497183cc187ae239d9cb {
+                    width: 60%;
+                    min-width: 300px;
+                    margin: auto;
+                }
+
+                #commentForm509a7539aa2a497183cc187ae239d9cb form {
+                    background-color: #272727;
+                    padding: 10px;
+                    margin: 10px;
+                    overflow: hidden;
+                }
+
+                #commentForm509a7539aa2a497183cc187ae239d9cb form textarea {
+                    width: 100%;
+                    max-width: 100%;
+                    min-width: 100%;
+                    font-family: Helvetica, Arial, sans-serif;
+                    font-size: 16px;
+                    padding: 10px;
+                    outline: none;
+                    color: white;
+                    background-color: #494949;
+                    border: none;
+                    border-radius: 10px 10px 0 10px;
+                }
+
+                #commentForm509a7539aa2a497183cc187ae239d9cb form .left {
+                    float: left;
+                    margin-left: 10px;
+                }
+
+                #commentForm509a7539aa2a497183cc187ae239d9cb form .left p {
+                    margin-bottom: 10px;
+                }
+
+                #commentForm509a7539aa2a497183cc187ae239d9cb form .right {
+                    float: right;
+                    padding: 10px;
+                }
+
+                #commentForm509a7539aa2a497183cc187ae239d9cb form .right button {
+                    margin: 10px;
+                    padding: 10px 20px;
+                    background-color: #272727;
+                    color: white;
+                    border: 2px solid white;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    font-size: 14px;
+                }
+
+                #commentForm509a7539aa2a497183cc187ae239d9cb form .right button:hover {
+                    background-color: #ef6e9c;
+                    border: 2px solid #ef6e9c;
+                }
+            </style>
+            <form action="">
+                <textarea name="comment" id="comment-text-area" cols="30" rows="2"
+                    placeholder="type your comment here ..."></textarea>
+                <div class="clearfix">
+                    <div class="left">
+                        <!-- Rectangular switch -->
+
+                        <style>
+                            /* The switch - the box around the slider */
+                            #buttone278cca5da014ad69e59ca9c70eaf572 {
+                                font-family: Helvetica, Arial, sans-serif;
+                                color: white;
+                            }
+
+                            #buttone278cca5da014ad69e59ca9c70eaf572>p {
+                                display: block;
+                                font-size: 14px;
+                            }
+
+                            #buttone278cca5da014ad69e59ca9c70eaf572 .switch {
+                                position: relative;
+                                display: inline-block;
+                                width: 70px;
+                                height: 34px;
+                                color: white;
+                                font-size: 14px;
+                            }
+
+                            /* Hide default HTML checkbox */
+                            #buttone278cca5da014ad69e59ca9c70eaf572 .switch input {
+                                opacity: 0;
+                                width: 0;
+                                height: 0;
+                            }
+
+                            /* The slider */
+                            #buttone278cca5da014ad69e59ca9c70eaf572 .slider {
+                                position: absolute;
+                                cursor: pointer;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                background-color: black;
+                                -webkit-transition: .4s;
+                                transition: .4s;
+                                padding: 8px 6px;
+                            }
+
+                            #buttone278cca5da014ad69e59ca9c70eaf572 .slider span {
+                                margin-right: 15px;
+                                font-family: Helvetica, Arial, sans-serif;
+                            }
+
+                            #buttone278cca5da014ad69e59ca9c70eaf572 .slider:before {
+                                position: absolute;
+                                content: "";
+                                height: 34px;
+                                width: 34px;
+                                left: -1px;
+                                bottom: 0px;
+                                background-color: #ef6e9c;
+                                mix-blend-mode: lighten;
+                                -webkit-transition: .4s;
+                                transition: .4s;
+                            }
+
+                            #buttone278cca5da014ad69e59ca9c70eaf572 input:checked+.slider:before {
+                                width: 38px;
+                                -webkit-transform: translateX(34px);
+                                -ms-transform: translateX(34px);
+                                transform: translateX(34px);
+                            }
+
+                            #buttone278cca5da014ad69e59ca9c70eaf572 .slider.round {
+                                border-radius: 34px;
+                            }
+
+                            #buttone278cca5da014ad69e59ca9c70eaf572 .slider.round:before {
+                                border-radius: 34px;
+                            }
+                        </style>
+
+                        <div id="buttone278cca5da014ad69e59ca9c70eaf572">
+                            <p><b>Contains spoiling contents?</b></p>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"><span><b>No</b></span><span><b>Yes</b></span></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <button type="submit"><i class="fa-regular fa-paper-plane"></i> Send</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-------------------------------- Comments --------------------------------->
+    <div id="commentbox7ede10ed5f974d38a0eba405cd494715" class="clearfix">
+        <style>
+            #commentbox7ede10ed5f974d38a0eba405cd494715 {
+                width: 60%;
+                margin: auto;
+            }
+
+            @media screen and (max-width:800px) {
+                #commentbox7ede10ed5f974d38a0eba405cd494715 {
+                    width: 100%;
+                    margin: auto;
+                }
+            }
+        </style>
+
+        <!--div id="comment-filter-box">
+            <style>
+                #comment-filter-box{}
+            </style>
+            <button></button>
+        </div-->
+
+        <style>
+            .commentd1a6fd35cc894a87ab0050406100447c {
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                background-color: #272727;
+                color: white;
+                padding: 0px 10px 30px 10px;
+                border-radius: 10px;
+                border: 1px solid black;
+                margin: 5px auto 0px;
+                width: 100%;
+                position: relative;
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c:hover {
+                background-color: #333333;
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c.reply {
+                width: 95%;
+                margin-left: 5%;
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c>div {
+                margin: 10px 10px 0 10px;
+            }
+
+            @media screen and (max-width:600px) {
+                .commentd1a6fd35cc894a87ab0050406100447c>div {
+                    margin: 10px 5px 0 0px;
+                }
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c span,
+            .commentd1a6fd35cc894a87ab0050406100447c button {
+                margin: 5px;
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c span.date {
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: 12px;
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c img {
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c .left {
+                float: left;
+                padding-top: 5px;
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c .review-box {
+                /*float: right;*/
+                position: absolute;
+                right: 5px;
+                bottom: 5px;
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c i {
+                font-size: 14px;
+
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c button {
+                border: 1px solid #ef6e9c;
+                background-color: #272727;
+                border-radius: 20px;
+                color: white;
+                /*padding: 5px 15px 10px 15px;*/
+                padding: 5px;
+                margin: 0px;
+                cursor: pointer;
+                font-size: 12px;
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c button:hover {
+                /*background-color: #ef6e9c;*/
+                background-color: #e2004f;
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c .user-name {
+                color: #ef6e9c;
+                margin: 5px;
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c a {
+                text-decoration: none;
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c .comment-box p {
+                line-height: 1.5rem;
+                /*letter-spacing: 1px;*/
+                margin: 5px;
+                font-size: 14px;
+            }
+
+            @media screen and (max-width:600px) {
+                .commentd1a6fd35cc894a87ab0050406100447c .comment-box p {
+                    margin: 5px 0;
+                }
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c .spoil-div {
+                position: absolute;
+                z-index: 1;
+                /*width: 100%;*/
+                top: -10px;
+                bottom: 0px;
+                right: -10px;
+                left: -10px;
+                text-align: center;
+                backdrop-filter: blur(5px) brightness(50%);
+                /*filter: brightness(50%);*/
+                border-radius: 10px;
+            }
+
+            .commentd1a6fd35cc894a87ab0050406100447c .spoil-div * {
+                display: inline-block;
+                /*transform: translateY(50%);*/
+                margin-top: 10px;
+            }
+        </style>
+
+        <style>
+            .dropdown4046b38a7d3f4cc3a1cbbbc111fd42e0 {
+                width: fit-content;
+                /*margin: auto;*/
+                position: absolute;
+                top: 2px;
+                right: 70px;
+            }
+
+            .dropdown4046b38a7d3f4cc3a1cbbbc111fd42e0 .dropbtn {
+                background-color: transparent;
+                color: white;
+                padding: 0px 10px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+            }
+
+            .dropdown4046b38a7d3f4cc3a1cbbbc111fd42e0 .dropbtn:hover,
+            .dropdown4046b38a7d3f4cc3a1cbbbc111fd42e0 .dropbtn:focus {
+                background-color: #e2004f;
+                /*#2980B9;*/
+            }
+
+            .dropdown4046b38a7d3f4cc3a1cbbbc111fd42e0 .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f1f1f1;
+                /*min-width: 160px;*/
+                width: fit-content;
+                overflow: auto;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+                width: fit-content;
+                border-radius: 5px;
+            }
+
+            .dropdown4046b38a7d3f4cc3a1cbbbc111fd42e0 .dropdown-content a,
+            .dropdown4046b38a7d3f4cc3a1cbbbc111fd42e0 .dropdown-content button {
+                color: black;
+                padding: 10px 14px;
+                text-decoration: none;
+                display: block;
+                text-wrap: nowrap;
+                background-color: transparent;
+                border: none;
+                font-size: 14px;
+                border-radius: 0;
+            }
+
+            .dropdown4046b38a7d3f4cc3a1cbbbc111fd42e0 a:hover,
+            .dropdown4046b38a7d3f4cc3a1cbbbc111fd42e0 button:hover {
+                background-color: #ddd;
+            }
+
+            .dropdown4046b38a7d3f4cc3a1cbbbc111fd42e0 .show {
+                display: block;
+            }
+        </style>
+
+        <div class="commentd1a6fd35cc894a87ab0050406100447c">
+            <!--div class="spoil-div">
+                <span style="font-size: 14px;">
+                    <i style="color: orangered;font-size: 16px;" class="fa-solid fa-circle-info"></i>
+                    This comment seems to spoil the story!
+                </span>
+                <button onclick="this.parentElement.style.display='none'">Reveal</button>
+            </div-->
+            <div class="user-image-box">
+                <img src="./statics/defaultProfile.jpg" alt="">
+            </div>
+            <div class="comment-box">
+                <div class="clearfix">
+                    <div class="left">
+                        <a href="" class="user-name"><b>username1</b></a>
+                        <span class="date">12/25/2023</span>
+                        <div class="dropdown4046b38a7d3f4cc3a1cbbbc111fd42e0">
+                            <button onclick="myFunction_dropdown4046b38a7d3f4cc3a1cbbbc111fd42e0(this)"
+                                class="dropbtn">&ctdot;</button>
+                            <div class="dropdown-content">
+                                <button
+                                    onclick="function01_reportModalcf829ce8e2b48eeaf98607844fc5dbe(this)">Report</button>
+                                <a href="">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-box">
+                        <button class="reply-btn" onclick="function01_modalcf829ce8e2b48eeaf98607844fc5dbe(this)">
+                            <i class="fa-solid fa-reply"></i><span> Reply</span>
+                        </button>
+                        <button class="like-btn">
+                            <!--i class="fa-regular fa-thumbs-up"></i-->
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            <span> 16</span>
+                        </button>
+                        <button class="dislike-btn">
+                            <i class="fa-regular fa-thumbs-down"></i>
+                            <!--i class="fa-solid fa-thumbs-down"></i-->
+                            <span> 4</span>
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam aliquid temporibus molestias
+                        mollitia natus. Odio voluptas officia voluptates laboriosam pariatur dicta, ullam corrupti!
+                        Quibusdam sunt accusantium veritatis architecto officia eum cupiditate deleniti. Dolorem placeat
+                        aliquid sed voluptate provident veniam aliquam eveniet esse illum voluptatum totam debitis
+                        atque, dolorum beatae molestiae.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="commentd1a6fd35cc894a87ab0050406100447c reply">
+            <!--div class="spoil-div">
+                <span style="font-size: 14px;">
+                    <i style="color: orangered;font-size: 16px;" class="fa-solid fa-circle-info"></i>
+                    This comment seems to spoil the story!
+                </span>
+                <button onclick="this.parentElement.style.display='none'">Reveal</button>
+            </div-->
+            <div class="user-image-box">
+                <img src="./statics/defaultProfile.jpg" alt="">
+            </div>
+            <div class="comment-box">
+                <div class="clearfix">
+                    <div class="left">
+                        <a href="" class="user-name"><b>username2</b></a><span style="font-size: 14px;">to
+                            username1</span>
+                        <span class="date">12/25/2023</span>
+                        <div class="dropdown4046b38a7d3f4cc3a1cbbbc111fd42e0">
+                            <button onclick="myFunction_dropdown4046b38a7d3f4cc3a1cbbbc111fd42e0(this)"
+                                class="dropbtn">&ctdot;</button>
+                            <div class="dropdown-content">
+                                <button
+                                    onclick="function01_reportModalcf829ce8e2b48eeaf98607844fc5dbe(this)">Report</button>
+                                <a href="">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-box">
+                        <button class="reply-btn" onclick="function01_modalcf829ce8e2b48eeaf98607844fc5dbe(this)">
+                            <i class="fa-solid fa-reply"></i><span> Reply</span>
+                        </button>
+                        <button class="like-btn">
+                            <!--i class="fa-regular fa-thumbs-up"></i-->
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            <span> 16</span>
+                        </button>
+                        <button class="dislike-btn">
+                            <i class="fa-regular fa-thumbs-down"></i>
+                            <!--i class="fa-solid fa-thumbs-down"></i-->
+                            <span> 4</span>
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam aliquid temporibus molestias
+                        mollitia natus.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="commentd1a6fd35cc894a87ab0050406100447c">
+            <div class="spoil-div">
+                <span style="font-size: 14px;">
+                    <i style="color: orangered;font-size: 16px;" class="fa-solid fa-circle-info"></i>
+                    This comment seems to spoil the story!
+                </span>
+                <button onclick="this.parentElement.style.display='none'">Reveal</button>
+            </div>
+            <div class="user-image-box">
+                <img src="./statics/defaultProfile.jpg" alt="">
+            </div>
+            <div class="comment-box">
+                <div class="clearfix">
+                    <div class="left">
+                        <a href="" class="user-name"><b>username3</b></a>
+                        <span class="date">12/25/2023</span>
+                        <div class="dropdown4046b38a7d3f4cc3a1cbbbc111fd42e0">
+                            <button onclick="myFunction_dropdown4046b38a7d3f4cc3a1cbbbc111fd42e0(this)"
+                                class="dropbtn">&ctdot;</button>
+                            <div class="dropdown-content">
+                                <button
+                                    onclick="function01_reportModalcf829ce8e2b48eeaf98607844fc5dbe(this)">Report</button>
+                                <a href="">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-box">
+                        <button class="reply-btn" onclick="function01_modalcf829ce8e2b48eeaf98607844fc5dbe(this)">
+                            <i class="fa-solid fa-reply"></i><span> Reply</span>
+                        </button>
+                        <button class="like-btn">
+                            <!--i class="fa-regular fa-thumbs-up"></i-->
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            <span> 16</span>
+                        </button>
+                        <button class="dislike-btn">
+                            <i class="fa-regular fa-thumbs-down"></i>
+                            <!--i class="fa-solid fa-thumbs-down"></i-->
+                            <span> 4</span>
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function myFunction_dropdown4046b38a7d3f4cc3a1cbbbc111fd42e0(element) {
+                let dropdownContents = element.parentElement.getElementsByClassName("dropdown-content");
+
+                for (let i = 0; i < dropdownContents.length; i++) {
+                    dropdownContents[i].classList.toggle("show");
+                }
+            }
+
+            window.addEventListener("click", (event) => {
+                let mainElements = document.getElementsByClassName("dropdown4046b38a7d3f4cc3a1cbbbc111fd42e0");
+                for (let mainElement of mainElements) {
+                    let dropButton = mainElement.getElementsByClassName("dropbtn")[0];
+                    if (event.target != dropButton) {
+                        mainElement.getElementsByClassName("dropdown-content")[0].classList.remove("show");
+                    }
+                }
+            });
+        </script>
+    </div>
+
+    <!----------------------------------------------------------------->
+    <div class="modalcf829ce8e2b48eeaf98607844fc5dbe">
+        <style>
+            .modalcf829ce8e2b48eeaf98607844fc5dbe {
+                width: fit-content;
+                margin: 50px auto 0;
+            }
+
+            /* The Modal (background) */
+            .modalcf829ce8e2b48eeaf98607844fc5dbe .modal {
+                display: none;
+                /* Hidden by default */
+                position: fixed;
+                /* Stay in place */
+                z-index: 2;
+                /* Sit on top */
+                left: 0;
+                top: 0;
+                width: 100%;
+                /* Full width */
+                height: 100%;
+                /* Full height */
+                overflow: auto;
+                /* Enable scroll if needed */
+                background-color: rgb(0, 0, 0);
+                /* Fallback color */
+                background-color: rgba(0, 0, 0, 0.4);
+                /* Black w/ opacity */
+                backdrop-filter: blur(5px);
+            }
+
+            /* Modal Content/Box */
+            .modalcf829ce8e2b48eeaf98607844fc5dbe .modal-content {
+                margin: auto;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 60%;
+            }
+
+            @media screen and (max-width:600px) {
+                .modalcf829ce8e2b48eeaf98607844fc5dbe .modal-content {
+                    width: 100%;
+                }
+            }
+
+            /* The Close Button */
+            .modalcf829ce8e2b48eeaf98607844fc5dbe .close {
+                color: white;
+                /*float: right;*/
+                font-size: 28px;
+                font-weight: bold;
+                position: absolute;
+                right: 5px;
+                top: 0;
+            }
+
+            .modalcf829ce8e2b48eeaf98607844fc5dbe .close:hover,
+            .modalcf829ce8e2b48eeaf98607844fc5dbe .close:focus {
+                color: red;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        </style>
+
+        <!-- Trigger/Open The Modal -->
+        <!--button id="myBtn" onclick="function01_modalcf829ce8e2b48eeaf98607844fc5dbe(this)">Open Modal</button-->
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal" style="display: none;"
+            onclick="if(event.target==this){this.style.display = 'none';}">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="this.parentElement.parentElement.style.display = 'none'">×</span>
+
+                <div class="form509a7539aa2a497183cc187ae239d9cb">
+                    <style>
+                        .form509a7539aa2a497183cc187ae239d9cb {
+                            width: 100%;
+                            min-width: 300px;
+                            margin: auto;
+                        }
+
+                        .form509a7539aa2a497183cc187ae239d9cb form {
+                            background-color: #272727;
+                            padding: 10px;
+                            margin: auto;
+                            overflow: hidden;
+                            border-radius: 10px;
+                        }
+
+                        .form509a7539aa2a497183cc187ae239d9cb form textarea {
+                            width: 100%;
+                            max-width: 100%;
+                            min-width: 100%;
+                            font-family: Helvetica, Arial, sans-serif;
+                            font-size: 16px;
+                            padding: 10px;
+                            outline: none;
+                            color: white;
+                            background-color: #494949;
+                            border: none;
+                            border-radius: 10px 10px 0 10px;
+                        }
+
+                        .form509a7539aa2a497183cc187ae239d9cb form .left {
+                            float: left;
+                            margin-left: 10px;
+                        }
+
+                        .form509a7539aa2a497183cc187ae239d9cb form .left p {
+                            margin-bottom: 10px;
+                        }
+
+                        .form509a7539aa2a497183cc187ae239d9cb form .right {
+                            float: right;
+                            padding: 10px;
+                        }
+
+                        .form509a7539aa2a497183cc187ae239d9cb form .right button {
+                            margin: 10px;
+                            padding: 10px 20px;
+                            background-color: #272727;
+                            color: white;
+                            border: 2px solid white;
+                            border-radius: 20px;
+                            cursor: pointer;
+                            font-size: 14px;
+                        }
+
+                        .form509a7539aa2a497183cc187ae239d9cb form .right button:hover {
+                            background-color: #ef6e9c;
+                            border: 2px solid #ef6e9c;
+                        }
+                    </style>
+                    <form action="">
+                        <p id="reply-form-username" style="color: white;font-size: 14px;font-weight: normal;">To
+                            username:</p>
+                        <textarea name="comment" id="comment-text-area" cols="30" rows="2"
+                            placeholder="type your comment here ..."></textarea>
+                        <div class="clearfix">
+                            <div class="left">
+                                <!-- Rectangular switch -->
+
+                                <style>
+                                    /* The switch - the box around the slider */
+                                    #buttone278cca5da014ad69e59ca9c70eaf572 {
+                                        font-family: Helvetica, Arial, sans-serif;
+                                        color: white;
+                                    }
+
+                                    #buttone278cca5da014ad69e59ca9c70eaf572>p {
+                                        display: block;
+                                        font-size: 14px;
+                                    }
+
+                                    #buttone278cca5da014ad69e59ca9c70eaf572 .switch {
+                                        position: relative;
+                                        display: inline-block;
+                                        width: 70px;
+                                        height: 34px;
+                                        color: white;
+                                        font-size: 14px;
+                                    }
+
+                                    /* Hide default HTML checkbox */
+                                    #buttone278cca5da014ad69e59ca9c70eaf572 .switch input {
+                                        opacity: 0;
+                                        width: 0;
+                                        height: 0;
+                                    }
+
+                                    /* The slider */
+                                    #buttone278cca5da014ad69e59ca9c70eaf572 .slider {
+                                        position: absolute;
+                                        cursor: pointer;
+                                        top: 0;
+                                        left: 0;
+                                        right: 0;
+                                        bottom: 0;
+                                        background-color: black;
+                                        -webkit-transition: .4s;
+                                        transition: .4s;
+                                        padding: 8px 6px;
+                                    }
+
+                                    #buttone278cca5da014ad69e59ca9c70eaf572 .slider span {
+                                        margin-right: 15px;
+                                        font-family: Helvetica, Arial, sans-serif;
+                                    }
+
+                                    #buttone278cca5da014ad69e59ca9c70eaf572 .slider:before {
+                                        position: absolute;
+                                        content: "";
+                                        height: 34px;
+                                        width: 34px;
+                                        left: -1px;
+                                        bottom: 0px;
+                                        background-color: #ef6e9c;
+                                        mix-blend-mode: lighten;
+                                        -webkit-transition: .4s;
+                                        transition: .4s;
+                                    }
+
+                                    #buttone278cca5da014ad69e59ca9c70eaf572 input:checked+.slider:before {
+                                        width: 38px;
+                                        -webkit-transform: translateX(34px);
+                                        -ms-transform: translateX(34px);
+                                        transform: translateX(34px);
+                                    }
+
+                                    #buttone278cca5da014ad69e59ca9c70eaf572 .slider.round {
+                                        border-radius: 34px;
+                                    }
+
+                                    #buttone278cca5da014ad69e59ca9c70eaf572 .slider.round:before {
+                                        border-radius: 34px;
+                                    }
+                                </style>
+
+                                <div id="buttone278cca5da014ad69e59ca9c70eaf572">
+                                    <p><b>Contains spoiling contents?</b></p>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"><span><b>No</b></span><span><b>Yes</b></span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <button type="submit"><i class="fa-regular fa-paper-plane"></i> Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function function01_modalcf829ce8e2b48eeaf98607844fc5dbe(btn) {
+                let username = btn.parentElement.previousElementSibling.getElementsByClassName("user-name")[0].innerText;
+                let modal = document.getElementById("myModal");
+                modal.querySelector("#reply-form-username").innerHTML = "To " + username + " :";
+                modal.style.display = "block";
+            }
+        </script>
+
+    </div>
+
+    <!----------------------------------------------------------------->
+    <div class="modalcf829ce8e2b48eeaf98607844fc5dbe">
+
+        <!-- The Modal -->
+        <div id="myReportModal" class="modal" style="display: none;"
+            onclick="if(event.target==this){this.style.display = 'none';}">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="this.parentElement.parentElement.style.display = 'none'">×</span>
+
+                <div class="form509a7539aa2a497183cc187ae239d9cb">
+                    <form action="">
+                        <p id="reply-form-username" style="color: white;font-size: 14px;font-weight: normal;">
+                            Explanation:
+                        </p>
+                        <textarea name="comment" id="comment-text-area" cols="30" rows="2"
+                            placeholder="type your message here ..."></textarea>
+                        <div class="clearfix">
+                            <div class="right">
+                                <button type="submit"><i class="fa-regular fa-paper-plane"></i> Report</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function function01_reportModalcf829ce8e2b48eeaf98607844fc5dbe(btn) {
+                let modal = document.getElementById("myReportModal");
+                modal.style.display = "block";
+            }
+        </script>
+
+    </div>
+
+</body>
+
+</html>
